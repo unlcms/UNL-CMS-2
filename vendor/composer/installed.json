@@ -4555,5 +4555,60 @@
         "support": {
             "source": "http://cgit.drupalcode.org/diff"
         }
+    },
+    {
+        "name": "drupal/memcache",
+        "version": "dev-2.x",
+        "version_normalized": "dev-2.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/memcache",
+            "reference": "908c0a2bfa19363859d3cf935437c4170ad4d24c"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.0-alpha1+9-dev",
+                "datestamp": "1465310136"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Jeremy",
+                "homepage": "https://www.drupal.org/user/409"
+            },
+            {
+                "name": "catch",
+                "homepage": "https://www.drupal.org/user/35733"
+            },
+            {
+                "name": "damiankloip",
+                "homepage": "https://www.drupal.org/user/1037976"
+            },
+            {
+                "name": "jvandyk",
+                "homepage": "https://www.drupal.org/user/2375"
+            },
+            {
+                "name": "robertDouglass",
+                "homepage": "https://www.drupal.org/user/5449"
+            }
+        ],
+        "description": "High performance integration with memcache.",
+        "homepage": "https://www.drupal.org/project/memcache",
+        "support": {
+            "source": "http://cgit.drupalcode.org/memcache"
+        }
     }
 ]
