@@ -4610,5 +4610,56 @@
         "support": {
             "source": "http://cgit.drupalcode.org/memcache"
         }
+    },
+    {
+        "name": "drupal/menu_block",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/menu_block",
+            "reference": "04537ceff184e0f5d4b2eec18ad9de342221565c"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.2+1-dev",
+                "datestamp": "1470903239"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Dave Reid",
+                "homepage": "https://www.drupal.org/user/53892"
+            },
+            {
+                "name": "JohnAlbin",
+                "homepage": "https://www.drupal.org/user/32095"
+            },
+            {
+                "name": "kim.pepper",
+                "homepage": "https://www.drupal.org/user/370574"
+            },
+            {
+                "name": "rrrob",
+                "homepage": "https://www.drupal.org/user/273533"
+            }
+        ],
+        "description": "Provides configurable blocks of menu links.",
+        "homepage": "https://www.drupal.org/project/menu_block",
+        "support": {
+            "source": "http://cgit.drupalcode.org/menu_block"
+        }
     }
 ]

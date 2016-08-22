@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8de9f20a6a82ff5ee4ea86085776adab",
-    "content-hash": "56f16ef0c64176ba1b70fb0995cbce43",
+    "hash": "808dbc282f77843d4c2ba8fe077d6358",
+    "content-hash": "a477cf13f141f0258624b6cbfc12e132",
     "packages": [
         {
             "name": "composer/installers",
@@ -764,6 +764,56 @@
                 "source": "http://cgit.drupalcode.org/memcache"
             },
             "time": "2016-06-07 13:12:58"
+        },
+        {
+            "name": "drupal/menu_block",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/menu_block",
+                "reference": "04537ceff184e0f5d4b2eec18ad9de342221565c"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2+1-dev",
+                    "datestamp": "1470903239"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "kim.pepper",
+                    "homepage": "https://www.drupal.org/user/370574"
+                },
+                {
+                    "name": "rrrob",
+                    "homepage": "https://www.drupal.org/user/273533"
+                }
+            ],
+            "description": "Provides configurable blocks of menu links.",
+            "homepage": "https://www.drupal.org/project/menu_block",
+            "support": {
+                "source": "http://cgit.drupalcode.org/menu_block"
+            },
+            "time": "2016-08-11 08:12:01"
         },
         {
             "name": "drupal/pathauto",
@@ -4478,7 +4528,8 @@
         "drupal/ctools": 20,
         "drupal/pathauto": 20,
         "drupal/diff": 20,
-        "drupal/memcache": 20
+        "drupal/memcache": 20,
+        "drupal/menu_block": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
