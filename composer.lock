@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c707b1aa242c66413fc4c7e7f26df0ef",
-    "content-hash": "de591be81a405001a800fc0797c7761d",
+    "hash": "4125bfbb222cf2cb88b3fb0d26837af1",
+    "content-hash": "abe42dbf8db3dd6d9f8623f22291890d",
     "packages": [
         {
             "name": "composer/installers",
@@ -710,6 +710,91 @@
                 "source": "http://cgit.drupalcode.org/diff"
             },
             "time": "2016-08-17 22:32:39"
+        },
+        {
+            "name": "drupal/file_entity",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/file_entity",
+                "reference": "1af9fe03f47e308c1118fd9e0e698da719a56b7c"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "suggest": {
+                "drupal/pathauto": "Required by drupal/file_entity"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-beta1+1-dev",
+                    "datestamp": "1470642539"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Devin Carlson",
+                    "homepage": "https://www.drupal.org/user/290182"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "Drupal media CI",
+                    "homepage": "https://www.drupal.org/user/3057985"
+                },
+                {
+                    "name": "JacobSingh",
+                    "homepage": "https://www.drupal.org/user/68912"
+                },
+                {
+                    "name": "ParisLiakos",
+                    "homepage": "https://www.drupal.org/user/1011436"
+                },
+                {
+                    "name": "aaron",
+                    "homepage": "https://www.drupal.org/user/33420"
+                },
+                {
+                    "name": "arthurf",
+                    "homepage": "https://www.drupal.org/user/27259"
+                },
+                {
+                    "name": "effulgentsia",
+                    "homepage": "https://www.drupal.org/user/78040"
+                },
+                {
+                    "name": "robeano",
+                    "homepage": "https://www.drupal.org/user/67660"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Extends Drupal file entities to be fieldable and viewable.",
+            "homepage": "https://www.drupal.org/project/file_entity",
+            "support": {
+                "source": "http://cgit.drupalcode.org/file_entity"
+            },
+            "time": "2016-08-08 07:44:09"
         },
         {
             "name": "drupal/memcache",
@@ -4579,7 +4664,8 @@
         "drupal/diff": 20,
         "drupal/memcache": 20,
         "drupal/menu_block": 20,
-        "drupal/metatag": 20
+        "drupal/metatag": 20,
+        "drupal/file_entity": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
