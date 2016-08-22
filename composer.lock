@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8bf66069edfe3cbb6d39cdc115a611dc",
-    "content-hash": "eccfea71154e1e61da0bff16a1847fde",
+    "hash": "e1b7cc2d6073d78330be57c10697c255",
+    "content-hash": "58ee7d0f57e19a8d876411550e98c278",
     "packages": [
         {
             "name": "composer/installers",
@@ -637,6 +637,58 @@
                 "source": "http://cgit.drupalcode.org/ctools"
             },
             "time": "2016-08-20 19:59:03"
+        },
+        {
+            "name": "drupal/pathauto",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/pathauto",
+                "reference": "05a0bc51694b70efb697b3c8b175f2884bff7b34"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/ctools": "*",
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3+16-dev",
+                    "datestamp": "1470567239"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Freso",
+                    "homepage": "https://www.drupal.org/user/27504"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                }
+            ],
+            "description": "Provides a mechanism for modules to automatically generate aliases for the content they manage.",
+            "homepage": "https://www.drupal.org/project/pathauto",
+            "support": {
+                "source": "http://cgit.drupalcode.org/pathauto"
+            },
+            "time": "2016-08-07 10:52:55"
         },
         {
             "name": "drupal/token",
@@ -4296,7 +4348,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/token": 20,
-        "drupal/ctools": 20
+        "drupal/ctools": 20,
+        "drupal/pathauto": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
