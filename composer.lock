@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5e14f057cfce03180014a6a75e38de6f",
-    "content-hash": "7d72dc63a3981fb6edb92f6786ba94b1",
+    "hash": "feea794f38081fc12f66ed2e93d615be",
+    "content-hash": "b719218bf07de2b1bbb9daa9fec58752",
     "packages": [
         {
             "name": "composer/installers",
@@ -560,6 +560,65 @@
                 "parser"
             ],
             "time": "2014-09-09 13:34:57"
+        },
+        {
+            "name": "drupal/token",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/token",
+                "reference": "8e11392d8c2daaf972bf37db9ad4887b2a07f238"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1+1-dev",
+                    "datestamp": "1471176539"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "eaton",
+                    "homepage": "https://www.drupal.org/user/16496"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Provides a user interface for the Token API and some missing core tokens.",
+            "homepage": "https://www.drupal.org/project/token",
+            "support": {
+                "source": "http://cgit.drupalcode.org/token",
+                "issues": "https://www.drupal.org/project/issues/token"
+            },
+            "time": "2016-08-14 12:04:10"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -4158,7 +4217,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/token": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
