@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e733126a4ac7e64865e00e9a3b9a0c19",
-    "content-hash": "59d6137366ff622854e89dabf969d907",
+    "hash": "b5e5f92dc1fb253c74bd1e19ef092eda",
+    "content-hash": "3f06b74bab00768760182507083e4d27",
     "packages": [
         {
             "name": "composer/installers",
@@ -948,6 +948,74 @@
                 "issues": "http://drupal.org/project/issues/metatag"
             },
             "time": "2016-08-22 17:45:58"
+        },
+        {
+            "name": "drupal/og",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/og",
+                "reference": "561f49b1a8384bcd032838772e51f09de3ee394d"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1471465439"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dries",
+                    "homepage": "https://www.drupal.org/user/1"
+                },
+                {
+                    "name": "Grayside",
+                    "homepage": "https://www.drupal.org/user/346868"
+                },
+                {
+                    "name": "Zen",
+                    "homepage": "https://www.drupal.org/user/21209"
+                },
+                {
+                    "name": "amitaibu",
+                    "homepage": "https://www.drupal.org/user/57511"
+                },
+                {
+                    "name": "dww",
+                    "homepage": "https://www.drupal.org/user/46549"
+                },
+                {
+                    "name": "merlinofchaos",
+                    "homepage": "https://www.drupal.org/user/26979"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                },
+                {
+                    "name": "sethcohn",
+                    "homepage": "https://www.drupal.org/user/14944"
+                }
+            ],
+            "description": "API to allow associating content with groups.",
+            "homepage": "https://drupal.org/project/og",
+            "support": {
+                "source": "https://cgit.drupalcode.org/og",
+                "issues": "https://drupal.org/project/issues/og",
+                "irc": "irc://irc.freenode.org/drupal-og"
+            },
+            "time": "2016-08-17 18:09:56"
         },
         {
             "name": "drupal/pathauto",
@@ -4724,7 +4792,8 @@
         "drupal/menu_block": 20,
         "drupal/metatag": 20,
         "drupal/file_entity": 20,
-        "drupal/scheduler": 20
+        "drupal/scheduler": 20,
+        "drupal/og": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

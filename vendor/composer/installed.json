@@ -4856,5 +4856,74 @@
             "source": "http://cgit.drupalcode.org/scheduler",
             "issues": "https://www.drupal.org/project/issues/scheduler"
         }
+    },
+    {
+        "name": "drupal/og",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/og",
+            "reference": "561f49b1a8384bcd032838772e51f09de3ee394d"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.x-dev",
+                "datestamp": "1471465439"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Dries",
+                "homepage": "https://www.drupal.org/user/1"
+            },
+            {
+                "name": "Grayside",
+                "homepage": "https://www.drupal.org/user/346868"
+            },
+            {
+                "name": "Zen",
+                "homepage": "https://www.drupal.org/user/21209"
+            },
+            {
+                "name": "amitaibu",
+                "homepage": "https://www.drupal.org/user/57511"
+            },
+            {
+                "name": "dww",
+                "homepage": "https://www.drupal.org/user/46549"
+            },
+            {
+                "name": "merlinofchaos",
+                "homepage": "https://www.drupal.org/user/26979"
+            },
+            {
+                "name": "moshe weitzman",
+                "homepage": "https://www.drupal.org/user/23"
+            },
+            {
+                "name": "sethcohn",
+                "homepage": "https://www.drupal.org/user/14944"
+            }
+        ],
+        "description": "API to allow associating content with groups.",
+        "homepage": "https://drupal.org/project/og",
+        "support": {
+            "source": "https://cgit.drupalcode.org/og",
+            "issues": "https://drupal.org/project/issues/og",
+            "irc": "irc://irc.freenode.org/drupal-og"
+        }
     }
 ]

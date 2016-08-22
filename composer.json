@@ -14,7 +14,8 @@
         "drupal/menu_block": "1.x-dev",
         "drupal/metatag": "1.x-dev",
         "drupal/file_entity": "2.x-dev",
-        "drupal/scheduler": "1.x-dev"
+        "drupal/scheduler": "1.x-dev",
+        "drupal/og": "1.x-dev"
     },
     "replace": {
         "drupal/core": "~8.1"
