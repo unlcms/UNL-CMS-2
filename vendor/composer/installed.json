@@ -4661,5 +4661,55 @@
         "support": {
             "source": "http://cgit.drupalcode.org/menu_block"
         }
+    },
+    {
+        "name": "drupal/metatag",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/metatag",
+            "reference": "c0610ad2ad9318298823c24db66b8769095910a3"
+        },
+        "require": {
+            "drupal/core": "*",
+            "drupal/token": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-beta10+0-dev",
+                "datestamp": "1471888139"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "See contributors",
+                "homepage": "https://www.drupal.org/node/640498/committers",
+                "role": "Developer"
+            },
+            {
+                "name": "Dave Reid",
+                "homepage": "https://www.drupal.org/user/53892"
+            }
+        ],
+        "description": "Manage meta tags for all entities.",
+        "homepage": "https://www.drupal.org/project/metatag",
+        "keywords": [
+            "php",
+            "seo"
+        ],
+        "support": {
+            "source": "http://cgit.drupalcode.org/metatag",
+            "issues": "http://drupal.org/project/issues/metatag"
+        }
     }
 ]

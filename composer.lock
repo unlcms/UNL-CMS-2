@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "808dbc282f77843d4c2ba8fe077d6358",
-    "content-hash": "a477cf13f141f0258624b6cbfc12e132",
+    "hash": "c707b1aa242c66413fc4c7e7f26df0ef",
+    "content-hash": "de591be81a405001a800fc0797c7761d",
     "packages": [
         {
             "name": "composer/installers",
@@ -814,6 +814,55 @@
                 "source": "http://cgit.drupalcode.org/menu_block"
             },
             "time": "2016-08-11 08:12:01"
+        },
+        {
+            "name": "drupal/metatag",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/metatag",
+                "reference": "c0610ad2ad9318298823c24db66b8769095910a3"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta10+0-dev",
+                    "datestamp": "1471888139"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/640498/committers",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                }
+            ],
+            "description": "Manage meta tags for all entities.",
+            "homepage": "https://www.drupal.org/project/metatag",
+            "keywords": [
+                "php",
+                "seo"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/metatag",
+                "issues": "http://drupal.org/project/issues/metatag"
+            },
+            "time": "2016-08-22 17:45:58"
         },
         {
             "name": "drupal/pathauto",
@@ -4529,7 +4578,8 @@
         "drupal/pathauto": 20,
         "drupal/diff": 20,
         "drupal/memcache": 20,
-        "drupal/menu_block": 20
+        "drupal/menu_block": 20,
+        "drupal/metatag": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
