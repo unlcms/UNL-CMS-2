@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4125bfbb222cf2cb88b3fb0d26837af1",
-    "content-hash": "abe42dbf8db3dd6d9f8623f22291890d",
+    "hash": "e733126a4ac7e64865e00e9a3b9a0c19",
+    "content-hash": "59d6137366ff622854e89dabf969d907",
     "packages": [
         {
             "name": "composer/installers",
@@ -1000,6 +1000,64 @@
                 "source": "http://cgit.drupalcode.org/pathauto"
             },
             "time": "2016-08-07 10:52:55"
+        },
+        {
+            "name": "drupal/scheduler",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/scheduler",
+                "reference": "2f96be8816586f93599e6e791fc3244817d4a337"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "suggest": {
+                "drupal/date": "Required by drupal/scheduler"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1+27-dev",
+                    "datestamp": "1469714883"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Schaefer (Eric Schaefer)",
+                    "homepage": "https://www.drupal.org/u/eric-schaefer",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jonathan Smith (jonathan1055)",
+                    "homepage": "https://www.drupal.org/u/jonathan1055",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Pieter Frenssen (pfrenssen)",
+                    "homepage": "https://www.drupal.org/u/pfrenssen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Rick Manelius (rickmanelius)",
+                    "homepage": "https://www.drupal.org/u/rickmanelius",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Automatically publish and unpublish content at specified dates and times.",
+            "homepage": "https://drupal.org/project/scheduler",
+            "support": {
+                "source": "http://cgit.drupalcode.org/scheduler",
+                "issues": "https://www.drupal.org/project/issues/scheduler"
+            },
+            "time": "2016-07-27 14:10:28"
         },
         {
             "name": "drupal/token",
@@ -4665,7 +4723,8 @@
         "drupal/memcache": 20,
         "drupal/menu_block": 20,
         "drupal/metatag": 20,
-        "drupal/file_entity": 20
+        "drupal/file_entity": 20,
+        "drupal/scheduler": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
