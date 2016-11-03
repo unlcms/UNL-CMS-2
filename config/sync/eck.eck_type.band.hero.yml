@@ -1,0 +1,9 @@
+uuid: d51a7944-0afb-4870-ae65-73a57e888226
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.band
+name: Hero
+type: hero
+description: 'This is a WDN hero.'

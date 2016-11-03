@@ -1,0 +1,22 @@
+uuid: 858967a6-620f-4bbf-a900-0fd1b0be80c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: unl_fourone_breadcrumbs
+theme: unl_fourone
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

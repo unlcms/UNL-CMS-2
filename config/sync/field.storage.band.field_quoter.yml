@@ -1,0 +1,21 @@
+uuid: b11244f6-35fd-4390-9694-5afe41a43c03
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: band.field_quoter
+field_name: field_quoter
+entity_type: band
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

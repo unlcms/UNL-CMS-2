@@ -1,0 +1,22 @@
+uuid: 4c1866b9-eebb-4d35-b2ea-a0fa3c4275ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: unl_fourone_content
+theme: unl_fourone
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

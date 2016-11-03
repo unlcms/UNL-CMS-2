@@ -1,0 +1,10 @@
+uuid: dc2ef028-befa-459e-beaf-2dfa5a56193a
+langcode: en
+status: true
+dependencies:
+  module:
+    - shortcut
+id: shortcut.token
+label: Token
+targetEntityType: shortcut
+cache: true

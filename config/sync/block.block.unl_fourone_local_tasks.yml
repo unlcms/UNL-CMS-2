@@ -1,0 +1,22 @@
+uuid: 104fc5aa-aea1-4a39-bc30-5e8e1c57b753
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: unl_fourone_local_tasks
+theme: unl_fourone
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

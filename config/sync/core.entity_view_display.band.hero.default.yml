@@ -1,0 +1,33 @@
+uuid: e704f890-f9d9-48a9-8e2c-289f20757f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.band.hero
+    - field.field.band.hero.field_hero_image
+    - field.field.band.hero.field_hero_title
+  module:
+    - image
+id: band.hero.default
+targetEntityType: band
+bundle: hero
+mode: default
+content:
+  field_hero_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_hero_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  id: true
+  langcode: true

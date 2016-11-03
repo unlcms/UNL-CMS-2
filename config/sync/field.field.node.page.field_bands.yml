@@ -1,0 +1,30 @@
+uuid: 800306ec-8291-4a41-a6cb-3a99564eff07
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.band.hero
+    - eck.eck_type.band.quote
+    - field.storage.node.field_bands
+    - node.type.page
+id: node.page.field_bands
+field_name: field_bands
+entity_type: node
+bundle: page
+label: Bands
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:band'
+  handler_settings:
+    target_bundles:
+      hero: hero
+      quote: quote
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: hero
+field_type: entity_reference

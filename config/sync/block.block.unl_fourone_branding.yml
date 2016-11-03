@@ -1,0 +1,25 @@
+uuid: c750273b-524a-43fe-8e3c-c2a13fb761e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: unl_fourone_branding
+theme: unl_fourone
+region: header
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

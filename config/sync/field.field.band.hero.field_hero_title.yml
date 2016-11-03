@@ -1,0 +1,19 @@
+uuid: f24f9fe0-3b06-4de4-8d6b-4399e6f800a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.band.hero
+    - field.storage.band.field_hero_title
+id: band.hero.field_hero_title
+field_name: field_hero_title
+entity_type: band
+bundle: hero
+label: 'Hero Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 8179005c-b306-4687-bb87-fad2ce0b4727
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: unl_fourone_help
+theme: unl_fourone
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: de7e538f-5ac6-41a8-89dc-97cd5fd9f540
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: unl_fourone_messages
+theme: unl_fourone
+region: header
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

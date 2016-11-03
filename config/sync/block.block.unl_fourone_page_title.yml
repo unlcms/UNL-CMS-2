@@ -1,0 +1,20 @@
+uuid: 066d55f2-ca4e-49e8-9df7-bf9a2332f9c6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: unl_fourone_page_title
+theme: unl_fourone
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

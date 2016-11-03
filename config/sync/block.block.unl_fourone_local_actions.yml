@@ -1,0 +1,20 @@
+uuid: 1d9e250a-f338-4d04-8653-c0b9c152680f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: unl_fourone_local_actions
+theme: unl_fourone
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

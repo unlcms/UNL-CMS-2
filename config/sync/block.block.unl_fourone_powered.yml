@@ -1,0 +1,22 @@
+uuid: b33e10c2-4275-4f6a-bd02-23817adc9483
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - unl_fourone
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: unl_fourone_powered
+theme: unl_fourone
+region: '-1'
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
