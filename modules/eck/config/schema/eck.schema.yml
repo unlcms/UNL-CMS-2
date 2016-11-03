@@ -1,0 +1,52 @@
+# Schema for the configuration files of the ECK module.
+
+# This schema tells the config system how to read the config YML files.
+
+eck.eck_entity_type.*:
+  type: mapping
+  label: 'ECK Entity Type'
+  mapping:
+    id:
+      type: string
+      label: 'Id'
+    label:
+      type: label
+      label: 'Name'
+    langcode:
+      type: string
+      label: 'Langcode'
+    status:
+      type: boolean
+      label: 'Status'
+    dependencies:
+      type: mapping
+      label: 'Dependencies'
+    uid:
+      type: boolean
+      label: 'Author'
+    created:
+      type: boolean
+      label: 'Created'
+    changed:
+      type: boolean
+      label: 'Changed'
+    title:
+      type: boolean
+      label: 'Title'
+    uuid:
+      type: string
+      label: 'uuid'
+
+eck.eck_type.*:
+  type: config_entity
+  label: 'ECK Entity bundle'
+  mapping:
+    name:
+      type: label
+      label: 'Name'
+    type:
+      type: string
+      label: 'Bundle machine name'
+    description:
+      type: text
+      label: 'Explanation or submission guidelines'
