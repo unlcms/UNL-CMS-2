@@ -50,3 +50,6 @@ sites/default/settings.php
 .DS_Store
 
 wdn
+
+profiles/unl_profile
+themes/custom

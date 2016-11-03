@@ -18,6 +18,9 @@ Replace all files except for
   - /sites
   - /themes
 
+Manually update the above files
+  - For example, update "drupal/core" in composer.json with the new version
+
 Run composer update drupal/core --with-dependencies
 
 Run update.php
