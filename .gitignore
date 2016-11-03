@@ -51,5 +51,5 @@ sites/default/settings.php
 
 wdn
 
-profiles/unl_profile
-themes/custom
+profiles
+themes

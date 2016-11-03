@@ -20,7 +20,8 @@
         "drupal/eck": "1.0-alpha1",
         "drupal/drupal_reset": "1.x-dev",
         "unlcms/unl_profile": "*",
-        "unlcms/unl_fourone": "*"
+        "unlcms/unl_fourone": "*",
+        "drupal/config_installer": "1.3"
     },
     "replace": {
         "drupal/core": "~8.2"

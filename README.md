@@ -1,6 +1,16 @@
 # Installation
 
-Run composer update drupal/core --with-dependencies
+  * Navigate to index.php and choose "Configuration installer" for the "installation profile"
+
+  * Edit sites/default/settings.php and add:
+
+  $config_directories = array(
+    CONFIG_SYNC_DIRECTORY => 'config/sync',
+  );
+
+  * Run $> composer update drupal/core --with-dependencies
+
+  * Run &> drush config-import
 
 
 # Update core
