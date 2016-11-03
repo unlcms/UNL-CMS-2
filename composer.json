@@ -15,7 +15,9 @@
         "drupal/metatag": "1.x-dev",
         "drupal/file_entity": "2.x-dev",
         "drupal/scheduler": "1.x-dev",
-        "drupal/og": "1.x-dev"
+        "drupal/og": "1.x-dev",
+        "drupal/inline_entity_form": "1.0-beta1",
+        "drupal/eck": "1.0-alpha1"
     },
     "replace": {
         "drupal/core": "~8.1"

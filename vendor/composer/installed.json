@@ -4925,5 +4925,142 @@
             "issues": "https://drupal.org/project/issues/og",
             "irc": "irc://irc.freenode.org/drupal-og"
         }
+    },
+    {
+        "name": "drupal/inline_entity_form",
+        "version": "1.0.0-beta1",
+        "version_normalized": "1.0.0.0-beta1",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/inline_entity_form",
+            "reference": "8.x-1.0-beta1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-beta1.zip",
+            "reference": "8.x-1.0-beta1",
+            "shasum": "185ffc28a7b68d19cce057855d1c111f1741a3ea"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "suggest": {
+            "drupal/entity_reference_revisions": "Required by drupal/inline_entity_form"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-beta1",
+                "datestamp": "1477868343"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "dawehner",
+                "homepage": "https://www.drupal.org/user/99340"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            },
+            {
+                "name": "slashrsm",
+                "homepage": "https://www.drupal.org/user/744628"
+            },
+            {
+                "name": "webflo",
+                "homepage": "https://www.drupal.org/user/254778"
+            }
+        ],
+        "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
+        "homepage": "https://www.drupal.org/project/inline_entity_form",
+        "support": {
+            "source": "http://cgit.drupalcode.org/inline_entity_form"
+        }
+    },
+    {
+        "name": "drupal/eck",
+        "version": "1.0.0-alpha1",
+        "version_normalized": "1.0.0.0-alpha1",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/eck",
+            "reference": "8.x-1.0-alpha1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/eck-8.x-1.0-alpha1.zip",
+            "reference": null,
+            "shasum": "8db988a2aa6407b86311ace65379c9a208a3b0ac"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-alpha1",
+                "datestamp": "1453547639"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "acrazyanimal",
+                "homepage": "https://www.drupal.org/user/696648"
+            },
+            {
+                "name": "dpopdan",
+                "homepage": "https://www.drupal.org/user/2759811"
+            },
+            {
+                "name": "eric.napier",
+                "homepage": "https://www.drupal.org/user/501688"
+            },
+            {
+                "name": "fmizzell",
+                "homepage": "https://www.drupal.org/user/1312210"
+            },
+            {
+                "name": "legolasbo",
+                "homepage": "https://www.drupal.org/user/2480548"
+            },
+            {
+                "name": "mducharme",
+                "homepage": "https://www.drupal.org/user/616996"
+            },
+            {
+                "name": "mihai_brb",
+                "homepage": "https://www.drupal.org/user/2065978"
+            },
+            {
+                "name": "wjaspers",
+                "homepage": "https://www.drupal.org/user/813890"
+            }
+        ],
+        "description": "ECK (Entity Contruction Kit) allows users to create and administer entity types, bundles and entities from UI",
+        "homepage": "https://www.drupal.org/project/eck",
+        "support": {
+            "source": "http://cgit.drupalcode.org/eck"
+        }
     }
 ]
