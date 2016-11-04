@@ -8,8 +8,8 @@ _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
 id: unl_fourone_local_tasks
 theme: unl_fourone
-region: content
-weight: -7
+region: header
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:
