@@ -68,10 +68,14 @@
 
 # Managing configuration
 
+  * **git pull** so you have the latest /config version
+
   * Make sure your local dev site is using the latest config by running this from the site root $> drush config-import
 
   * Make configuration changes on a local dev site and run $> drush config-export
 
   * Commit changes to config dir
+  
+  * Do a pull request
 
   * On production run $> drush config-import
