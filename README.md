@@ -15,7 +15,19 @@
     CONFIG_SYNC_DIRECTORY => 'config/sync',
   );
 
-  * Run $> composer update drupal/core --with-dependencies
+  * Edit .htaccess and change
+  ``` 
+  # RewriteBase /
+  ```
+  to
+  ``` 
+  RewriteBase /workspace/UNL-CMS-2
+  ```
+
+  * Run
+  ```
+  composer update drupal/core --with-dependencies
+  ```
 
   * Do standard Drupal install
     - Navigate to /index.php
