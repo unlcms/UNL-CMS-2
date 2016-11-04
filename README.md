@@ -17,7 +17,16 @@
 
   * Run $> composer update drupal/core --with-dependencies
 
-  * Do standard Drupal install: Navigate to /index.php and choose "Configuration installer" for the "installation profile"
+  * Do standard Drupal install
+    - Navigate to /index.php
+    - Choose "Configuration installer" for the "installation profile"
+    - On "Configure site" set "Username" to "admin" and set "Email address" to a personal address so it doesn't conflict with your UNL email
+
+  * Run:
+```
+    sudo chmod 644 sites/default/settings.php
+    sudo chmod 644 sites/default/files/
+```
 
 
 # Update core
