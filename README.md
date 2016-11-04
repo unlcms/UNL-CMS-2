@@ -5,7 +5,7 @@
 
 # Installation
   
-  * Run:
+  * Run from the project root:
   ```
   ln -s /Library/WebServer/Documents/wdn wdn
   cp .htaccess.drupal-default .htaccess
@@ -64,8 +64,11 @@
   * Manually update the above files with the latest changes in the latest core version
     - For example, update "drupal/core" in composer.json with the new version
 
-  * Run composer update drupal/core --with-dependencies
-
+  * Run 
+  ```
+  composer update drupal/core --with-dependencies
+  ```
+  
   * Run update.php
 
 
