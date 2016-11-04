@@ -1,6 +1,6 @@
 # Requires
 
-  * Drush: http://docs.drush.org/en/master/install/
+  * Drush 8+: http://docs.drush.org/en/master/install/
   * Composer: https://getcomposer.org/download/
 
 # Installation
@@ -85,3 +85,7 @@
   * Do a pull request
 
   * On production run $> drush config-import
+
+# Useful drush commands
+
+  * Cache rebuild: drush cr
