@@ -1,6 +1,11 @@
 # Installation
-
-  * Navigate to index.php and choose "Configuration installer" for the "installation profile"
+  
+  * Run:
+    $> cp .htaccess.drupal-default .htaccess
+    $> cp sites/default/default.settings.php sites/default/settings.php
+    $> mkdir sites/default/files
+    $> sudo chmod 777 sites/default/settings.php
+    $> sudo chmod 777 sites/default/files/
 
   * Edit sites/default/settings.php and add:
 
@@ -10,7 +15,7 @@
 
   * Run $> composer update drupal/core --with-dependencies
 
-  * Run &> drush config-import
+  * Do standard Drupal install: Navigate to /index.php and choose "Configuration installer" for the "installation profile"
 
 
 # Update core
