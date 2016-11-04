@@ -1,13 +1,15 @@
 # Installation
   
   * Run:
-```
-    cp .htaccess.drupal-default .htaccess
-    cp sites/default/default.settings.php sites/default/settings.php
-    mkdir sites/default/files
-    sudo chmod 777 sites/default/settings.php
-    sudo chmod 777 sites/default/files/
-```
+  ```
+  ln -s /Library/WebServer/Documents/wdn wdn
+  cp .htaccess.drupal-default .htaccess
+  cp sites/default/default.settings.php sites/default/settings.php
+  mkdir sites/default/files
+  sudo chown _www sites/default/files
+  sudo chmod 777 sites/default/settings.php
+  sudo chmod 777 sites/default/files
+  ```
 
   * Edit sites/default/settings.php and add:
 
@@ -36,8 +38,8 @@
 
   * Run:
 ```
-    sudo chmod 644 sites/default/settings.php
-    sudo chmod 644 sites/default/files/
+    sudo chmod 755 sites/default/settings.php
+    sudo chmod 755 sites/default/files/
 ```
 
 
