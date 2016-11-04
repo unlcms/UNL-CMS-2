@@ -1,3 +1,8 @@
+# Requires
+
+  * Drush: http://docs.drush.org/en/master/install/
+  * Composer: https://getcomposer.org/download/
+
 # Installation
   
   * Run:
