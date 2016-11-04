@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "183bbaefe523e3675ee2eaacbee2729c",
-    "content-hash": "5e3439c7c56a552544fd25b69d5ce4ae",
+    "hash": "e0c601222245394ffe98acb2534c1dfe",
+    "content-hash": "cbfdd9f2ad53f7cacc5f87fcc5fb5ece",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -684,7 +684,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/config_installer-8.x-1.3.zip",
-                "reference": null,
+                "reference": "8.x-1.3",
                 "shasum": "1507bca7a9f7d5a8ca759b8d717d055629b8f045"
             },
             "require": {
@@ -717,11 +717,17 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "dev-3.x",
+            "version": "3.0.0-alpha27",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/ctools",
-                "reference": "231e2649678d58901368a9e5681f36865ce84e73"
+                "reference": "8.x-3.0-alpha27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha27.zip",
+                "reference": null,
+                "shasum": "3e069c46902dd05c2a4e0caf7b185942e9b53238"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -735,7 +741,7 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha27+0-dev",
+                    "version": "8.x-3.0-alpha27",
                     "datestamp": "1471723439"
                 }
             },
@@ -789,16 +795,21 @@
             "homepage": "https://www.drupal.org/project/ctools",
             "support": {
                 "source": "http://cgit.drupalcode.org/ctools"
-            },
-            "time": "2016-08-20 19:59:03"
+            }
         },
         {
             "name": "drupal/diff",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/diff",
-                "reference": "394fd485965301066c1a0f35788e5bd7b44d19fe"
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/diff-8.x-1.0-beta2.zip",
+                "reference": null,
+                "shasum": "efd25beac74fabace6e013858862a13cd517f3e4"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -810,8 +821,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta2+10-dev",
-                    "datestamp": "1478039039"
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1476455639"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -866,8 +877,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/diff",
                 "issues": "https://www.drupal.org/project/issues/diff"
-            },
-            "time": "2016-11-01 22:22:35"
+            }
         },
         {
             "name": "drupal/drupal_reset",
@@ -930,7 +940,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/eck-8.x-1.0-alpha1.zip",
-                "reference": "8.x-1.0-alpha1",
+                "reference": null,
                 "shasum": "8db988a2aa6407b86311ace65379c9a208a3b0ac"
             },
             "require": {
@@ -992,11 +1002,17 @@
         },
         {
             "name": "drupal/file_entity",
-            "version": "dev-2.x",
+            "version": "2.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/file_entity",
-                "reference": "92a7256313453f5aa2a35630dfcdffc76d40c06a"
+                "reference": "8.x-2.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/file_entity-8.x-2.0-beta3.zip",
+                "reference": null,
+                "shasum": "999624a08aeb23e759b2b4a682c5086eb6d87707"
             },
             "require": {
                 "drupal/core": "*",
@@ -1011,8 +1027,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-beta3+0-dev",
-                    "datestamp": "1477563839"
+                    "version": "8.x-2.0-beta3",
+                    "datestamp": "1477564141"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1073,8 +1089,7 @@
             "homepage": "https://www.drupal.org/project/file_entity",
             "support": {
                 "source": "http://cgit.drupalcode.org/file_entity"
-            },
-            "time": "2016-10-27 10:22:22"
+            }
         },
         {
             "name": "drupal/inline_entity_form",
@@ -1087,7 +1102,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-beta1.zip",
-                "reference": "8.x-1.0-beta1",
+                "reference": null,
                 "shasum": "185ffc28a7b68d19cce057855d1c111f1741a3ea"
             },
             "require": {
@@ -1140,11 +1155,17 @@
         },
         {
             "name": "drupal/memcache",
-            "version": "dev-2.x",
+            "version": "2.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/memcache",
-                "reference": "9e4c514b2aa63b6a8981e9a375de4e2fcaa100e3"
+                "reference": "8.x-2.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.0-alpha2.zip",
+                "reference": null,
+                "shasum": "dedad417e274e06a064e282135ce2f05b2c2c6ba"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1155,8 +1176,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha2+2-dev",
-                    "datestamp": "1475051939"
+                    "version": "8.x-2.0-alpha2",
+                    "datestamp": "1473758939"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1189,16 +1210,21 @@
             "homepage": "https://www.drupal.org/project/memcache",
             "support": {
                 "source": "http://cgit.drupalcode.org/memcache"
-            },
-            "time": "2016-09-28 08:38:34"
+            }
         },
         {
             "name": "drupal/menu_block",
-            "version": "dev-1.x",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/menu_block",
-                "reference": "c6195b4829e3687ccd7e635d6ab2ee15ac7ec9fd"
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.4.zip",
+                "reference": null,
+                "shasum": "fd8d559452a9e1e07de6fefd9955df6feadc943a"
             },
             "require": {
                 "drupal/core": "*"
@@ -1209,8 +1235,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.3+1-dev",
-                    "datestamp": "1473062639"
+                    "version": "8.x-1.4",
+                    "datestamp": "1473063239"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1239,16 +1265,21 @@
             "homepage": "https://www.drupal.org/project/menu_block",
             "support": {
                 "source": "http://cgit.drupalcode.org/menu_block"
-            },
-            "time": "2016-09-05 08:00:00"
+            }
         },
         {
             "name": "drupal/metatag",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/metatag",
-                "reference": "9d0ec8e682d9500ce5e4e7bb6f09d2d82e4c77b6"
+                "reference": "8.x-1.0-beta11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.0-beta11.zip",
+                "reference": null,
+                "shasum": "d73fb7ba41833bd8ccb9a661aafc47258b4c7e18"
             },
             "require": {
                 "drupal/core": "*",
@@ -1260,8 +1291,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta11+2-dev",
-                    "datestamp": "1477935239"
+                    "version": "8.x-1.0-beta11",
+                    "datestamp": "1477935218"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1288,8 +1319,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/metatag",
                 "issues": "http://drupal.org/project/issues/metatag"
-            },
-            "time": "2016-10-31 17:29:04"
+            }
         },
         {
             "name": "drupal/og",
@@ -1364,11 +1394,17 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/pathauto",
-                "reference": "9a1273789886dae163e6d6ddbc33b311bc9f7c1e"
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "0c8756d73d5b1f95419921926e8e55bc0c69e41b"
             },
             "require": {
                 "drupal/core": "*",
@@ -1381,8 +1417,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta1+2-dev",
-                    "datestamp": "1476280558"
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1474313339"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1411,16 +1447,21 @@
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
                 "source": "http://cgit.drupalcode.org/pathauto"
-            },
-            "time": "2016-10-12 14:18:39"
+            }
         },
         {
             "name": "drupal/scheduler",
-            "version": "dev-1.x",
+            "version": "1.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/scheduler",
-                "reference": "cc9325a41e4b13b3c54e36d362d976f684395db3"
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/scheduler-8.x-1.0-alpha2.zip",
+                "reference": null,
+                "shasum": "9d3e2b7b995734752b5c00ff7cec590d027820d1"
             },
             "require": {
                 "drupal/core": "*"
@@ -1434,8 +1475,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2+11-dev",
-                    "datestamp": "1476038639"
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1473923639"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1469,16 +1510,21 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/scheduler",
                 "issues": "https://www.drupal.org/project/issues/scheduler"
-            },
-            "time": "2016-10-09 18:39:21"
+            }
         },
         {
             "name": "drupal/token",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/token",
-                "reference": "724ccaa7a60f1aa7e8883e82de737115b0f73a3f"
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-beta2.zip",
+                "reference": null,
+                "shasum": "b838318eddf46e4f382489de5516ab916257c393"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1489,7 +1535,7 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta2+0-dev",
+                    "version": "8.x-1.0-beta2",
                     "datestamp": "1474367039"
                 }
             },
@@ -1528,8 +1574,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/token",
                 "issues": "https://www.drupal.org/project/issues/token"
-            },
-            "time": "2016-09-20 10:19:14"
+            }
         },
         {
             "name": "easyrdf/easyrdf",
@@ -3511,7 +3556,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "f92a5f5e34fb3e7661dcf7cdaa715c659f9c4d33"
+                "reference": "39fb7ee6a092eb2aa0552d20401460625c2f4329"
             },
             "type": "drupal-theme",
             "authors": [
@@ -3522,7 +3567,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2016-11-03 16:27:17"
+            "time": "2016-11-03 22:33:45"
         },
         {
             "name": "unlcms/unl_profile",
@@ -5398,15 +5443,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/token": 20,
-        "drupal/ctools": 20,
-        "drupal/pathauto": 20,
-        "drupal/diff": 20,
-        "drupal/memcache": 20,
-        "drupal/menu_block": 20,
-        "drupal/metatag": 20,
-        "drupal/file_entity": 20,
-        "drupal/scheduler": 20,
         "drupal/og": 20,
         "drupal/drupal_reset": 20
     },
