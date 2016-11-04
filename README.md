@@ -54,11 +54,9 @@
     - composer.json
     - composer.lock
     - robots.txt
-    - /modules
     - /sites
-    - /themes
 
-  * Manually update the above files
+  * Manually update the above files with the latest changes in the latest core version
     - For example, update "drupal/core" in composer.json with the new version
 
   * Run composer update drupal/core --with-dependencies
