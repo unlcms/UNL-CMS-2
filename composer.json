@@ -16,9 +16,6 @@
         "drupal/file_entity": "2.0-beta3",
         "drupal/scheduler": "1.0-alpha2",
         "drupal/og": "1.x-dev",
-        "drupal/inline_entity_form": "1.0-beta1",
-        "drupal/eck": "1.0-alpha1",
-        "drupal/drupal_reset": "1.x-dev",
         "unlcms/unl_profile": "*",
         "unlcms/unl_fourone": "*",
         "drupal/config_installer": "1.3"
