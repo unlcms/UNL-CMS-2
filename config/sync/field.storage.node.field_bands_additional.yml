@@ -1,0 +1,20 @@
+uuid: bff9865e-9d14-4c24-a998-30c04f2ac351
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+id: node.field_bands_additional
+field_name: field_bands_additional
+entity_type: node
+type: entity_reference
+settings:
+  target_type: band
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

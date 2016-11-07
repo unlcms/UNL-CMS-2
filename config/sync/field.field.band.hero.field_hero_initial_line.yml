@@ -1,17 +1,17 @@
-uuid: f24f9fe0-3b06-4de4-8d6b-4399e6f800a2
+uuid: 81ed3894-15ad-468d-b315-da486094ddc0
 langcode: en
 status: true
 dependencies:
   config:
     - eck.eck_type.band.hero
-    - field.storage.band.field_hero_title
-id: band.hero.field_hero_title
-field_name: field_hero_title
+    - field.storage.band.field_hero_initial_line
+id: band.hero.field_hero_initial_line
+field_name: field_hero_initial_line
 entity_type: band
 bundle: hero
-label: 'Hero Title'
+label: 'Hero Initial Line'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

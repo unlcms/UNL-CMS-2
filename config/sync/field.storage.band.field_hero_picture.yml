@@ -1,4 +1,4 @@
-uuid: 39517dad-96f7-4849-8349-8acb1e349b79
+uuid: b2b84b81-5fb9-47f2-b76e-55d2db5131fb
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - eck
     - file
     - image
-id: band.field_hero_image
-field_name: field_hero_image
+id: band.field_hero_picture
+field_name: field_hero_picture
 entity_type: band
 type: image
 settings:

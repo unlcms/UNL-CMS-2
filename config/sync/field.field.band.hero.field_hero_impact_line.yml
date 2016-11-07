@@ -1,0 +1,21 @@
+uuid: 88fd5374-d58b-4360-be5e-d4748bc6a121
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.band.hero
+    - field.storage.band.field_hero_impact_line
+id: band.hero.field_hero_impact_line
+field_name: field_hero_impact_line
+entity_type: band
+bundle: hero
+label: 'Hero Impact Line'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Headline
+default_value_callback: ''
+settings: {  }
+field_type: string

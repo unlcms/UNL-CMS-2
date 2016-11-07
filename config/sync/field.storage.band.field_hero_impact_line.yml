@@ -1,15 +1,15 @@
-uuid: a2024d4a-3450-4454-b7f1-00f1943a081f
+uuid: d6b54185-dc2f-41ff-805f-758aa00032a3
 langcode: en
 status: true
 dependencies:
   module:
     - eck
-id: band.field_hero_title
-field_name: field_hero_title
+id: band.field_hero_impact_line
+field_name: field_hero_impact_line
 entity_type: band
 type: string
 settings:
-  max_length: 64
+  max_length: 255
   is_ascii: false
   case_sensitive: false
 module: core

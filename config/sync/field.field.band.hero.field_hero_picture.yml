@@ -1,17 +1,17 @@
-uuid: 822992c0-3c04-48e6-8382-73fd1c1274ee
+uuid: 495e0f41-0326-45f3-8a3e-058e892b4fd2
 langcode: en
 status: true
 dependencies:
   config:
     - eck.eck_type.band.hero
-    - field.storage.band.field_hero_image
+    - field.storage.band.field_hero_picture
   module:
     - image
-id: band.hero.field_hero_image
-field_name: field_hero_image
+id: band.hero.field_hero_picture
+field_name: field_hero_picture
 entity_type: band
 bundle: hero
-label: 'Hero Image'
+label: 'Hero Picture'
 description: ''
 required: true
 translatable: false
@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
+  max_filesize: '800 KB'
   max_resolution: ''
   min_resolution: ''
   alt_field: true

@@ -1,0 +1,24 @@
+uuid: 5718dccc-e5e6-4ec4-ba46-a28b1ac160bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.bands
+  module:
+    - views
+  theme:
+    - unl_fourone
+id: views_block__bands_block_2
+theme: unl_fourone
+region: content_bottom
+weight: -6
+provider: null
+plugin: 'views_block:bands-block_2'
+settings:
+  id: 'views_block:bands-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

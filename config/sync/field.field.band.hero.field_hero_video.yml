@@ -1,0 +1,27 @@
+uuid: 9bfd2b42-1452-4b97-8342-b5d7f745d932
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.band.hero
+    - field.storage.band.field_hero_video
+  module:
+    - file
+id: band.hero.field_hero_video
+field_name: field_hero_video
+entity_type: band
+bundle: hero
+label: 'Hero Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp4
+  max_filesize: '2 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

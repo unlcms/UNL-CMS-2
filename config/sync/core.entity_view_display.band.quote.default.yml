@@ -20,18 +20,17 @@ content:
     type: basic_string
   field_quoter:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_quoter_context:
     weight: 2
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
 hidden:
   id: true
-  langcode: true
