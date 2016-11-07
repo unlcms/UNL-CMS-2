@@ -86,6 +86,10 @@
 
   * On production run $> drush config-import
 
+# Local devlopment
+
+  * Enable Twig debugging and disable caching: https://www.drupal.org/node/1903374
+
 # Useful drush commands
 
   * Cache rebuild: drush cr
