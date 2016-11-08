@@ -1,14 +1,12 @@
-uuid: 63da2085-13cc-434b-bb00-2b349c645e9a
+uuid: 3d18941b-31bb-4f43-9a53-7d476bfff8db
 langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.wysiwyg
   module:
     - ckeditor
-_core:
-  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
-format: basic_html
+format: wysiwyg
 editor: ckeditor
 settings:
   toolbar:
@@ -20,7 +18,7 @@ settings:
             - Bold
             - Italic
         -
-          name: Linking
+          name: Links
           items:
             - DrupalLink
             - DrupalUnlink
@@ -38,15 +36,11 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
-        -
-          name: Tools
-          items:
-            - Source
   plugins:
     language:
       language_list: un
     stylescombo:
-      styles: "figure.wdn-frame|wdn-frame\r\ndiv.clear-top|clear-top\r\na.wdn-button|wdn-button"
+      styles: ''
 image_upload:
   status: true
   scheme: public

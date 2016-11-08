@@ -1,0 +1,14 @@
+uuid: 29922ec9-729a-4a00-91d8-b64ca16d401f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.coder
+  module:
+    - user
+id: user_add_role_action.coder
+label: 'Add the Coder role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: coder

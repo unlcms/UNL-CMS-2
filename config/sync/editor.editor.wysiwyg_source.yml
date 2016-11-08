@@ -1,14 +1,12 @@
-uuid: 63da2085-13cc-434b-bb00-2b349c645e9a
+uuid: 50aa946a-cf84-4cca-a52f-f6e7e20220c9
 langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.wysiwyg_source
   module:
     - ckeditor
-_core:
-  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
-format: basic_html
+format: wysiwyg_source
 editor: ckeditor
 settings:
   toolbar:
@@ -20,7 +18,7 @@ settings:
             - Bold
             - Italic
         -
-          name: Linking
+          name: Links
           items:
             - DrupalLink
             - DrupalUnlink
@@ -46,7 +44,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "figure.wdn-frame|wdn-frame\r\ndiv.clear-top|clear-top\r\na.wdn-button|wdn-button"
+      styles: ''
 image_upload:
   status: true
   scheme: public

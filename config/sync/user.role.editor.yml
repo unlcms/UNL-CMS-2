@@ -1,0 +1,10 @@
+uuid: 4a00e309-b426-4b97-9258-2d6bd4bfdee2
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: -8
+is_admin: null
+permissions:
+  - 'use text format wysiwyg'

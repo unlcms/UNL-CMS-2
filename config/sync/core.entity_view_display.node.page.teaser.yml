@@ -27,3 +27,4 @@ content:
     weight: 101
 hidden:
   field_bands: true
+  field_bands_additional: true

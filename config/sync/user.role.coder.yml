@@ -1,0 +1,10 @@
+uuid: 7efd9006-aa73-4248-8ca1-3213dc02885f
+langcode: en
+status: true
+dependencies: {  }
+id: coder
+label: Coder
+weight: -7
+is_admin: null
+permissions:
+  - 'use text format wysiwyg_source'
