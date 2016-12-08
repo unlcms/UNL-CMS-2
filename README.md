@@ -1,16 +1,13 @@
-# Requires
-
-  * Drush 8+: http://docs.drush.org/en/master/install/
-  * Composer: https://getcomposer.org/download/
-
 # Installation
-  
+
+  * Install Composer: https://getcomposer.org/download/
+
   * Install the UNLedu Framework (https://github.com/unl/wdntemplates) separately and create a symlink to its 'wdn' directory.
   ```
   ln -s /Library/WebServer/Documents/wdn wdn
   ```
   
-  * Run from the project root:
+  * Clone this project and run from this project's root:
   ```
   cp .htaccess.drupal-default .htaccess
   cp sites/default/default.settings.php sites/default/settings.php
@@ -53,6 +50,8 @@
 
   * Enable the unl_cas module and create a user with your My.UNL uid (such as jdoe2) and make yourself an administrator. Logout and log back in with your UNL credentials.  The reason we create an admin user first, then create a second account is that the first user in a Drupal installation has special permisisons. We want to operate without that complexity. See https://www.drupal.org/node/540008
 
+  * That's it for installation. Instructions below are for additional site maintenance and updating tasks.
+
 # Update core
 
   * Download latest version from drupal.org
@@ -78,6 +77,8 @@
 
 
 # Managing configuration
+
+  * Requires Drush 8+: http://docs.drush.org/en/master/install/
 
   * **git pull** so you have the latest /config version
 
