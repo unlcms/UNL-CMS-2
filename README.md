@@ -3,35 +3,35 @@
 1. Install Composer: https://getcomposer.org/download/
   
 2. Clone this project and run from this project's root:
-```
+  ```
   cp .htaccess.drupal-default .htaccess
   cp sites/default/default.settings.php sites/default/settings.php
   mkdir sites/default/files
   sudo chown _www sites/default/files
   sudo chmod 777 sites/default/settings.php
   sudo chmod 777 sites/default/files
-```
-
+  ```
+  
 3. Edit sites/default/settings.php and add:
-```
+  ```
   $config_directories = array(
     CONFIG_SYNC_DIRECTORY => 'config/sync',
   );
-```
+  ```
 
 4. Edit .htaccess and change
-``` 
+  ``` 
   # RewriteBase /
-```
+  ```
   to
-``` 
+  ``` 
   RewriteBase /workspace/UNL-CMS-2
-```
+  ```
 
 5. Run
-```
+  ```
   composer update drupal/core --with-dependencies
-```
+  ```
 
 6. Do standard Drupal install
   * Navigate to /index.php
@@ -39,15 +39,15 @@
   * On "Configure site" set "Username" to "admin" and set "Email address" to a personal address so it doesn't conflict with your UNL email
 
 7. Run:
-```
+  ```
   sudo chmod 755 sites/default/settings.php
   sudo chmod 755 sites/default/files/
-```
+  ```
 
 8. Install the UNLedu Framework (https://github.com/unl/wdntemplates) separately and create a symlink to its 'wdn' directory.
-```
+  ```
   ln -s /Library/WebServer/Documents/wdn wdn
-```
+  ```
 
 9. Enable the unl_cas module and create a user with your My.UNL uid (such as jdoe2) and make yourself an administrator. Logout and log back in with your UNL credentials.  The reason we create an admin user first, then create a second account is that the first user in a Drupal installation has special permisisons. We want to operate without that complexity. See https://www.drupal.org/node/540008
 
