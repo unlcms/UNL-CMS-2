@@ -76,6 +76,20 @@
   
   * Run update.php
 
+# Adding a module
+
+  * Example $> composer require drupal/imce:1.4
+    where 1.4 is the version number portion of 8.x-1.4
+  * Enable the module in the UI and configure
+  * Export the configuration and commit using "Managing configuration" below
+  
+# Updating a module
+
+  * Edit composer.json and update the version number for the module you want
+  * Run $> composer update
+  * Make edits to the configuration in the Drupal UI if needed
+  * Follow "Managing configuration" below
+  * Once the module update is pushed to production, run update.php there
 
 # Managing configuration
 
