@@ -95,6 +95,7 @@
 
 # Local devlopment
 
+  * Disable Drupal 8 caching during development: https://www.drupal.org/node/2598914
   * Enable Twig debugging and disable caching: https://www.drupal.org/node/1903374
 
 # Useful drush commands
