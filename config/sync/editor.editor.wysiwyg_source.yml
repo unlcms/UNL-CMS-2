@@ -1,6 +1,6 @@
 uuid: 50aa946a-cf84-4cca-a52f-f6e7e20220c9
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - filter.format.wysiwyg_source

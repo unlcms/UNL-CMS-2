@@ -19,3 +19,4 @@ permissions:
   8: 'view files'
   9: 'create band entities'
   10: 'view any band entities'
+  11: 'use text format restricted_html'

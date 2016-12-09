@@ -14,7 +14,7 @@ filters:
     status: false
     weight: -50
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p> <h1> <pre>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p> <h1> <pre> <sup> <sub> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr>'
       filter_html_help: true
       filter_html_nofollow: false
   editor_file_reference:
@@ -56,7 +56,7 @@ filters:
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
-    status: true
+    status: false
     weight: -43
     settings: {  }
   filter_url:

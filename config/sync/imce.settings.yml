@@ -1,0 +1,12 @@
+abs_urls: false
+roles_profiles:
+  administrator:
+    public: admin
+  site_admin:
+    public: member
+  coder:
+    public: member
+  editor:
+    public: member
+_core:
+  default_config_hash: 6Wk4BLqlH9PdR3lPJohO4Ek3-uRJAgdfrVT4qWYXVMY

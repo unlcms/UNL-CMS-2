@@ -17,6 +17,8 @@ settings:
           items:
             - Bold
             - Italic
+            - Superscript
+            - Subscript
         -
           name: Links
           items:
@@ -30,19 +32,26 @@ settings:
         -
           name: Media
           items:
+            - Table
             - Blockquote
             - DrupalImage
         -
-          name: 'Block Formatting'
+          name: Formatting
           items:
             - Format
+            - PasteFromWord
+        -
+          name: Source
+          items:
+            - ShowBlocks
+            - Source
   plugins:
     language:
       language_list: un
     stylescombo:
       styles: ''
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''
