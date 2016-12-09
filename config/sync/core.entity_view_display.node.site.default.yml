@@ -1,0 +1,39 @@
+uuid: df771a86-84a8-416f-99af-8bd271b92202
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.site.body
+    - field.field.node.site.og_audience
+    - node.type.site
+  module:
+    - og
+    - text
+    - user
+id: node.site.default
+targetEntityType: node
+bundle: site
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+  og_audience:
+    label: above
+    type: entity_reference_label
+    settings:
+      link: true
+    weight: 102
+    third_party_settings: {  }
+  og_group:
+    weight: 0
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

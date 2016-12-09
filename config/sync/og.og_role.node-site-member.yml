@@ -1,0 +1,13 @@
+uuid: 62205270-65ec-4a56-8585-7415ecd4b941
+langcode: en
+status: true
+dependencies: {  }
+id: node-site-member
+label: Member
+weight: 1
+is_admin: null
+group_type: node
+group_bundle: site
+group_id: null
+permissions: {  }
+role_type: required

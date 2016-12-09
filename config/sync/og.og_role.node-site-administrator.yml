@@ -1,0 +1,13 @@
+uuid: 66a3530e-ae2b-47b2-bf36-bdd527e2d9b0
+langcode: en
+status: true
+dependencies: {  }
+id: node-site-administrator
+label: Administrator
+weight: 2
+is_admin: true
+group_type: node
+group_bundle: site
+group_id: null
+permissions: {  }
+role_type: null

@@ -1,0 +1,14 @@
+uuid: 0beafe84-570e-4cab-a539-02756bfd194b
+langcode: en
+status: true
+dependencies: {  }
+id: node-site-non-member
+label: Non-member
+weight: null
+is_admin: null
+group_type: node
+group_bundle: site
+group_id: null
+permissions:
+  - subscribe
+role_type: required

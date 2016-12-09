@@ -1,0 +1,18 @@
+uuid: 9a2f6564-7ef7-4b57-8cc1-b3072fb42e60
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Site
+type: site
+description: 'Create a new <em>site</em> for each section that should have it''s own site title and menu.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
