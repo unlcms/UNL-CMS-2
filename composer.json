@@ -25,7 +25,8 @@
         "drupal/eck": "1.0-alpha2",
         "drupal/inline_entity_form": "1.0-beta1",
         "drupal/easy_breadcrumb": "1.5",
-        "drupal/devel": "1.0-alpha1"
+        "drupal/devel": "1.0-alpha1",
+        "drupal/imce": "1.4"
     },
     "replace": {
         "drupal/core": "~8.2"
