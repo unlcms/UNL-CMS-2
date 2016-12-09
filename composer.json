@@ -16,6 +16,7 @@
         "drupal/file_entity": "2.0-beta3",
         "drupal/scheduler": "1.0-alpha2",
         "drupal/og": "1.x-dev",
+        "drupal/og_menu": "*",
         "unlcms/unl_profile": "*",
         "unlcms/unl_fourone": "*",
         "unlcms/unl_cas": "*",
@@ -64,6 +65,10 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "og_menu": {
+            "url": "https://github.com/ec-europa/og_menu.git",
+            "type": "git"
         },
         "unl_profile": {
             "url": "https://github.com/unlcms/unl_profile.git",
