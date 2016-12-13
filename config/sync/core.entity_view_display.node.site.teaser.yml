@@ -30,4 +30,5 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  og_audience: true
