@@ -824,7 +824,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha1",
-                    "datestamp": "1466970239"
+                    "datestamp": "1480796583"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1240,7 +1240,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/imce-8.x-1.4.zip",
-                "reference": null,
+                "reference": "8.x-1.4",
                 "shasum": "6276e11db0438f0ffc021c90c117c344f214256e"
             },
             "require": {
@@ -1473,7 +1473,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta11",
-                    "datestamp": "1477935218"
+                    "datestamp": "1478265227"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
