@@ -78,7 +78,10 @@
 
 # Adding a module
 
-  * Example $> composer require drupal/imce:1.4
+  * Example 
+  ```
+  composer require drupal/imce:1.4
+  ```
     where 1.4 is the version number portion of 8.x-1.4
   * Enable the module in the UI and configure
   * Export the configuration and commit using "Managing configuration" below
