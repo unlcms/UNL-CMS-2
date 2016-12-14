@@ -19,7 +19,7 @@
   );
   ```
 
-4. Edit .htaccess and change
+4. If installing in a directory such as http://localhost/workspace/UNL-CMS-2 edit .htaccess and change
   ``` 
   # RewriteBase /
   ```
