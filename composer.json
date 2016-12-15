@@ -24,9 +24,11 @@
         "drupal/eck": "1.0-alpha2",
         "drupal/inline_entity_form": "1.0-beta1",
         "drupal/easy_breadcrumb": "1.5",
-        "drupal/devel": "1.0-alpha1",
+        "drupal/devel": "1.0-beta1",
         "drupal/imce": "1.4",
-        "drupal/admin_toolbar": "1.18"
+        "drupal/admin_toolbar": "1.18",
+        "drupal/honeypot": "^1.23",
+        "drupal/webform": "5.0.0-beta2"
     },
     "replace": {
         "drupal/core": "~8.2"
