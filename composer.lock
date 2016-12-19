@@ -3841,7 +3841,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "59e3d9a89f0cc39c9e89a040aceb94f895e93abf"
+                "reference": "70277eb7f66a1827618d3adcd90d26e8cf5c655d"
             },
             "type": "drupal-theme",
             "authors": [
@@ -3852,7 +3852,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2016-11-08 22:24:43"
+            "time": "2016-12-16 23:44:51"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
