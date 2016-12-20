@@ -1,5 +1,5 @@
-include_home_segment: 1
-home_segment_title: UNL
+include_home_segment: 0
+home_segment_title: ''
 include_title_segment: 1
 language_path_prefix_as_segment: 0
 _core:
