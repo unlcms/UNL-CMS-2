@@ -1,9 +1,0 @@
-uuid: 82fa475b-bac1-4bfe-b9ec-3fed41befd73
-langcode: en
-status: true
-dependencies:
-  config:
-    - eck.eck_entity_type.band
-name: Quote
-type: quote
-description: 'This is a WDN quote.'

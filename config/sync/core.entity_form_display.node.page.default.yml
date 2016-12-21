@@ -4,12 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_bands
-    - field.field.node.page.field_bands_additional
     - field.field.node.page.og_audience
     - node.type.page
   module:
-    - inline_entity_form
     - og
     - path
     - text
@@ -33,30 +30,6 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-  field_bands:
-    weight: 7
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-  field_bands_additional:
-    weight: 9
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
   og_audience:
     type: og_complex
     settings:

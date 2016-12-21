@@ -16,7 +16,6 @@ module:
   diff: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
-  eck: 0
   editor: 0
   field: 0
   field_ui: 0
@@ -27,7 +26,6 @@ module:
   history: 0
   image: 0
   imce: 0
-  inline_entity_form: 0
   link: 0
   menu_ui: 0
   node: 0
