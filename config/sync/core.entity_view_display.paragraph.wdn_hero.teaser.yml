@@ -1,0 +1,35 @@
+uuid: 4a56f55a-669d-4b9e-9700-0928cfbda3a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.wdn_hero.field_hero_impact_line
+    - field.field.paragraph.wdn_hero.field_hero_initial_line
+    - field.field.paragraph.wdn_hero.field_hero_link
+    - field.field.paragraph.wdn_hero.field_hero_picture
+    - field.field.paragraph.wdn_hero.field_hero_video
+    - image.style.large
+    - paragraphs.paragraphs_type.wdn_hero
+  module:
+    - image
+id: paragraph.wdn_hero.teaser
+targetEntityType: paragraph
+bundle: wdn_hero
+mode: teaser
+content:
+  field_hero_picture:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  created: true
+  field_hero_impact_line: true
+  field_hero_initial_line: true
+  field_hero_link: true
+  field_hero_video: true
+  uid: true

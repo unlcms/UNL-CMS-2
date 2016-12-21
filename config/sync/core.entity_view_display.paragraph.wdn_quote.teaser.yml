@@ -1,0 +1,21 @@
+uuid: d6a76034-f085-40f2-b105-7b9745e58277
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.wdn_quote.field_quote
+    - field.field.paragraph.wdn_quote.field_quoter
+    - field.field.paragraph.wdn_quote.field_quoter_context
+    - paragraphs.paragraphs_type.wdn_quote
+id: paragraph.wdn_quote.teaser
+targetEntityType: paragraph
+bundle: wdn_quote
+mode: teaser
+content: {  }
+hidden:
+  created: true
+  field_quote: true
+  field_quoter: true
+  field_quoter_context: true
+  uid: true

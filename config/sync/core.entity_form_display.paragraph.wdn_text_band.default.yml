@@ -1,0 +1,26 @@
+uuid: 57cd4b77-f2fa-4cb2-9cfb-fa26b2301628
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wdn_text_band.field_body
+    - paragraphs.paragraphs_type.wdn_text_band
+  module:
+    - text
+id: paragraph.wdn_text_band.default
+targetEntityType: paragraph
+bundle: wdn_text_band
+mode: default
+content:
+  field_body:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+hidden:
+  created: true
+  status: true
+  uid: true

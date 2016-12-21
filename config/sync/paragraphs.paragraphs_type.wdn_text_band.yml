@@ -1,0 +1,6 @@
+uuid: 79e6e853-a365-4bfd-8821-83a153c8b3dd
+langcode: en
+status: true
+dependencies: {  }
+id: wdn_text_band
+label: 'Text Band'

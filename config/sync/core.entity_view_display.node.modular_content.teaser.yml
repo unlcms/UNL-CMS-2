@@ -7,13 +7,23 @@ dependencies:
     - field.field.node.modular_content.field_bands
     - node.type.modular_content
   module:
+    - entity_reference_revisions
     - user
 id: node.modular_content.teaser
 targetEntityType: node
 bundle: modular_content
 mode: teaser
 content:
+  field_bands:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: ''
+    third_party_settings: {  }
   links:
-    weight: 100
-hidden:
-  field_bands: true
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
