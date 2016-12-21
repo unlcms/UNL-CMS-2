@@ -53,7 +53,6 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
   seven: 0
   unl_fourone: 0
 _core:
