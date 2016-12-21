@@ -1,0 +1,6 @@
+uuid: dc28272b-1ef8-42ee-9cdd-75df70d7f389
+langcode: en
+status: true
+dependencies: {  }
+id: wdn_events
+label: Events

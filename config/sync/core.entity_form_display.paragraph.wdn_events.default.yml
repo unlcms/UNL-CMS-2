@@ -1,0 +1,25 @@
+uuid: 9bfed168-ba19-4855-aaa4-1dd1ca81f4de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wdn_events.field_events_link
+    - paragraphs.paragraphs_type.wdn_events
+  module:
+    - link
+id: paragraph.wdn_events.default
+targetEntityType: paragraph
+bundle: wdn_events
+mode: default
+content:
+  field_events_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden:
+  created: true
+  status: true
+  uid: true
