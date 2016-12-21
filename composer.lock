@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "75652ece572330dfb4f00b9831b95aa0",
-    "content-hash": "9b1f1993e0264ab105b3373415a86559",
+    "hash": "7a0067d0ec29db0f12f2ecaa64312212",
+    "content-hash": "ff93f65d005af4901ee326044914813b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1250,6 +1250,61 @@
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/exclude_node_title",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/exclude_node_title",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/exclude_node_title-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "04b307c90c71285f421f8727d5ba8fd84b3df066"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1452548339"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fizk",
+                    "homepage": "https://www.drupal.org/user/473174"
+                },
+                {
+                    "name": "gabrielu",
+                    "homepage": "https://www.drupal.org/user/279352"
+                },
+                {
+                    "name": "id.tarzanych",
+                    "homepage": "https://www.drupal.org/user/2776543"
+                },
+                {
+                    "name": "jordanpagewhite",
+                    "homepage": "https://www.drupal.org/user/3162067"
+                }
+            ],
+            "description": "Excludes a node title from display. It provides a checkbox on node-edit pages for easier exclusion. You can also exclude title display from teaser pages.",
+            "homepage": "https://www.drupal.org/project/exclude_node_title",
+            "support": {
+                "source": "http://cgit.drupalcode.org/exclude_node_title"
             }
         },
         {
