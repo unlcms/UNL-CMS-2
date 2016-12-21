@@ -1,0 +1,19 @@
+uuid: 1c979ce1-9081-47f8-90bd-f73beffeeb9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_initial_line
+    - paragraphs.paragraphs_type.wdn_hero
+id: paragraph.wdn_hero.field_hero_initial_line
+field_name: field_hero_initial_line
+entity_type: paragraph
+bundle: wdn_hero
+label: 'Hero Initial Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

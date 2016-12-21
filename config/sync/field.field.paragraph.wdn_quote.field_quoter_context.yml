@@ -1,0 +1,19 @@
+uuid: 2a2bc318-340c-45d0-baf7-ed073f6369d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quoter_context
+    - paragraphs.paragraphs_type.wdn_quote
+id: paragraph.wdn_quote.field_quoter_context
+field_name: field_quoter_context
+entity_type: paragraph
+bundle: wdn_quote
+label: 'Quoter Context'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

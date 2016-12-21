@@ -1,0 +1,19 @@
+uuid: 47881b7f-e56b-4c21-a81c-9a43d0d61a61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_impact_line
+    - paragraphs.paragraphs_type.wdn_hero
+id: paragraph.wdn_hero.field_hero_impact_line
+field_name: field_hero_impact_line
+entity_type: paragraph
+bundle: wdn_hero
+label: 'Hero Impact Line'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

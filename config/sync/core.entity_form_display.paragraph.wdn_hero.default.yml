@@ -1,0 +1,59 @@
+uuid: 3d5e3111-d9af-49e5-a6ce-d45bc954062f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wdn_hero.field_hero_impact_line
+    - field.field.paragraph.wdn_hero.field_hero_initial_line
+    - field.field.paragraph.wdn_hero.field_hero_link
+    - field.field.paragraph.wdn_hero.field_hero_picture
+    - field.field.paragraph.wdn_hero.field_hero_video
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.wdn_hero
+  module:
+    - file
+    - image
+    - link
+id: paragraph.wdn_hero.default
+targetEntityType: paragraph
+bundle: wdn_hero
+mode: default
+content:
+  field_hero_impact_line:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_hero_initial_line:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_hero_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_hero_picture:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_hero_video:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+hidden:
+  created: true
+  status: true
+  uid: true

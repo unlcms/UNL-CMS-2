@@ -1,0 +1,19 @@
+uuid: 52fbbb3f-7bb8-44b2-b543-ca9668b15246
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.modular_content.field_bands
+    - node.type.modular_content
+  module:
+    - user
+id: node.modular_content.teaser
+targetEntityType: node
+bundle: modular_content
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_bands: true

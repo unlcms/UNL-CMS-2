@@ -1,0 +1,23 @@
+uuid: b76471fd-08da-4c4d-b69e-6aa9315ccff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_link
+    - paragraphs.paragraphs_type.wdn_hero
+  module:
+    - link
+id: paragraph.wdn_hero.field_hero_link
+field_name: field_hero_link
+entity_type: paragraph
+bundle: wdn_hero
+label: 'Hero Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,19 @@
+uuid: ce78a369-0074-49ea-8788-0b9e533897fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote
+    - paragraphs.paragraphs_type.wdn_quote
+id: paragraph.wdn_quote.field_quote
+field_name: field_quote
+entity_type: paragraph
+bundle: wdn_quote
+label: Quote
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
