@@ -26,7 +26,9 @@
         "drupal/easy_breadcrumb": "1.5",
         "drupal/devel": "1.0-alpha1",
         "drupal/imce": "1.4",
-        "drupal/admin_toolbar": "1.18"
+        "drupal/admin_toolbar": "1.18",
+        "drupal/paragraphs": "1.0",
+        "drupal/entity_reference_revisions": "1.0"
     },
     "replace": {
         "drupal/core": "~8.2"
