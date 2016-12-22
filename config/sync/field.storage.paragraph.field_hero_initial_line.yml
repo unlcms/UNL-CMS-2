@@ -1,0 +1,21 @@
+uuid: af36895d-c039-4260-a15e-c83f6c7ab8ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_hero_initial_line
+field_name: field_hero_initial_line
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

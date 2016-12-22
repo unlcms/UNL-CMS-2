@@ -1,0 +1,22 @@
+uuid: 0727f2eb-ca0f-4541-8d8c-7964f8c4f92a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.wdn_text_band
+  module:
+    - text
+id: paragraph.wdn_text_band.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: wdn_text_band
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

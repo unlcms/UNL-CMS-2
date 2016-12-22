@@ -1,0 +1,27 @@
+uuid: d51bd819-a644-457f-9911-ea7305860218
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_video
+    - paragraphs.paragraphs_type.wdn_hero
+  module:
+    - file
+id: paragraph.wdn_hero.field_hero_video
+field_name: field_hero_video
+entity_type: paragraph
+bundle: wdn_hero
+label: 'Hero Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: video/hero
+  file_extensions: mp4
+  max_filesize: '3 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

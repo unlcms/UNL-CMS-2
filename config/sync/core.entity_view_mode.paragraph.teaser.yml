@@ -1,0 +1,10 @@
+uuid: c035c674-3468-41ac-957c-e287e3713e5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.teaser
+label: Teaser
+targetEntityType: paragraph
+cache: true

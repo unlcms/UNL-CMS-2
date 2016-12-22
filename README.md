@@ -1,6 +1,6 @@
 # Installation
 
-1. Install Composer: https://getcomposer.org/download/
+1. Install Composer (https://getcomposer.org/download/) and Drush version 8+ (http://docs.drush.org/en/master/install/)
   
 2. Clone this project and run from this project's root:
   ```
@@ -49,7 +49,12 @@
   ln -s /Library/WebServer/Documents/wdn wdn
   ```
 
-9. Enable the unl_cas module and create a user with your My.UNL uid (such as jdoe2) and make yourself an administrator. Logout and log back in (/user/login) with your UNL credentials.  The reason we create an admin user first, then create a second account is that the first user in a Drupal installation has special permisisons. We want to operate without that complexity. See https://www.drupal.org/node/540008
+9. Run:
+  ```
+  drush user-create jdoe2
+  drush user-add-role "administrator" jdoe2
+  ```
+  The reason we create an admin user first, then create a second account is that the first user in a Drupal installation has special permisisons. We want to operate without that complexity. See https://www.drupal.org/node/540008
 
 10. That's it for installation. Instructions below are for additional site maintenance and updating tasks.
 
@@ -88,8 +93,7 @@
   
 # Updating a module
 
-  * Edit composer.json and update the version number for the module you want
-  * Run $> composer update
+  * Run command to update a module `composer update "vendor/module:version"`. For example: `composer update "unlcms/unl_cas"` as this will only update the specific module and nothing else.
   * Make edits to the configuration in the Drupal UI if needed
   * Follow "Managing configuration" below
   * Once the module update is pushed to production, run update.php there

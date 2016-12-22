@@ -1,0 +1,25 @@
+uuid: de784e65-88a2-4cc1-84af-0b9d190696ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.wdn_text_band.field_body
+    - paragraphs.paragraphs_type.wdn_text_band
+  module:
+    - text
+id: paragraph.wdn_text_band.teaser
+targetEntityType: paragraph
+bundle: wdn_text_band
+mode: teaser
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_summary_or_trimmed
+hidden:
+  created: true
+  uid: true

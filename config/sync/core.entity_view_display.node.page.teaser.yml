@@ -28,3 +28,4 @@ content:
 hidden:
   field_bands: true
   field_bands_additional: true
+  og_audience: true

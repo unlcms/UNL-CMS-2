@@ -1,0 +1,17 @@
+uuid: ffec000c-aac8-43f4-92ab-0a38186e37ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.wdn_events.field_events_link
+    - paragraphs.paragraphs_type.wdn_events
+id: paragraph.wdn_events.teaser
+targetEntityType: paragraph
+bundle: wdn_events
+mode: teaser
+content: {  }
+hidden:
+  created: true
+  field_events_link: true
+  uid: true

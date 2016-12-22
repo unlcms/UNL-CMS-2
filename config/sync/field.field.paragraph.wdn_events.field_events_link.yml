@@ -1,0 +1,28 @@
+uuid: ce62f503-736a-4a9e-a9cd-1e30421a0d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_events_link
+    - paragraphs.paragraphs_type.wdn_events
+  module:
+    - link
+id: paragraph.wdn_events.field_events_link
+field_name: field_events_link
+entity_type: paragraph
+bundle: wdn_events
+label: 'Events Link'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://events.unl.edu/yourcalendar/'
+    title: ''
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

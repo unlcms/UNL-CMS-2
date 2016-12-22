@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "117714208e301aba99149c815a1d24e3",
-    "content-hash": "267eca7613e9ed1aa942864ea5d66994",
+    "hash": "ab04ff9f3894e4dae81af52b53555641",
+    "content-hash": "dc2e35b3d1008a7e63a3b1fdf5f69ba4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1199,6 +1199,115 @@
             }
         },
         {
+            "name": "drupal/entity_reference_revisions",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_reference_revisions",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0.zip",
+                "reference": null,
+                "shasum": "85d5c182208beb4358fe3943a624182f590d1e0d"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/diff": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1469725576"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "Adds a Entity Reference field type with revision support.",
+            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/exclude_node_title",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/exclude_node_title",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/exclude_node_title-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "04b307c90c71285f421f8727d5ba8fd84b3df066"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1452548339"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fizk",
+                    "homepage": "https://www.drupal.org/user/473174"
+                },
+                {
+                    "name": "gabrielu",
+                    "homepage": "https://www.drupal.org/user/279352"
+                },
+                {
+                    "name": "id.tarzanych",
+                    "homepage": "https://www.drupal.org/user/2776543"
+                },
+                {
+                    "name": "jordanpagewhite",
+                    "homepage": "https://www.drupal.org/user/3162067"
+                }
+            ],
+            "description": "Excludes a node title from display. It provides a checkbox on node-edit pages for easier exclusion. You can also exclude title display from teaser pages.",
+            "homepage": "https://www.drupal.org/project/exclude_node_title",
+            "support": {
+                "source": "http://cgit.drupalcode.org/exclude_node_title"
+            }
+        },
+        {
             "name": "drupal/file_entity",
             "version": "2.0.0-beta3",
             "source": {
@@ -1300,7 +1409,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.23.zip",
-                "reference": "8.x-1.23",
+                "reference": null,
                 "shasum": "a822b1d1926a85248eb40902ab7027796ce41db1"
             },
             "require": {
@@ -1620,7 +1729,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/og",
-                "reference": "da89731c0ef4c7350fdbb03ad804ac0dc2ade5a1"
+                "reference": "c75de3a0a59de375106cb50d1e5d6e96f1bb1858"
             },
             "require": {
                 "drupal/core": "*"
@@ -1635,7 +1744,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1481826783"
+                    "datestamp": "1481908384"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1683,7 +1792,7 @@
                 "issues": "https://drupal.org/project/issues/og",
                 "irc": "irc://irc.freenode.org/drupal-og"
             },
-            "time": "2016-12-15 10:32:43"
+            "time": "2016-12-16 17:09:06"
         },
         {
             "name": "drupal/og_menu",
@@ -1704,6 +1813,68 @@
                 "source": "https://cgit.drupalcode.org/og_menu"
             },
             "time": "2016-11-30 08:15:41"
+        },
+        {
+            "name": "drupal/paragraphs",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/paragraphs",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.0.zip",
+                "reference": null,
+                "shasum": "4fcbd6a50f5b725a9ba66ee105d6f8a1385ff2c8"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/entity_reference_revisions": "*"
+            },
+            "require-dev": {
+                "drupal/diff": "*",
+                "drupal/replicate": "*",
+                "drupal/search_api": "*",
+                "drupal/search_api_db": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1469726249"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "Enables the creation of paragraphs entities. To safely uninstall, go first to Structure > Paragraphs types > Settings.",
+            "homepage": "https://www.drupal.org/project/paragraphs",
+            "support": {
+                "source": "http://cgit.drupalcode.org/paragraphs"
+            }
         },
         {
             "name": "drupal/pathauto",
@@ -1760,6 +1931,57 @@
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
                 "source": "http://cgit.drupalcode.org/pathauto"
+            }
+        },
+        {
+            "name": "drupal/purge",
+            "version": "3.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/purge",
+                "reference": "8.x-3.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0-beta6.zip",
+                "reference": null,
+                "shasum": "9d40630d796a95b289ea8ce9518b668f229febe5"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-beta6",
+                    "datestamp": "1477484639"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "SqyD",
+                    "homepage": "https://www.drupal.org/user/106525"
+                },
+                {
+                    "name": "djbobbydrake",
+                    "homepage": "https://www.drupal.org/user/336378"
+                },
+                {
+                    "name": "nielsvm",
+                    "homepage": "https://www.drupal.org/user/163285"
+                }
+            ],
+            "description": "Provides a generic external cache invalidation API and queue service.",
+            "homepage": "https://www.drupal.org/project/purge",
+            "support": {
+                "source": "http://cgit.drupalcode.org/purge"
             }
         },
         {
@@ -1890,6 +2112,57 @@
             }
         },
         {
+            "name": "drupal/varnish_purge",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/varnish_purge",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.4.zip",
+                "reference": null,
+                "shasum": "23af511919141850be8ade0965d72ad4df33d007"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/purge": "*",
+                "drupal/purge_tokens": "*",
+                "drupal/varnish_purger": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1473445439"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "MiSc",
+                    "homepage": "https://www.drupal.org/user/382892"
+                },
+                {
+                    "name": "deadbeef",
+                    "homepage": "https://www.drupal.org/user/93644"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/varnish_purge",
+            "support": {
+                "source": "http://cgit.drupalcode.org/varnish_purge"
+            }
+        },
+        {
             "name": "drupal/webform",
             "version": "5.0.0-beta2",
             "source": {
@@ -1906,9 +2179,8 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/core": "Required by drupal/webform_node",
-                "drupal/devel": "Required by drupal/webform_devel"
+            "require-dev": {
+                "drupal/devel": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1917,7 +2189,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.0-beta2",
-                    "datestamp": "1481192283"
+                    "datestamp": "1482316383"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2192,28 +2464,28 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "2693c101803ca78b27972d84081d027fca790a1e"
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/2693c101803ca78b27972d84081d027fca790a1e",
-                "reference": "2693c101803ca78b27972d84081d027fca790a1e",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2239,7 +2511,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-11-18 17:47:58"
+            "time": "2016-12-20 10:07:11"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -3955,7 +4227,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_cas.git",
-                "reference": "b249dc7be25d022cacb7f9dfdf9cfb3bff9dde0b"
+                "reference": "eeab3cd2eec268ebbb15d3901aa8352bcf9197f2"
             },
             "type": "drupal-module",
             "authors": [
@@ -3966,7 +4238,7 @@
                 }
             ],
             "description": "login.unl.edu integration",
-            "time": "2016-12-08 23:02:06"
+            "time": "2016-12-20 17:33:16"
         },
         {
             "name": "unlcms/unl_fourone",
@@ -3974,7 +4246,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "59e3d9a89f0cc39c9e89a040aceb94f895e93abf"
+                "reference": "4721f16e673a3d339af7ec2c7d72de2ec68b97a8"
             },
             "type": "drupal-theme",
             "authors": [
@@ -3985,7 +4257,26 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2016-11-08 22:24:43"
+            "time": "2016-12-22 19:04:10"
+        },
+        {
+            "name": "unlcms/unl_purge_processor",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unlcms/unl_purge_processor.git",
+                "reference": "2d811c4f30c2df5fd9fdde9d6af0cfb110c95515"
+            },
+            "type": "drupal-module",
+            "authors": [
+                {
+                    "name": "Eric Rasmussen (ericras)",
+                    "homepage": "https://www.drupal.org/u/ericras",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Processes the queue when a node is saved.",
+            "time": "2016-12-22 19:31:29"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
@@ -5844,7 +6135,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/og": 20,
-        "drupal/drupal_reset": 20
+        "drupal/drupal_reset": 20,
+        "drupal/purge": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

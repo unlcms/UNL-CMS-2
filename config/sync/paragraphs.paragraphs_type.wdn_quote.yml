@@ -1,0 +1,6 @@
+uuid: 2a7c9b16-2dbd-403f-8687-fe2a9489ca86
+langcode: en
+status: true
+dependencies: {  }
+id: wdn_quote
+label: Quote

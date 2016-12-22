@@ -1,0 +1,31 @@
+uuid: dea90816-73e5-4e85-bce4-455d768442a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bands
+    - node.type.modular_content
+  module:
+    - entity_reference_revisions
+id: node.modular_content.field_bands
+field_name: field_bands
+entity_type: node
+bundle: modular_content
+label: Bands
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      wdn_hero:
+        weight: 3
+        enabled: false
+      wdn_quote:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

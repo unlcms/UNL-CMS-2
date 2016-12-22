@@ -1,0 +1,6 @@
+uuid: ecf33da1-aee7-456b-8608-f4e60aea6b13
+langcode: en
+status: true
+dependencies: {  }
+id: wdn_hero
+label: Hero
