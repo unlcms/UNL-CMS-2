@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a4b0323f0deb8c9d270092e9ce9601c",
-    "content-hash": "e4b012f9c2aa39f7ff3179fd1cb4f6fb",
+    "hash": "013dfd94461ca2654e92b53c69ac8fdb",
+    "content-hash": "df13b203e81bedebd245c470b22ea5db",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -884,7 +884,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha1",
-                    "datestamp": "1466970239"
+                    "datestamp": "1480796583"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1263,7 +1263,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/exclude_node_title-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta1",
                 "shasum": "04b307c90c71285f421f8727d5ba8fd84b3df066"
             },
             "require": {
@@ -1677,7 +1677,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/og",
-                "reference": "2f3f7ec5b42d8f6aa7f4e3e58192307ad01f26f1"
+                "reference": "c75de3a0a59de375106cb50d1e5d6e96f1bb1858"
             },
             "require": {
                 "drupal/core": "*"
@@ -1692,7 +1692,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1481221382"
+                    "datestamp": "1481908384"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1740,7 +1740,7 @@
                 "issues": "https://drupal.org/project/issues/og",
                 "irc": "irc://irc.freenode.org/drupal-og"
             },
-            "time": "2016-12-08 18:19:30"
+            "time": "2016-12-16 17:09:06"
         },
         {
             "name": "drupal/og_menu",
@@ -1781,6 +1781,7 @@
                 "drupal/entity_reference_revisions": "*"
             },
             "require-dev": {
+                "drupal/core": "*",
                 "drupal/diff": "*",
                 "drupal/replicate": "*",
                 "drupal/search_api": "*",
@@ -2070,7 +2071,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.4.zip",
-                "reference": null,
+                "reference": "8.x-1.4",
                 "shasum": "23af511919141850be8ade0965d72ad4df33d007"
             },
             "require": {
@@ -2332,28 +2333,28 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "2693c101803ca78b27972d84081d027fca790a1e"
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/2693c101803ca78b27972d84081d027fca790a1e",
-                "reference": "2693c101803ca78b27972d84081d027fca790a1e",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2379,7 +2380,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-11-18 17:47:58"
+            "time": "2016-12-20 10:07:11"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2585,16 +2586,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v1.4.1",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774"
+                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/c7e26a21ba357863de030f0b9e701c7d04593774",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
+                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
                 "shasum": ""
             },
             "require": {
@@ -2629,7 +2630,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-03-18 20:34:03"
+            "time": "2016-11-07 23:38:38"
         },
         {
             "name": "psr/http-message",
@@ -4114,7 +4115,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "70277eb7f66a1827618d3adcd90d26e8cf5c655d"
+                "reference": "f67240f5edc1f901759a3a7b5ad499fd4656f85b"
             },
             "type": "drupal-theme",
             "authors": [
@@ -4125,7 +4126,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2016-12-16 23:44:51"
+            "time": "2016-12-22 16:55:13"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
