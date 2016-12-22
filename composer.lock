@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "013dfd94461ca2654e92b53c69ac8fdb",
-    "content-hash": "df13b203e81bedebd245c470b22ea5db",
+    "hash": "81d9ddfbc4bd12d736f0c1b53f67ec1e",
+    "content-hash": "ab06af3e264c6f8ff0afaf9681a98d65",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1893,7 +1893,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0-beta6.zip",
-                "reference": "8.x-3.0-beta6",
+                "reference": null,
                 "shasum": "9d40630d796a95b289ea8ce9518b668f229febe5"
             },
             "require": {
@@ -2071,7 +2071,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.4.zip",
-                "reference": "8.x-1.4",
+                "reference": null,
                 "shasum": "23af511919141850be8ade0965d72ad4df33d007"
             },
             "require": {
@@ -4115,7 +4115,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "f67240f5edc1f901759a3a7b5ad499fd4656f85b"
+                "reference": "4721f16e673a3d339af7ec2c7d72de2ec68b97a8"
             },
             "type": "drupal-theme",
             "authors": [
@@ -4126,7 +4126,26 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2016-12-22 16:55:13"
+            "time": "2016-12-22 19:04:10"
+        },
+        {
+            "name": "unlcms/unl_purge_processor",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unlcms/unl_purge_processor.git",
+                "reference": "c1d93081b4f8560522770472830c489e204e5af4"
+            },
+            "type": "drupal-module",
+            "authors": [
+                {
+                    "name": "Eric Rasmussen (ericras)",
+                    "homepage": "https://www.drupal.org/u/ericras",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Processes the queue when a node is saved.",
+            "time": "2016-12-22 19:25:16"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
