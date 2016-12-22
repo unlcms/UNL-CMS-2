@@ -20,3 +20,4 @@ permissions:
   9: 'create band entities'
   10: 'view any band entities'
   11: 'use text format restricted_html'
+  12: 'use exclude node title'

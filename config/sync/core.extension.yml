@@ -18,6 +18,8 @@ module:
   easy_breadcrumb: 0
   eck: 0
   editor: 0
+  entity_reference_revisions: 0
+  exclude_node_title: 0
   field: 0
   field_ui: 0
   file: 0
@@ -64,7 +66,6 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
   seven: 0
   unl_fourone: 0
 _core:

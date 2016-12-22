@@ -16,3 +16,4 @@ permissions:
   - 'search content'
   - 'view files'
   - 'view any band entities'
+  - 'use exclude node title'

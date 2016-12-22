@@ -93,8 +93,7 @@
   
 # Updating a module
 
-  * Edit composer.json and update the version number for the module you want
-  * Run $> composer update
+  * Run command to update a module `composer update "vendor/module:version"`. For example: `composer update "unlcms/unl_cas"` as this will only update the specific module and nothing else.
   * Make edits to the configuration in the Drupal UI if needed
   * Follow "Managing configuration" below
   * Once the module update is pushed to production, run update.php there

@@ -8,3 +8,4 @@ weight: -6
 is_admin: null
 permissions:
   - 'use text format wysiwyg'
+  - 'use exclude node title'
