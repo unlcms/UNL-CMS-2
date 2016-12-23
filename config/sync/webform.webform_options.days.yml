@@ -1,0 +1,10 @@
+uuid: d3855e37-7ad8-411b-914b-78a2c9b023cf
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: days
+label: Days
+options: "Sunday: Sunday\nMonday: Monday\nTuesday: Tuesday\nWednesday: Wednesday\nThursday: Thursday\nFriday: Friday\nSaturday: Saturday\n"

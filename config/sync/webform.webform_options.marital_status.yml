@@ -1,0 +1,10 @@
+uuid: b134f954-dbce-4d12-89fd-eca584387e1f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: marital_status
+label: 'Marital status'
+options: "Single: Single\nMarried: Married\nDivorced: Divorced\nWidowed: Widowed\n"

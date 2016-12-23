@@ -1,0 +1,10 @@
+uuid: 65edf7b8-01ba-49d0-b9e8-f813c34473a2
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: likert_quality
+label: 'Likert: Quality'
+options: "1: Poor\n2: Fair\n3: Good\n4: Very good\n5: Excellent\n"

@@ -1,0 +1,10 @@
+uuid: f1576ef9-edc5-4413-a9fe-010cb6260e52
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: months
+label: Months
+options: "January: January\nFebruary: February\nMarch: March\nApril: April\nMay: May\nJune: June\nJuly: July\nAugust: August\nSeptember: September\nOctober: October\nNovember: November\nDecember: December\n"

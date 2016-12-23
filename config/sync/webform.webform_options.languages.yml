@@ -1,0 +1,10 @@
+uuid: bbb81a72-c03d-4f48-a964-a662a427fd76
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: languages
+label: Languages
+options: ''

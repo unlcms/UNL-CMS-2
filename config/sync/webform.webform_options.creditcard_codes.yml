@@ -1,0 +1,10 @@
+uuid: 8cfa6a74-817d-454b-9d2e-d5262f35d46b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: creditcard_codes
+label: 'Credit card codes'
+options: "VI: 'Visa'\nMC: 'Mastercard'\nAE: 'American Express'\nDC: 'Discover'\n"

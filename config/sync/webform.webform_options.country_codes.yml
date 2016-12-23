@@ -1,0 +1,10 @@
+uuid: 25274791-0e13-4f7f-893f-3cb0900ef47a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: country_codes
+label: 'Country codes'
+options: ''

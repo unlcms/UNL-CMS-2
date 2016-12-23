@@ -1,0 +1,10 @@
+uuid: e010a332-3931-49ce-ae56-e03bc1bdee95
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: country_names
+label: 'Country names'
+options: ''

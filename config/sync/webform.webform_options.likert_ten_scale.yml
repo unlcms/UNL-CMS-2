@@ -1,0 +1,10 @@
+uuid: b06d5c61-81a1-44ea-9ff8-df8dc1fe3324
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: likert_ten_scale
+label: 'Likert: Ten Scale'
+options: "1: 1\n2: 2\n3: 3\n4: 4\n5: 5\n6: 6\n7: 7\n8: 8\n9: 9\n10: 10\n"

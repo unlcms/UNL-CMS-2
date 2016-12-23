@@ -1,0 +1,10 @@
+uuid: 1524ceb8-86dd-49f3-9e00-a672fb216515
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: employment_status
+label: 'Employment status'
+options: "'Full Time': 'Full Time'\n'Part Time': 'Part Time'\n'Military': 'Military'\nUnemployed: Unemployed\nRetired: Retired\n"

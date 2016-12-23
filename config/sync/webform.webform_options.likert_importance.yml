@@ -1,0 +1,10 @@
+uuid: 5c38c612-7422-4c11-9a3a-1bcfd1760c13
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: likert_importance
+label: 'Likert: Importance'
+options: "1: Not at all Important\n2: Somewhat Important\n3: Neutral\n4: Important\n5: Very Important\n"
