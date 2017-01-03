@@ -1,0 +1,16 @@
+uuid: 59dd05f2-6e0a-4f92-9d90-500d18d3a10b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16x9_3200x1800
+label: '16:9 (3200×1800)'
+effects:
+  67ac3df0-4871-4a51-8807-55c65bd34104:
+    uuid: 67ac3df0-4871-4a51-8807-55c65bd34104
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 3200
+      height: 1800

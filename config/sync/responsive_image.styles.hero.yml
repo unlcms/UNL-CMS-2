@@ -1,0 +1,131 @@
+uuid: 9fa4cfef-26d2-48f6-a465-c143fb66767d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16x9_1152x648
+    - image.style.16x9_1280x720
+    - image.style.16x9_1440x810
+    - image.style.16x9_1536x864
+    - image.style.16x9_1600x900
+    - image.style.16x9_1920x1080
+    - image.style.16x9_2400x1350
+    - image.style.16x9_2560x1440
+    - image.style.16x9_3200x1800
+    - image.style.16x9_480x270
+    - image.style.16x9_640x360
+    - image.style.16x9_720x405
+    - image.style.16x9_768x432
+    - image.style.16x9_960x540
+  theme:
+    - unl_fourone
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp1600
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: 16x9_3200x1800
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp1600
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1920x1080
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp1600
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 16x9_3200x1800
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp1280
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: 16x9_2400x1350
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp1280
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1600x900
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp1280
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 16x9_3200x1800
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp960
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1920x1080
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp960
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1280x720
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp960
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 16x9_2560x1440
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp768
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1440x810
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp768
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 16x9_960x540
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp768
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1920x1080
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp640
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1152x648
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp640
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 16x9_768x432
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp640
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1536x864
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp480
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: 16x9_960x540
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp480
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 16x9_640x360
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.bp480
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 16x9_1280x720
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.base
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: 16x9_720x405
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.base
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 16x9_480x270
+  -
+    breakpoint_id: unl_fourone.wdn_breakpoints.base
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: 16x9_960x540
+breakpoint_group: wdn_breakpoints
+fallback_image_style: 16x9_480x270

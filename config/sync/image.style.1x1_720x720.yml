@@ -1,0 +1,16 @@
+uuid: dec49690-5a5d-4154-a7f0-d5e8e6399dad
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 1x1_720x720
+label: '1:1 (720×720)'
+effects:
+  a4889f01-3344-42b7-8839-b1a404a11724:
+    uuid: a4889f01-3344-42b7-8839-b1a404a11724
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 720

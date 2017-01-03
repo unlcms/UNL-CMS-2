@@ -1,0 +1,16 @@
+uuid: 1c5fbf52-8110-438e-bf11-bc0daf678c11
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 1x1_768x768
+label: '1:1 (768×768)'
+effects:
+  1149692e-aeeb-468c-b459-c0da50f53378:
+    uuid: 1149692e-aeeb-468c-b459-c0da50f53378
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 768

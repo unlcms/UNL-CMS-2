@@ -1,0 +1,16 @@
+uuid: 81688445-de89-4e36-a679-47cad5a2021d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16x9_720x405
+label: '16:9 (720×405)'
+effects:
+  ace7e875-bb0e-4546-b35f-adffa506fb22:
+    uuid: ace7e875-bb0e-4546-b35f-adffa506fb22
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 405

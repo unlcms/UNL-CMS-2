@@ -1,0 +1,16 @@
+uuid: c4722d63-a94c-4664-a180-a0e187acaff5
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 1x1_640x640
+label: '1:1 (640×640)'
+effects:
+  d9bb590f-4855-4ae9-a9da-249891ffc4eb:
+    uuid: d9bb590f-4855-4ae9-a9da-249891ffc4eb
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 640
