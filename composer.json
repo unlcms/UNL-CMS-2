@@ -31,9 +31,11 @@
         "drupal/admin_toolbar": "1.18",
         "drupal/paragraphs": "1.0",
         "drupal/entity_reference_revisions": "1.0",
+        "drupal/exclude_node_title": "1.0-beta1",
+        "drupal/crop": "1.0",
+        "drupal/focal_point": "1.0-beta4"
         "drupal/purge": "^3.0@beta",
         "drupal/varnish_purge": "^1.4",
-        "drupal/exclude_node_title": "1.0-beta1",
         "symfony/ldap": "~3.2.1"
     },
     "replace": {

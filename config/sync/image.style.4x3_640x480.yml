@@ -1,0 +1,16 @@
+uuid: ccf1b9a1-beb0-4bc2-a7dc-c100395ccd25
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 4x3_640x480
+label: '4:3 (640×480)'
+effects:
+  a0e67fb1-b506-4cfd-8659-453eb11d5953:
+    uuid: a0e67fb1-b506-4cfd-8659-453eb11d5953
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 480

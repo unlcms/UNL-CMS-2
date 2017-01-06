@@ -10,6 +10,7 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  crop: 0
   ctools: 0
   datetime: 0
   dblog: 0
@@ -24,6 +25,7 @@ module:
   file: 0
   file_entity: 0
   filter: 0
+  focal_point: 0
   help: 0
   history: 0
   image: 0
@@ -37,6 +39,7 @@ module:
   page_cache: 0
   paragraphs: 0
   path: 0
+  responsive_image: 0
   purge: 0
   purge_drush: 0
   purge_processor_cron: 0

@@ -1,0 +1,16 @@
+uuid: 0405e19d-d477-40da-881a-3ff06f195ae4
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 4x3_720x540
+label: '4:3 (720×540)'
+effects:
+  892d6e2d-afb2-4eae-8bc7-7aa84ed7e446:
+    uuid: 892d6e2d-afb2-4eae-8bc7-7aa84ed7e446
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 540

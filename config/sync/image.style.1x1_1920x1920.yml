@@ -1,0 +1,16 @@
+uuid: e00adf58-608e-44a3-8bd8-611c07dca51d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 1x1_1920x1920
+label: '1:1 (1920×1920)'
+effects:
+  c4d14999-db2c-4636-be12-ea33f39ed2f3:
+    uuid: c4d14999-db2c-4636-be12-ea33f39ed2f3
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1920
