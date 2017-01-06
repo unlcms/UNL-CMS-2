@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9c5b9cefa3221a4c1e6f089c1a40aee3",
-    "content-hash": "c6f26b3018f847d055ee4490fb58f50d",
+    "hash": "5b24a0bb30c23010bee4a403d6c7e4e1",
+    "content-hash": "2c15a4b5cff373633b497231aacc34cf",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4490,6 +4490,28 @@
             ],
             "description": "Processes the queue when a node is saved.",
             "time": "2016-12-22 19:31:29"
+        },
+        {
+            "name": "unlcms/unl_user",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unlcms/unl_user.git",
+                "reference": "06ec688294d31bda6d939891f3876b7cd8c63b28"
+            },
+            "require": {
+                "symfony/ldap": "~3.2.1"
+            },
+            "type": "drupal-module",
+            "authors": [
+                {
+                    "name": "Michael Fairchild (mfairchild365)",
+                    "homepage": "https://www.drupal.org/u/mfairchild365",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "UNL User data integration",
+            "time": "2017-01-05 16:52:08"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
