@@ -28,6 +28,7 @@ module:
   focal_point: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
   imce: 0
   link: 0
@@ -60,6 +61,9 @@ module:
   varnish_purge_tags: 0
   varnish_purger: 0
   views_ui: 0
+  webform: 0
+  webform_node: 0
+  webform_ui: 0
   menu_link_content: 1
   pathauto: 1
   views: 10

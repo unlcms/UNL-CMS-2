@@ -1,0 +1,10 @@
+uuid: 6c273fe9-e1b5-4ebb-b7db-e05d3cf76de3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: likert_comparison
+label: 'Likert: Comparison'
+options: "1: Strongly Disagree\n2: Disagree\n3: Neutral\n4: Agree\n5: Strongly Agree\n"

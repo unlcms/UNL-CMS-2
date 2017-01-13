@@ -1,0 +1,10 @@
+uuid: c4c6830b-0fc9-4044-ba1d-8012f004bc43
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: titles
+label: Titles
+options: "Miss: Miss\nMs: Ms\nMr: Mr\nMrs: Mrs\nDr: Dr\n"

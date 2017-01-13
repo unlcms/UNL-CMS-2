@@ -1,0 +1,10 @@
+uuid: 8b9ea9bb-d000-460c-b214-f8858911eb19
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: likert_would_you
+label: 'Likert: Would You'
+options: "1: Definitely Not\n2: Probably Not\n3: Not Sure\n4: Probably\n5: Definitely\n"
