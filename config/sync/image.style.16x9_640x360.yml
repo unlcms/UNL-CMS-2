@@ -1,0 +1,16 @@
+uuid: e2e07399-eb07-4773-9a9f-876c94302a2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16x9_640x360
+label: '16:9 (640×360)'
+effects:
+  e18cc413-de09-462d-9c81-0a0f15592f66:
+    uuid: e18cc413-de09-462d-9c81-0a0f15592f66
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 360

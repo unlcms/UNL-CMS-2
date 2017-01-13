@@ -1,0 +1,16 @@
+uuid: f62be789-6a5b-4006-a946-6e7ae3dbda89
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 1x1_1600x1600
+label: '1:1 (1600×1600)'
+effects:
+  6574eac7-d88b-4aaf-b2c9-1bbc49bcfebe:
+    uuid: 6574eac7-d88b-4aaf-b2c9-1bbc49bcfebe
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 1600

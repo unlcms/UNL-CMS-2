@@ -9,10 +9,11 @@ dependencies:
     - field.field.paragraph.wdn_hero.field_hero_picture
     - field.field.paragraph.wdn_hero.field_hero_video
     - paragraphs.paragraphs_type.wdn_hero
+    - responsive_image.styles.hero
   module:
     - file
-    - image
     - link
+    - responsive_image
 id: paragraph.wdn_hero.default
 targetEntityType: paragraph
 bundle: wdn_hero
@@ -47,10 +48,10 @@ content:
     weight: 3
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: hero
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
   field_hero_video:
     weight: 4
     label: hidden

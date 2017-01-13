@@ -1,0 +1,16 @@
+uuid: 2fab0a8e-f00c-461e-8d6b-77b3913338be
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 4x3_1536x1152
+label: '4:3 (1536×1152)'
+effects:
+  3e5ea80c-8d3b-470c-a4ea-62cb36e61ceb:
+    uuid: 3e5ea80c-8d3b-470c-a4ea-62cb36e61ceb
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1536
+      height: 1152

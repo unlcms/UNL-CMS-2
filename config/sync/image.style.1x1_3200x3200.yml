@@ -1,0 +1,16 @@
+uuid: de8624a9-0ebc-4d3a-b14d-8c31ee910817
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 1x1_3200x3200
+label: '1:1 (3200×3200)'
+effects:
+  1ea9fbf1-2e40-4fde-ad57-321444c10e98:
+    uuid: 1ea9fbf1-2e40-4fde-ad57-321444c10e98
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 3200
+      height: 3200

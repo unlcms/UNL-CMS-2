@@ -1,0 +1,16 @@
+uuid: 0d484798-fa48-4af7-a509-cc37d0599ccd
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16x9_1440x810
+label: '16:9 (1440×810)'
+effects:
+  d4a395c3-f437-481d-a031-1dd22df23c2c:
+    uuid: d4a395c3-f437-481d-a031-1dd22df23c2c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 810
