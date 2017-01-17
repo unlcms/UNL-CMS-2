@@ -1,0 +1,32 @@
+uuid: e46fc80b-d852-4a8c-97b8-7197fa71096d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_horizontal_orientation
+    - paragraphs.paragraphs_type.wdn_hero
+    - taxonomy.vocabulary.horizontal_orientation
+  content:
+    - 'taxonomy_term:horizontal_orientation:e2e6ce87-176d-4e77-b350-e7cdff473cd1'
+id: paragraph.wdn_hero.field_horizontal_orientation
+field_name: field_horizontal_orientation
+entity_type: paragraph
+bundle: wdn_hero
+label: 'Horizontal Orientation'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: e2e6ce87-176d-4e77-b350-e7cdff473cd1
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      horizontal_orientation: horizontal_orientation
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
