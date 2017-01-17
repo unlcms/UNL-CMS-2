@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - editor
-    - unl_filter
 name: WYSIWYG
 format: wysiwyg
 weight: -10
@@ -67,9 +66,3 @@ filters:
     weight: -45
     settings:
       filter_url_length: 72
-  filter_unl_ssi:
-    id: filter_unl_ssi
-    provider: unl_filter
-    status: true
-    weight: 0
-    settings: {  }
