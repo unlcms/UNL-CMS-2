@@ -1,0 +1,9 @@
+uuid: 9149236d-0fda-43a4-bcf6-7962edc61853
+langcode: en
+status: true
+dependencies: {  }
+name: 'Vertical Orientation'
+vid: vertical_orientation
+description: ''
+hierarchy: 0
+weight: 0
