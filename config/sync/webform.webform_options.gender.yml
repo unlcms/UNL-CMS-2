@@ -1,0 +1,10 @@
+uuid: b592b043-b1bf-4f59-bf6b-6e99ab1ba275
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: gender
+label: Gender
+options: "Male: Male\nFemale: Female\nTransgender: Transgender\n"

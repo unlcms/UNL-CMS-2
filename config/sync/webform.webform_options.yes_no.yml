@@ -1,0 +1,10 @@
+uuid: 801064ef-0a9d-4e13-89cc-596f7ec0429f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: yes_no
+label: Yes/No
+options: "Yes: Yes\nNo: No\n"

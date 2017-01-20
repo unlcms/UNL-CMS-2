@@ -1,0 +1,10 @@
+uuid: 02a7085d-92ca-481f-a965-536d8c79ed08
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: likert_agreement
+label: 'Likert: Agreement'
+options: "1: Much Worse\n2: Somewhat Worse\n3: About the Same\n4: Somewhat Better\n5: Much Better\n"

@@ -1,0 +1,10 @@
+uuid: 27e06d89-5edc-4571-90dc-d12fd2b70f68
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: ethnicity
+label: Ethnicity
+options: "Caucasian: Caucasian\n'Latino/Hispanic': 'Latino/Hispanic'\n'Middle Eastern': 'Middle Eastern'\nAfrican: African\nCaribbean: Caribbean\n'South Asian': 'South Asian'\n'East Asian': 'East Asian'\nMixed: Mixed\n"
