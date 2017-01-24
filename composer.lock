@@ -4609,7 +4609,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "abf5509e06e8ccdc0023dbbfa11a29c7beffc741"
+                "reference": "7f59c100cca4482489afed761fa776a3fa38281f"
             },
             "type": "drupal-theme",
             "authors": [
@@ -4620,7 +4620,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-01-06 22:11:57"
+            "time": "2017-01-24 20:54:37"
         },
         {
             "name": "unlcms/unl_purge_processor",
