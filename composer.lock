@@ -4566,10 +4566,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_cas.git",
-                "reference": "cf779af9b180458fc0a6b28af803df7a7312fe64"
-            },
-            "require": {
-                "symfony/ldap": "~3.2.1"
+                "reference": "60fdf94e61a429994ff993fe68b0ea94a8fbf309"
             },
             "type": "drupal-module",
             "authors": [
@@ -4580,7 +4577,7 @@
                 }
             ],
             "description": "login.unl.edu integration",
-            "time": "2016-12-23 19:49:06"
+            "time": "2017-01-13 22:41:52"
         },
         {
             "name": "unlcms/unl_filter",
