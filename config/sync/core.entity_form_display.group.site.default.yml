@@ -1,0 +1,35 @@
+uuid: 12da38ae-00d9-46c1-8fc4-9ae9b99c377a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.site.field_short_name
+    - group.type.site
+  module:
+    - path
+id: group.site.default
+targetEntityType: group
+bundle: site
+mode: default
+content:
+  field_short_name:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  label:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

@@ -1,0 +1,30 @@
+uuid: dc6de5cf-ed03-4972-a4c7-ccd3558a3988
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.site.field_short_name
+    - group.type.site
+id: group.site.default
+targetEntityType: group
+bundle: site
+mode: default
+content:
+  field_short_name:
+    weight: -4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  label:
+    label: hidden
+    type: string
+    weight: -5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  uid: true
