@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "db1003ea18136bc0696e6bdce3c3f8a2",
-    "content-hash": "7d05621745ea85c6b1709e45b9020737",
+    "hash": "fccda31b77a6e1a862558d2dcc727358",
+    "content-hash": "b0131b328ebd175a648d69b5206978ab",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1566,7 +1566,7 @@
                     "datestamp": "1481129283"
                 },
                 "patches_applied": {
-                    "How to redirect to the owning group after adding a gnode": "https://www.drupal.org/files/issues/2817109-12-how-to-redirect.patch"
+                    "provide a generic and extensible UI for adding new content into a Group": "https://www.drupal.org/files/issues/group-2819595-31.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
