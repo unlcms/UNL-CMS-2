@@ -1,0 +1,37 @@
+uuid: 356a543b-57ac-49a4-abdd-65fa7d2c8f46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_bands
+    - group.type.site
+  module:
+    - entity_reference_revisions
+id: group.site.field_bands
+field_name: field_bands
+entity_type: group
+bundle: site
+label: Bands
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      wdn_events:
+        weight: 5
+        enabled: false
+      wdn_hero:
+        weight: 6
+        enabled: false
+      wdn_quote:
+        weight: 7
+        enabled: false
+      wdn_text_band:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

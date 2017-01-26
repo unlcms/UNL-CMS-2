@@ -1,18 +1,16 @@
-uuid: eb617463-b718-4a82-8543-6010d7b0b81e
+uuid: 04f173bd-f044-435f-9ed7-7222e2f5857a
 langcode: en
 status: true
 dependencies:
   module:
     - group
-id: group.field_short_name
-field_name: field_short_name
+    - text
+id: group.field_body
+field_name: field_body
 entity_type: group
-type: string
-settings:
-  max_length: 32
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_with_summary
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

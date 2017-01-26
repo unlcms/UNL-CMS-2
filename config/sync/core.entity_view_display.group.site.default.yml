@@ -3,20 +3,31 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.group.site.field_short_name
+    - field.field.group.site.field_bands
+    - field.field.group.site.field_body
     - group.type.site
+  module:
+    - entity_reference_revisions
+    - text
 id: group.site.default
 targetEntityType: group
 bundle: site
 mode: default
 content:
-  field_short_name:
-    weight: -4
-    label: above
+  field_bands:
+    type: entity_reference_revisions_entity_view
+    weight: -3
+    label: hidden
     settings:
-      link_to_entity: false
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: string
+  field_body:
+    weight: -4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
   label:
     label: hidden
     type: string

@@ -11,7 +11,7 @@ _core:
 id: unl_fourone_branding
 theme: unl_fourone
 region: header
-weight: -6
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

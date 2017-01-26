@@ -11,4 +11,5 @@ internal: true
 audience: member
 group_type: site
 permissions_ui: true
-permissions: {  }
+permissions:
+  - 'view group'
