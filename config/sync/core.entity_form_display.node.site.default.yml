@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.site.body
-    - field.field.node.site.og_audience
     - node.type.site
   module:
-    - og
     - path
     - text
 id: node.site.default
@@ -27,14 +25,6 @@ content:
     type: datetime_timestamp
     weight: 10
     settings: {  }
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    weight: 32
     third_party_settings: {  }
   path:
     type: path
