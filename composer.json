@@ -38,7 +38,8 @@
         "drupal/focal_point": "1.0-beta4",
         "drupal/purge": "^3.0@beta",
         "drupal/varnish_purge": "^1.4",
-        "symfony/ldap": "~3.2.1"
+        "symfony/ldap": "~3.2.1",
+        "drupal/group": "1.x-dev"
     },
     "replace": {
         "drupal/core": "~8.2"
