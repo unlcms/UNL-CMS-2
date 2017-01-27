@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   file_directory: images/hero
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: '1 MB'
+  max_filesize: '10 MB'
   max_resolution: ''
   min_resolution: ''
   alt_field: true

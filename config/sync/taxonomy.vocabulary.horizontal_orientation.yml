@@ -1,0 +1,9 @@
+uuid: 0c453cf0-22f9-4d27-b408-e986be0de70c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Horizontal Orientation'
+vid: horizontal_orientation
+description: ''
+hierarchy: 0
+weight: 0

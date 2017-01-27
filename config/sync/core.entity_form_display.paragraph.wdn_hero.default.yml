@@ -8,11 +8,13 @@ dependencies:
     - field.field.paragraph.wdn_hero.field_hero_link
     - field.field.paragraph.wdn_hero.field_hero_picture
     - field.field.paragraph.wdn_hero.field_hero_video
-    - image.style.thumbnail
+    - field.field.paragraph.wdn_hero.field_horizontal_orientation
+    - image.style.medium
     - paragraphs.paragraphs_type.wdn_hero
   module:
     - file
     - image
+    - imce
     - link
 id: paragraph.wdn_hero.default
 targetEntityType: paragraph
@@ -20,39 +22,46 @@ bundle: wdn_hero
 mode: default
 content:
   field_hero_impact_line:
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_hero_initial_line:
     weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_hero_initial_line:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_hero_link:
-    weight: 2
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
   field_hero_picture:
-    weight: 3
+    weight: 4
     settings:
+      preview_image_style: medium
       progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
+    third_party_settings:
+      imce:
+        enabled: false
     type: image_image
   field_hero_video:
-    weight: 4
+    weight: 5
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+  field_horizontal_orientation:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
 hidden:
   created: true
   status: true

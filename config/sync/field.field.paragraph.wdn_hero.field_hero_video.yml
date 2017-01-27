@@ -12,7 +12,7 @@ field_name: field_hero_video
 entity_type: paragraph
 bundle: wdn_hero
 label: 'Hero Video'
-description: ''
+description: 'This field is for uploading 16:9 video (without audio) that will autoplay, loop, and display in place of the Hero Picture on devices that support video autoplay. Use <a href="https://mediahub.unl.edu/help/media-prep">MediaHub''s HandBrake presets</a> to optimize your video for web playback.'
 required: false
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   file_directory: video/hero
   file_extensions: mp4
-  max_filesize: '3 MB'
+  max_filesize: '10 MB'
   description_field: false
   handler: 'default:file'
   handler_settings: {  }
