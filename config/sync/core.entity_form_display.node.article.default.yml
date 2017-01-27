@@ -7,13 +7,11 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - field.field.node.article.og_audience
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
     - image
-    - og
     - path
     - text
 _core:
@@ -55,14 +53,6 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  og_audience:
-    type: og_complex
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    weight: 0
     third_party_settings: {  }
   path:
     type: path

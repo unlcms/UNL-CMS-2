@@ -1,0 +1,15 @@
+uuid: c72a5d07-27d9-4dcf-a2ed-8a427b4fcbf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site
+id: site-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: site
+permissions_ui: true
+permissions:
+  - 'view group'

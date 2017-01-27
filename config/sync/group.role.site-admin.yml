@@ -1,0 +1,23 @@
+uuid: 7811306e-ef3a-44a6-8e62-0e2b18e5a61a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site
+id: site-admin
+label: Admin
+weight: 100
+internal: false
+audience: member
+group_type: site
+permissions_ui: true
+permissions:
+  0: 'access content overview'
+  1: 'administer group'
+  2: 'administer members'
+  4: 'edit group'
+  5: 'edit own group_membership content'
+  6: 'leave group'
+  7: 'view group'
+  8: 'view group_membership content'
+  9: 'access group_node overview'

@@ -1,0 +1,15 @@
+uuid: 65bdd767-6b3b-45f5-b8d1-ea57793fd05a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site
+id: site-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: site
+permissions_ui: true
+permissions:
+  - 'view group'

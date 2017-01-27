@@ -1,0 +1,9 @@
+uuid: d85fc8a9-228a-45c0-b4d7-d5f9b6f02f1c
+langcode: en
+status: true
+dependencies: {  }
+id: site
+label: Site
+description: 'A main subsite/section.'
+creator_roles:
+  - site-admin

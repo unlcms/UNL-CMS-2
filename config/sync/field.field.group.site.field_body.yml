@@ -1,20 +1,20 @@
-uuid: cdd12446-b360-4739-8f45-ec1129081a41
+uuid: 02c81f76-b57d-4026-876a-05c5093242e7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.site
+    - field.storage.group.field_body
+    - group.type.site
   module:
     - text
-id: node.site.body
-field_name: body
-entity_type: node
+id: group.site.field_body
+field_name: field_body
+entity_type: group
 bundle: site
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

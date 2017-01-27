@@ -2,10 +2,6 @@ uuid: 16abbdd4-0f41-444f-97c0-88518f059eb6
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:bfff9cf2-2802-4f08-9ec7-64de8587bb85'
-  module:
-    - block_content
   theme:
     - unl_fourone
 id: relatedlinks
