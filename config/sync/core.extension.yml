@@ -59,6 +59,8 @@ module:
   unl_purge_processor: 0
   unl_user: 0
   user: 0
+  varnish_purge_tags: 0
+  varnish_purger: 0
   views_ui: 0
   webform: 0
   webform_node: 0

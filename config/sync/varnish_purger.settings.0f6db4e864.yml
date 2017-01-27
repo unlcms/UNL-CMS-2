@@ -1,0 +1,24 @@
+uuid: 7a15301a-852c-403e-97a5-2bf6cb3ed1e4
+langcode: en
+status: true
+dependencies: {  }
+id: 0f6db4e864
+name: VarnishPurger1
+invalidationtype: tag
+hostname: localhost
+port: 80
+path: /
+request_method: BAN
+scheme: http
+verify: '1'
+headers:
+  field: Cache-Tags
+  value: '[invalidation:expression]'
+body: null
+body_content_type: null
+runtime_measurement: true
+timeout: !!float 1
+connect_timeout: !!float 1
+cooldown_time: !!float 0
+max_requests: 100
+http_errors: true
