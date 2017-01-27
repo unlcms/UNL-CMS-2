@@ -56,3 +56,4 @@ profiles
 themes
 
 config/sync/unl_cas.settings.yml
+config/sync/unl_user.settings.yml
