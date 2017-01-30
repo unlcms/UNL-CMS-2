@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fccda31b77a6e1a862558d2dcc727358",
-    "content-hash": "b0131b328ebd175a648d69b5206978ab",
+    "hash": "57fd7f359dad8865e5743901e39b7780",
+    "content-hash": "0cc9fc3dc18ee2454399dab443ad5193",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1551,7 +1551,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/group",
-                "reference": "593477fb5f7f018b14c63d91e406404bae6e28e5"
+                "reference": "8e4038152a00d95ed952339bcccc4cd1a14896d8"
             },
             "require": {
                 "drupal/core": "*"
@@ -1564,9 +1564,6 @@
                 "drupal": {
                     "version": "8.x-1.0-beta4+21-dev",
                     "datestamp": "1481129283"
-                },
-                "patches_applied": {
-                    "provide a generic and extensible UI for adding new content into a Group": "https://www.drupal.org/files/issues/group-2819595-31.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1588,7 +1585,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
             },
-            "time": "2016-12-07 09:54:57"
+            "time": "2017-01-30 14:42:09"
         },
         {
             "name": "drupal/honeypot",
@@ -4612,7 +4609,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "7f59c100cca4482489afed761fa776a3fa38281f"
+                "reference": "b86ad51cbfe5c618c5467336f24a0fd6073b82df"
             },
             "type": "drupal-theme",
             "authors": [
@@ -4623,7 +4620,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-01-24 20:54:37"
+            "time": "2017-01-27 23:56:46"
         },
         {
             "name": "unlcms/unl_purge_processor",
@@ -5932,16 +5929,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f"
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
                 "shasum": ""
             },
             "require": {
@@ -5992,7 +5989,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2016-11-19 09:18:40"
+            "time": "2017-01-29 09:50:25"
         },
         {
             "name": "sebastian/diff",

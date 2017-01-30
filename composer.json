@@ -63,11 +63,6 @@
             "recurse": false,
             "replace": false,
             "merge-extra": false
-        },
-        "patches": {
-            "drupal/group": {
-                "provide a generic and extensible UI for adding new content into a Group": "https://www.drupal.org/files/issues/group-2819595-31.patch"
-            }
         }
     },
     "autoload": {
