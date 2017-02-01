@@ -195,7 +195,7 @@ class BlockForm extends EntityForm {
       '#title' => $this->t('Region'),
       '#description' => $this->t('Select the region where this block should be displayed.'),
       '#default_value' => $region,
-      '#empty_value' => BlockInterface::BLOCK_REGION_NONE,
+      '#required' => TRUE,
       '#options' => system_region_list($theme, REGIONS_VISIBLE),
       '#prefix' => '<div id="edit-block-region-wrapper">',
       '#suffix' => '</div>',
@@ -292,6 +292,7 @@ class BlockForm extends EntityForm {
   protected function actions(array $form, FormStateInterface $form_state) {
     $actions = parent::actions($form, $form_state);
     $actions['submit']['#value'] = $this->t('Save block');
+    $actions['delete']['#title'] = $this->t('Remove block');
     return $actions;
   }
 

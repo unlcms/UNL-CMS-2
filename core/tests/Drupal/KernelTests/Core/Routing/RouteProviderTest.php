@@ -11,6 +11,7 @@ use Drupal\Core\Cache\MemoryBackend;
 use Drupal\Core\Database\Database;
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\KeyValueStore\KeyValueMemoryFactory;
+use Drupal\Core\Lock\NullLockBackend;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\Routing\MatcherDumper;
 use Drupal\Core\Routing\RouteProvider;
@@ -81,9 +82,9 @@ class RouteProviderTest extends KernelTestBase {
   protected function setUp() {
     parent::setUp();
     $this->fixtures = new RoutingFixtures();
-    $this->state = new State(new KeyValueMemoryFactory());
+    $this->state = new State(new KeyValueMemoryFactory(), new MemoryBackend('test'), new NullLockBackend());
     $this->currentPath = new CurrentPathStack(new RequestStack());
-    $this->cache = new MemoryBackend('data');
+    $this->cache = new MemoryBackend();
     $this->pathProcessor = \Drupal::service('path_processor_manager');
     $this->cacheTagsInvalidator = \Drupal::service('cache_tags.invalidator');
   }

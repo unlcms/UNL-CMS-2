@@ -4,7 +4,6 @@ namespace Drupal\views_ui;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\SafeMarkup;
-use Drupal\Component\Utility\Xss;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\Core\Ajax\ReplaceCommand;
@@ -259,6 +258,16 @@ class ViewEditForm extends ViewFormBase {
     $displays = $view->get('display');
     foreach ($displays as $id => $display) {
       if (!empty($display['deleted'])) {
+        // Remove view display from view attachment under the attachments
+        // options.
+        $display_handler = $executable->displayHandlers->get($id);
+        if ($attachments = $display_handler->getAttachedDisplays()) {
+          foreach ($attachments as $attachment ) {
+            $attached_options = $executable->displayHandlers->get($attachment)->getOption('displays');
+            unset($attached_options[$id]);
+            $executable->displayHandlers->get($attachment)->setOption('displays', $attached_options);
+          }
+        }
         $executable->displayHandlers->remove($id);
         unset($displays[$id]);
       }
@@ -1056,7 +1065,7 @@ class ViewEditForm extends ViewFormBase {
         $field_name = '(' . $relationships[$field['relationship']] . ') ' . $field_name;
       }
 
-      $description = Xss::filterAdmin($handler->adminSummary());
+      $description = $handler->adminSummary();
       $link_text = $field_name . (empty($description) ? '' : " ($description)");
       $link_attributes = array('class' => array('views-ajax-link'));
       if (!empty($field['exclude'])) {

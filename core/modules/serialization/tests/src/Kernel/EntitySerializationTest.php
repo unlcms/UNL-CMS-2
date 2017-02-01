@@ -29,7 +29,7 @@ class EntitySerializationTest extends NormalizerTestBase {
   /**
    * The test entity.
    *
-   * @var \Drupal\Core\Entity\ContentEntityBase
+   * @var \Drupal\Core\Entity\ContentEntityInterface
    */
   protected $entity;
 

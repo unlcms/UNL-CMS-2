@@ -81,7 +81,7 @@ class Drupal {
   /**
    * The current system version.
    */
-  const VERSION = '8.2.5';
+  const VERSION = '8.3.0-alpha1';
 
   /**
    * Core API compatibility.
@@ -179,6 +179,16 @@ class Drupal {
    */
   public static function root() {
     return static::getContainer()->get('app.root');
+  }
+
+  /**
+   * Gets the active install profile.
+   *
+   * @return string|null
+   *   The name of the active install profile.
+   */
+  public static function installProfile() {
+    return static::getContainer()->getParameter('install_profile');
   }
 
   /**
@@ -297,6 +307,23 @@ class Drupal {
    */
   public static function cache($bin = 'default') {
     return static::getContainer()->get('cache.' . $bin);
+  }
+
+  /**
+   * Retrieves the class resolver.
+   *
+   * This is to be used in procedural code such as module files to instantiate
+   * an object of a class that implements
+   * \Drupal\Core\DependencyInjection\ContainerInjectionInterface.
+   *
+   * One common usecase is to provide a class which contains the actual code
+   * of a hook implementation, without having to create a service.
+   *
+   * @return \Drupal\Core\DependencyInjection\ClassResolverInterface
+   *   The class resolver.
+   */
+  public static function classResolver() {
+    return static::getContainer()->get('class_resolver');
   }
 
   /**
@@ -718,6 +745,16 @@ class Drupal {
    */
   public static function entityDefinitionUpdateManager() {
     return static::getContainer()->get('entity.definition_update_manager');
+  }
+
+  /**
+   * Returns the time service.
+   *
+   * @return \Drupal\Component\Datetime\TimeInterface
+   *   The time service.
+   */
+  public static function time() {
+    return static::getContainer()->get('datetime.time');
   }
 
 }

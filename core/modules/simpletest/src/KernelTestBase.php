@@ -5,6 +5,7 @@ namespace Drupal\simpletest;
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\SafeMarkup;
 use Drupal\Component\Utility\Variable;
+use Drupal\Core\Config\Development\ConfigSchemaChecker;
 use Drupal\Core\Database\Database;
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\DrupalKernel;
@@ -231,7 +232,7 @@ EOD;
     // \Drupal\Core\Config\ConfigInstaller::installDefaultConfig() to work.
     // Write directly to active storage to avoid early instantiation of
     // the event dispatcher which can prevent modules from registering events.
-    \Drupal::service('config.storage')->write('core.extension', array('module' => array(), 'theme' => array()));
+    \Drupal::service('config.storage')->write('core.extension', array('module' => array(), 'theme' => array(), 'profile' => ''));
 
     // Collect and set a fixed module list.
     $class = get_class($this);
@@ -321,7 +322,7 @@ EOD;
 
     if ($this->strictConfigSchema) {
       $container
-        ->register('simpletest.config_schema_checker', 'Drupal\Core\Config\Testing\ConfigSchemaChecker')
+        ->register('simpletest.config_schema_checker', ConfigSchemaChecker::class)
         ->addArgument(new Reference('config.typed'))
         ->addArgument($this->getConfigSchemaExclusions())
         ->addTag('event_subscriber');

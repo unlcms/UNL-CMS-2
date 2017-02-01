@@ -49,7 +49,7 @@ class TwigTransTest extends WebTestBase {
 
     // Setup test_theme.
     \Drupal::service('theme_handler')->install(array('test_theme'));
-    \Drupal::service('theme_handler')->setDefault('test_theme');
+    $this->config('system.theme')->set('default', 'test_theme')->save();
 
     // Create and log in as admin.
     $this->adminUser = $this->drupalCreateUser(array(
@@ -209,7 +209,7 @@ class TwigTransTest extends WebTestBase {
         $this->assertRaw('"edit-languages-' . $langcode . '-weight"', 'Language code found.');
 
         // Import the custom .po contents for the language.
-        $filename = tempnam('temporary://', "po_") . '.po';
+        $filename = \Drupal::service('file_system')->tempnam('temporary://', "po_") . '.po';
         file_put_contents($filename, $contents);
         $options = array(
           'files[file]' => $filename,

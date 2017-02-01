@@ -317,6 +317,7 @@ function simpletest_phpunit_run_command(array $unescaped_test_classnames, $phpun
   // this variable.
   if ($base_url) {
     putenv('SIMPLETEST_BASE_URL=' . $base_url);
+    putenv('BROWSERTEST_OUTPUT_DIRECTORY=' . \Drupal::service('file_system')->realpath('public://simpletest'));
   }
   $phpunit_bin = simpletest_phpunit_command();
 
@@ -324,6 +325,8 @@ function simpletest_phpunit_run_command(array $unescaped_test_classnames, $phpun
     $phpunit_bin,
     '--log-junit',
     escapeshellarg($phpunit_file),
+    '--printer',
+    '\\\Drupal\\\Tests\\\Listeners\\\SimpletestUiPrinter',
   );
 
   // Optimized for running a single test.
@@ -357,6 +360,7 @@ function simpletest_phpunit_run_command(array $unescaped_test_classnames, $phpun
   putenv('SIMPLETEST_DB=');
   if ($base_url) {
     putenv('SIMPLETEST_BASE_URL=');
+    putenv('BROWSERTEST_OUTPUT_DIRECTORY=');
   }
   return $ret;
 }
@@ -569,13 +573,20 @@ function simpletest_log_read($test_id, $database_prefix, $test_class) {
  *       ),
  *     );
  *   @endcode
+ *
+ * @deprecated in Drupal 8.3.x, for removal before 9.0.0 release. Use
+ *   \Drupal::service('test_discovery')->getTestClasses($extension, $types)
+ *   instead.
  */
 function simpletest_test_get_all($extension = NULL, array $types = []) {
   return \Drupal::service('test_discovery')->getTestClasses($extension, $types);
 }
 
 /**
- * Registers namespaces for disabled modules.
+ * Registers test namespaces of all extensions and core test classes.
+ *
+ * @deprecated in Drupal 8.3.x for removal before 9.0.0 release. Use
+ *   \Drupal::service('test_discovery')->registerTestNamespaces() instead.
  */
 function simpletest_classloader_register() {
   \Drupal::service('test_discovery')->registerTestNamespaces();

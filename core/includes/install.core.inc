@@ -12,6 +12,7 @@ use Drupal\Core\Database\DatabaseExceptionWrapper;
 use Drupal\Core\Form\FormState;
 use Drupal\Core\Installer\Exception\AlreadyInstalledException;
 use Drupal\Core\Installer\Exception\InstallerException;
+use Drupal\Core\Installer\Exception\InstallProfileMismatchException;
 use Drupal\Core\Installer\Exception\NoProfilesException;
 use Drupal\Core\Installer\InstallerKernel;
 use Drupal\Core\Language\Language;
@@ -20,6 +21,7 @@ use Drupal\Core\Logger\LoggerChannelFactory;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\StringTranslation\Translator\FileTranslation;
 use Drupal\Core\StackMiddleware\ReverseProxyMiddleware;
+use Drupal\Core\StreamWrapper\PublicStream;
 use Drupal\Core\Extension\ExtensionDiscovery;
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Url;
@@ -1036,6 +1038,21 @@ function install_base_system(&$install_state) {
   // Install system.module.
   drupal_install_system($install_state);
 
+  // Prevent the installer from using the system temporary directory after the
+  // system module has been installed.
+  if (drupal_valid_test_ua()) {
+    // While the temporary directory could be preset/enforced in settings.php
+    // like the public files directory, some tests expect it to be configurable
+    // in the UI. If declared in settings.php, they would no longer be
+    // configurable. The temporary directory needs to match what is set in each
+    // test types ::prepareEnvironment() step.
+    $temporary_directory = dirname(PublicStream::basePath()) . '/temp';
+    file_prepare_directory($temporary_directory, FILE_MODIFY_PERMISSIONS | FILE_CREATE_DIRECTORY);
+    \Drupal::configFactory()->getEditable('system.file')
+      ->set('path.temporary', $temporary_directory)
+      ->save();
+  }
+
   // Call file_ensure_htaccess() to ensure that all of Drupal's standard
   // directories (e.g., the public files directory and config directory) have
   // appropriate .htaccess files. These directories will have already been
@@ -1542,7 +1559,7 @@ function install_profile_themes(&$install_state) {
 
   // Ensure that the install profile's theme is used.
   // @see _drupal_maintenance_theme()
-  \Drupal::service('theme.manager')->resetActiveTheme();
+  \Drupal::theme()->resetActiveTheme();
 }
 
 /**
@@ -1564,7 +1581,7 @@ function install_install_profile(&$install_state) {
 
   // Ensure that the install profile's theme is used.
   // @see _drupal_maintenance_theme()
-  \Drupal::service('theme.manager')->resetActiveTheme();
+  \Drupal::theme()->resetActiveTheme();
 }
 
 /**
@@ -2172,18 +2189,31 @@ function install_display_requirements($install_state, $requirements) {
 }
 
 /**
- * Installation task; ensures install profile is written to settings.php.
+ * Installation task; writes profile to settings.php if possible.
  *
  * @param array $install_state
  *   An array of information about the current installation state.
+ *
+ * @see _install_select_profile()
+ *
+ * @throws \Drupal\Core\Installer\Exception\InstallProfileMismatchException
+ *
+ * @deprecated in Drupal 8.3.0 and will be removed before Drupal 9.0.0. The
+ *    install profile is written to core.extension.
  */
 function install_write_profile($install_state) {
-  if (Settings::get('install_profile') !== $install_state['parameters']['profile']) {
+  // Only need to write to settings.php if it is possible. The primary storage
+  // for the install profile is the core.extension configuration.
+  $settings_path = \Drupal::service('site.path') . '/settings.php';
+  if (is_writable($settings_path)) {
     // Remember the profile which was used.
     $settings['settings']['install_profile'] = (object) array(
       'value' => $install_state['parameters']['profile'],
       'required' => TRUE,
     );
     drupal_rewrite_settings($settings);
+  }
+  elseif (($settings_profile = Settings::get('install_profile')) && $settings_profile !== $install_state['parameters']['profile']) {
+    throw new InstallProfileMismatchException($install_state['parameters']['profile'], $settings_profile, $settings_path, \Drupal::translation());
   }
 }

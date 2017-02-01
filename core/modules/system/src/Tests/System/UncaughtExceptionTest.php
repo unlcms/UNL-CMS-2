@@ -113,7 +113,12 @@ class UncaughtExceptionTest extends WebTestBase {
    * Tests a missing dependency on a service.
    */
   public function testMissingDependency() {
-    $this->expectedExceptionMessage = 'Argument 1 passed to Drupal\error_service_test\LonelyMonkeyClass::__construct() must be an instance of Drupal\Core\Database\Connection, non';
+    if (version_compare(PHP_VERSION, '7.1') < 0) {
+      $this->expectedExceptionMessage = 'Argument 1 passed to Drupal\error_service_test\LonelyMonkeyClass::__construct() must be an instance of Drupal\Core\Database\Connection, non';
+    }
+    else {
+      $this->expectedExceptionMessage = 'Too few arguments to function Drupal\error_service_test\LonelyMonkeyClass::__construct(), 0 passed';
+    }
     $this->drupalGet('broken-service-class');
     $this->assertResponse(500);
 
@@ -223,7 +228,7 @@ class UncaughtExceptionTest extends WebTestBase {
       'value' => $incorrect_username,
       'required' => TRUE,
     );
-    $settings['databases']['default']['default']['passowrd'] = (object) array(
+    $settings['databases']['default']['default']['password'] = (object) array(
       'value' => $this->randomMachineName(16),
       'required' => TRUE,
     );
@@ -232,7 +237,7 @@ class UncaughtExceptionTest extends WebTestBase {
 
     $this->drupalGet('');
     $this->assertResponse(500);
-    $this->assertRaw('PDOException');
+    $this->assertRaw('DatabaseAccessDeniedException');
     $this->assertErrorLogged($this->expectedExceptionMessage);
   }
 

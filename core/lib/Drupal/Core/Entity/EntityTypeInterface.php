@@ -48,22 +48,6 @@ interface EntityTypeInterface extends PluginDefinitionInterface {
   public function set($property, $value);
 
   /**
-   * Gets the unique identifier of the entity type.
-   *
-   * @return string
-   *   The unique identifier of the entity type.
-   */
-  public function id();
-
-  /**
-   * Gets the name of the provider of this entity type.
-   *
-   * @return string
-   *   The name of the provider of this entity type.
-   */
-  public function getProvider();
-
-  /**
    * Gets the name of the original entity type class.
    *
    * In case the class name was changed with setClass(), this will return
@@ -352,6 +336,17 @@ interface EntityTypeInterface extends PluginDefinitionInterface {
   public function setAccessClass($class);
 
   /**
+   * Indicates if the entity type class implements the given interface.
+   *
+   * @param string $interface
+   *   The class or interface to check.
+   *
+   * @return bool
+   *   TRUE if the entity type class implements the given interface.
+   */
+  public function entityClassImplements($interface);
+
+  /**
    * Indicates if the entity type is a subclass of the given class or interface.
    *
    * @param string $class
@@ -359,6 +354,10 @@ interface EntityTypeInterface extends PluginDefinitionInterface {
    *
    * @return bool
    *   TRUE if the entity type is a subclass of the class or interface.
+   *
+   * @deprecated in Drupal 8.3.0 and will be removed before Drupal 9.0.0.
+   *   Use Drupal\Core\Entity\EntityTypeInterface::entityClassImpelments()
+   *   instead.
    */
   public function isSubclassOf($class);
 
@@ -574,6 +573,14 @@ interface EntityTypeInterface extends PluginDefinitionInterface {
   public function isTranslatable();
 
   /**
+   * Indicates whether the revision form fields should be added to the form.
+   *
+   * @return bool
+   *   TRUE if the form field should be added, FALSE otherwise.
+   */
+  public function showRevisionUi();
+
+  /**
    * Indicates whether entities of this type have revision support.
    *
    * @return bool
@@ -626,6 +633,14 @@ interface EntityTypeInterface extends PluginDefinitionInterface {
    *   The lowercase form of the human-readable entity type name.
    */
   public function getLowercaseLabel();
+
+  /**
+   * Gets the collection label of the entity type.
+   *
+   * @return string
+   *   The collection label.
+   */
+  public function getCollectionLabel();
 
   /**
    * Gets the singular label of the entity type.

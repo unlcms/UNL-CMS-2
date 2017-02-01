@@ -14,6 +14,7 @@ use Drupal\views\Render\ViewsRenderPipelineMarkup;
 use Drupal\views\ViewExecutable;
 use Drupal\views\Plugin\views\display\PathPluginBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
 /**
@@ -298,7 +299,7 @@ class RestExport extends PathPluginBase implements ResponseDisplayPluginInterfac
       $form['auth'] = array(
         '#type' => 'checkboxes',
         '#title' => $this->t('Authentication methods'),
-        '#description' => $this->t('These are the supported authentication providers for this view. When this view is requested, the client will be forced to authenticate with one of the selected providers. Make sure you set the appropiate requirements at the <em>Access</em> section since the Authentication System will fallback to the anonymous user if it fails to authenticate. For example: require Access: Role | Authenticated User.'),
+        '#description' => $this->t('These are the supported authentication providers for this view. When this view is requested, the client will be forced to authenticate with one of the selected providers. Make sure you set the appropriate requirements at the <em>Access</em> section since the Authentication System will fallback to the anonymous user if it fails to authenticate. For example: require Access: Role | Authenticated User.'),
         '#options' => $this->getAuthOptions(),
         '#default_value' => $this->getOption('auth'),
       );
@@ -345,6 +346,26 @@ class RestExport extends PathPluginBase implements ResponseDisplayPluginInterfac
         $route->setOption('_auth', $auth);
       }
     }
+  }
+
+  /**
+   * Determines whether the view overrides the given route.
+   *
+   * @param string $view_path
+   *   The path of the view.
+   * @param \Symfony\Component\Routing\Route $view_route
+   *   The route of the view.
+   * @param \Symfony\Component\Routing\Route $route
+   *   The route itself.
+   *
+   * @return bool
+   *   TRUE, when the view should override the given route.
+   */
+  protected function overrideApplies($view_path, Route $view_route, Route $route) {
+    $route_formats = explode('|', $route->getRequirement('_format'));
+    $view_route_formats = explode('|', $view_route->getRequirement('_format'));
+    return $this->overrideAppliesPathAndMethod($view_path, $view_route, $route)
+      && (!$route->hasRequirement('_format') || array_intersect($route_formats, $view_route_formats) != []);
   }
 
   /**

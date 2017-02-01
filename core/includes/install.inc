@@ -621,6 +621,12 @@ function drupal_install_system($install_state) {
   // Install base system configuration.
   \Drupal::service('config.installer')->installDefaultConfig('core', 'core');
 
+  // Store the installation profile in configuration to populate the
+  // 'install_profile' container parameter.
+  \Drupal::configFactory()->getEditable('core.extension')
+    ->set('profile', $install_state['parameters']['profile'])
+    ->save();
+
   // Install System module and rebuild the newly available routes.
   $kernel->getContainer()->get('module_installer')->install(array('system'), FALSE);
   \Drupal::service('router.builder')->rebuild();
@@ -1044,10 +1050,11 @@ function drupal_check_module($module) {
  *
  * Example of .info.yml file:
  * @code
- *    name = Minimal
- *    description = Start fresh, with only a few modules enabled.
- *    dependencies[] = block
- *    dependencies[] = dblog
+ *    name: Minimal
+ *    description: Start fresh, with only a few modules enabled.
+ *    dependencies:
+ *      - block
+ *      - dblog
  * @endcode
  *
  * @param $profile

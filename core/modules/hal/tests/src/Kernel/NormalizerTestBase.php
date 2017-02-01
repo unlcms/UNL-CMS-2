@@ -10,9 +10,9 @@ use Drupal\hal\Normalizer\EntityReferenceItemNormalizer;
 use Drupal\hal\Normalizer\FieldItemNormalizer;
 use Drupal\hal\Normalizer\FieldNormalizer;
 use Drupal\language\Entity\ConfigurableLanguage;
-use Drupal\rest\LinkManager\LinkManager;
-use Drupal\rest\LinkManager\RelationLinkManager;
-use Drupal\rest\LinkManager\TypeLinkManager;
+use Drupal\serialization\LinkManager\LinkManager;
+use Drupal\serialization\LinkManager\RelationLinkManager;
+use Drupal\serialization\LinkManager\TypeLinkManager;
 use Drupal\serialization\EntityResolver\ChainEntityResolver;
 use Drupal\serialization\EntityResolver\TargetIdResolver;
 use Drupal\serialization\EntityResolver\UuidResolver;
@@ -30,7 +30,7 @@ abstract class NormalizerTestBase extends KernelTestBase {
    *
    * @var array
    */
-  public static $modules = ['entity_test', 'field', 'hal', 'language', 'rest', 'serialization', 'system', 'text', 'user', 'filter'];
+  public static $modules = ['entity_test', 'field', 'hal', 'language', 'serialization', 'system', 'text', 'user', 'filter'];
 
   /**
    * The mock serializer.
@@ -131,7 +131,7 @@ abstract class NormalizerTestBase extends KernelTestBase {
     ])->save();
 
     $entity_manager = \Drupal::entityManager();
-    $link_manager = new LinkManager(new TypeLinkManager(new MemoryBackend('default'), \Drupal::moduleHandler(), \Drupal::service('config.factory'), \Drupal::service('request_stack'), \Drupal::service('entity_type.bundle.info')), new RelationLinkManager(new MemoryBackend('default'), $entity_manager, \Drupal::moduleHandler(), \Drupal::service('config.factory'), \Drupal::service('request_stack')));
+    $link_manager = new LinkManager(new TypeLinkManager(new MemoryBackend(), \Drupal::moduleHandler(), \Drupal::service('config.factory'), \Drupal::service('request_stack'), \Drupal::service('entity_type.bundle.info')), new RelationLinkManager(new MemoryBackend(), $entity_manager, \Drupal::moduleHandler(), \Drupal::service('config.factory'), \Drupal::service('request_stack')));
 
     $chain_resolver = new ChainEntityResolver(array(new UuidResolver($entity_manager), new TargetIdResolver()));
 

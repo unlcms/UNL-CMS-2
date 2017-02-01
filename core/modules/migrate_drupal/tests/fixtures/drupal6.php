@@ -44405,6 +44405,30 @@ $connection->insert('url_alias')
   'dst' => 'alias-three',
   'language' => '',
 ))
+->values(array(
+  'pid' => '4',
+  'src' => 'node/10',
+  'dst' => 'the-real-mccoy',
+  'language' => 'en',
+))
+->values(array(
+  'pid' => '5',
+  'src' => 'node/11',
+  'dst' => 'le-vrai-mccoy',
+  'language' => 'fr',
+))
+->values(array(
+  'pid' => '6',
+  'src' => 'node/12',
+  'dst' => 'abantu-zulu',
+  'language' => 'zu',
+))
+->values(array(
+  'pid' => '7',
+  'src' => 'node/13',
+  'dst' => 'the-zulu-people',
+  'language' => 'en',
+))
 ->execute();
 
 $connection->schema()->createTable('users', array(
@@ -45930,8 +45954,32 @@ $connection->insert('variable')
   'value' => 's:1:"1";',
 ))
 ->values(array(
-  'name' => 'upload_page',
-  'value' => 'b:1;',
+  'name' => 'upload_employee',
+  'value' => 'b:0;',
+))
+->values(array(
+  'name' => 'upload_event',
+  'value' => 'b:0;',
+))
+->values(array(
+  'name' => 'upload_sponsor',
+  'value' => 'b:0;',
+))
+->values(array(
+  'name' => 'upload_test_page',
+  'value' => 'b:0;',
+))
+->values(array(
+  'name' => 'upload_test_event',
+  'value' => 'b:0;',
+))
+->values(array(
+  'name' => 'upload_test_planet',
+  'value' => 'b:0;',
+))
+->values(array(
+  'name' => 'upload_test_story',
+  'value' => 'b:0;',
 ))
 ->values(array(
   'name' => 'upload_story',

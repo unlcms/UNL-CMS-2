@@ -68,7 +68,7 @@ class Term extends ContentEntityBase implements TermInterface {
           // If the term has multiple parents, we don't delete it.
           $parents = $storage->loadParents($child->id());
           if (empty($parents)) {
-            $orphans[] = $child->id();
+            $orphans[] = $child;
           }
         }
       }
@@ -79,7 +79,7 @@ class Term extends ContentEntityBase implements TermInterface {
     $storage->deleteTermHierarchy(array_keys($entities));
 
     if (!empty($orphans)) {
-      entity_delete_multiple('taxonomy_term', $orphans);
+      $storage->delete($orphans);
     }
   }
 
@@ -116,7 +116,6 @@ class Term extends ContentEntityBase implements TermInterface {
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The term name.'))
       ->setTranslatable(TRUE)
       ->setRequired(TRUE)
       ->setSetting('max_length', 255)
@@ -133,7 +132,6 @@ class Term extends ContentEntityBase implements TermInterface {
 
     $fields['description'] = BaseFieldDefinition::create('text_long')
       ->setLabel(t('Description'))
-      ->setDescription(t('A description of the term.'))
       ->setTranslatable(TRUE)
       ->setDisplayOptions('view', array(
         'label' => 'hidden',

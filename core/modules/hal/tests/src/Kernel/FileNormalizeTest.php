@@ -7,9 +7,9 @@ use Drupal\file\Entity\File;
 use Drupal\hal\Encoder\JsonEncoder;
 use Drupal\hal\Normalizer\FieldItemNormalizer;
 use Drupal\hal\Normalizer\FileEntityNormalizer;
-use Drupal\rest\LinkManager\LinkManager;
-use Drupal\rest\LinkManager\RelationLinkManager;
-use Drupal\rest\LinkManager\TypeLinkManager;
+use Drupal\serialization\LinkManager\LinkManager;
+use Drupal\serialization\LinkManager\RelationLinkManager;
+use Drupal\serialization\LinkManager\TypeLinkManager;
 use Symfony\Component\Serializer\Serializer;
 
 
@@ -35,7 +35,7 @@ class FileNormalizeTest extends NormalizerTestBase {
     $this->installEntitySchema('file');
 
     $entity_manager = \Drupal::entityManager();
-    $link_manager = new LinkManager(new TypeLinkManager(new MemoryBackend('default'), \Drupal::moduleHandler(), \Drupal::service('config.factory'), \Drupal::service('request_stack'), \Drupal::service('entity_type.bundle.info')), new RelationLinkManager(new MemoryBackend('default'), $entity_manager, \Drupal::moduleHandler(), \Drupal::service('config.factory'), \Drupal::service('request_stack')));
+    $link_manager = new LinkManager(new TypeLinkManager(new MemoryBackend(), \Drupal::moduleHandler(), \Drupal::service('config.factory'), \Drupal::service('request_stack'), \Drupal::service('entity_type.bundle.info')), new RelationLinkManager(new MemoryBackend(), $entity_manager, \Drupal::moduleHandler(), \Drupal::service('config.factory'), \Drupal::service('request_stack')));
 
     // Set up the mock serializer.
     $normalizers = array(

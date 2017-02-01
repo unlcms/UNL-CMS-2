@@ -12,7 +12,7 @@ use Drupal\Core\TypedData\OptionsProviderInterface;
 /**
  * A class for defining entity fields.
  */
-class BaseFieldDefinition extends ListDataDefinition implements FieldDefinitionInterface, FieldStorageDefinitionInterface {
+class BaseFieldDefinition extends ListDataDefinition implements FieldDefinitionInterface, FieldStorageDefinitionInterface, RequiredFieldStorageDefinitionInterface {
 
   use UnchangingCacheableDependencyTrait;
 
@@ -414,7 +414,7 @@ class BaseFieldDefinition extends ListDataDefinition implements FieldDefinitionI
   public function setDisplayConfigurable($display_context, $configurable) {
     // If no explicit display options have been specified, default to 'hidden'.
     if (empty($this->definition['display'][$display_context])) {
-      $this->definition['display'][$display_context]['options'] = array('type' => 'hidden');
+      $this->definition['display'][$display_context]['options'] = array('region' => 'hidden');
     }
     $this->definition['display'][$display_context]['configurable'] = $configurable;
     return $this;
@@ -721,6 +721,32 @@ class BaseFieldDefinition extends ListDataDefinition implements FieldDefinitionI
       return $override;
     }
     return BaseFieldOverride::createFromBaseFieldDefinition($this, $bundle);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function isStorageRequired() {
+    if (isset($this->definition['storage_required'])) {
+      return (bool) $this->definition['storage_required'];
+    }
+
+    // Default to the 'required' property of the base field.
+    return $this->isRequired();
+  }
+
+  /**
+   * Sets whether the field storage is required.
+   *
+   * @param bool $required
+   *   Whether the field storage is required.
+   *
+   * @return static
+   *   The object itself for chaining.
+   */
+  public function setStorageRequired($required) {
+    $this->definition['storage_required'] = $required;
+    return $this;
   }
 
 }

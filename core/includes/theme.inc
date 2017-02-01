@@ -134,7 +134,7 @@ function drupal_theme_rebuild() {
  */
 function drupal_find_theme_functions($cache, $prefixes) {
   $implementations = [];
-  $grouped_functions = \Drupal::service('theme.registry')->getPrefixGroupedUserFunctions();
+  $grouped_functions = \Drupal::service('theme.registry')->getPrefixGroupedUserFunctions($prefixes);
 
   foreach ($cache as $hook => $info) {
     foreach ($prefixes as $prefix) {
@@ -1600,9 +1600,7 @@ function template_preprocess_field_multiple_value_form(&$variables) {
       array(
         'data' => array(
           '#prefix' => '<h4' . $header_attributes . '>',
-          'title' => array(
-            '#markup' => $element['#title'],
-          ),
+          '#markup' => $element['#title'],
           '#suffix' => '</h4>',
         ),
         'colspan' => 2,

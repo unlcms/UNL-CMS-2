@@ -4,6 +4,7 @@ namespace Drupal\content_translation;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
+use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\Core\Entity\EntityHandlerInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityManagerInterface;
@@ -15,6 +16,7 @@ use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\user\Entity\User;
+use Drupal\user\EntityOwnerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -174,7 +176,7 @@ class ContentTranslationHandler implements ContentTranslationHandlerInterface, E
     // EntityOwnerInterface. This helps to exclude cases, where the uid is
     // defined as field name, but is not meant to be an owner field; for
     // instance, the User entity.
-    return $this->entityType->isSubclassOf('\Drupal\user\EntityOwnerInterface') && $this->checkFieldStorageDefinitionTranslatability('uid');
+    return $this->entityType->entityClassImplements(EntityOwnerInterface::class) && $this->checkFieldStorageDefinitionTranslatability('uid');
   }
 
   /**
@@ -194,7 +196,7 @@ class ContentTranslationHandler implements ContentTranslationHandlerInterface, E
    *   TRUE if metadata is natively supported, FALSE otherwise.
    */
   protected function hasChangedTime() {
-    return $this->entityType->isSubclassOf('Drupal\Core\Entity\EntityChangedInterface') && $this->checkFieldStorageDefinitionTranslatability('changed');
+    return $this->entityType->entityClassImplements(EntityChangedInterface::class) && $this->checkFieldStorageDefinitionTranslatability('changed');
   }
 
   /**
@@ -284,7 +286,7 @@ class ContentTranslationHandler implements ContentTranslationHandlerInterface, E
     if (isset($languages[$form_langcode]) && ($has_translations || $new_translation)) {
       $title = $this->entityFormTitle($entity);
       // When editing the original values display just the entity label.
-      if ($form_langcode != $entity_langcode) {
+      if ($is_translation) {
         $t_args = array('%language' => $languages[$form_langcode]->getName(), '%title' => $entity->label(), '@title' => $title);
         $title = empty($source_langcode) ? t('@title [%language translation]', $t_args) : t('Create %language translation of %title', $t_args);
       }
@@ -383,6 +385,16 @@ class ContentTranslationHandler implements ContentTranslationHandlerInterface, E
         '#access' => $this->getTranslationAccess($entity, $source_langcode ? 'create' : 'update')->isAllowed(),
         '#multilingual' => TRUE,
       );
+
+      if (isset($form['advanced'])) {
+        $form['content_translation'] += array(
+          '#group' => 'advanced',
+          '#weight' => 100,
+          '#attributes' => array(
+            'class' => array('entity-translation-options'),
+          ),
+        );
+      }
 
       // A new translation is enabled by default.
       $metadata = $this->manager->getTranslationMetadata($entity);

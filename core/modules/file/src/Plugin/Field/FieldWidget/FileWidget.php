@@ -311,7 +311,7 @@ class FileWidget extends WidgetBase implements ContainerFactoryPluginInterface {
    *
    * This method is assigned as a #value_callback in formElement() method.
    */
-  public static function value($element, $input = FALSE, FormStateInterface $form_state) {
+  public static function value($element, $input, FormStateInterface $form_state) {
     if ($input) {
       // Checkboxes lose their value when empty.
       // If the display field is present make sure its unchecked value is saved.
@@ -558,7 +558,7 @@ class FileWidget extends WidgetBase implements ContainerFactoryPluginInterface {
     }
 
     // If there are more files uploaded via the same widget, we have to separate
-    // them, as we display each file in it's own widget.
+    // them, as we display each file in its own widget.
     $new_values = array();
     foreach ($submitted_values as $delta => $submitted_value) {
       if (is_array($submitted_value['fids'])) {

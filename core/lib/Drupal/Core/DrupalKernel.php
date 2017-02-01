@@ -17,11 +17,14 @@ use Drupal\Core\DependencyInjection\YamlFileLoader;
 use Drupal\Core\Extension\ExtensionDiscovery;
 use Drupal\Core\File\MimeType\MimeTypeGuesser;
 use Drupal\Core\Http\TrustedHostsRequestFactory;
+use Drupal\Core\Installer\InstallerRedirectTrait;
 use Drupal\Core\Language\Language;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\Test\TestDatabase;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
 use Symfony\Component\ClassLoader\ApcClassLoader;
+use Symfony\Component\ClassLoader\WinCacheClassLoader;
+use Symfony\Component\ClassLoader\XcacheClassLoader;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -46,6 +49,7 @@ use Symfony\Component\Routing\Route;
  * container, or modify existing services.
  */
 class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
+  use InstallerRedirectTrait;
 
   /**
    * Holds the class used for dumping the container to a PHP array.
@@ -645,7 +649,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
       // installed yet (i.e., if no $databases array has been defined in the
       // settings.php file) and we are not already installing.
       if (!Database::getConnectionInfo() && !drupal_installation_attempted() && PHP_SAPI !== 'cli') {
-        $response = new RedirectResponse($request->getBasePath() . '/core/install.php');
+        $response = new RedirectResponse($request->getBasePath() . '/core/install.php', 302, ['Cache-Control' => 'no-cache']);
       }
       else {
         $this->boot();
@@ -684,14 +688,17 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    *   If the passed in exception cannot be turned into a response.
    */
   protected function handleException(\Exception $e, $request, $type) {
+    if ($this->shouldRedirectToInstaller($e, $this->container ? $this->container->get('database') : NULL)) {
+      return new RedirectResponse($request->getBasePath() . '/core/install.php', 302, ['Cache-Control' => 'no-cache']);
+    }
+
     if ($e instanceof HttpExceptionInterface) {
       $response = new Response($e->getMessage(), $e->getStatusCode());
       $response->headers->add($e->getHeaders());
       return $response;
     }
-    else {
-      throw $e;
-    }
+
+    throw $e;
   }
 
   /**
@@ -1023,16 +1030,38 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
       }
     }
 
-    // If the class loader is still the same, possibly upgrade to the APC class
-    // loader.
+    // If the class loader is still the same, possibly
+    // upgrade to an optimized class loader.
     if ($class_loader_class == get_class($this->classLoader)
-        && Settings::get('class_loader_auto_detect', TRUE)
-        && function_exists('apcu_fetch')) {
+        && Settings::get('class_loader_auto_detect', TRUE)) {
       $prefix = Settings::getApcuPrefix('class_loader', $this->root);
-      $apc_loader = new ApcClassLoader($prefix, $this->classLoader);
-      $this->classLoader->unregister();
-      $apc_loader->register();
-      $this->classLoader = $apc_loader;
+      $loader = NULL;
+
+      // We autodetect one of the following three optimized classloaders, if
+      // their underlying extension exists.
+      if (function_exists('apcu_fetch')) {
+        $loader = new ApcClassLoader($prefix, $this->classLoader);
+      }
+      elseif (extension_loaded('wincache')) {
+        $loader = new WinCacheClassLoader($prefix, $this->classLoader);
+      }
+      elseif (extension_loaded('xcache')) {
+        $loader = new XcacheClassLoader($prefix, $this->classLoader);
+      }
+      if (!empty($loader)) {
+        $this->classLoader->unregister();
+        // The optimized classloader might be persistent and store cache misses.
+        // For example, once a cache miss is stored in APCu clearing it on a
+        // specific web-head will not clear any other web-heads. Therefore
+        // fallback to the composer class loader that only statically caches
+        // misses.
+        $old_loader = $this->classLoader;
+        $this->classLoader = $loader;
+        // Our class loaders are preprended to ensure they come first like the
+        // class loader they are replacing.
+        $old_loader->register(TRUE);
+        $loader->register(TRUE);
+      }
     }
   }
 
@@ -1175,6 +1204,7 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
     $container = $this->getContainerBuilder();
     $container->set('kernel', $this);
     $container->setParameter('container.modules', $this->getModulesParameter());
+    $container->setParameter('install_profile', $this->getInstallProfile());
 
     // Get a list of namespaces and put it onto the container.
     $namespaces = $this->getModuleNamespacesPsr4($this->getModuleFileNames());
@@ -1530,6 +1560,27 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    */
   protected function addServiceFiles(array $service_yamls) {
     $this->serviceYamls['site'] = array_filter($service_yamls, 'file_exists');
+  }
+
+  /**
+   * Gets the active install profile.
+   *
+   * @return string|null
+   *   The name of the any active install profile or distribution.
+   */
+  protected function getInstallProfile() {
+    $config = $this->getConfigStorage()->read('core.extension');
+    if (!empty($config['profile'])) {
+      $install_profile = $config['profile'];
+    }
+    // @todo https://www.drupal.org/node/2831065 remove the BC layer.
+    else {
+      // If system_update_8300() has not yet run fallback to using settings.
+      $install_profile = Settings::get('install_profile');
+    }
+
+    // Normalize an empty string to a NULL value.
+    return empty($install_profile) ? NULL : $install_profile;
   }
 
 }
