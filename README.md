@@ -60,9 +60,10 @@
 
 # Update core
 
-  * Download latest version from drupal.org
-
-  * Delete /core and /vendor
+  * Run 
+    ```
+    composer update drupal/core --with-dependencies
+    ```
 
   * Replace all files except for
     - .htaccess
@@ -73,13 +74,8 @@
 
   * Manually update the above files with the latest changes in the latest core version
     - For example, update "drupal/core" in composer.json with the new version
-
-  * Run 
-  ```
-  composer update drupal/core --with-dependencies
-  ```
   
-  * Run update.php
+  * Run `drush updatedb`
 
 # Adding a module
 
