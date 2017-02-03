@@ -12,4 +12,7 @@ audience: anonymous
 group_type: site
 permissions_ui: true
 permissions:
-  - 'view group'
+  0: 'view group'
+  2: 'view group_node:article entity'
+  3: 'view group_node:page entity'
+  4: 'view group_node:modular_content entity'

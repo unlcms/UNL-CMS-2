@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.group.site.field_bands
     - field.field.group.site.field_body
+    - field.field.group.site.field_use_subdomain
     - group.type.site
   module:
     - entity_reference_revisions
@@ -28,6 +29,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+  field_use_subdomain:
+    weight: -2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
   label:
     label: hidden
     type: string

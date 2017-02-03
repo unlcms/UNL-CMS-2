@@ -1,0 +1,23 @@
+uuid: de8cc0fd-7341-4ceb-b583-318ed7cbe7c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_use_subdomain
+    - group.type.site
+id: group.site.field_use_subdomain
+field_name: field_use_subdomain
+entity_type: group
+bundle: site
+label: 'Use subdomain'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

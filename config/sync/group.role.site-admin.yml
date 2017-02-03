@@ -12,12 +12,12 @@ audience: member
 group_type: site
 permissions_ui: true
 permissions:
-  0: 'access content overview'
-  1: 'administer group'
-  2: 'administer members'
-  4: 'edit group'
-  5: 'edit own group_membership content'
-  6: 'leave group'
-  7: 'view group'
-  8: 'view group_membership content'
-  9: 'access group_node overview'
+  - 'access content overview'
+  - 'administer group'
+  - 'administer members'
+  - 'edit group'
+  - 'edit own group_membership content'
+  - 'leave group'
+  - 'view group'
+  - 'view group_membership content'
+  - 'access group_node overview'

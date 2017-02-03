@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.group.site.field_bands
     - field.field.group.site.field_body
+    - field.field.group.site.field_use_subdomain
     - group.type.site
   module:
     - paragraphs
@@ -33,6 +34,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
+  field_use_subdomain:
+    weight: 33
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
   label:
     type: string_textfield
     weight: -5
