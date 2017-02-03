@@ -40,7 +40,8 @@
         "drupal/purge": "^3.0@beta",
         "drupal/varnish_purge": "^1.4",
         "symfony/ldap": "~3.2.1",
-        "drupal/group": "1.x-dev"
+        "drupal/group": "1.x-dev",
+        "unlcms/group_subdomain": "*"
     },
     "replace": {
         "drupal/core": "~8.2"
@@ -66,6 +67,7 @@
         },
         "patches": {
             "drupal/group": {
+                "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch"
             }
         }
     },
@@ -84,6 +86,10 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "group_subdomain": {
+            "url": "https://github.com/unlcms/group_subdomain.git",
+            "type": "git"
         },
         "unl_fourone": {
             "url": "https://github.com/unlcms/unl_fourone.git",
