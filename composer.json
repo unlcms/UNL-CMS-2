@@ -41,9 +41,7 @@
         "drupal/varnish_purge": "^1.4",
         "symfony/ldap": "~3.2.1",
         "drupal/group": "1.x-dev",
-        "unlcms/group_subdomain": "*"
-    },
-    "replace": {
+        "unlcms/group_subdomain": "*",
         "drupal/core": "~8.2"
     },
     "minimum-stability": "dev",
