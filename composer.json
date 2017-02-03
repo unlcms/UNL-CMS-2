@@ -42,7 +42,8 @@
         "symfony/ldap": "~3.2.1",
         "drupal/group": "1.x-dev",
         "unlcms/group_subdomain": "*",
-        "drupal/core": "~8.2"
+        "drupal/core": "~8.2",
+        "drupal/imagemagick": "^1.0@alpha"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

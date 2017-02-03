@@ -1,7 +1,12 @@
+# UNLcms 2
+Drupal 8 installation at the University of Nebraska–Lincoln
+
 # Installation
 
 1. Install Composer (https://getcomposer.org/download/) and Drush version 8+ (http://docs.drush.org/en/master/install/)
-  
+
+  -  Production uses http://www.imagemagick.org/script/download.php. You can optionally skip installing this and switch to the core GD2 toolkit at _admin/config/media/image-toolkit_.
+
 2. Clone this project and run from this project's root:
   ```
   cp .htaccess.drupal-default .htaccess
@@ -30,11 +35,11 @@
 
 5. Run
   ```
-  composer update drupal/core --with-dependencies
+  composer install
   ```
 
-6. Do standard Drupal install
-  * Navigate to /index.php
+6. Do standard Drupal install:
+  * Navigate to /index.php in the browser
   * Choose "Configuration installer" for the "installation profile"
   * On "Configure site" set "Username" to "admin" and set "Email address" to a personal address so it doesn't conflict with your UNL email
 
@@ -45,8 +50,10 @@
   ```
 
 8. Install the UNLedu Framework (https://github.com/unl/wdntemplates) separately and create a symlink to its 'wdn' directory.
+  * For example, if you installed the wdntemplates project in /Library/WebServer/Documents then you would run this from your UNL-CMS-2 porject root:
+
   ```
-  ln -s /Library/WebServer/Documents/wdn wdn
+  ln -s /Library/WebServer/Documents/wdntemplates/wdn wdn
   ```
 
 9. Run:
@@ -60,30 +67,19 @@
 
 # Update core
 
-  * Run 
-    ```
-    composer update drupal/core --with-dependencies
-    ```
-
-  * Replace all files except for
+  * Run `composer update drupal/core --with-dependencies`
+  * Replace all files (such as index.php, update.php ) except for
     - .htaccess
     - composer.json
     - composer.lock
     - robots.txt
     - /sites
-
-  * Manually update the above files with the latest changes in the latest core version
-    - For example, update "drupal/core" in composer.json with the new version
-  
+  * Manually update the above files with the latest changes
   * Run `drush updatedb`
 
 # Adding a module
 
-  * Example 
-  ```
-  composer require drupal/imce:1.4
-  ```
-    where 1.4 is the version number portion of 8.x-1.4
+  * Example for adding the IMCE module: `composer require drupal/imce`
   * Enable the module in the UI and configure
   * Export the configuration and commit using "Managing configuration" below
   
@@ -97,18 +93,12 @@
 # Managing configuration
 
   * Requires Drush 8+: http://docs.drush.org/en/master/install/
-
-  * **git pull** so you have the latest /config version
-
-  * Make sure your local dev site is using the latest config by running this from the site root $> drush config-import
-
-  * Make configuration changes on a local dev site and run $> drush config-export
-
-  * Commit changes to config dir
-  
+  * `git pull` so you have the latest /config files
+  * Make sure your local dev site is using the latest config by running this from the site root `drush config-import`
+  * Make configuration changes on a local dev site and run `drush config-export`
+  * Commit changes to /config dir
   * Do a pull request
-
-  * On production run $> drush config-import
+  * On production run `drush config-import`
 
 # Local devlopment
 
@@ -117,4 +107,4 @@
 
 # Useful drush commands
 
-  * Cache rebuild: drush cr
+  * Cache rebuild: `drush cr`
