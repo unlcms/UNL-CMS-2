@@ -41,6 +41,7 @@
         "drupal/varnish_purge": "^1.4",
         "symfony/ldap": "~3.2.1",
         "drupal/group": "1.x-dev",
+        "unlcms/group_simplecss": "*",
         "unlcms/group_subdomain": "*",
         "drupal/core": "~8.2",
         "drupal/imagemagick": "^1.0@alpha",
@@ -86,6 +87,10 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "group_simplecss": {
+            "url": "https://github.com/unlcms/group_simplecss.git",
+            "type": "git"
         },
         "group_subdomain": {
             "url": "https://github.com/unlcms/group_subdomain.git",

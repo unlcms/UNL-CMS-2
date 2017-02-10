@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4762f3f3affa41f757798171e18c2684",
+    "content-hash": "45ab94d3917d4d55e969c9e9158cec91",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4831,6 +4831,25 @@
             "time": "2017-01-11T19:36:15+00:00"
         },
         {
+            "name": "unlcms/group_simplecss",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unlcms/group_simplecss.git",
+                "reference": "0af74d169021fffc48f87717d75b79b8583a0d24"
+            },
+            "type": "drupal-module",
+            "authors": [
+                {
+                    "name": "Eric Rasmussen (ericras)",
+                    "homepage": "https://www.drupal.org/u/ericras",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Add CSS to a Group.",
+            "time": "2017-02-10 21:09:57"
+        },
+        {
             "name": "unlcms/group_subdomain",
             "version": "dev-8.x-1.x",
             "source": {
@@ -4922,7 +4941,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "d9c79c23c08b8efd5fa5a842cc66383249238c8d"
+                "reference": "1b2894f6458809ebb5d3069e8235fecb2acc2c81"
             },
             "type": "drupal-theme",
             "authors": [
@@ -4933,7 +4952,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-02-01 20:25:20"
+            "time": "2017-02-10 21:03:23"
         },
         {
             "name": "unlcms/unl_purge_processor",
