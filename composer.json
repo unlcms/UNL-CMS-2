@@ -26,7 +26,7 @@
         "drupal/drupal_reset": "1.x-dev",
         "drupal/easy_breadcrumb": "1.5",
         "drupal/devel": "1.0-beta1",
-        "drupal/imce": "1.4",
+        "drupal/imce": "1.5",
         "drupal/admin_toolbar": "1.18",
         "drupal/honeypot": "^1.23",
         "drupal/webform": "^5.0.0",
