@@ -1690,7 +1690,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/group",
-                "reference": "942edb9911732027f6bc5fe43e7165fca3cecc3d"
+                "reference": "67e89c855ecf5d53a6f40dedc5536d5412683541"
             },
             "require": {
                 "drupal/core": "*"
@@ -1701,8 +1701,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta4+24-dev",
-                    "datestamp": "1486464483"
+                    "version": "8.x-1.0-beta4+26-dev",
+                    "datestamp": "1486995185"
                 },
                 "patches_applied": {
                     "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch"
@@ -1716,10 +1716,6 @@
                 {
                     "name": "kristiaanvandeneynde",
                     "homepage": "https://www.drupal.org/user/1345130"
-                },
-                {
-                    "name": "oenie",
-                    "homepage": "https://www.drupal.org/user/1446068"
                 }
             ],
             "description": "This module allows you to group users, content and other entities",
@@ -1727,7 +1723,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
             },
-            "time": "2017-02-07 10:57:11"
+            "time": "2017-02-14 09:07:16"
         },
         {
             "name": "drupal/honeypot",
@@ -2421,17 +2417,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.0.0-beta5",
+            "version": "5.0.0-beta7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "8.x-5.0-beta5"
+                "reference": "8.x-5.0-beta7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-beta5.zip",
-                "reference": "8.x-5.0-beta5",
-                "shasum": "91cd6651923310974fa01aa12b9811c7811e3969"
+                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-beta7.zip",
+                "reference": null,
+                "shasum": "1c2be66200291e38ebe41e27641e2607d4be7baa"
             },
             "require": {
                 "drupal/core": "*"
@@ -2445,8 +2441,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta5",
-                    "datestamp": "1485776283"
+                    "version": "8.x-5.0-beta7",
+                    "datestamp": "1487143684"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4721,7 +4717,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/group_subdomain.git",
-                "reference": "fa66a002d90bc1bed276e1e8158249a1b435971e"
+                "reference": "76ed13501a00a3fb78c3d94f2bd7b302f43105bb"
             },
             "type": "drupal-module",
             "authors": [
@@ -4737,7 +4733,7 @@
                 }
             ],
             "description": "Assign subdomains to groups.",
-            "time": "2017-02-03 15:27:26"
+            "time": "2017-02-14 17:35:29"
         },
         {
             "name": "unlcms/unl_breadcrumbs",
@@ -4764,7 +4760,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_cas.git",
-                "reference": "60fdf94e61a429994ff993fe68b0ea94a8fbf309"
+                "reference": "c7e2076978bce432284478cbb19b78201acb0b9b"
             },
             "type": "drupal-module",
             "authors": [
@@ -4775,7 +4771,7 @@
                 }
             ],
             "description": "login.unl.edu integration",
-            "time": "2017-01-13 22:41:52"
+            "time": "2017-02-13 16:53:34"
         },
         {
             "name": "unlcms/unl_filter",
