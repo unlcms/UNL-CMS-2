@@ -63,7 +63,9 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   ```
   The reason we create an admin user first, then create a second account is that the first user in a Drupal installation has special permisisons. We want to operate without that complexity. See https://www.drupal.org/node/540008
 
-10. That's it for installation. Instructions below are for additional site maintenance and updating tasks.
+10. Enter the domain of your dev machine at admin/config/system/group_subdomain
+
+11. That's it for installation. Instructions below are for additional site maintenance and updating tasks.
 
 # Update core
 
