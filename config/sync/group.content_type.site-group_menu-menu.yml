@@ -1,0 +1,17 @@
+uuid: c090df9a-f758-4b46-b44b-e953e1a14902
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site
+  module:
+    - group_menu
+    - system
+id: site-group_menu-menu
+label: 'Site: Group menu'
+description: 'Adds menus to groups both publicly and privately.'
+group_type: site
+content_plugin: 'group_menu:menu'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1

@@ -1,0 +1,23 @@
+uuid: 6c05afc7-aa96-4706-808e-03735b85e601
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_menu_block
+  theme:
+    - unl_fourone
+id: groupmenus
+theme: unl_fourone
+region: navlinks
+weight: -7
+provider: null
+plugin: group_menus
+settings:
+  id: group_menus
+  label: 'Group menus'
+  provider: group_menu_block
+  label_display: '0'
+  context_mapping:
+    group: '@group.group_route_context:group'
+    node: '@node.node_route_context:node'
+visibility: {  }

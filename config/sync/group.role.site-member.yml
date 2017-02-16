@@ -12,4 +12,12 @@ audience: member
 group_type: site
 permissions_ui: true
 permissions:
-  - 'view group'
+  0: 'view group'
+  2: 'edit group menus'
+  3: 'create group_menu:menu content'
+  4: 'delete any group_menu:menu content'
+  5: 'delete own group_menu:menu content'
+  6: 'update any group_menu:menu content'
+  7: 'update own group_menu:menu content'
+  8: 'view group_menu:menu content'
+  9: 'view group menus'

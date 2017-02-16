@@ -3,6 +3,7 @@ settings:
   default_form_closed_message: 'Sorry...This form is closed to new submissions.'
   default_form_exception_message: 'Unable to display this webform. Please contact the site administrator.'
   default_form_submit_label: Submit
+  default_form_submit_once: false
   default_form_confidential_message: 'This form is confidential. You must <a href="[site:login-url]/logout?destination=[current-page:url:relative]">Log out</a> to submit it.'
   default_form_disable_back: false
   default_form_unsaved: false
@@ -26,9 +27,13 @@ settings:
   confirmation_back_classes: "button\r\n"
   default_limit_total_message: 'No more submissions are permitted.'
   default_limit_user_message: 'No more submissions are permitted.'
+assets:
+  css: ''
+  javascript: ''
 export:
   exporter: delimited
   delimiter: ','
+  multiple_delimiter: ;
   excel: false
   file_name: 'submission-[webform-submission:serial]'
   header_format: label
@@ -40,10 +45,13 @@ export:
   options_item_format: label
   entity_reference_format: link
   likert_answers_format: label
+  signature_format: status
 batch:
   default_batch_export_size: 500
   default_batch_update_size: 500
   default_batch_delete_size: 500
+purge_settings:
+  cron_size: 100
 elements:
   allowed_tags: admin
   wrapper_classes: "container-inline clearfix\r\nform--inline clearfix\r\nmessages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
@@ -79,6 +87,7 @@ ui:
   video_display: dialog
   details_save: true
   dialog_disabled: false
+  offcanvas_disabled: false
   html_editor_disabled: false
 library:
   cdn: true
