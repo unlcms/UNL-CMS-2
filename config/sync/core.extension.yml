@@ -43,7 +43,6 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  paragraphs: 0
   path: 0
   purge: 0
   purge_drush: 0
@@ -75,6 +74,7 @@ module:
   menu_link_content: 1
   pathauto: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable: 0
