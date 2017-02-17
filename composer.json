@@ -43,7 +43,8 @@
         "unlcms/group_subdomain": "*",
         "drupal/core": "~8.2",
         "drupal/imagemagick": "^1.0@alpha",
-        "drupal/asset_injector": "1.x-dev"
+        "drupal/asset_injector": "1.x-dev",
+        "drupal/config_ignore": "^1.3"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
