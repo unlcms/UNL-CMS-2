@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b361632a432f535fcb418ae9485a8efd",
+    "content-hash": "614ac0f690bfad13adf5f3df5a414bac",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1755,7 +1755,9 @@
                     "version": "8.x-1.0-beta4+34-dev",
                     "datestamp": "1487601184"
                 },
-                "patches_applied": []
+                "patches_applied": {
+                    "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch"
+                }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -1771,7 +1773,8 @@
             "homepage": "https://www.drupal.org/project/group",
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
-            }
+            },
+            "time": "2017-02-20 14:29:58"
         },
         {
             "name": "drupal/honeypot",
@@ -4806,6 +4809,30 @@
             ],
             "description": "Assign subdomains to groups.",
             "time": "2017-02-14 17:35:29"
+        },
+        {
+            "name": "unlcms/imce_groups",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unlcms/imce_groups.git",
+                "reference": "49de26b1277bfefb1ed8aa3e4013ea3b75007691"
+            },
+            "type": "drupal-module",
+            "authors": [
+                {
+                    "name": "Michael Fairchild (mfairchild365)",
+                    "homepage": "https://github.com/mfairchild365",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Eric Rasmussen (ericras)",
+                    "homepage": "https://www.drupal.org/u/ericras",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Create and use IMCE folders for groups",
+            "time": "2017-02-21 20:17:23"
         },
         {
             "name": "unlcms/unl_breadcrumbs",

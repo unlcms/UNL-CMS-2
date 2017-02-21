@@ -1,0 +1,18 @@
+uuid: ab947ee6-11a1-4284-83c8-641936473614
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated_profile
+label: 'Authenticated profile'
+description: 'Configuration for group members'
+conf:
+  extensions: 'jpg jpeg png gif svg pdf txt doc docx xls xslx ppt pptx'
+  maxsize: !!float 10
+  quota: !!float 2048
+  maxwidth: 1920
+  maxheight: 1920
+  replace: 1
+  folders:
+    -
+      path: groups
+      permissions: {  }
