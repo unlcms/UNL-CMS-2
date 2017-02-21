@@ -1,0 +1,3 @@
+uri: 'ldap://localhost/'
+dn: 'uid=admin,dc=localhost,dc='
+password: XXX

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "70d6eaf9a6b190a76ab4f942147597d1",
+    "content-hash": "b361632a432f535fcb418ae9485a8efd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1741,7 +1741,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/group",
-                "reference": "67e89c855ecf5d53a6f40dedc5536d5412683541"
+                "reference": "022aac3841ee6b5ba56a3eb8e907679a0b0a746d"
             },
             "require": {
                 "drupal/core": "*"
@@ -1752,12 +1752,10 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta4+26-dev",
-                    "datestamp": "1486995185"
+                    "version": "8.x-1.0-beta4+34-dev",
+                    "datestamp": "1487601184"
                 },
-                "patches_applied": {
-                    "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch"
-                }
+                "patches_applied": []
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -1773,8 +1771,7 @@
             "homepage": "https://www.drupal.org/project/group",
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
-            },
-            "time": "2017-02-14 09:07:16"
+            }
         },
         {
             "name": "drupal/honeypot",
@@ -2821,16 +2818,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
+                "reference": "04a6d1a00ea5da0727ee94309a9f0d3dbaecb569"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
-                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/04a6d1a00ea5da0727ee94309a9f0d3dbaecb569",
+                "reference": "04a6d1a00ea5da0727ee94309a9f0d3dbaecb569",
                 "shasum": ""
             },
             "require": {
@@ -2866,16 +2863,23 @@
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
-            "description": "PSR-7 message implementation",
+            "description": "PSR-7 message implementation that also provides common utility methods",
             "keywords": [
                 "http",
                 "message",
+                "request",
+                "response",
                 "stream",
-                "uri"
+                "uri",
+                "url"
             ],
-            "time": "2016-06-24T23:00:38+00:00"
+            "time": "2017-02-21T01:20:32+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -4746,6 +4750,21 @@
             "time": "2017-01-11T19:36:15+00:00"
         },
         {
+            "name": "unlcms/group_menu",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ericras/group_menu.git",
+                "reference": "c2d195c882fe592f1c7c5391d4eb9c5cedb5a29e"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Gives the ability to create and manage menus for groups",
+            "time": "2017-02-17 22:51:27"
+        },
+        {
             "name": "unlcms/group_simplecss",
             "version": "dev-8.x-1.x",
             "source": {
@@ -4856,7 +4875,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "4e6ef5ade9164de33e8960587f7882f557de90cc"
+                "reference": "a3d75c6c8b65cbcc52a824543c61f39d9347a305"
             },
             "type": "drupal-theme",
             "authors": [
@@ -4867,7 +4886,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-02-16 22:03:22"
+            "time": "2017-02-17 22:01:51"
         },
         {
             "name": "unlcms/unl_purge_processor",

@@ -55,10 +55,6 @@ modules
 profiles
 themes
 
-config/sync/group_subdomain.settings.yml
-config/sync/unl_cas.settings.yml
-config/sync/unl_user.settings.yml
-
 # Ignore Group menus by ignoring all menus then adding back in the core ones with !
 config/sync/system.menu.*
 !config/sync/system.menu.account.yml
