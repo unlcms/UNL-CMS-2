@@ -21,3 +21,4 @@ permissions:
   10: 'view any band entities'
   11: 'use text format restricted_html'
   12: 'use exclude node title'
+  13: 'view the administration theme'

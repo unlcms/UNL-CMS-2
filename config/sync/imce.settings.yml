@@ -4,8 +4,6 @@ roles_profiles:
     public: authenticated_profile
   editor:
     public: member
-  coder:
-    public: member
   site_admin:
     public: member
   administrator:
