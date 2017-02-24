@@ -4758,14 +4758,14 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ericras/group_menu.git",
-                "reference": "c2d195c882fe592f1c7c5391d4eb9c5cedb5a29e"
+                "reference": "d750af0e67901cc1f9acf94069946858055d9afc"
             },
             "type": "drupal-module",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "Gives the ability to create and manage menus for groups",
-            "time": "2017-02-17 22:51:27"
+            "time": "2017-02-24 20:24:02"
         },
         {
             "name": "unlcms/group_simplecss",
@@ -4792,7 +4792,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/group_subdomain.git",
-                "reference": "8a4e825ca4748d3367a8ab95dab3c5f6188c20f9"
+                "reference": "22388141ba6544b584a146d5faca9ed5772e200f"
             },
             "type": "drupal-module",
             "authors": [
@@ -4808,7 +4808,7 @@
                 }
             ],
             "description": "Assign subdomains to groups.",
-            "time": "2017-02-24 16:34:45"
+            "time": "2017-02-24 22:51:18"
         },
         {
             "name": "unlcms/imce_groups",
