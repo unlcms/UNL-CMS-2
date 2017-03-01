@@ -13,4 +13,7 @@ group_type: site
 permissions_ui: true
 permissions:
   0: 'view group'
-  2: 'view group menus'
+  1: 'view group menus'
+  2: 'view group_node:article entity'
+  3: 'view group_node:page entity'
+  8: 'view group_node:modular_content entity'

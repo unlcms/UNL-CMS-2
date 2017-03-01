@@ -4,3 +4,4 @@ status: true
 dependencies: {  }
 id: wdn_quote
 label: Quote
+behavior_plugins: {  }
