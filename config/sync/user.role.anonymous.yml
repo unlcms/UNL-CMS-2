@@ -9,11 +9,10 @@ label: 'Anonymous user'
 weight: -10
 is_admin: false
 permissions:
-  - 'access content'
-  - 'use text format restricted_html'
-  - 'access comments'
-  - 'access site-wide contact form'
-  - 'search content'
-  - 'view files'
-  - 'view any band entities'
-  - 'use exclude node title'
+  0: 'access content'
+  1: 'use text format restricted_html'
+  2: 'access comments'
+  4: 'search content'
+  5: 'view files'
+  6: 'view any band entities'
+  7: 'use exclude node title'

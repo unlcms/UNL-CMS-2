@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "614ac0f690bfad13adf5f3df5a414bac",
+    "content-hash": "c86561ee34f94388c6a49f3386b137ac",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -868,17 +868,17 @@
         },
         {
             "name": "drupal/config_installer",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_installer",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_installer-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "1507bca7a9f7d5a8ca759b8d717d055629b8f045"
+                "url": "https://ftp.drupal.org/files/projects/config_installer-8.x-1.4.zip",
+                "reference": null,
+                "shasum": "5371ced3d688f6c932992066fa0d5f44f7d6e7dd"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -889,8 +889,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1462466939"
+                    "version": "8.x-1.4",
+                    "datestamp": "1488072484"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1439,17 +1439,17 @@
         },
         {
             "name": "drupal/easy_breadcrumb",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/easy_breadcrumb",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "b7f12392ea4d8325f6da080a79308cc424f614a1"
+                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-8.x-1.6.zip",
+                "reference": null,
+                "shasum": "d7e4fcbb76a65bc33230d45c3bf41c4689b8e1a2"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1460,8 +1460,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1475705039"
+                    "version": "8.x-1.6",
+                    "datestamp": "1487359983"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2708,21 +2708,21 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.2.2",
+            "version": "6.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60"
+                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
-                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8d6c6cc55186db87b7dc5009827429ba4e9dc006",
+                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.3.1",
+                "guzzlehttp/psr7": "^1.4",
                 "php": ">=5.5"
             },
             "require-dev": {
@@ -2766,7 +2766,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-10-08T15:01:37+00:00"
+            "time": "2017-02-28T22:50:30+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -4903,7 +4903,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "0e8f23895304b8a4d4506af97f0562d264a35bf5"
+                "reference": "05d89465f7bd7938edae3bfe7844c29e30a49f25"
             },
             "type": "drupal-theme",
             "authors": [
@@ -4914,7 +4914,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-02-22 17:22:44"
+            "time": "2017-02-28 20:10:03"
         },
         {
             "name": "unlcms/unl_purge_processor",

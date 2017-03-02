@@ -9,3 +9,11 @@ is_admin: null
 permissions:
   - 'use text format wysiwyg'
   - 'use exclude node title'
+  - 'access contextual links'
+  - 'access content overview'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'create url aliases'
+  - 'switch shortcut sets'
+  - 'access administration pages'
+  - 'access toolbar'
