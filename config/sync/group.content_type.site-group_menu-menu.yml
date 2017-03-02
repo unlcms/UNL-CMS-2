@@ -1,4 +1,4 @@
-uuid: e31ad3c9-4e9f-495e-90fe-ed37dea91d4f
+uuid: 7df701c4-7099-4f25-a170-e7fe6edc05a3
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ description: 'Adds menus to groups both publicly and privately.'
 group_type: site
 content_plugin: 'group_menu:menu'
 plugin_config:
-  group_cardinality: 0
+  group_cardinality: 1
   entity_cardinality: 1
   use_creation_wizard: true
   info_text:
