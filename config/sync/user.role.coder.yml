@@ -10,3 +10,4 @@ permissions:
   - 'use text format wysiwyg_source'
   - 'use text format wysiwyg'
   - 'use exclude node title'
+  - 'edit html code'

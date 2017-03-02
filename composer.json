@@ -22,6 +22,7 @@
         "unlcms/unl_purge_processor": "*",
         "unlcms/unl_user": "*",
         "unlcms/unl_breadcrumbs": "dev-master",
+        "unlcms/unl_editor": "*",
         "drupal/config_installer": "^1.0",
         "drupal/drupal_reset": "1.x-dev",
         "drupal/easy_breadcrumb": "^1.0",
@@ -111,6 +112,10 @@
         },
         "unl_cas": {
             "url": "https://github.com/unlcms/unl_cas.git",
+            "type": "git"
+        },
+        "unl_editor": {
+            "url": "https://github.com/unlcms/unl_editor.git",
             "type": "git"
         },
         "unl_filter": {
