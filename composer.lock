@@ -4879,7 +4879,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_editor.git",
-                "reference": "52943c28bdfbc764e76ec144aa4f69ff690a4d39"
+                "reference": "c122e561b65699434699604c6fb092a3a7cc053b"
             },
             "type": "drupal-module",
             "authors": [
@@ -4890,7 +4890,7 @@
                 }
             ],
             "description": "Modifications for text formats and editors.",
-            "time": "2017-03-02 21:54:49"
+            "time": "2017-03-02 23:09:44"
         },
         {
             "name": "unlcms/unl_filter",
@@ -4922,7 +4922,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "05d89465f7bd7938edae3bfe7844c29e30a49f25"
+                "reference": "3c50d24fd46e1fae5f6ddbd6113a4daf500636ba"
             },
             "type": "drupal-theme",
             "authors": [
@@ -4933,7 +4933,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-02-28 20:10:03"
+            "time": "2017-03-02 23:26:33"
         },
         {
             "name": "unlcms/unl_purge_processor",
