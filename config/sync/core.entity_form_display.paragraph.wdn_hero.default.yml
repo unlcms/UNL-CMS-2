@@ -28,6 +28,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_hero_initial_line:
     weight: 0
     settings:
@@ -35,6 +36,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_hero_link:
     weight: 3
     settings:
@@ -42,6 +44,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_hero_picture:
     weight: 4
     settings:
@@ -51,17 +54,20 @@ content:
       imce:
         enabled: false
     type: image_image
+    region: content
   field_hero_video:
     weight: 5
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
   field_horizontal_orientation:
     weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
 hidden:
   created: true
   status: true

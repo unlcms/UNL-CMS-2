@@ -7,13 +7,13 @@ label: Editor
 weight: -8
 is_admin: null
 permissions:
-  - 'use text format wysiwyg'
-  - 'use exclude node title'
-  - 'access contextual links'
+  - 'access administration pages'
   - 'access content overview'
-  - 'view all revisions'
-  - 'view own unpublished content'
+  - 'access contextual links'
+  - 'access toolbar'
   - 'create url aliases'
   - 'switch shortcut sets'
-  - 'access administration pages'
-  - 'access toolbar'
+  - 'use exclude node title'
+  - 'use text format wysiwyg'
+  - 'view all revisions'
+  - 'view own unpublished content'

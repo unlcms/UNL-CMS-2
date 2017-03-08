@@ -1,6 +1,7 @@
-uuid: ce1084ad-e685-4776-be40-eb5ccdb663fa
 langcode: en
 status: true
+open: null
+close: null
 dependencies:
   enforced:
     module:
@@ -56,6 +57,7 @@ settings:
   draft_saved_message: ''
   draft_loaded_message: ''
   confirmation_type: url_message
+  confirmation_title: ''
   confirmation_message: 'Your message has been sent.'
   confirmation_url: '<front>'
   confirmation_attributes: {  }
@@ -137,3 +139,4 @@ handlers:
       html: true
       attachments: false
       debug: false
+uuid: ce1084ad-e685-4776-be40-eb5ccdb663fa

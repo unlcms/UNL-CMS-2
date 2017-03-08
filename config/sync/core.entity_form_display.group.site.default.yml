@@ -18,45 +18,52 @@ mode: default
 content:
   field_bands:
     type: entity_reference_paragraphs
-    weight: 32
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
   field_body:
-    weight: 31
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
+    region: content
   field_use_subdomain:
-    weight: 33
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
   group_simplecss:
     type: string_textarea
-    weight: 50
+    weight: 5
     settings:
       rows: 20
       placeholder: ''
     third_party_settings: {  }
+    region: content
   label:
     type: string_textfield
-    weight: -5
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   path:
     type: path
-    weight: 30
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:

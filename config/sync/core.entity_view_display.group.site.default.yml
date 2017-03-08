@@ -17,35 +17,30 @@ mode: default
 content:
   field_bands:
     type: entity_reference_revisions_entity_view
-    weight: -3
+    weight: 2
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
   field_body:
-    weight: -4
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  field_use_subdomain:
-    weight: -2
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
+    region: content
   label:
-    label: hidden
     type: string
-    weight: -5
+    weight: 0
+    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
   changed: true
   created: true
+  field_use_subdomain: true
   uid: true

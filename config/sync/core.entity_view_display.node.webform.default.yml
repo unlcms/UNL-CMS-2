@@ -23,14 +23,17 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
   webform:
     weight: 102
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: webform_entity_reference_entity_view
+    region: content
 hidden: {  }

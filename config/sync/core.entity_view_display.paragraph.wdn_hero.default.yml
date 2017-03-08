@@ -27,6 +27,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_hero_initial_line:
     weight: 1
     label: hidden
@@ -34,6 +35,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_hero_link:
     weight: 2
     label: hidden
@@ -45,6 +47,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
   field_hero_picture:
     weight: 3
     label: hidden
@@ -53,12 +56,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: responsive_image
+    region: content
   field_hero_video:
     type: file_url_plain
     weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_horizontal_orientation:
     type: entity_reference_label
     weight: 5
@@ -66,6 +71,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   uid: true

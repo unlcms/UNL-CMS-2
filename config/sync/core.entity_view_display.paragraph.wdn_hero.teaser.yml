@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.wdn_hero.field_hero_link
     - field.field.paragraph.wdn_hero.field_hero_picture
     - field.field.paragraph.wdn_hero.field_hero_video
+    - field.field.paragraph.wdn_hero.field_horizontal_orientation
     - image.style.large
     - paragraphs.paragraphs_type.wdn_hero
   module:
@@ -26,10 +27,12 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
 hidden:
   created: true
   field_hero_impact_line: true
   field_hero_initial_line: true
   field_hero_link: true
   field_hero_video: true
+  field_horizontal_orientation: true
   uid: true

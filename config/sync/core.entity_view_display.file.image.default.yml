@@ -21,12 +21,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: above
+    region: content
   field_image_title_text:
     type: string
     weight: 0
     settings: {  }
     third_party_settings: {  }
     label: above
+    region: content
   filemime:
     type: string
     weight: 2
@@ -34,6 +36,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   filename:
     type: string
     label: hidden
@@ -41,18 +44,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   filesize:
     type: file_size
     weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
+    region: content
   uid:
     type: uri_link
     weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
+    region: content
   uri:
     type: file_image
     label: hidden
@@ -63,4 +69,5 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

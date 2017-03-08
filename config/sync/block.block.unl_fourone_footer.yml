@@ -12,7 +12,7 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: unl_fourone_footer
 theme: unl_fourone
-region: '-1'
+region: header
 weight: -7
 provider: null
 plugin: 'system_menu_block:footer'

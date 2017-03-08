@@ -20,6 +20,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
+    region: content
 hidden:
   created: true
   status: true

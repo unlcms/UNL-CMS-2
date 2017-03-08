@@ -1,6 +1,7 @@
-uuid: af34bf89-c8c5-4d77-a1fb-96f29dcc03dc
 langcode: en
 status: true
+open: null
+close: null
 dependencies: {  }
 uid: 1
 template: false
@@ -53,6 +54,7 @@ settings:
   draft_saved_message: ''
   draft_loaded_message: ''
   confirmation_type: page
+  confirmation_title: ''
   confirmation_message: ''
   confirmation_url: ''
   confirmation_attributes: {  }
@@ -98,3 +100,4 @@ access:
     roles: {  }
     users: {  }
 handlers: {  }
+uuid: af34bf89-c8c5-4d77-a1fb-96f29dcc03dc

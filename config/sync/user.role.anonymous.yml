@@ -9,9 +9,9 @@ label: 'Anonymous user'
 weight: -10
 is_admin: false
 permissions:
-  0: 'access content'
-  2: 'access comments'
-  4: 'search content'
-  5: 'view files'
-  6: 'view any band entities'
-  7: 'use exclude node title'
+  - 'access comments'
+  - 'access content'
+  - 'search content'
+  - 'use exclude node title'
+  - 'view any band entities'
+  - 'view files'

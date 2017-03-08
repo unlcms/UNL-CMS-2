@@ -7,7 +7,7 @@ label: Coder
 weight: -7
 is_admin: null
 permissions:
-  - 'use text format wysiwyg_source'
-  - 'use text format wysiwyg'
-  - 'use exclude node title'
   - 'edit html code'
+  - 'use exclude node title'
+  - 'use text format wysiwyg'
+  - 'use text format wysiwyg_source'
