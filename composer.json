@@ -44,7 +44,7 @@
         "unlcms/group_simplecss": "*",
         "unlcms/group_subdomain": "*",
         "unlcms/imce_groups": "*",
-        "drupal/core": "~8.2",
+        "drupal/core": "~8.3",
         "drupal/imagemagick": "^1.0@alpha",
         "drupal/asset_injector": "1.x-dev",
         "drupal/config_ignore": "^1.3"
