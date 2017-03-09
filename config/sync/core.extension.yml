@@ -23,6 +23,7 @@ module:
   entity_reference_revisions: 0
   exclude_node_title: 0
   field: 0
+  field_permissions: 0
   field_ui: 0
   file: 0
   file_entity: 0
