@@ -783,7 +783,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/asset_injector",
-                "reference": "223a04d5d0941de56c0706c4200b70c017cc6969"
+                "reference": "4dcfee493053002d45851a3644f6e7bcd2cecb60"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -794,8 +794,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1+4-dev",
-                    "datestamp": "1486522984"
+                    "version": "8.x-1.1+5-dev",
+                    "datestamp": "1486525385"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -813,7 +813,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/asset_injector"
             },
-            "time": "2017-02-08 03:40:07"
+            "time": "2017-03-09 04:50:22"
         },
         {
             "name": "drupal/config_ignore",
@@ -3879,16 +3879,16 @@
         },
         {
             "name": "symfony/ldap",
-            "version": "v3.2.4",
+            "version": "v3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/ldap.git",
-                "reference": "092718897df0c74ae729867acb47015aa6a7f5d7"
+                "reference": "347560a8cb6a12d67ca439f383efd1f0d22fd975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/ldap/zipball/092718897df0c74ae729867acb47015aa6a7f5d7",
-                "reference": "092718897df0c74ae729867acb47015aa6a7f5d7",
+                "url": "https://api.github.com/repos/symfony/ldap/zipball/347560a8cb6a12d67ca439f383efd1f0d22fd975",
+                "reference": "347560a8cb6a12d67ca439f383efd1f0d22fd975",
                 "shasum": ""
             },
             "require": {
@@ -3931,20 +3931,20 @@
                 "active directory",
                 "ldap"
             ],
-            "time": "2017-01-12T19:04:24+00:00"
+            "time": "2017-02-21T10:04:38+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v3.2.4",
+            "version": "v3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "855429e3e9014b9dafee2a667de304c3aaa86fe6"
+                "reference": "56e3d0a41313f8a54326851f10690d591e62a24c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/855429e3e9014b9dafee2a667de304c3aaa86fe6",
-                "reference": "855429e3e9014b9dafee2a667de304c3aaa86fe6",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/56e3d0a41313f8a54326851f10690d591e62a24c",
+                "reference": "56e3d0a41313f8a54326851f10690d591e62a24c",
                 "shasum": ""
             },
             "require": {
@@ -3985,7 +3985,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2017-01-02T20:32:22+00:00"
+            "time": "2017-02-21T09:12:04+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -4977,7 +4977,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_cas.git",
-                "reference": "c7e2076978bce432284478cbb19b78201acb0b9b"
+                "reference": "25fcfb2af2bd6d8dffa95bd390556476340a229d"
             },
             "type": "drupal-module",
             "authors": [
@@ -4988,7 +4988,7 @@
                 }
             ],
             "description": "login.unl.edu integration",
-            "time": "2017-02-13 16:53:34"
+            "time": "2017-03-09 21:06:23"
         },
         {
             "name": "unlcms/unl_editor",
@@ -5039,7 +5039,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "8479c6a39615d8e7d4461d15983bafe6f446cd60"
+                "reference": "dee5d9e44274cdf89eb0f71fe0673ed5c3d318e3"
             },
             "type": "drupal-theme",
             "authors": [
@@ -5050,7 +5050,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-03-08 22:13:42"
+            "time": "2017-03-09 20:42:03"
         },
         {
             "name": "unlcms/unl_purge_processor",
@@ -6851,16 +6851,16 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.2.4",
+            "version": "v3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "394a2475a3a89089353fde5714a7f402fbb83880"
+                "reference": "2fe0caa60c1a1dfeefd0425741182687a9b382b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/394a2475a3a89089353fde5714a7f402fbb83880",
-                "reference": "394a2475a3a89089353fde5714a7f402fbb83880",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/2fe0caa60c1a1dfeefd0425741182687a9b382b8",
+                "reference": "2fe0caa60c1a1dfeefd0425741182687a9b382b8",
                 "shasum": ""
             },
             "require": {
@@ -6904,7 +6904,7 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-31T21:49:23+00:00"
+            "time": "2017-02-21T09:12:04+00:00"
         },
         {
             "name": "symfony/css-selector",
