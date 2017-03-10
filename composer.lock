@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fe09d30f248c6f9be8ce16d431ef6fa",
+    "content-hash": "84ca44ea2da81d33651aab1662d974fa",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1817,7 +1817,8 @@
                     "datestamp": "1487601184"
                 },
                 "patches_applied": {
-                    "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch"
+                    "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch",
+                    "More contexts needed": "https://www.drupal.org/files/issues/expand_context_to_nodes-2815971-13.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3879,7 +3880,7 @@
         },
         {
             "name": "symfony/ldap",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/ldap.git",
@@ -3935,7 +3936,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -6851,7 +6852,7 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",

@@ -1,0 +1,134 @@
+diff --git a/group.tokens.inc b/group.tokens.inc
+index 4e7f76a..38baa4a 100644
+--- a/group.tokens.inc
++++ b/group.tokens.inc
+@@ -113,10 +113,6 @@ function group_tokens($type, $tokens, array $data, array $options, BubbleableMet
+           $replacements[$original] = $group->language()->getId();
+           break;
+ 
+-        case 'url':
+-          $replacements[$original] = $group->toUrl('canonical', $url_options)->toString();
+-          break;
+-
+         case 'edit-url':
+           $replacements[$original] = $group->toUrl('edit-form', $url_options)->toString();
+           break;
+@@ -139,6 +135,12 @@ function group_tokens($type, $tokens, array $data, array $options, BubbleableMet
+           $bubbleable_metadata->addCacheableDependency($date_format);
+           $replacements[$original] = \Drupal::service('date.formatter')->format($group->getChangedTime(), 'medium', '', NULL, $langcode);
+           break;
++
++        case 'url':
++          $url = $group->toUrl('canonical', $url_options);
++          $bubbleable_metadata->addCacheableDependency($url);
++          $replacements[$original] = $url->toString();
++          break;
+       }
+     }
+ 
+@@ -153,6 +155,10 @@ function group_tokens($type, $tokens, array $data, array $options, BubbleableMet
+     if ($changed_tokens = $token_service->findWithPrefix($tokens, 'changed')) {
+       $replacements += $token_service->generate('date', $changed_tokens, ['date' => $group->getChangedTime()], $options, $bubbleable_metadata);
+     }
++
++    if ($url_tokens = $token_service->findWithPrefix($tokens, 'url')) {
++      $replacements += $token_service->generate('url', $url_tokens, ['url' => $group->urlInfo()], $options, $bubbleable_metadata);
++    }
+   }
+ 
+   return $replacements;
+diff --git a/modules/gnode/gnode.tokens.inc b/modules/gnode/gnode.tokens.inc
+new file mode 100644
+index 0000000..b385d0f
+--- /dev/null
++++ b/modules/gnode/gnode.tokens.inc
+@@ -0,0 +1,89 @@
++<?php
++
++/**
++ * @file
++ * Builds placeholder replacement tokens for group node-related data.
++ */
++
++use Drupal\Core\Render\BubbleableMetadata;
++use Drupal\group\Entity\GroupContent;
++
++
++/**
++ * Implements hook_token_info_alter().
++ */
++function gnode_token_info_alter(&$info) {
++  $info['tokens']['group']['url']['type'] = 'url';
++}
++
++/**
++ * Implements hook_token_info().
++ */
++function gnode_token_info() {
++  $tokens = [];
++
++  $tokens['group'] = [
++    'name' => t('Group'),
++    'description' => t('The parent group.'),
++    'type' => 'group',
++  ];
++
++  if (\Drupal::moduleHandler()->moduleExists('token')) {
++    $tokens['groups'] = [
++      'name' => t('Groups'),
++      'description' => t("An array of all the node parent groups."),
++      'type' => 'array',
++    ];
++  }
++
++  return array(
++    'tokens' => array('node' => $tokens),
++  );
++}
++
++/**
++ * Implements hook_tokens().
++ */
++function gnode_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
++  if ($type != 'node' || empty($data['node'])) {
++    return [];
++  }
++
++  $token_service = \Drupal::token();
++  $replacements = [];
++
++  $group_content_array = GroupContent::loadByEntity($data['node']);
++  if (empty($group_content_array)) {
++    return [];
++  }
++
++  $groups = [];
++  /** @var \Drupal\group\Entity\GroupContentInterface $group_content */
++  foreach ($group_content_array as $group_content) {
++    $group = $group_content->getGroup();
++    $groups[$group->id()] = $group->label();
++    $bubbleable_metadata->addCacheableDependency($group);
++  };
++
++  if (isset($tokens['groups'])) {
++    $replacements[$tokens['groups']] = token_render_array($groups, $options);
++  }
++
++  // [node:groups:*] chained tokens.
++  if ($parents_tokens = \Drupal::token()->findWithPrefix($tokens, 'groups')) {
++    $replacements += \Drupal::token()->generate('array', $parents_tokens, array('array' => $groups), $options, $bubbleable_metadata);
++  }
++
++  /** @var \Drupal\group\Entity\GroupContentInterface $group_content */
++  $group_content = array_pop($group_content_array);
++  $group = $group_content->getGroup();
++  if (isset($tokens['group'])) {
++    $replacements[$tokens['group']] = $group->label();
++  }
++
++  if ($group_tokens = $token_service->findWithPrefix($tokens, 'group')) {
++    $replacements += $token_service->generate('group', $group_tokens, array('group' => $group), $options, $bubbleable_metadata);
++  }
++
++  return $replacements;
++}
