@@ -1,0 +1,25 @@
+uuid: d2340cab-fbe3-4816-a434-ebee38ae74dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_particulars
+  module:
+    - views
+  theme:
+    - unl_fourone
+id: views_block__group_particulars_block_2
+theme: unl_fourone
+region: contactinfo_additional
+weight: 0
+provider: null
+plugin: 'views_block:group_particulars-block_2'
+settings:
+  id: 'views_block:group_particulars-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

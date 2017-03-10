@@ -1,0 +1,23 @@
+uuid: 2d962e15-bda1-4be6-b7ca-929b09e6b1c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_social_media
+    - group.type.site
+  module:
+    - link
+id: group.site.field_social_media
+field_name: field_social_media
+entity_type: group
+bundle: site
+label: 'Social media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

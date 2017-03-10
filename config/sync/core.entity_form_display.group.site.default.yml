@@ -5,9 +5,14 @@ dependencies:
   config:
     - field.field.group.site.field_bands
     - field.field.group.site.field_body
+    - field.field.group.site.field_contact_info
+    - field.field.group.site.field_related_links
+    - field.field.group.site.field_site_affiliation
+    - field.field.group.site.field_social_media
     - field.field.group.site.field_use_subdomain
     - group.type.site
   module:
+    - link
     - paragraphs
     - path
     - text
@@ -18,7 +23,7 @@ mode: default
 content:
   field_bands:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -29,7 +34,7 @@ content:
     third_party_settings: {  }
     region: content
   field_body:
-    weight: 3
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -37,8 +42,40 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_contact_info:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_related_links:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_site_affiliation:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social_media:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_use_subdomain:
-    weight: 2
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }
@@ -46,7 +83,7 @@ content:
     region: content
   group_simplecss:
     type: string_textarea
-    weight: 5
+    weight: 9
     settings:
       rows: 20
       placeholder: ''
@@ -54,7 +91,7 @@ content:
     region: content
   label:
     type: string_textfield
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -62,7 +99,7 @@ content:
     region: content
   path:
     type: path
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

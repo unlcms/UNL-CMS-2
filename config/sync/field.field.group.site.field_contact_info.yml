@@ -1,0 +1,21 @@
+uuid: b20ab317-ae94-4390-9e80-cfb390235bca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_contact_info
+    - group.type.site
+  module:
+    - text
+id: group.site.field_contact_info
+field_name: field_contact_info
+entity_type: group
+bundle: site
+label: 'Contact info'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

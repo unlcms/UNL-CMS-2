@@ -1,0 +1,25 @@
+uuid: 98829335-446a-4afb-b52b-f37033adde1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_particulars
+  module:
+    - views
+  theme:
+    - unl_fourone
+id: views_block__group_particulars_block_4
+theme: unl_fourone
+region: leftcollinks
+weight: 0
+provider: null
+plugin: 'views_block:group_particulars-block_4'
+settings:
+  id: 'views_block:group_particulars-block_4'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

@@ -1,4 +1,4 @@
-uuid: 80ce32e0-1517-4385-8d02-015184001e62
+uuid: 3808286d-3b4f-4e93-982e-e0d6f2c3d456
 langcode: en
 status: false
 dependencies:
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - unl_fourone
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: unl_fourone_main_menu
 theme: unl_fourone
-region: header
-weight: -4
+region: navlinks
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:
