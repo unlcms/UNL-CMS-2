@@ -224,7 +224,18 @@ display:
       title: 'Your Sites'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<p><a href="user/login">Login to see your Jump Start sites</a></p>'
+          plugin_id: text_custom
       relationships:
         group_content_id:
           id: group_content_id
