@@ -11,7 +11,7 @@ _core:
 id: unl_fourone_help
 theme: unl_fourone
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: help_block
 settings:

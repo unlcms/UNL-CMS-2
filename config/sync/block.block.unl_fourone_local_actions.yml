@@ -9,7 +9,7 @@ _core:
 id: unl_fourone_local_actions
 theme: unl_fourone
 region: content
-weight: -5
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

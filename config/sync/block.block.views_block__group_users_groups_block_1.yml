@@ -1,0 +1,31 @@
+uuid: d122b50c-15df-4d1e-b4b4-de8a80de45f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_users_groups
+  module:
+    - system
+    - views
+  theme:
+    - unl_fourone
+id: views_block__group_users_groups_block_1
+theme: unl_fourone
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:group_users_groups-block_1'
+settings:
+  id: 'views_block:group_users_groups-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
