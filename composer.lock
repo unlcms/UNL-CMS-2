@@ -1613,7 +1613,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/field_permissions-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta1",
                 "shasum": "f9d7c39734c01e52412de95a671992ec781d6652"
             },
             "require": {
@@ -5040,7 +5040,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "c0bb9980d440332358c33b5dcd56f62a47c90ed7"
+                "reference": "742d620a35085967c98ce7f6b8113236c7009e2e"
             },
             "type": "drupal-theme",
             "authors": [
@@ -5051,7 +5051,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-03-09 22:47:21"
+            "time": "2017-03-10 22:18:46"
         },
         {
             "name": "unlcms/unl_purge_processor",
