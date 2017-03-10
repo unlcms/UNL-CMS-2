@@ -2,6 +2,8 @@ uuid: 47088c0d-844c-49f8-8a87-2dd2d9dd235c
 langcode: en
 status: true
 dependencies:
+  config:
+    - user.role.authenticated
   module:
     - group
     - user
@@ -21,8 +23,10 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: role
+        options:
+          role:
+            authenticated: authenticated
       cache:
         type: tag
         options: {  }
@@ -225,17 +229,19 @@ display:
       header: {  }
       footer: {  }
       empty:
-        area_text_custom:
-          id: area_text_custom
+        area:
+          id: area
           table: views
-          field: area_text_custom
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<p><a href="user/login">Login to see your Jump Start sites</a></p>'
-          plugin_id: text_custom
+          content:
+            value: 'You do not have any sites.'
+            format: wysiwyg
+          plugin_id: text
       relationships:
         group_content_id:
           id: group_content_id
@@ -311,6 +317,7 @@ display:
         - 'languages:language_interface'
         - url
         - user
+        - user.roles
       tags: {  }
   block_1:
     display_plugin: block
@@ -328,4 +335,5 @@ display:
         - 'languages:language_interface'
         - url
         - user
+        - user.roles
       tags: {  }
