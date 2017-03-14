@@ -5,6 +5,13 @@ dependencies:
   enforced:
     module:
       - webform
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: e0BoXlrxD4xhZMqJm5A1gTUkmntzhvyhDNY-3Y4glyc
 name: Webform
@@ -13,4 +20,4 @@ description: 'A basic page with a webform attached.'
 help: ''
 new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false
