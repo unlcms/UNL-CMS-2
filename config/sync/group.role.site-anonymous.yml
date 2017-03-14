@@ -12,8 +12,9 @@ audience: anonymous
 group_type: site
 permissions_ui: true
 permissions:
-  - 'view group'
-  - 'view group_node:article entity'
-  - 'view group_node:page entity'
-  - 'view group_node:modular_content entity'
-  - 'view group menus'
+  0: 'view group'
+  1: 'view group_node:article entity'
+  2: 'view group_node:page entity'
+  3: 'view group_node:modular_content entity'
+  4: 'view group menus'
+  10: 'view group_node:webform entity'
