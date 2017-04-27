@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "42485160905b4355755f34c3e136136f",
+    "content-hash": "7ba49019859ace1ae98abe4fb43af46f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -967,17 +967,11 @@
         },
         {
             "name": "drupal/config_ignore",
-            "version": "1.4.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_ignore",
-                "reference": "8.x-1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "6b55ca40891bd2a6320c61a3406cae0a16e4e9b9"
+                "reference": "8914431d622175418fda0dcbef9f8007f4f5c211"
             },
             "require": {
                 "drupal/core": "*"
@@ -988,8 +982,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1490346183"
+                    "version": "8.x-1.4+1-dev",
+                    "datestamp": "1493230443"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1014,7 +1008,8 @@
                 "source": "http://cgit.drupalcode.org/config_ignore",
                 "issues": "http://drupal.org/project/config_ignore",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
+            },
+            "time": "2017-04-26 18:09:46"
         },
         {
             "name": "drupal/config_installer",
@@ -2863,7 +2858,8 @@
                     "dev-master": "8.0.x-dev"
                 },
                 "patches_applied": {
-                    "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch"
+                    "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch",
+                    "Add prefix to database array": "patches/drush-add-prefix.patch"
                 }
             },
             "autoload": {
@@ -7673,6 +7669,7 @@
         "drupal/group": 20,
         "drupal/imagemagick": 15,
         "drupal/asset_injector": 20,
+        "drupal/config_ignore": 20,
         "drupal/field_permissions": 10,
         "drupal/menu_entity_index": 15,
         "behat/mink": 20
