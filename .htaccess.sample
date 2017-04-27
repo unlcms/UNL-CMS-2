@@ -27,8 +27,8 @@ AddEncoding gzip svgz
 # Drupal\Core\DrupalKernel::bootEnvironment() for settings that can be
 # changed at runtime.
 
-# PHP 5, Apache 1 and 2.
-<IfModule mod_php5.c>
+# PHP 7, Apache 1 and 2.
+<IfModule mod_php7.c>
   php_value assert.active                   0
   php_flag session.auto_start               off
   php_value mbstring.http_input             pass
@@ -79,6 +79,22 @@ AddEncoding gzip svgz
   # Make sure Authorization HTTP header is available to PHP
   # even when running as CGI or FastCGI.
   RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # THIS SECTION IS FOR UNL MULTISITE (SUBSITES)
+  # DO NOT EDIT!!!!
+
+  # Add the following line to your httpd.conf
+  # RewriteMap drupal_multisite txt:<DRUPAL_ROOT>/.htaccess-subsite-map.txt
+  # Do not uncomment the previous line.
+
+  RewriteRule .*/cron.php cron.php
+  RewriteRule .*/update.php update.php
+  RewriteRule ^(.*?/(misc|modules|sites|themes))(.*) ${drupal_multisite:$1|$1}$3
+
+  RewriteCond ${drupal_multisite://%{HTTP_HOST}%{REQUEST_URI}|NOT_FOUND} !^NOT_FOUND$
+  RewriteRule (.*) ${drupal_multisite://%{HTTP_HOST}%{REQUEST_URI}|$1} [R,L]
+
+  # END MULTISITE AREA.
 
   # Block access to "hidden" directories whose names begin with a period. This
   # includes directories used by version control systems such as Subversion or

@@ -9,7 +9,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
 
 2. Clone this project and run from this project's root:
   ```
-  cp .htaccess.drupal-default .htaccess
+  cp .htaccess.sample .htaccess
   cp sites/default/default.settings.php sites/default/settings.php
   mkdir sites/default/files
   sudo chown _www sites/default/files
