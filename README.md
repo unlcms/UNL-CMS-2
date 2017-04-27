@@ -22,6 +22,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   $config_directories = array(
     CONFIG_SYNC_DIRECTORY => 'config/sync',
   );
+  $settings['install_profile'] = 'config_installer';
   ```
 
 4. If installing in a directory such as http://localhost/workspace/UNL-CMS-2 edit .htaccess and change

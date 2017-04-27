@@ -75,6 +75,9 @@
             "drupal/group": {
                 "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch",
                 "More contexts needed": "https://www.drupal.org/files/issues/expand_context_to_nodes-2815971-13.patch"
+            },
+            "drush/drush": {
+                "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch"
             }
         }
     },
