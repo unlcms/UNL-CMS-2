@@ -1,0 +1,13 @@
+diff --git a/commands/sql/sql.drush.inc b/commands/sql/sql.drush.inc
+index 23ab737..7a4a899 100644
+--- a/commands/sql/sql.drush.inc
++++ b/commands/sql/sql.drush.inc
+@@ -523,6 +523,8 @@ function drush_sql_get_class($db_spec = NULL) {
+     $url =  is_array($url) ? $url[$database] : $url;
+     $db_spec = drush_convert_db_from_db_url($url);
+     $db_spec['db_prefix'] = drush_get_option('db-prefix');
++    // Match $sqlVersion->get_db_spec() (called below in the else statement) which sets this for D7/8. 
++    $db_spec['prefix'] = $db_spec['db_prefix'];
+     return drush_sql_get_class($db_spec);
+   }
+   elseif (($databases = drush_get_option('databases')) && (array_key_exists($database, $databases)) && (array_key_exists($target, $databases[$database]))) {

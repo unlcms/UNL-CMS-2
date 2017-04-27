@@ -77,7 +77,8 @@
                 "More contexts needed": "https://www.drupal.org/files/issues/expand_context_to_nodes-2815971-13.patch"
             },
             "drush/drush": {
-                "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch"
+                "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch",
+                "Add prefix to database array": "patches/drush-add-prefix.patch"
             }
         }
     },
