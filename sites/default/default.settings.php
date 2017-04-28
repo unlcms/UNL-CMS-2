@@ -244,7 +244,9 @@
  *   );
  * @endcode
  */
-$config_directories = array();
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => 'config/sync',
+);
 
 /**
  * Settings:
@@ -266,7 +268,7 @@ $config_directories = array();
  *
  * @see install_select_profile()
  */
-# $settings['install_profile'] = '';
+$settings['install_profile'] = 'config_installer';
 
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.

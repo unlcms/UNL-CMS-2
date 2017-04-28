@@ -17,15 +17,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   sudo chmod 777 sites/default/files
   ```
   
-3. Edit sites/default/settings.php and add:
-  ```
-  $config_directories = array(
-    CONFIG_SYNC_DIRECTORY => 'config/sync',
-  );
-  $settings['install_profile'] = 'config_installer';
-  ```
-
-4. If installing in a directory such as http://localhost/workspace/UNL-CMS-2 edit .htaccess and change
+3. If installing in a directory such as http://localhost/workspace/UNL-CMS-2 edit .htaccess and change
   ``` 
   # RewriteBase /
   ```
@@ -34,39 +26,39 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   RewriteBase /workspace/UNL-CMS-2
   ```
 
-5. Run
+4. Run
   ```
   composer install
   ```
 
-6. Do standard Drupal install:
+5. Do standard Drupal install:
   * Navigate to /index.php in the browser
   * Choose "Configuration installer" for the "installation profile"
   * On "Configure site" set "Username" to "admin" and set "Email address" to a personal address so it doesn't conflict with your UNL email
 
-7. Run:
+6. Run:
   ```
   sudo chmod 755 sites/default/settings.php
   sudo chmod 755 sites/default/files/
   ```
 
-8. Install the UNLedu Framework (https://github.com/unl/wdntemplates) separately and create a symlink to its 'wdn' directory.
+7. Install the UNLedu Framework (https://github.com/unl/wdntemplates) separately and create a symlink to its 'wdn' directory.
   * For example, if you installed the wdntemplates project in /Library/WebServer/Documents then you would run this from your UNL-CMS-2 porject root:
 
   ```
   ln -s /Library/WebServer/Documents/wdntemplates/wdn wdn
   ```
 
-9. Run:
+8. Run:
   ```
   drush user-create jdoe2
   drush user-add-role "administrator" jdoe2
   ```
   The reason we create an admin user first, then create a second account is that the first user in a Drupal installation has special permisisons. We want to operate without that complexity. See https://www.drupal.org/node/540008
 
-10. Enter the domain of your dev machine at admin/config/system/group_subdomain
+9. Enter the domain of your dev machine at admin/config/system/group_subdomain
 
-11. That's it for installation. Instructions below are for additional site maintenance and updating tasks.
+10. That's it for installation. Instructions below are for additional site maintenance and updating tasks.
 
 # Update core
 
