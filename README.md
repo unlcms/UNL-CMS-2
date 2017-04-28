@@ -3,7 +3,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
 
 # Installation
 
-1. Install Composer (https://getcomposer.org/download/) and Drush version 8+ (http://docs.drush.org/en/master/install/)
+1. Install Composer (https://getcomposer.org/download/) and Drush version 8 (http://docs.drush.org/en/master/install/). Latest Drush tested and verified is 8.1.11.
 
   -  Production uses http://www.imagemagick.org/script/download.php. You can optionally skip installing this and switch to the core GD2 toolkit at _admin/config/media/image-toolkit_.
 
@@ -43,7 +43,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   ```
 
 7. Install the UNLedu Framework (https://github.com/unl/wdntemplates) separately and create a symlink to its 'wdn' directory.
-  * For example, if you installed the wdntemplates project in /Library/WebServer/Documents then you would run this from your UNL-CMS-2 porject root:
+  * For example, if you installed the wdntemplates project in /Library/WebServer/Documents then you would run this from your UNL-CMS-2 project root:
 
   ```
   ln -s /Library/WebServer/Documents/wdntemplates/wdn wdn
