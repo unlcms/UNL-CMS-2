@@ -23,6 +23,7 @@
         "unlcms/unl_user": "*",
         "unlcms/unl_breadcrumbs": "dev-master",
         "unlcms/unl_editor": "*",
+        "unlcms/unl_multisite": "*",
         "drupal/config_installer": "^1.0",
         "drupal/drupal_reset": "1.x-dev",
         "drupal/easy_breadcrumb": "^1.0",
@@ -140,6 +141,10 @@
         },
         "unl_breadcrumbs": {
           "url": "https://github.com/unlcms/unl_breadcrumbs.git",
+          "type": "git"
+        },
+        "unl_multisite": {
+          "url": "https://github.com/unlcms/unl_multisite.git",
           "type": "git"
         }
     }
