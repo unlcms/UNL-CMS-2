@@ -65,6 +65,7 @@ module:
   unl_cas: 0
   unl_editor: 0
   unl_filter: 0
+  unl_multisite: 0
   unl_purge_processor: 0
   unl_user: 0
   update: 0
