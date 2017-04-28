@@ -79,7 +79,6 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
-  standard: 1000
 theme:
   stable: 0
   classy: 0
@@ -87,4 +86,4 @@ theme:
   unl_fourone: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
-profile: standard
+profile: config_installer
