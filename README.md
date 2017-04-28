@@ -63,12 +63,13 @@ Drupal 8 installation at the University of Nebraska–Lincoln
 # Update core
 
   * Run `composer update drupal/core --with-dependencies`
-  * Replace all files (such as index.php, update.php ) except for
-    - .htaccess
+  * Replace files (such as update.php) except for
+    - .htaccess.sample (and your site's .htaccess)
+    - index.php
     - composer.json
     - composer.lock
     - robots.txt
-    - /sites
+    - sites/ directory including sites/default/default.settings.php
   * Manually update the above files with the latest changes
   * Run `drush updatedb`
 
