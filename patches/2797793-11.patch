@@ -1,0 +1,162 @@
+diff --git a/group.module b/group.module
+index 22e760f..39b0e1a 100644
+--- a/group.module
++++ b/group.module
+@@ -204,12 +204,10 @@ function group_form_block_form_alter(&$form, FormStateInterface $form_state, $fo
+  * Implements hook_entity_delete().
+  */
+ function group_entity_delete(EntityInterface $entity) {
+-  if ($entity instanceof ContentEntityInterface) {
+-    if ($group_contents = GroupContent::loadByEntity($entity)) {
+-      /** @var \Drupal\group\Entity\GroupContent $group_content */
+-      foreach ($group_contents as $group_content) {
+-        $group_content->delete();
+-      }
++  if ($group_contents = GroupContent::loadByEntity($entity)) {
++    /** @var \Drupal\group\Entity\GroupContent $group_content */
++    foreach ($group_contents as $group_content) {
++      $group_content->delete();
+     }
+   }
+ }
+@@ -336,7 +334,7 @@ function group_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+   // GroupContentController::createForm() tends to load entity forms for adding
+   // entities to a group. We need to add or alter the submit handlers of those
+   // forms for the process to work properly.
+-  if ($form_state->getFormObject() instanceof ContentEntityForm && $form_state->has('group_content_enabler')) {
++  if ($form_state->getFormObject() && $form_state->has('group_content_enabler')) {
+     if ($wizard = $form_state->has('store_id')) {
+       $store = \Drupal::service('user.private_tempstore')->get('group_content_wizard');
+       $store_id = $form_state->get('store_id');
+diff --git a/src/Entity/Group.php b/src/Entity/Group.php
+index 0808b76..bec2498 100644
+--- a/src/Entity/Group.php
++++ b/src/Entity/Group.php
+@@ -2,12 +2,12 @@
+ 
+ namespace Drupal\group\Entity;
+ 
+-use Drupal\Core\Field\BaseFieldDefinition;
+ use Drupal\Core\Entity\ContentEntityBase;
+-use Drupal\Core\Entity\ContentEntityInterface;
+-use Drupal\Core\Entity\EntityTypeInterface;
+ use Drupal\Core\Entity\EntityChangedTrait;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityStorageInterface;
++use Drupal\Core\Entity\EntityTypeInterface;
++use Drupal\Core\Field\BaseFieldDefinition;
+ use Drupal\Core\Session\AccountInterface;
+ use Drupal\user\UserInterface;
+ 
+@@ -149,7 +149,7 @@ class Group extends ContentEntityBase implements GroupInterface {
+   /**
+    * {@inheritdoc}
+    */
+-  public function addContent(ContentEntityInterface $entity, $plugin_id, $values = []) {
++  public function addContent(EntityInterface $entity, $plugin_id, $values = []) {
+     $storage = $this->groupContentStorage();
+     $group_content = $storage->createForEntityInGroup($entity, $this, $plugin_id, $values);
+     $storage->save($group_content);
+diff --git a/src/Entity/GroupContent.php b/src/Entity/GroupContent.php
+index e94d533..565fa72 100644
+--- a/src/Entity/GroupContent.php
++++ b/src/Entity/GroupContent.php
+@@ -3,8 +3,8 @@
+ namespace Drupal\group\Entity;
+ 
+ use Drupal\Core\Entity\ContentEntityBase;
+-use Drupal\Core\Entity\ContentEntityInterface;
+ use Drupal\Core\Entity\EntityChangedTrait;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityStorageInterface;
+ use Drupal\Core\Entity\EntityTypeInterface;
+ use Drupal\Core\Field\BaseFieldDefinition;
+@@ -114,7 +114,7 @@ class GroupContent extends ContentEntityBase implements GroupContentInterface {
+   /**
+    * {@inheritdoc}
+    */
+-  public static function loadByEntity(ContentEntityInterface $entity) {
++  public static function loadByEntity(EntityInterface $entity) {
+     /** @var \Drupal\group\Entity\Storage\GroupContentStorageInterface $storage */
+     $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+     return $storage->loadByEntity($entity);
+@@ -240,9 +240,13 @@ class GroupContent extends ContentEntityBase implements GroupContentInterface {
+ 
+     // Borrowed this logic from the Comment module.
+     // Warning! May change in the future: https://www.drupal.org/node/2346347
++    // The target type is set to a config entity to force a string field
++    // for the entity ID.
++    // @see https://www.drupal.org/node/1757452.
+     $fields['entity_id'] = BaseFieldDefinition::create('entity_reference')
+       ->setLabel(t('Content'))
+       ->setDescription(t('The entity to add to the group.'))
++      ->setSetting('target_type', 'group_type')
+       ->setDisplayOptions('form', [
+         'type' => 'entity_reference_autocomplete',
+         'weight' => 5,
+diff --git a/src/Entity/GroupContentInterface.php b/src/Entity/GroupContentInterface.php
+index 28965aa..dedcf03 100644
+--- a/src/Entity/GroupContentInterface.php
++++ b/src/Entity/GroupContentInterface.php
+@@ -2,9 +2,10 @@
+ 
+ namespace Drupal\group\Entity;
+ 
+-use Drupal\user\EntityOwnerInterface;
+ use Drupal\Core\Entity\ContentEntityInterface;
+ use Drupal\Core\Entity\EntityChangedInterface;
++use Drupal\Core\Entity\EntityInterface;
++use Drupal\user\EntityOwnerInterface;
+ 
+ /**
+  * Provides an interface defining a Group content entity.
+@@ -55,12 +56,12 @@ interface GroupContentInterface extends ContentEntityInterface, EntityOwnerInter
+   /**
+    * Loads group content entities which reference a given entity.
+    *
+-   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
++   * @param \Drupal\Core\Entity\EntityInterface $entity
+    *   An entity which may be within one or more groups.
+    *
+    * @return \Drupal\group\Entity\GroupContentInterface[]
+    *   An array of group content entities which reference the given entity.
+    */
+-  public static function loadByEntity(ContentEntityInterface $entity);
++  public static function loadByEntity(EntityInterface $entity);
+ 
+ }
+diff --git a/src/Entity/GroupInterface.php b/src/Entity/GroupInterface.php
+index f6477fc..ef65ef8 100644
+--- a/src/Entity/GroupInterface.php
++++ b/src/Entity/GroupInterface.php
+@@ -2,10 +2,11 @@
+ 
+ namespace Drupal\group\Entity;
+ 
+-use Drupal\user\EntityOwnerInterface;
+ use Drupal\Core\Entity\ContentEntityInterface;
+ use Drupal\Core\Entity\EntityChangedInterface;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Session\AccountInterface;
++use Drupal\user\EntityOwnerInterface;
+ use Drupal\user\UserInterface;
+ 
+ /**
+@@ -33,7 +34,7 @@ interface GroupInterface extends ContentEntityInterface, EntityOwnerInterface, E
+   /**
+    * Adds a content entity as a group content entity.
+    *
+-   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
++   * @param \Drupal\Core\Entity\EntityInterface $entity
+    *   The content entity to add to the group.
+    * @param string $plugin_id
+    *   The ID of the content enabler plugin to add the entity with.
+@@ -41,7 +42,7 @@ interface GroupInterface extends ContentEntityInterface, EntityOwnerInterface, E
+    *   (optional) Extra values to add to the group content relationship. You
+    *   cannot overwrite the group ID (gid) or entity ID (entity_id).
+    */
+-  public function addContent(ContentEntityInterface $entity, $plugin_id, $values = []);
++  public function addContent(EntityInterface $entity, $plugin_id, $values = []);
+ 
+   /**
+    * Retrieves all GroupContent entities for the group.
