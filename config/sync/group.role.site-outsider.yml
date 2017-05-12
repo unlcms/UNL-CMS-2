@@ -12,9 +12,10 @@ audience: outsider
 group_type: site
 permissions_ui: true
 permissions:
-  - 'view group'
-  - 'view group menus'
-  - 'view group_node:article entity'
-  - 'view group_node:page entity'
-  - 'view group_node:modular_content entity'
-  - 'view group_node:webform entity'
+  0: 'view group'
+  1: 'view group menus'
+  2: 'view group_node:article entity'
+  3: 'view group_node:page entity'
+  4: 'view group_node:modular_content entity'
+  5: 'view group_node:webform entity'
+  7: 'view group_menu:menu entity'

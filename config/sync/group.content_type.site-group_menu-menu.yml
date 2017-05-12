@@ -1,20 +1,19 @@
-uuid: 7df701c4-7099-4f25-a170-e7fe6edc05a3
+uuid: 5c1b0a04-9ad6-443a-b65a-e96ef8dc9b5c
 langcode: en
 status: true
 dependencies:
   config:
     - group.type.site
   module:
-    - group_menu
+    - groupmenu
     - system
 id: site-group_menu-menu
 label: 'Site: Group menu'
-description: 'Adds menus to groups both publicly and privately.'
+description: 'Adds menu''s to groups'
 group_type: site
 content_plugin: 'group_menu:menu'
 plugin_config:
-  group_cardinality: 1
+  group_cardinality: 0
   entity_cardinality: 1
   use_creation_wizard: true
-  info_text:
-    value: '<p>By submitting this form you will add this menu to the group.<br />It will then be subject to the access control settings that were configured for the group.<br/>Please fill out any available fields to describe the relation between the content and the group.</p>'
+  node_form_group_menu: 1

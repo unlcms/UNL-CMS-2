@@ -12,6 +12,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
+  - 'access site-wide contact form'
   - 'access user profiles'
   - 'bypass honeypot protection'
   - 'create band entities'

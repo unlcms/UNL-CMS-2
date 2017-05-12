@@ -1,9 +1,9 @@
-uuid: e08e0e2f-9169-4a73-bdeb-660827206e57
+uuid: e16c36dc-d3f0-41f2-b1bf-4c5bf724893b
 langcode: en
 status: true
 dependencies:
   module:
-    - group_menu_block
+    - groupmenu_block
   theme:
     - unl_fourone
 id: groupmenus
@@ -11,11 +11,11 @@ theme: unl_fourone
 region: navlinks
 weight: 0
 provider: null
-plugin: group_menus
+plugin: groupmenus
 settings:
-  id: group_menus
+  id: groupmenus
   label: 'Group menus'
-  provider: group_menu_block
+  provider: groupmenu_block
   label_display: '0'
   context_mapping:
     group: '@group.group_route_context:group'

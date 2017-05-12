@@ -41,7 +41,7 @@
         "drupal/varnish_purge": "^1.4",
         "symfony/ldap": "~3.2.1",
         "drupal/group": "1.x-dev",
-        "unlcms/group_menu": "*",
+        "drupal-sandbox/groupmenu": "*",
         "unlcms/group_simplecss": "*",
         "unlcms/group_subdomain": "*",
         "unlcms/imce_groups": "*",
@@ -100,9 +100,18 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "group_menu": {
-            "url": "https://github.com/ericras/group_menu.git",
-            "type": "git"
+        "groupmenu": {
+            "type": "package",
+            "package": {
+                "name": "drupal-sandbox/groupmenu",
+                "type": "drupal-module",
+                "version": "0.1",
+                "source": {
+                    "url": "https://git.drupal.org/sandbox/seanpenn079/2868316.git",
+                    "type": "git",
+                    "reference": "8.x-1.x"
+                }
+            }
         },
         "group_simplecss": {
             "url": "https://github.com/unlcms/group_simplecss.git",
