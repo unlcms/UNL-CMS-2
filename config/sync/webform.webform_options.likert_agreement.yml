@@ -7,4 +7,5 @@ dependencies:
       - webform
 id: likert_agreement
 label: 'Likert: Agreement'
+category: null
 options: "1: Much Worse\n2: Somewhat Worse\n3: About the Same\n4: Somewhat Better\n5: Much Better\n"

@@ -1,18 +1,17 @@
-uuid: dbfead04-8080-43f4-b914-50b2a7d4ff42
+uuid: 5071247b-a979-4849-909e-bd480a7cc2d4
 langcode: en
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - field_permissions
-    - node
     - paragraphs
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_bands
-field_name: field_bands
-entity_type: node
+id: paragraph.field_column_content
+field_name: field_column_content
+entity_type: paragraph
 type: entity_reference_revisions
 settings:
   target_type: paragraph

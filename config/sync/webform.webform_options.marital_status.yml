@@ -7,4 +7,5 @@ dependencies:
       - webform
 id: marital_status
 label: 'Marital status'
+category: null
 options: "Single: Single\nMarried: Married\nDivorced: Divorced\nWidowed: Widowed\n"

@@ -7,4 +7,5 @@ dependencies:
       - webform
 id: days
 label: Days
+category: null
 options: "Sunday: Sunday\nMonday: Monday\nTuesday: Tuesday\nWednesday: Wednesday\nThursday: Thursday\nFriday: Friday\nSaturday: Saturday\n"

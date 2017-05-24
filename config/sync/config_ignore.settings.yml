@@ -2,8 +2,9 @@ ignored_config_entities:
   0: exclude_node_title.settings
   2: group_subdomain.settings
   4: imagemagick.settings
-  6: system.site
-  8: unl_cas.settings
-  10: unl_user.settings
+  6: 'system.menu.*'
+  8: system.site
+  10: unl_cas.settings
+  12: unl_user.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

@@ -1,16 +1,18 @@
+uuid: ce1084ad-e685-4776-be40-eb5ccdb663fa
 langcode: en
-status: true
-open: null
-close: null
+status: '1'
 dependencies:
   enforced:
     module:
       - webform
+open: null
+close: null
 uid: null
 template: false
 id: contact
 title: Contact
 description: 'Basic email contact webform.'
+category: null
 elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[webform-authenticated-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[webform-authenticated-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\n"
 css: ''
 javascript: ''
@@ -50,7 +52,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }
@@ -121,6 +123,14 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      reply_to: ''
+      return_path: ''
   email_notification:
     id: email
     label: 'Email notification'
@@ -139,4 +149,11 @@ handlers:
       html: true
       attachments: false
       debug: false
-uuid: ce1084ad-e685-4776-be40-eb5ccdb663fa
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      reply_to: ''
+      return_path: ''

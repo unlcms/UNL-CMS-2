@@ -85,7 +85,6 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
-  standard: 1000
 theme:
   stable: 0
   classy: 0

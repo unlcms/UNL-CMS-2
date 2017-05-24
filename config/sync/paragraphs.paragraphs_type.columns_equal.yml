@@ -1,0 +1,7 @@
+uuid: ee7788f7-aee7-4c0b-adb1-22faf76f8b50
+langcode: en
+status: true
+dependencies: {  }
+id: columns_equal
+label: 'Columns (Equal)'
+behavior_plugins: {  }

@@ -1,0 +1,7 @@
+uuid: 536ecf4c-23ae-476a-ae87-79fe407ac1c1
+langcode: en
+status: true
+dependencies: {  }
+id: content_reference
+label: 'Content Reference (Full display)'
+behavior_plugins: {  }

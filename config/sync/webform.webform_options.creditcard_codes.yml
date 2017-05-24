@@ -7,4 +7,5 @@ dependencies:
       - webform
 id: creditcard_codes
 label: 'Credit card codes'
+category: null
 options: "VI: 'Visa'\nMC: 'Mastercard'\nAE: 'American Express'\nDC: 'Discover'\n"

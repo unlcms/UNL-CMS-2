@@ -1,0 +1,7 @@
+uuid: 9b8f5e6c-03d9-4365-85da-ba3e390488e8
+langcode: en
+status: true
+dependencies: {  }
+id: content_reference_teaser
+label: 'Content Reference (Teaser display)'
+behavior_plugins: {  }

@@ -1,0 +1,30 @@
+uuid: 17e8e194-3b1a-431a-8916-e0a670f81e59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.columns_equal.field_column_content
+    - paragraphs.paragraphs_type.columns_equal
+  module:
+    - paragraphs
+id: paragraph.columns_equal.default
+targetEntityType: paragraph
+bundle: columns_equal
+mode: default
+content:
+  field_column_content:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

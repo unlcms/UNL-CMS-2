@@ -1,0 +1,24 @@
+uuid: 5d2de23d-e3f5-4134-b1ed-4a053a8a631c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.columns_equal.field_column_content
+    - paragraphs.paragraphs_type.columns_equal
+  module:
+    - entity_reference_revisions
+id: paragraph.columns_equal.default
+targetEntityType: paragraph
+bundle: columns_equal
+mode: default
+content:
+  field_column_content:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,24 +1,23 @@
-uuid: dbfead04-8080-43f4-b914-50b2a7d4ff42
+uuid: 4a7be8d0-f0a8-45cd-a937-b9f9753b0436
 langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
     - field_permissions
     - node
     - paragraphs
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_bands
-field_name: field_bands
-entity_type: node
-type: entity_reference_revisions
+id: paragraph.field_existing_content_item
+field_name: field_existing_content_item
+entity_type: paragraph
+type: entity_reference
 settings:
-  target_type: paragraph
-module: entity_reference_revisions
+  target_type: node
+module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

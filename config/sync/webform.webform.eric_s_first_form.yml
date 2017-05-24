@@ -1,16 +1,16 @@
-uuid: af34bf89-c8c5-4d77-a1fb-96f29dcc03dc
+uuid: e8799065-f767-43d6-8b10-4f677f875059
 langcode: en
-status: '1'
+status: open
 dependencies: {  }
 open: null
 close: null
-uid: 1
+uid: 2
 template: false
-id: example
-title: Example
+id: eric_s_first_form
+title: 'Eric''s first form'
 description: ''
 category: null
-elements: "address:\n  '#type': webform_address\n  '#title': Address\n"
+elements: "comments:\n  '#type': text_format\n  '#title': Comments\n"
 css: ''
 javascript: ''
 settings:

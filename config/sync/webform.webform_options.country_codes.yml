@@ -7,4 +7,5 @@ dependencies:
       - webform
 id: country_codes
 label: 'Country codes'
+category: null
 options: ''
