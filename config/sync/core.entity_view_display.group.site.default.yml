@@ -3,37 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.group.site.field_bands
-    - field.field.group.site.field_body
     - field.field.group.site.field_contact_info
+    - field.field.group.site.field_front_page
     - field.field.group.site.field_related_links
     - field.field.group.site.field_site_affiliation
     - field.field.group.site.field_social_media
     - field.field.group.site.field_use_subdomain
     - group.type.site
-  module:
-    - entity_reference_revisions
-    - text
 id: group.site.default
 targetEntityType: group
 bundle: site
 mode: default
 content:
-  field_bands:
-    type: entity_reference_revisions_entity_view
-    weight: 2
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
-  field_body:
+  field_front_page:
     weight: 1
     label: hidden
-    settings: {  }
+    settings:
+      view_mode: full
+      link: false
     third_party_settings: {  }
-    type: text_default
+    type: entity_reference_entity_view
     region: content
   label:
     type: string

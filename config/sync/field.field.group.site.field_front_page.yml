@@ -1,0 +1,34 @@
+uuid: 1b57cfea-3e6e-4d3a-b859-986c748ed8cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_front_page
+    - group.type.site
+    - node.type.article
+    - node.type.modular_content
+    - node.type.page
+    - node.type.webform
+id: group.site.field_front_page
+field_name: field_front_page
+entity_type: group
+bundle: site
+label: 'Front page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      page: page
+      modular_content: modular_content
+      webform: webform
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference
