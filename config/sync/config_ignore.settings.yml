@@ -6,5 +6,6 @@ ignored_config_entities:
   8: system.site
   10: unl_cas.settings
   12: unl_user.settings
+  14: 'webform.webform.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
