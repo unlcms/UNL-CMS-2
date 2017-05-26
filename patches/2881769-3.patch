@@ -1,0 +1,20 @@
+diff --git a/src/Entity/Access/GroupContentAccessControlHandler.php b/src/Entity/Access/GroupContentAccessControlHandler.php
+index fd69e16..5ee4fb8 100644
+--- a/src/Entity/Access/GroupContentAccessControlHandler.php
++++ b/src/Entity/Access/GroupContentAccessControlHandler.php
+@@ -27,7 +27,14 @@ class GroupContentAccessControlHandler extends EntityAccessControlHandler {
+    */
+   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
+     $group_content_type = GroupContentType::load($entity_bundle);
+-    return $group_content_type->getContentPlugin()->createAccess($context['group'], $account);
++    $current_route_match = \Drupal::service('current_route_match')->getRouteObject();
++    
++    if ($current_route_match->getDefaults()['create_mode']) {
++      return $group_content_type->getContentPlugin()->createEntityAccess($context['group'], $account);
++    }
++    else {
++      return $group_content_type->getContentPlugin()->createAccess($context['group'], $account);
++    }
+   }
+ 
+ }
