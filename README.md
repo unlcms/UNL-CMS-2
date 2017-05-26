@@ -18,13 +18,8 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   ```
   
 3. If installing in a directory such as http://localhost/workspace/UNL-CMS-2 edit .htaccess and change
-  ``` 
-  # RewriteBase /
-  ```
-  to
-  ``` 
-  RewriteBase /workspace/UNL-CMS-2
-  ```
+  
+  `# RewriteBase /` to `RewriteBase /workspace/UNL-CMS-2`
 
 4. Run
   ```
@@ -38,6 +33,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
 
 6. Run:
   ```
+  drush entity-updates
   sudo chmod 755 sites/default/settings.php
   sudo chmod 755 sites/default/files/
   ```
