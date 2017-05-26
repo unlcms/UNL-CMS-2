@@ -160,3 +160,84 @@ index f6477fc..ef65ef8 100644
  
    /**
     * Retrieves all GroupContent entities for the group.
+diff --git a/src/Entity/Storage/GroupContentStorage.php b/src/Entity/Storage/GroupContentStorage.php
+index cc5ea53..34cadbd 100644
+--- a/src/Entity/Storage/GroupContentStorage.php
++++ b/src/Entity/Storage/GroupContentStorage.php
+@@ -2,7 +2,7 @@
+ 
+ namespace Drupal\group\Entity\Storage;
+ 
+-use Drupal\Core\Entity\ContentEntityInterface;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityStorageException;
+ use Drupal\Core\Entity\Sql\SqlContentEntityStorage;
+ use Drupal\group\Entity\GroupInterface;
+@@ -18,7 +18,7 @@ class GroupContentStorage extends SqlContentEntityStorage implements GroupConten
+   /**
+    * {@inheritdoc}
+    */
+-  public function createForEntityInGroup(ContentEntityInterface $entity, GroupInterface $group, $plugin_id, $values = []) {
++  public function createForEntityInGroup(EntityInterface $entity, GroupInterface $group, $plugin_id, $values = []) {
+     // An unsaved entity cannot have any group content.
+     if ($entity->id() === NULL) {
+       throw new EntityStorageException("Cannot add an unsaved entity to a group.");
+@@ -78,7 +78,7 @@ class GroupContentStorage extends SqlContentEntityStorage implements GroupConten
+   /**
+    * {@inheritdoc}
+    */
+-  public function loadByEntity(ContentEntityInterface $entity) {
++  public function loadByEntity(EntityInterface $entity) {
+     // An unsaved entity cannot have any group content.
+     if ($entity->id() === NULL) {
+       throw new EntityStorageException("Cannot load GroupContent entities for an unsaved entity.");
+diff --git a/src/Entity/Storage/GroupContentStorageInterface.php b/src/Entity/Storage/GroupContentStorageInterface.php
+index f61001b..3f3a84b 100644
+--- a/src/Entity/Storage/GroupContentStorageInterface.php
++++ b/src/Entity/Storage/GroupContentStorageInterface.php
+@@ -2,8 +2,8 @@
+ 
+ namespace Drupal\group\Entity\Storage;
+ 
+-use Drupal\Core\Entity\ContentEntityInterface;
+ use Drupal\Core\Entity\ContentEntityStorageInterface;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\group\Entity\GroupInterface;
+ 
+ /**
+@@ -14,8 +14,8 @@ interface GroupContentStorageInterface extends ContentEntityStorageInterface {
+   /**
+    * Creates a GroupContent entity for placing a content entity in a group.
+    *
+-   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+-   *   The content entity to add to the group.
++   * @param \Drupal\Core\Entity\EntityInterface $entity
++   *   The entity to add to the group.
+    * @param \Drupal\group\Entity\GroupInterface $group
+    *   The group to add the content entity to.
+    * @param string $plugin_id
+@@ -26,7 +26,7 @@ interface GroupContentStorageInterface extends ContentEntityStorageInterface {
+    * @return \Drupal\group\Entity\GroupContentInterface
+    *   A new GroupContent entity.
+    */
+-  public function createForEntityInGroup(ContentEntityInterface $entity, GroupInterface $group, $plugin_id, $values = []);
++  public function createForEntityInGroup(EntityInterface $entity, GroupInterface $group, $plugin_id, $values = []);
+ 
+   /**
+    * Retrieves all GroupContent entities for a group.
+@@ -47,13 +47,13 @@ interface GroupContentStorageInterface extends ContentEntityStorageInterface {
+   /**
+    * Retrieves all GroupContent entities that represent a given entity.
+    *
+-   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
++   * @param \Drupal\Core\Entity\EntityInterface $entity
+    *   An entity which may be within one or more groups.
+    *
+    * @return \Drupal\group\Entity\GroupContentInterface[]
+    *   A list of GroupContent entities which refer to the given entity.
+    */
+-  public function loadByEntity(ContentEntityInterface $entity);
++  public function loadByEntity(EntityInterface $entity);
+ 
+   /**
+    * Retrieves all GroupContent entities by their responsible plugin ID.

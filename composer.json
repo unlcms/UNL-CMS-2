@@ -40,8 +40,8 @@
         "drupal/purge": "^3.0@beta",
         "drupal/varnish_purge": "^1.4",
         "symfony/ldap": "~3.2.1",
-        "drupal/group": "1.x-dev",
-        "drupal-sandbox/groupmenu": "*",
+        "drupal/group": "1.x-dev#12a0077835c69fbeb185b5c134bf35bb62a561bc",
+        "drupal/groupmenu": "1.x-dev",
         "unlcms/group_simplecss": "*",
         "unlcms/group_subdomain": "*",
         "unlcms/imce_groups": "*",
@@ -77,7 +77,7 @@
             "drupal/group": {
                 "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch",
                 "More contexts needed": "https://www.drupal.org/files/issues/expand_context_to_nodes-2815971-13.patch",
-                "Configurable entities as group content": "https://www.drupal.org/files/issues/2797793-11.patch"
+                "Configurable entities as group content": "https://www.drupal.org/files/issues/2797793-12.patch"
             },
             "drush/drush": {
                 "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch",
@@ -100,19 +100,6 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        "groupmenu": {
-            "type": "package",
-            "package": {
-                "name": "drupal-sandbox/groupmenu",
-                "type": "drupal-module",
-                "version": "0.1",
-                "source": {
-                    "url": "https://git.drupal.org/sandbox/seanpenn079/2868316.git",
-                    "type": "git",
-                    "reference": "8.x-1.x"
-                }
-            }
         },
         "group_simplecss": {
             "url": "https://github.com/unlcms/group_simplecss.git",

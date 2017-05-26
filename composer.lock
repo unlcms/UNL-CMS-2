@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6d693ef0f2e09294b48ff4d3517765a",
+    "content-hash": "3ce5d6570826eb5bd9ec36e8fd0d11ba",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -868,16 +868,6 @@
             "time": "2014-09-09T13:34:57+00:00"
         },
         {
-            "name": "drupal-sandbox/groupmenu",
-            "version": "0.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/sandbox/seanpenn079/2868316.git",
-                "reference": "8.x-1.x"
-            },
-            "type": "drupal-module"
-        },
-        {
             "name": "drupal/admin_toolbar",
             "version": "1.19.0",
             "source": {
@@ -943,7 +933,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/asset_injector",
-                "reference": "9b83b38fb849f9ae3bbeee5e9941c88928743489"
+                "reference": "728a2eafa66457f7bdc2c338b1ac277ac83dd8de"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -954,8 +944,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2+65-dev",
-                    "datestamp": "1494464886"
+                    "version": "8.x-1.2+66-dev",
+                    "datestamp": "1494499684"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -977,7 +967,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/asset_injector"
             },
-            "time": "2017-05-11 10:44:58"
+            "time": "2017-05-25 16:24:20"
         },
         {
             "name": "drupal/config_ignore",
@@ -1663,17 +1653,17 @@
         },
         {
             "name": "drupal/entity_reference_revisions",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_reference_revisions",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "15261a4237cc2a743522a7bd81e9f34e01d12843"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.3.zip",
+                "reference": null,
+                "shasum": "78aebb58efbbfcbb2faa40a1afc0830312b32631"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1687,8 +1677,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1485790085"
+                    "version": "8.x-1.3",
+                    "datestamp": "1495814284"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1981,13 +1971,13 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta5+11-dev",
-                    "datestamp": "1492179243"
+                    "version": "8.x-1.0-beta5+12-dev",
+                    "datestamp": "1492504443"
                 },
                 "patches_applied": {
                     "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch",
                     "More contexts needed": "https://www.drupal.org/files/issues/expand_context_to_nodes-2815971-13.patch",
-                    "Configurable entities as group content": "https://www.drupal.org/files/issues/2797793-11.patch"
+                    "Configurable entities as group content": "https://www.drupal.org/files/issues/2797793-12.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2008,18 +1998,64 @@
             "time": "2017-04-18 08:29:00"
         },
         {
+            "name": "drupal/groupmenu",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/groupmenu",
+                "reference": "fe1fb63b974b7f897e37ea74565fb9d740dfc613"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/group": "*"
+            },
+            "require-dev": {
+                "drupal/gnode": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1495009688"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mike.davis",
+                    "homepage": "https://www.drupal.org/user/2660157"
+                },
+                {
+                    "name": "seanB",
+                    "homepage": "https://www.drupal.org/user/545912"
+                }
+            ],
+            "description": "Gives the ability to create and manage menus for groups",
+            "homepage": "https://www.drupal.org/project/groupmenu",
+            "support": {
+                "source": "http://cgit.drupalcode.org/groupmenu"
+            },
+            "time": "2017-05-17 08:24:40"
+        },
+        {
             "name": "drupal/honeypot",
-            "version": "1.24.0",
+            "version": "1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/honeypot",
-                "reference": "8.x-1.24"
+                "reference": "8.x-1.25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.24.zip",
-                "reference": "8.x-1.24",
-                "shasum": "f17d22e80a2b7226e4ee444900de0b933881ee40"
+                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.25.zip",
+                "reference": null,
+                "shasum": "9dfe6677c5b4a19e87fae143755949b79168b9d1"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2030,8 +2066,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.24",
-                    "datestamp": "1490277183"
+                    "version": "8.x-1.25",
+                    "datestamp": "1494742085"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2747,17 +2783,17 @@
         },
         {
             "name": "drupal/varnish_purge",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/varnish_purge",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "23af511919141850be8ade0965d72ad4df33d007"
+                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.5.zip",
+                "reference": null,
+                "shasum": "a5fba946f355e648883dc2729fd895017f638ed7"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2773,8 +2809,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1473445439"
+                    "version": "8.x-1.5",
+                    "datestamp": "1495108687"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3708,16 +3744,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8"
+                "reference": "e6a969a640b00d8daa3c66518b0405fb41ae0c4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d68dbdc53dc358a816f00b300704702b2eaff7b8",
-                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/e6a969a640b00d8daa3c66518b0405fb41ae0c4b",
+                "reference": "e6a969a640b00d8daa3c66518b0405fb41ae0c4b",
                 "shasum": ""
             },
             "require": {
@@ -3753,7 +3789,7 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "time": "2015-02-03T12:10:50+00:00"
+            "time": "2016-01-25T08:17:30+00:00"
         },
         {
             "name": "psr/http-message",
@@ -3854,16 +3890,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.4",
+            "version": "v0.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82"
+                "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/17cf432bb80d9198df239b80d00a29155bd74d82",
-                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/38a9d21406597a0440690eafbcb0222f528c8ac6",
+                "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6",
                 "shasum": ""
             },
             "require": {
@@ -3923,7 +3959,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-05-12T15:41:55+00:00"
+            "time": "2017-05-17T06:49:19+00:00"
         },
         {
             "name": "stack/builder",
@@ -5782,7 +5818,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "11e6e83bd7a52f2b9da85dd00321de91d8c86ad3"
+                "reference": "79dffc737ea1c5bb7247833968cdcc3a5221e521"
             },
             "type": "drupal-theme",
             "authors": [
@@ -5793,7 +5829,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-05-12 21:24:46"
+            "time": "2017-05-24 22:12:31"
         },
         {
             "name": "unlcms/unl_multisite",
@@ -7179,23 +7215,23 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.1",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e"
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/13edfd8706462032c2f52b4b862974dd46b71c9e",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
             },
             "type": "library",
             "extra": {
@@ -7227,7 +7263,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-08T07:14:41+00:00"
+            "time": "2017-05-22T07:24:03+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -7487,16 +7523,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "f7dfecbee89d68ab475a6c9e17d22bc9b69aed97"
+                "reference": "dcbed1074f8244661eecddfc2a675430d8d33f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f7dfecbee89d68ab475a6c9e17d22bc9b69aed97",
-                "reference": "f7dfecbee89d68ab475a6c9e17d22bc9b69aed97",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dcbed1074f8244661eecddfc2a675430d8d33f62",
+                "reference": "dcbed1074f8244661eecddfc2a675430d8d33f62",
                 "shasum": ""
             },
             "require": {
@@ -7561,7 +7597,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-05-03T23:30:39+00:00"
+            "time": "2017-05-22T02:43:20+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -7737,6 +7773,7 @@
         "drupal/drupal_reset": 20,
         "drupal/purge": 10,
         "drupal/group": 20,
+        "drupal/groupmenu": 20,
         "drupal/imagemagick": 15,
         "drupal/asset_injector": 20,
         "drupal/config_ignore": 20,
