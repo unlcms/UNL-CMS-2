@@ -102,7 +102,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   * Make configuration changes on a local dev site and run `drush config-export`
   * Commit changes to /config dir
   * Do a pull request
-  * On production run `drush config-import`
+  * On production run `drush config-import --partial`  IMPORTANT: Must use the '--partial' flag so that existing group menus and webforms are not deleted.
 
 # Local devlopment
 
