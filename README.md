@@ -18,25 +18,12 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   ```
   
 3. If installing in a directory such as http://localhost/workspace/UNL-CMS-2 edit .htaccess and change
-  ``` 
-  # RewriteBase /
-  ```
-  to
-  ``` 
-  RewriteBase /workspace/UNL-CMS-2
-  ```
+  
+  `# RewriteBase /` to `RewriteBase /workspace/UNL-CMS-2`
 
 4. Run
   ```
   composer install
-  ```
-
-4a: Comment out the following in `core/lib/Drupal/Core/EventSubscriber/ConfigImportSubscriber.php` 
-  (https://www.drupal.org/node/2871896)
-  ```
-  if ($install_profile !== $core_extension['profile']) {
-    $config_importer->logError($this->t('Cannot change the install profile from %new_profile to %profile once Drupal is installed.', ['%profile' => $install_profile, '%new_profile' => $core_extension['profile']]));
-  }
   ```
 
 5. Do standard Drupal install:
@@ -46,6 +33,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
 
 6. Run:
   ```
+  drush entity-updates
   sudo chmod 755 sites/default/settings.php
   sudo chmod 755 sites/default/files/
   ```
