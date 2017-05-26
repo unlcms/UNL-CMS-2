@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "393b667f2fca6e69350c1be5a1542f21",
+    "content-hash": "a6d693ef0f2e09294b48ff4d3517765a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2570,6 +2570,53 @@
             "homepage": "https://www.drupal.org/project/purge",
             "support": {
                 "source": "http://cgit.drupalcode.org/purge"
+            }
+        },
+        {
+            "name": "drupal/recreate_block_content",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/recreate_block_content",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/recreate_block_content-8.x-1.0.zip",
+                "reference": null,
+                "shasum": "28448a485b37c3c5f1a6d0de040836381ad0ce25"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1494267785"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Joao Sausen",
+                    "homepage": "https://www.drupal.org/user/1504028"
+                }
+            ],
+            "description": "Recreates the block content for a exported block.",
+            "homepage": "https://www.drupal.org/project/recreate_block_content",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/recreate_block_content",
+                "issues": "https://www.drupal.org/project/issues/recreate_block_content"
             }
         },
         {

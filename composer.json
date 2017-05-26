@@ -51,7 +51,8 @@
         "drupal/config_ignore": "1.x-dev",
         "drupal/field_permissions": "^1.0@beta",
         "drupal/menu_entity_index": "^1.0@alpha",
-        "drush/drush": "^8.1"
+        "drush/drush": "^8.1",
+        "drupal/recreate_block_content": "^1.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

@@ -57,6 +57,7 @@ module:
   purge_ui: 0
   quickedit: 0
   rdf: 0
+  recreate_block_content: 0
   responsive_image: 0
   search: 0
   shortcut: 0
