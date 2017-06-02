@@ -62,6 +62,7 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  theme_change: 0
   token: 0
   toolbar: 0
   unl_breadcrumbs: 0

@@ -54,7 +54,8 @@
         "drush/drush": "^8.1",
         "drupal/recreate_block_content": "^1.0",
         "drupal/libraries": "3.x-dev",
-        "drupal/ckeditor_codemirror": "^1.0"
+        "drupal/ckeditor_codemirror": "^1.0",
+        "drupal/theme_change": "^1.5"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
