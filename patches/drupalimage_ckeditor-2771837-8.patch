@@ -1,0 +1,47 @@
+From dd55097b47a1ab6c30ff5d078562230cad2d9d33 Mon Sep 17 00:00:00 2001
+From: lucaslg <lucas.legoff@gmail.com>
+Date: Sun, 20 Nov 2016 15:45:15 +0100
+Subject: [PATCH] [ckeditor] image widget accept images without date-ffile
+ tribute
+
+---
+ core/modules/ckeditor/js/plugins/drupalimage/plugin.js        | 9 +--------
+ core/modules/ckeditor/js/plugins/drupalimagecaption/plugin.js | 2 +-
+ 2 files changed, 2 insertions(+), 9 deletions(-)
+
+diff --git a/core/modules/ckeditor/js/plugins/drupalimage/plugin.js b/core/modules/ckeditor/js/plugins/drupalimage/plugin.js
+index 0025664..4e19896 100644
+--- a/core/modules/ckeditor/js/plugins/drupalimage/plugin.js
++++ b/core/modules/ckeditor/js/plugins/drupalimage/plugin.js
+@@ -64,14 +64,7 @@
+           }
+         });
+ 
+-        // Extend requiredContent & allowedContent.
+-        // CKEDITOR.style is an immutable object: we cannot modify its
+-        // definition to extend requiredContent. Hence we get the definition,
+-        // modify it, and pass it to a new CKEDITOR.style instance.
+-        var requiredContent = widgetDefinition.requiredContent.getDefinition();
+-        requiredContent.attributes['data-entity-type'] = '';
+-        requiredContent.attributes['data-entity-uuid'] = '';
+-        widgetDefinition.requiredContent = new CKEDITOR.style(requiredContent);
++        // Extend allowedContent.
+         widgetDefinition.allowedContent.img.attributes['!data-entity-type'] = true;
+         widgetDefinition.allowedContent.img.attributes['!data-entity-uuid'] = true;
+ 
+diff --git a/core/modules/ckeditor/js/plugins/drupalimagecaption/plugin.js b/core/modules/ckeditor/js/plugins/drupalimagecaption/plugin.js
+index d1d666c..a75f64c 100644
+--- a/core/modules/ckeditor/js/plugins/drupalimagecaption/plugin.js
++++ b/core/modules/ckeditor/js/plugins/drupalimagecaption/plugin.js
+@@ -109,7 +109,7 @@
+         // We take the same attributes into account as downcast() does.
+         var originalUpcast = widgetDefinition.upcast;
+         widgetDefinition.upcast = function (element, data) {
+-          if (element.name !== 'img' || !element.attributes['data-entity-type'] || !element.attributes['data-entity-uuid']) {
++          if (element.name !== 'img') {
+             return;
+           }
+           // Don't initialize on pasted fake objects.
+-- 
+2.8.1
+
