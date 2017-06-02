@@ -57,6 +57,21 @@ settings:
       language_list: un
     stylescombo:
       styles: "a.wdn-button|.wdn-button\r\na.wdn-button.wdn-button-brand|.wdn-button-brand\r\na.wdn-button.wdn-button-triad|.wdn-button-triad\r\na.wdn-button.wdn-button-complement|.wdn-button-complement\r\na.wdn-button.wdn-button-energetic|.wdn-button-energetic\r\nblockquote.wdn-quote|.wdn-quote\r\np.zenbox|.zenbox\r\np.wdn-intro-p|.wdn-intro-p\r\np.wdn-sans-serif|.wdn-sans-serif\r\np.small|.small\r\nh1.wdn-brand|h1.wdn-brand\r\nh2.wdn-brand|h2.wdn-brand\r\nh3.wdn-brand|h3.wdn-brand\r\nh4.wdn-brand|h4.wdn-brand\r\nh5.wdn-brand|h5.wdn-brand\r\nh6.wdn-brand|h6.wdn-brand"
+    codemirror:
+      enable: true
+      mode: htmlmixed
+      theme: default
+      lineNumbers: true
+      lineWrapping: true
+      matchBrackets: true
+      autoCloseTags: true
+      autoCloseBrackets: true
+      enableSearchTools: true
+      enableCodeFolding: true
+      enableCodeFormatting: true
+      autoFormatOnStart: true
+      autoFormatOnModeChange: true
+      autoFormatOnUncomment: true
 image_upload:
   status: false
   scheme: public

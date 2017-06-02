@@ -7,6 +7,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  ckeditor_codemirror: 0
   comment: 0
   config: 0
   config_ignore: 0
@@ -42,6 +43,7 @@ module:
   imagemagick: 0
   imce: 0
   imce_groups: 0
+  libraries: 0
   link: 0
   menu_ui: 0
   node: 0
