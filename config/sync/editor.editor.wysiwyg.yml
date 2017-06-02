@@ -15,10 +15,17 @@ settings:
         -
           name: Formatting
           items:
+            - Format
+            - Styles
             - Bold
             - Italic
+            - Strike
             - Superscript
             - Subscript
+            - Blockquote
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
         -
           name: Links
           items:
@@ -33,13 +40,13 @@ settings:
           name: Media
           items:
             - Table
-            - Blockquote
             - DrupalImage
+            - SpecialChar
         -
-          name: Formatting
+          name: Paste
           items:
-            - Format
             - PasteFromWord
+            - RemoveFormat
         -
           name: Source
           items:
@@ -49,7 +56,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: "a.wdn-button|.wdn-button\r\na.wdn-button.wdn-button-brand|.wdn-button-brand\r\na.wdn-button.wdn-button-triad|.wdn-button-triad\r\na.wdn-button.wdn-button-complement|.wdn-button-complement\r\na.wdn-button.wdn-button-energetic|.wdn-button-energetic\r\nblockquote.wdn-quote|.wdn-quote\r\np.zenbox|.zenbox\r\np.wdn-intro-p|.wdn-intro-p\r\np.wdn-sans-serif|.wdn-sans-serif\r\np.small|.small\r\nh1.wdn-brand|h1.wdn-brand\r\nh2.wdn-brand|h2.wdn-brand\r\nh3.wdn-brand|h3.wdn-brand\r\nh4.wdn-brand|h4.wdn-brand\r\nh5.wdn-brand|h5.wdn-brand\r\nh6.wdn-brand|h6.wdn-brand"
 image_upload:
   status: false
   scheme: public
