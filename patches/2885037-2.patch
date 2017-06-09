@@ -1,0 +1,75 @@
+diff --git a/src/GroupMenuContentListBuilder.php b/src/GroupMenuContentListBuilder.php
+index afc40a4..d127e24 100644
+--- a/src/GroupMenuContentListBuilder.php
++++ b/src/GroupMenuContentListBuilder.php
+@@ -40,7 +40,11 @@ class GroupMenuContentListBuilder extends GroupContentListBuilder {
+    * {@inheritdoc}
+    */
+   public function buildHeader() {
+-    $row = parent::buildHeader();
++    $header = [
++      'id' => $this->t('ID'),
++      'label' => $this->t('Menu'),
++    ];
++    $row = $header + parent::buildHeader();
+     unset($row['entity_type'], $row['plugin']);
+     return $row;
+   }
+@@ -49,7 +53,10 @@ class GroupMenuContentListBuilder extends GroupContentListBuilder {
+    * {@inheritdoc}
+    */
+   public function buildRow(EntityInterface $entity) {
+-    $row = parent::buildRow($entity);
++    /** @var \Drupal\group\Entity\GroupContentInterface $entity */
++    $row['id'] = $entity->id();
++    $row['label']['data'] = $entity->getEntity()->toLink(NULL,'edit-form');
++    $row = $row + parent::buildRow($entity);
+     unset($row['entity_type'], $row['plugin']);
+     return $row;
+   }
+@@ -70,12 +77,13 @@ class GroupMenuContentListBuilder extends GroupContentListBuilder {
+     /** @var \Drupal\group\Entity\GroupContentInterface $entity */
+     $operations = parent::getDefaultOperations($entity);
+ 
+-    // Improve the edit and delete operation labels.
+-    if (isset($operations['edit'])) {
+-      $operations['edit']['title'] = $this->t('Edit relation');
+-    }
+-    if (isset($operations['delete'])) {
+-      $operations['delete']['title'] = $this->t('Delete relation');
++    // Add view operation for the Group Content Relation.
++    if (!isset($operations['view'])) {
++      $operations['view'] = [
++        'title' => $this->t('View relation'),
++        'weight' => 1,
++        'url' => $entity->toUrl(),
++      ];
+     }
+ 
+     // Slap on redirect destinations for the administrative operations.
+@@ -84,22 +92,17 @@ class GroupMenuContentListBuilder extends GroupContentListBuilder {
+       $operations[$key]['query'] = $destination;
+     }
+ 
+-    // Add an operation to view the actual entity.
++    // Add operations to edit and delete the actual entity.
+     if ($entity->getEntity()->access('update')) {
+-      $operations['view-entity'] = [
+-        'title' => $this->t('View related entity'),
+-        'weight' => 101,
+-        'url' => $entity->getEntity()->toUrl(),
+-      ];
+       $operations['edit-entity'] = [
+-        'title' => $this->t('Edit related entity'),
++        'title' => $this->t('Edit menu'),
+         'weight' => 102,
+         'url' => $entity->getEntity()->toUrl(),
+       ];
+     }
+     if ($entity->getEntity()->access('delete')) {
+       $operations['delete-entity'] = [
+-        'title' => $this->t('Delete related entity'),
++        'title' => $this->t('Delete menu'),
+         'weight' => 103,
+         'url' => $entity->getEntity()->toUrl('delete-form'),
+       ];
