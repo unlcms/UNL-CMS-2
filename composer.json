@@ -87,7 +87,7 @@
                 "group/{group}/node/create use's the permissions of group/{group}/node/add": "patches/2881769-3.patch"
             },
             "drupal/groupmenu": {
-                "2885065 - Parent item is not set correctly on /node/%/edit if user does not have global Administer Menus permission": "patches/2885065-2.patch",
+                "2885065 - Parent item is not set correctly on /node/%/edit if user does not have global Administer Menus permission": "patches/2885065-3.patch",
                 "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch",
                 "2885055 - Small permissions issues": "patches/2885055-2.patch"
             },
