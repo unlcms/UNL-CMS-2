@@ -38,7 +38,7 @@ index afc40a4..d127e24 100644
 -    if (isset($operations['delete'])) {
 -      $operations['delete']['title'] = $this->t('Delete relation');
 +    // Add view operation for the Group Content Relation.
-+    if (!isset($operations['view'])) {
++    if (!isset($operations['view']) && $entity->access('view')) {
 +      $operations['view'] = [
 +        'title' => $this->t('View relation'),
 +        'weight' => 1,

@@ -87,7 +87,7 @@
                 "group/{group}/node/create use's the permissions of group/{group}/node/add": "patches/2881769-3.patch"
             },
             "drupal/groupmenu": {
-                "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-2.patch"
+                "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch"
             },
             "drupal/imce": {
                 "Don't auto-populate the Alternative Text with the image filename": "patches/2884755-2.patch"
