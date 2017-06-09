@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "163cb1c34a4b3871bbcb82c67c23c682",
+    "content-hash": "4cd3921710ffaf9badda3ceea0fb8be5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2076,6 +2076,7 @@
                     "datestamp": "1496932743"
                 },
                 "patches_applied": {
+                    "2885065 - Parent item is not set correctly on /node/%/edit if user does not have global Administer Menus permission": "patches/2885065-2.patch",
                     "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch",
                     "2885055 - Small permissions issues": "patches/2885055-2.patch"
                 }

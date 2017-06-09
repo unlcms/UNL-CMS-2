@@ -1,0 +1,78 @@
+diff --git a/groupmenu.module b/groupmenu.module
+index c15ab9c..2d9c734 100644
+--- a/groupmenu.module
++++ b/groupmenu.module
+@@ -10,6 +10,7 @@ use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Session\AccountInterface;
+ use Drupal\gnode\Plugin\GroupContentEnabler\GroupNode;
++use Drupal\group\Entity\GroupContent;
+ use Drupal\group\Entity\GroupContentType;
+ use Drupal\group\Entity\Form\GroupContentTypeForm;
+ use Drupal\group\Entity\GroupInterface;
+@@ -97,16 +98,28 @@ function groupmenu_form_node_form_alter(&$form, FormStateInterface $form_state)
+   // Filter all menu options when we are adding content in a group, or if we
+   // don't have permissions to edit all menu's.
+   /** @var \Drupal\group\Entity\GroupInterface $group */
+-  $group = $form_state->getStorage()['group'];
+-  if ($group || !$account->hasPermission('administer menu')) {
++  $groups[] = $form_state->getStorage()['group'];
++
++  // If a node is being edited at /node/%/edit, look for groups that it is a part of.
++  if (!$groups[0]) {
++    unset($groups);
++    $node = $form_state->getFormObject()->getEntity();
++    if ($node->id()) {
++      $group_content_array = GroupContent::loadByEntity($node);
++      foreach ($group_content_array as $group_content) {
++        $groups[] = $group_content->getGroup();
++      }
++    }
++  }
++
++  if ($groups || !$account->hasPermission('administer menu')) {
+     $menu_options = &$form['menu']['link']['menu_parent']['#options'];
+     if ($menu_options) {
+-      $menu_exist = groupmenu_filter_parent_options($menu_options, $group);
++      $menu_exist = groupmenu_filter_parent_options($menu_options, $groups);
+       if ($menu_exist) {
+         // If we have access to menu options, this means we have permission to
+         // edit the group menu.
+         $form['menu']['#access'] = TRUE;
+-        $form['menu']['link']['menu_parent']['#default_value'] = reset($menu_options);
+       }
+       else {
+         $form['menu']['#access'] = FALSE;
+@@ -120,16 +133,28 @@ function groupmenu_form_node_form_alter(&$form, FormStateInterface $form_state)
+  *
+  * @param array &$options
+  *   Form options to filter.
+- * @param \Drupal\group\Entity\GroupInterface $group
+- *   Optionally filter menus by group.
++ * @param array $groups
++ *   Optionally filter menus by group. Instances of \Drupal\group\Entity\GroupInterface
+  *
+  * @return bool
+  *   FALSE if there is no allowed menu items,
+  *   TRUE if we have some allowed menu items.
+  */
+-function groupmenu_filter_parent_options(array &$options, GroupInterface $group = NULL) {
++function groupmenu_filter_parent_options(array &$options, array $groups = []) {
+   $groupmenu_service = \Drupal::service('groupmenu.menu');
+-  $allowed_menus = $group ? $groupmenu_service->loadUserGroupMenusByGroup('edit', $group->id()) : $groupmenu_service->loadUserGroupMenus('edit');
++  foreach($groups as $key => $group) {
++    $allowed_menus_raw[$key] = $group ? $groupmenu_service->loadUserGroupMenusByGroup('edit', $group->id()) : $groupmenu_service->loadUserGroupMenus('edit');
++  }
++
++  $allowed_menus = array();
++  if (!empty($groups)) {
++    foreach ($allowed_menus_raw as $key => $value) {
++      if (is_array($value)) {
++        $allowed_menus = array_merge($allowed_menus, $value);
++      }
++    }
++  }
++
+   if (count($allowed_menus) && is_array($options)) {
+     $option_keys = array_keys($options);
+     foreach ($option_keys as $option_key) {
