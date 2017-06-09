@@ -1,8 +1,8 @@
 diff --git a/group.module b/group.module
-index 22e760f..39b0e1a 100644
+index 046b178..2a34aa5 100644
 --- a/group.module
 +++ b/group.module
-@@ -204,12 +204,10 @@ function group_form_block_form_alter(&$form, FormStateInterface $form_state, $fo
+@@ -194,12 +194,10 @@ function group_form_block_form_alter(&$form, FormStateInterface $form_state, $fo
   * Implements hook_entity_delete().
   */
  function group_entity_delete(EntityInterface $entity) {
@@ -19,17 +19,8 @@ index 22e760f..39b0e1a 100644
      }
    }
  }
-@@ -336,7 +334,7 @@ function group_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-   // GroupContentController::createForm() tends to load entity forms for adding
-   // entities to a group. We need to add or alter the submit handlers of those
-   // forms for the process to work properly.
--  if ($form_state->getFormObject() instanceof ContentEntityForm && $form_state->has('group_content_enabler')) {
-+  if ($form_state->getFormObject() && $form_state->has('group_content_enabler')) {
-     if ($wizard = $form_state->has('store_id')) {
-       $store = \Drupal::service('user.private_tempstore')->get('group_content_wizard');
-       $store_id = $form_state->get('store_id');
 diff --git a/src/Entity/Group.php b/src/Entity/Group.php
-index 0808b76..bec2498 100644
+index 0bbea96..0d31ca1 100644
 --- a/src/Entity/Group.php
 +++ b/src/Entity/Group.php
 @@ -2,12 +2,12 @@

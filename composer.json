@@ -40,7 +40,7 @@
         "drupal/purge": "^3.0@beta",
         "drupal/varnish_purge": "^1.4",
         "symfony/ldap": "~3.2.1",
-        "drupal/group": "1.x-dev#12a0077835c69fbeb185b5c134bf35bb62a561bc",
+        "drupal/group": "1.x-dev#22a99c0e1372e94b238860b543519812579fed78",
         "drupal/groupmenu": "1.x-dev",
         "unlcms/group_simplecss": "*",
         "unlcms/group_subdomain": "*",
@@ -81,10 +81,10 @@
                 "2771837 - drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "patches/drupalimage_ckeditor-2771837-8.patch"
             },
             "drupal/group": {
-                "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch",
-                "More contexts needed": "https://www.drupal.org/files/issues/expand_context_to_nodes-2815971-13.patch",
-                "Configurable entities as group content": "https://www.drupal.org/files/issues/2797793-12.patch",
-                "group/{group}/node/create use's the permissions of group/{group}/node/add": "https://www.drupal.org/files/issues/2881769-3.patch"
+                "Get a token of a node's parent group to create a pathauto pattern": "patches/group_add-node-group-tokens-2774827-24.patch",
+                "More contexts needed": "patches/expand_context_to_nodes-2815971-13.patch",
+                "Configurable entities as group content": "patches/2797793-13.patch",
+                "group/{group}/node/create use's the permissions of group/{group}/node/add": "patches/2881769-3.patch"
             },
             "drupal/imce": {
                 "Don't auto-populate the Alternative Text with the image filename": "patches/2884755-2.patch"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e79c9a62f77fba43e236bf9275409b64",
+    "content-hash": "21a50bf11c601c9e12f80b5808b9a9a2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2013,7 +2013,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/group",
-                "reference": "12a0077835c69fbeb185b5c134bf35bb62a561bc"
+                "reference": "22a99c0e1372e94b238860b543519812579fed78"
             },
             "require": {
                 "drupal/core": "*"
@@ -2028,10 +2028,10 @@
                     "datestamp": "1496750942"
                 },
                 "patches_applied": {
-                    "Get a token of a node's parent group to create a pathauto pattern": "https://www.drupal.org/files/issues/group_add-node-group-tokens-2774827-24.patch",
-                    "More contexts needed": "https://www.drupal.org/files/issues/expand_context_to_nodes-2815971-13.patch",
-                    "Configurable entities as group content": "https://www.drupal.org/files/issues/2797793-12.patch",
-                    "group/{group}/node/create use's the permissions of group/{group}/node/add": "https://www.drupal.org/files/issues/2881769-3.patch"
+                    "Get a token of a node's parent group to create a pathauto pattern": "patches/group_add-node-group-tokens-2774827-24.patch",
+                    "More contexts needed": "patches/expand_context_to_nodes-2815971-13.patch",
+                    "Configurable entities as group content": "patches/2797793-13.patch",
+                    "group/{group}/node/create use's the permissions of group/{group}/node/add": "patches/2881769-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2049,7 +2049,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
             },
-            "time": "2017-04-18 08:29:00"
+            "time": "2017-06-06 12:09:13"
         },
         {
             "name": "drupal/groupmenu",
@@ -2057,7 +2057,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/groupmenu",
-                "reference": "c2df53d8d4718c5eceb1928cbc3f095a799b960e"
+                "reference": "afbb5db801ff8d82bbc13afd1c0ecdb274e62101"
             },
             "require": {
                 "drupal/core": "*",
@@ -2073,7 +2073,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1496910242"
+                    "datestamp": "1496932743"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2095,7 +2095,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/groupmenu"
             },
-            "time": "2017-06-08 14:37:52"
+            "time": "2017-06-08 18:01:35"
         },
         {
             "name": "drupal/honeypot",
@@ -2239,7 +2239,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/imce-8.x-1.5.zip",
-                "reference": "8.x-1.5",
+                "reference": null,
                 "shasum": "b6ea0b74e9f1d37bf7acab10fdf0c1d1b3441464"
             },
             "require": {
@@ -2253,6 +2253,9 @@
                 "drupal": {
                     "version": "8.x-1.5",
                     "datestamp": "1486506784"
+                },
+                "patches_applied": {
+                    "Don't auto-populate the Alternative Text with the image filename": "patches/2884755-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4859,16 +4862,16 @@
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "5d4474f447403c3348e37b70acc2b95475b7befa"
+                "reference": "414e6538700614e7bb005a794d39d5d40aa70813"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/5d4474f447403c3348e37b70acc2b95475b7befa",
-                "reference": "5d4474f447403c3348e37b70acc2b95475b7befa",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/414e6538700614e7bb005a794d39d5d40aa70813",
+                "reference": "414e6538700614e7bb005a794d39d5d40aa70813",
                 "shasum": ""
             },
             "require": {
@@ -4908,11 +4911,11 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-23T19:14:03+00:00"
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
@@ -4971,16 +4974,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+                "reference": "dee1c8b1e040d7dec299e4133c8105538cb2e5c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dee1c8b1e040d7dec299e4133c8105538cb2e5c7",
+                "reference": "dee1c8b1e040d7dec299e4133c8105538cb2e5c7",
                 "shasum": ""
             },
             "require": {
@@ -5026,11 +5029,11 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-05-29T17:37:41+00:00"
         },
         {
             "name": "symfony/polyfill-php54",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php54.git",
@@ -5088,7 +5091,7 @@
         },
         {
             "name": "symfony/polyfill-php55",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php55.git",
@@ -5144,7 +5147,7 @@
         },
         {
             "name": "symfony/polyfill-php56",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php56.git",
@@ -5200,7 +5203,7 @@
         },
         {
             "name": "symfony/polyfill-util",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-util.git",
