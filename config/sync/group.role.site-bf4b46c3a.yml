@@ -1,0 +1,17 @@
+uuid: ba1b6f80-beaf-4b2f-875e-b21758d35684
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site
+  enforced:
+    config:
+      - user.role.site_admin
+id: site-bf4b46c3a
+label: 'Site admin'
+weight: -6
+internal: true
+audience: outsider
+group_type: site
+permissions_ui: false
+permissions: {  }

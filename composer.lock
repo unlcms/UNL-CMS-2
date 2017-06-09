@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d59a93bb7b8d326d515b8280e6d3cffb",
+    "content-hash": "163cb1c34a4b3871bbcb82c67c23c682",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2076,7 +2076,8 @@
                     "datestamp": "1496932743"
                 },
                 "patches_applied": {
-                    "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch"
+                    "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch",
+                    "2885055 - Small permissions issues": "patches/2885055-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

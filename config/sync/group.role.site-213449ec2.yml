@@ -1,0 +1,17 @@
+uuid: e8f673ff-476d-4ba2-9c39-3693dd714282
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site
+  enforced:
+    config:
+      - user.role.coder
+id: site-213449ec2
+label: Coder
+weight: -7
+internal: true
+audience: outsider
+group_type: site
+permissions_ui: false
+permissions: {  }

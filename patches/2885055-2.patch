@@ -1,0 +1,26 @@
+diff --git a/groupmenu.module b/groupmenu.module
+index c15ab9c..cff9df4 100644
+--- a/groupmenu.module
++++ b/groupmenu.module
+@@ -44,7 +44,7 @@ function groupmenu_entity_access(EntityInterface $entity, $op, AccountInterface
+   if (!($entity instanceof MenuInterface)) {
+     return AccessResult::neutral();
+   }
+-  return \Drupal::service('groupmenu.menu')->menuAccess('edit', $entity, $account);
++  return \Drupal::service('groupmenu.menu')->menuAccess($op, $entity, $account);
+ }
+ 
+ /**
+diff --git a/src/Access/GroupMenuAccess.php b/src/Access/GroupMenuAccess.php
+index f538ebb..1a6f141 100644
+--- a/src/Access/GroupMenuAccess.php
++++ b/src/Access/GroupMenuAccess.php
+@@ -17,7 +17,7 @@ class GroupMenuAccess implements GroupMenuAccessInterface {
+    * {@inheritdoc}
+    */
+   public function menuEditAccess(AccountInterface $account, MenuInterface $menu) {
+-    return \Drupal::service('groupmenu.menu')->menuAccess('edit', $menu, $account);
++    return \Drupal::service('groupmenu.menu')->menuAccess('update', $menu, $account);
+   }
+ 
+   /**
