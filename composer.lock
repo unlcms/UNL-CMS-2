@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9bf527bd591e5c6aa931c6f325d9d49f",
+    "content-hash": "22b24b1d580e44f99ef23cda666b9856",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -60,16 +60,16 @@
         },
         {
             "name": "caxy/php-htmldiff",
-            "version": "v0.1.4",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caxy/php-htmldiff.git",
-                "reference": "9b115a83d49c636d6bae8ffce15b0e1962cb2ed7"
+                "reference": "d7540c9938c860f2cb7083f72ba24c45f51d57bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/9b115a83d49c636d6bae8ffce15b0e1962cb2ed7",
-                "reference": "9b115a83d49c636d6bae8ffce15b0e1962cb2ed7",
+                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/d7540c9938c860f2cb7083f72ba24c45f51d57bc",
+                "reference": "d7540c9938c860f2cb7083f72ba24c45f51d57bc",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 "diff",
                 "html"
             ],
-            "time": "2017-05-02T21:16:54+00:00"
+            "time": "2017-06-12T17:35:44+00:00"
         },
         {
             "name": "composer/installers",
@@ -1814,6 +1814,61 @@
             }
         },
         {
+            "name": "drupal/external_entities",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/external_entities",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/external_entities-8.x-1.0-alpha2.zip",
+                "reference": null,
+                "shasum": "25ab1b732ea1bde3abffdd88a77bc0ef1194f213"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1483094584"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Hanno",
+                    "homepage": "https://www.drupal.org/user/18826"
+                },
+                {
+                    "name": "Jelle_S",
+                    "homepage": "https://www.drupal.org/user/829198"
+                },
+                {
+                    "name": "attiks",
+                    "homepage": "https://www.drupal.org/user/105002"
+                },
+                {
+                    "name": "rodrigoaguilera",
+                    "homepage": "https://www.drupal.org/user/408170"
+                }
+            ],
+            "description": "Allows using remote entities, for example through a REST interface.",
+            "homepage": "https://www.drupal.org/project/external_entities",
+            "support": {
+                "source": "http://cgit.drupalcode.org/external_entities"
+            }
+        },
+        {
             "name": "drupal/field_permissions",
             "version": "1.0.0-beta2",
             "source": {
@@ -2048,8 +2103,7 @@
             "homepage": "https://www.drupal.org/project/group",
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
-            },
-            "time": "2017-06-06 12:09:13"
+            }
         },
         {
             "name": "drupal/groupmenu",
@@ -2057,7 +2111,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/groupmenu",
-                "reference": "afbb5db801ff8d82bbc13afd1c0ecdb274e62101"
+                "reference": "afc9e6235813ecc18f76f801165047788192d54b"
             },
             "require": {
                 "drupal/core": "*",
@@ -2073,12 +2127,11 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1496932743"
+                    "datestamp": "1497663544"
                 },
                 "patches_applied": {
                     "2885065 - Parent item is not set correctly on /node/%/edit if user does not have global Administer Menus permission": "patches/2885065-3.patch",
-                    "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch",
-                    "2885055 - Small permissions issues": "patches/2885055-2.patch"
+                    "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2100,21 +2153,21 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/groupmenu"
             },
-            "time": "2017-06-08 18:01:35"
+            "time": "2017-06-17 01:41:37"
         },
         {
             "name": "drupal/honeypot",
-            "version": "1.25.0",
+            "version": "1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/honeypot",
-                "reference": "8.x-1.25"
+                "reference": "8.x-1.26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.25.zip",
-                "reference": "8.x-1.25",
-                "shasum": "9dfe6677c5b4a19e87fae143755949b79168b9d1"
+                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.26.zip",
+                "reference": "8.x-1.26",
+                "shasum": "045579e80f97cec3364fd7baff903ea88eed5268"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2125,8 +2178,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.25",
-                    "datestamp": "1494742085"
+                    "version": "8.x-1.26",
+                    "datestamp": "1497409443"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2843,7 +2896,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/theme_change-8.x-1.5.zip",
-                "reference": null,
+                "reference": "8.x-1.5",
                 "shasum": "e2472aa57b0073da759af96396e589e9a220eb30"
             },
             "require": {
@@ -5826,6 +5879,28 @@
             "time": "2017-06-07T18:45:17+00:00"
         },
         {
+            "name": "unlcms/external_entities_unldirectory",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unlcms/external_entities_unldirectory.git",
+                "reference": "17e21bc6ff1b94e556b1c3a8fb0a62bf4b9af902"
+            },
+            "require": {
+                "drupal/external_entities": "1.0.*"
+            },
+            "type": "drupal-module",
+            "authors": [
+                {
+                    "name": "Eric Rasmussen (ericras)",
+                    "homepage": "https://www.drupal.org/u/ericras",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Reference UNL Directory data as external entities.",
+            "time": "2017-06-19 18:48:24"
+        },
+        {
             "name": "unlcms/group_simplecss",
             "version": "dev-8.x-1.x",
             "source": {
@@ -7941,6 +8016,7 @@
         "drupal/field_permissions": 10,
         "drupal/menu_entity_index": 15,
         "drupal/libraries": 20,
+        "drupal/external_entities": 15,
         "behat/mink": 20
     },
     "prefer-stable": true,

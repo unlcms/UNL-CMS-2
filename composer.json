@@ -55,7 +55,9 @@
         "drupal/recreate_block_content": "^1.0",
         "drupal/libraries": "3.x-dev",
         "drupal/ckeditor_codemirror": "^1.0",
-        "drupal/theme_change": "^1.5"
+        "drupal/theme_change": "^1.5",
+        "drupal/external_entities": "^1.0@alpha",
+        "unlcms/external_entities_unldirectory": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -88,8 +90,7 @@
             },
             "drupal/groupmenu": {
                 "2885065 - Parent item is not set correctly on /node/%/edit if user does not have global Administer Menus permission": "patches/2885065-3.patch",
-                "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch",
-                "2885055 - Small permissions issues": "patches/2885055-2.patch"
+                "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch"
             },
             "drupal/imce": {
                 "Don't auto-populate the Alternative Text with the image filename": "patches/2884755-2.patch"
@@ -115,6 +116,10 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "external_entities_unldirectory": {
+            "url": "https://github.com/unlcms/external_entities_unldirectory.git",
+            "type": "git"
         },
         "group_simplecss": {
             "url": "https://github.com/unlcms/group_simplecss.git",
