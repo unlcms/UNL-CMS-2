@@ -95,6 +95,9 @@
             "drupal/imce": {
                 "Don't auto-populate the Alternative Text with the image filename": "patches/2884755-2.patch"
             },
+            "drupal/theme_change": {
+                "2887872 - Initialize vars and fix 'wilcard' typos": "patches/theme_change-init-and-typos.patch"
+            },
             "drush/drush": {
                 "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch",
                 "Add prefix to database array": "patches/drush-add-prefix.patch"

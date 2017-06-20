@@ -1,0 +1,76 @@
+diff --git a/src/Theme/ThemeChangeswitcherNegotiator.php b/src/Theme/ThemeChangeswitcherNegotiator.php
+index 6b25a87..2577ab5 100644
+--- a/src/Theme/ThemeChangeswitcherNegotiator.php
++++ b/src/Theme/ThemeChangeswitcherNegotiator.php
+@@ -8,6 +8,7 @@ use Drupal\Core\Theme\ThemeNegotiatorInterface;
+ class ThemeChangeswitcherNegotiator implements ThemeNegotiatorInterface {
+ 
+   public function applies(RouteMatchInterface $route_match) {
++    $wildcard = FALSE;
+     $applies = FALSE;
+     // Get Current Path.
+     $current_path = \Drupal::service('path.current')->getPath();
+@@ -24,7 +25,7 @@ class ThemeChangeswitcherNegotiator implements ThemeNegotiatorInterface {
+     foreach ($wildcard_paths as $wildcard_path) {
+       $path_matches = \Drupal::service('path.matcher')->matchPath($current_path, $wildcard_path);
+       if ($path_matches) {
+-        $wilcard = TRUE;
++        $wildcard = TRUE;
+       }
+     }
+     if ($routes && in_array($route_name, $routes)) {
+@@ -33,7 +34,7 @@ class ThemeChangeswitcherNegotiator implements ThemeNegotiatorInterface {
+     else if ($paths && (in_array($current_path, $paths) || in_array($pathAlias, $paths))) {
+       $applies = TRUE;
+     }
+-    else if ($wilcard) {
++    else if ($wildcard) {
+       $applies = TRUE;
+     }
+     // Use this theme negotiator.
+@@ -57,8 +58,8 @@ class ThemeChangeswitcherNegotiator implements ThemeNegotiatorInterface {
+     foreach ($wildcard_paths as $wildcard_path) {
+       $path_matches = \Drupal::service('path.matcher')->matchPath($current_path, $wildcard_path);
+       if ($path_matches) {
+-        $wilcard = TRUE;
+-        $wilcard_theme = $wildcard_path;
++        $wildcard = TRUE;
++        $wildcard_theme = $wildcard_path;
+         break;
+       }
+     }
+@@ -76,8 +77,8 @@ class ThemeChangeswitcherNegotiator implements ThemeNegotiatorInterface {
+         return $theme;
+       }
+     }
+-    else if ($wilcard && $wilcard_theme) {
+-      $theme = $this->_get_theme($wilcard_theme);
++    else if ($wildcard && $wildcard_theme) {
++      $theme = $this->_get_theme($wildcard_theme);
+       return $theme;
+     }
+   }
+@@ -86,6 +87,7 @@ class ThemeChangeswitcherNegotiator implements ThemeNegotiatorInterface {
+    * Get all route name(s).
+    */
+   public function _get_route_names() {
++    $routes = [];
+     $db_conn = \Drupal::database();
+     $query = $db_conn->select('theme_change', 'tc');
+     $query->fields('tc', ['value']);
+@@ -101,6 +103,7 @@ class ThemeChangeswitcherNegotiator implements ThemeNegotiatorInterface {
+    * Get all path value(s).
+    */
+   public function _get_path_values() {
++    $paths = [];
+     $db_conn = \Drupal::database();
+     $query = $db_conn->select('theme_change', 'tc');
+     $query->fields('tc', ['value']);
+@@ -116,6 +119,7 @@ class ThemeChangeswitcherNegotiator implements ThemeNegotiatorInterface {
+    * Get all wildcard path value(s).
+    */
+   public function _get_path_wildcard_values() {
++    $paths = [];
+     $db_conn = \Drupal::database();
+     $query = $db_conn->select('theme_change', 'tc');
+     $query->fields('tc', ['value']);
