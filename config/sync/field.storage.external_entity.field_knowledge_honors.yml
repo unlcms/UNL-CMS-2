@@ -1,0 +1,19 @@
+uuid: 223784a2-d336-4079-8d82-3878126711af
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: external_entity.field_knowledge_honors
+field_name: field_knowledge_honors
+entity_type: external_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

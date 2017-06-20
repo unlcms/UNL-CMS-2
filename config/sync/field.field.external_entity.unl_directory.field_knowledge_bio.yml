@@ -1,0 +1,21 @@
+uuid: 6dfd2085-dbb0-419b-990c-e5782f9c2b2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.storage.external_entity.field_knowledge_bio
+  module:
+    - text
+id: external_entity.unl_directory.field_knowledge_bio
+field_name: field_knowledge_bio
+entity_type: external_entity
+bundle: unl_directory
+label: knowledge_bio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

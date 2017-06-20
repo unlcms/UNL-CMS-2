@@ -12,11 +12,19 @@ field_mappings:
   field_edupersonprimaryaff: eduPersonPrimaryAffiliation
   field_imageurl: imageURL
   field_jobtitle: title
+  field_knowledge_bio: bio
+  field_knowledge_courses: courses
+  field_knowledge_education: education
+  field_knowledge_grants: grants
+  field_knowledge_honors: honors
+  field_knowledge_papers: papers
+  field_knowledge_performances: performances
+  field_knowledge_presentations: presentations
   field_mail: mail
   field_telephonenumber: telephoneNumber
   field_unldirectoryaddress: unlDirectoryAddress
   field_unlhrprimarydepartment: unlHRPrimaryDepartment
-endpoint: 'http://directory.unl.edu/'
+endpoint: 'https://directory.unl.edu/'
 client: unldirectory_client
 format: json
 pager_settings:

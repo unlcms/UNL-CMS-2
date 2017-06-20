@@ -1,0 +1,19 @@
+uuid: 1dcaec72-9f30-44f5-8d9f-3488fbd07497
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.storage.external_entity.field_knowledge_papers
+id: external_entity.unl_directory.field_knowledge_papers
+field_name: field_knowledge_papers
+entity_type: external_entity
+bundle: unl_directory
+label: knowledge_papers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

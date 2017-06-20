@@ -7,12 +7,21 @@ dependencies:
     - field.field.external_entity.unl_directory.field_edupersonprimaryaff
     - field.field.external_entity.unl_directory.field_imageurl
     - field.field.external_entity.unl_directory.field_jobtitle
+    - field.field.external_entity.unl_directory.field_knowledge_bio
+    - field.field.external_entity.unl_directory.field_knowledge_courses
+    - field.field.external_entity.unl_directory.field_knowledge_education
+    - field.field.external_entity.unl_directory.field_knowledge_grants
+    - field.field.external_entity.unl_directory.field_knowledge_honors
+    - field.field.external_entity.unl_directory.field_knowledge_papers
+    - field.field.external_entity.unl_directory.field_knowledge_performances
+    - field.field.external_entity.unl_directory.field_knowledge_presentations
     - field.field.external_entity.unl_directory.field_mail
     - field.field.external_entity.unl_directory.field_telephonenumber
     - field.field.external_entity.unl_directory.field_unldirectoryaddress
     - field.field.external_entity.unl_directory.field_unlhrprimarydepartment
   module:
     - telephone
+    - text
 id: external_entity.unl_directory.default
 targetEntityType: external_entity
 bundle: unl_directory
@@ -41,6 +50,70 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_knowledge_bio:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_knowledge_courses:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_knowledge_education:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_knowledge_grants:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_knowledge_honors:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_knowledge_papers:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_knowledge_performances:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_knowledge_presentations:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_mail:
     weight: -1

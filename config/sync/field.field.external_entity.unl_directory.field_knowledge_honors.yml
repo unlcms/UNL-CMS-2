@@ -1,0 +1,19 @@
+uuid: fb5bb9ac-9e82-49b8-b536-9cc7c9421a6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.storage.external_entity.field_knowledge_honors
+id: external_entity.unl_directory.field_knowledge_honors
+field_name: field_knowledge_honors
+entity_type: external_entity
+bundle: unl_directory
+label: knowledge_honors
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

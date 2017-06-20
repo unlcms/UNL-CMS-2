@@ -1,0 +1,19 @@
+uuid: cf17e0ea-05df-479f-9776-6b785fde1731
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+    - text
+id: external_entity.field_knowledge_bio
+field_name: field_knowledge_bio
+entity_type: external_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

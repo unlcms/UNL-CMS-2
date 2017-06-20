@@ -1,0 +1,19 @@
+uuid: 1a631b7e-cdec-4842-b848-e07214527d37
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: external_entity.field_knowledge_papers
+field_name: field_knowledge_papers
+entity_type: external_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

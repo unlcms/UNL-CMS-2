@@ -1,0 +1,21 @@
+uuid: a48cb31d-4639-4e98-98a5-535dfd4b9236
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: external_entity.field_knowledge_courses
+field_name: field_knowledge_courses
+entity_type: external_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
