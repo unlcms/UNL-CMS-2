@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4039e02aaee5e63e50d6a3c393957624",
+    "content-hash": "55912ea2ffbb96edd39e1c7b50e9f4c2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2913,7 +2913,7 @@
                     "datestamp": "1495982584"
                 },
                 "patches_applied": {
-                    "Initialize vars and fix 'wilcard' typos": "patches/theme_change-init-and-typos.patch"
+                    "2887872 - Initialize vars and fix 'wilcard' typos": "patches/theme_change-init-and-typos.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
