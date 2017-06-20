@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "55912ea2ffbb96edd39e1c7b50e9f4c2",
+    "content-hash": "f4b07837da02552c2a8b7c396aa7036c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2131,7 +2131,7 @@
                     "datestamp": "1497663544"
                 },
                 "patches_applied": {
-                    "2885065 - Parent item is not set correctly on /node/%/edit if user does not have global Administer Menus permission": "patches/2885065-3.patch",
+                    "2885065 - Parent item is not set correctly on /node/%/edit if user does not have global Administer Menus permission": "patches/2885065-6.patch",
                     "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch"
                 }
             },
@@ -6058,7 +6058,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "79dffc737ea1c5bb7247833968cdcc3a5221e521"
+                "reference": "f1b7c908513eb3b9753c7aa9cd70d84ed6caafe8"
             },
             "type": "drupal-theme",
             "authors": [
@@ -6069,7 +6069,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-05-24 22:12:31"
+            "time": "2017-06-20 21:11:28"
         },
         {
             "name": "unlcms/unl_multisite",
