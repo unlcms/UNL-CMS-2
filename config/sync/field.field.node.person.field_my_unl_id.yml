@@ -1,0 +1,28 @@
+uuid: 02c8a1c1-3d9c-477f-bde9-39975afb823e
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.storage.node.field_my_unl_id
+    - node.type.person
+id: node.person.field_my_unl_id
+field_name: field_my_unl_id
+entity_type: node
+bundle: person
+label: 'UNL Directory Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:external_entity'
+  handler_settings:
+    target_bundles:
+      unl_directory: unl_directory
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

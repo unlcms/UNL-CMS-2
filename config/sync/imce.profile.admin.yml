@@ -13,6 +13,7 @@ conf:
   quota: !!float 0
   maxwidth: 0
   maxheight: 0
+  autoalttext: 0
   replace: 1
   folders:
     -

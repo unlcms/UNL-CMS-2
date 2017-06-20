@@ -1,0 +1,33 @@
+uuid: f480f312-37e0-4432-855c-f972cb7a0498
+langcode: en
+status: true
+dependencies: {  }
+label: 'UNL Directory'
+type: unl_directory
+description: 'Info from directory.unl.edu.'
+read_only: true
+field_mappings:
+  id: uid
+  title: displayName
+  field_edupersonprimaryaff: eduPersonPrimaryAffiliation
+  field_imageurl: imageURL
+  field_jobtitle: title
+  field_mail: mail
+  field_telephonenumber: telephoneNumber
+  field_unldirectoryaddress: unlDirectoryAddress
+  field_unlhrprimarydepartment: unlHRPrimaryDepartment
+endpoint: 'http://directory.unl.edu/'
+client: unldirectory_client
+format: json
+pager_settings:
+  default_limit: '10'
+  page_parameter: page
+  page_parameter_type: pagenum
+  page_size_parameter: pagesize
+  page_size_parameter_type: pagesize
+api_key_settings:
+  header_name: ''
+  key: ''
+parameters:
+  list: {  }
+  single: {  }

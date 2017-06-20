@@ -23,6 +23,8 @@ module:
   editor: 0
   entity_reference_revisions: 0
   exclude_node_title: 0
+  external_entities: 0
+  external_entities_unldirectory: 0
   field: 0
   field_permissions: 0
   field_ui: 0
@@ -61,6 +63,7 @@ module:
   shortcut: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   theme_change: 0
   token: 0

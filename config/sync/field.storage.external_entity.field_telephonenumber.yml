@@ -1,0 +1,19 @@
+uuid: f4979e33-f264-473f-b457-e1d54ea04d3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+    - telephone
+id: external_entity.field_telephonenumber
+field_name: field_telephonenumber
+entity_type: external_entity
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

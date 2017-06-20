@@ -1,0 +1,38 @@
+uuid: f45421c5-31db-4234-ab96-765d578a064c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.body
+    - field.field.node.person.field_my_unl_id
+    - node.type.person
+  module:
+    - text
+    - user
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_my_unl_id:
+    weight: 102
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

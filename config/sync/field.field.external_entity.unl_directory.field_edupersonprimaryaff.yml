@@ -1,0 +1,19 @@
+uuid: a396a62e-d91b-49e0-91d4-81bd03570881
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.storage.external_entity.field_edupersonprimaryaff
+id: external_entity.unl_directory.field_edupersonprimaryaff
+field_name: field_edupersonprimaryaff
+entity_type: external_entity
+bundle: unl_directory
+label: eduPersonPrimaryAffiliation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

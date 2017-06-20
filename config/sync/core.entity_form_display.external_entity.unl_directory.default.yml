@@ -1,0 +1,84 @@
+uuid: 74b791cb-3379-41ba-b29d-ec0d770fc1c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.field.external_entity.unl_directory.field_edupersonprimaryaff
+    - field.field.external_entity.unl_directory.field_imageurl
+    - field.field.external_entity.unl_directory.field_jobtitle
+    - field.field.external_entity.unl_directory.field_mail
+    - field.field.external_entity.unl_directory.field_telephonenumber
+    - field.field.external_entity.unl_directory.field_unldirectoryaddress
+    - field.field.external_entity.unl_directory.field_unlhrprimarydepartment
+  module:
+    - telephone
+id: external_entity.unl_directory.default
+targetEntityType: external_entity
+bundle: unl_directory
+mode: default
+content:
+  field_edupersonprimaryaff:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_imageurl:
+    weight: -3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_jobtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mail:
+    weight: -1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_telephonenumber:
+    weight: -2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_unldirectoryaddress:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_unlhrprimarydepartment:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

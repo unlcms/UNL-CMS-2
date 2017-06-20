@@ -1,0 +1,21 @@
+uuid: 0a99e7da-6550-413e-97fb-79069be157e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: external_entity.field_unlhrprimarydepartment
+field_name: field_unlhrprimarydepartment
+entity_type: external_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

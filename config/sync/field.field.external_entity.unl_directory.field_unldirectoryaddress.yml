@@ -1,0 +1,19 @@
+uuid: 96e77b93-08bd-4cb8-a01a-40d347db3475
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.storage.external_entity.field_unldirectoryaddress
+id: external_entity.unl_directory.field_unldirectoryaddress
+field_name: field_unldirectoryaddress
+entity_type: external_entity
+bundle: unl_directory
+label: unlDirectoryAddress
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

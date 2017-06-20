@@ -2103,7 +2103,8 @@
             "homepage": "https://www.drupal.org/project/group",
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
-            }
+            },
+            "time": "2017-06-06 12:09:13"
         },
         {
             "name": "drupal/groupmenu",
@@ -5884,7 +5885,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/external_entities_unldirectory.git",
-                "reference": "17e21bc6ff1b94e556b1c3a8fb0a62bf4b9af902"
+                "reference": "11c804eee64414d242b4406a9f16ea8921ea2087"
             },
             "require": {
                 "drupal/external_entities": "1.0.*"
@@ -5898,7 +5899,7 @@
                 }
             ],
             "description": "Reference UNL Directory data as external entities.",
-            "time": "2017-06-19 18:48:24"
+            "time": "2017-06-19 19:04:44"
         },
         {
             "name": "unlcms/group_simplecss",

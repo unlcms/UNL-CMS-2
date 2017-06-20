@@ -1,0 +1,76 @@
+uuid: 0cd7f51d-c9b0-4d82-9e25-6c1c47be62f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.field.external_entity.unl_directory.field_edupersonprimaryaff
+    - field.field.external_entity.unl_directory.field_imageurl
+    - field.field.external_entity.unl_directory.field_jobtitle
+    - field.field.external_entity.unl_directory.field_mail
+    - field.field.external_entity.unl_directory.field_telephonenumber
+    - field.field.external_entity.unl_directory.field_unldirectoryaddress
+    - field.field.external_entity.unl_directory.field_unlhrprimarydepartment
+  module:
+    - telephone
+id: external_entity.unl_directory.default
+targetEntityType: external_entity
+bundle: unl_directory
+mode: default
+content:
+  field_edupersonprimaryaff:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_imageurl:
+    weight: -3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_jobtitle:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mail:
+    weight: -1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_telephonenumber:
+    weight: -2
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_unldirectoryaddress:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_unlhrprimarydepartment:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

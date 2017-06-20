@@ -1,0 +1,19 @@
+uuid: 0f054dc7-2ba3-4270-9044-ebbf639073aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.storage.external_entity.field_unlhrprimarydepartment
+id: external_entity.unl_directory.field_unlhrprimarydepartment
+field_name: field_unlhrprimarydepartment
+entity_type: external_entity
+bundle: unl_directory
+label: unlHRPrimaryDepartment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

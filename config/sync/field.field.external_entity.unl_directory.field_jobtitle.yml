@@ -1,0 +1,19 @@
+uuid: e41edded-9290-4de7-9fa1-b35fa4191d75
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.unl_directory
+    - field.storage.external_entity.field_jobtitle
+id: external_entity.unl_directory.field_jobtitle
+field_name: field_jobtitle
+entity_type: external_entity
+bundle: unl_directory
+label: title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

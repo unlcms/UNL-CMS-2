@@ -1,0 +1,21 @@
+uuid: 1dbdd606-0866-4ca0-adac-f425db75ff73
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: external_entity.field_imageurl
+field_name: field_imageurl
+entity_type: external_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
