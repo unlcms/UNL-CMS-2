@@ -16,6 +16,7 @@ permissions:
   - 'access user profiles'
   - 'bypass honeypot protection'
   - 'create band entities'
+  - 'create unl_directory external entity'
   - 'create webform'
   - 'delete own webform'
   - 'edit own comments'
@@ -30,3 +31,4 @@ permissions:
   - 'view any band entities'
   - 'view files'
   - 'view the administration theme'
+  - 'view unl_directory external entity'
