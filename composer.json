@@ -24,7 +24,7 @@
         "unlcms/unl_breadcrumbs": "dev-master",
         "unlcms/unl_editor": "*",
         "unlcms/unl_multisite": "*",
-        "drupal/config_installer": "^1.0",
+        "drupal/config_installer": "1.x-dev",
         "drupal/drupal_reset": "1.x-dev",
         "drupal/easy_breadcrumb": "^1.0",
         "drupal/devel": "1.0-beta1",
