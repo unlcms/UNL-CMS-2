@@ -77,7 +77,7 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   
 # Updating a module
 
-  * Run command to update a module `composer update "vendor/module:version"`. For example: `composer update "unlcms/unl_cas"` as this will only update the specific module and nothing else.
+  * Run command to update a module `composer update vendor/module`. For example: `composer update unlcms/unl_cas` as this will only update the specific module and nothing else.
   * Make edits to the configuration in the Drupal UI if needed
   * Follow "Managing configuration" below
   * Once the module update is pushed to production, run update.php there
@@ -90,7 +90,13 @@ Drupal 8 installation at the University of Nebraska–Lincoln
   * Make configuration changes on a local dev site and run `drush config-export`
   * Commit changes to /config dir
   * Do a pull request
-  * On production run `drush config-import --partial`  IMPORTANT: Must use the '--partial' flag so that existing group menus and webforms are not deleted.
+  
+# Production deployment
+
+  * `composer install --no-dev`
+  * `drush config-import --partial`  IMPORTANT: Must use the '--partial' flag so that existing group menus and webforms are not deleted.
+  * `drush updb`
+  * `drush cr`
 
 # Local devlopment
 

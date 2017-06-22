@@ -25,9 +25,7 @@
         "unlcms/unl_editor": "*",
         "unlcms/unl_multisite": "*",
         "drupal/config_installer": "1.x-dev",
-        "drupal/drupal_reset": "1.x-dev",
         "drupal/easy_breadcrumb": "^1.0",
-        "drupal/devel": "1.0-beta1",
         "drupal/imce": "1.5",
         "drupal/admin_toolbar": "^1.0",
         "drupal/honeypot": "^1.23",
@@ -58,6 +56,10 @@
         "drupal/theme_change": "^1.5",
         "drupal/external_entities": "^1.0@alpha",
         "unlcms/external_entities_unldirectory": "*"
+    },
+    "require-dev": {
+        "drupal/devel": "1.0-beta1",
+        "drupal/drupal_reset": "1.x-dev"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
