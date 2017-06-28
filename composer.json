@@ -55,7 +55,8 @@
         "drupal/ckeditor_codemirror": "^1.0",
         "drupal/theme_change": "^1.5",
         "drupal/external_entities": "^1.0@alpha",
-        "unlcms/external_entities_unldirectory": "*"
+        "unlcms/external_entities_unldirectory": "*",
+        "drupal/view_mode_selector": "1.x-dev"
     },
     "require-dev": {
         "drupal/devel": "1.0-beta1",

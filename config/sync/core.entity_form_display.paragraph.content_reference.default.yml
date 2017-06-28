@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.content_reference.field_existing_content_item
+    - field.field.paragraph.content_reference.field_view_mode
     - paragraphs.paragraphs_type.content_reference
+  module:
+    - view_mode_selector
 id: paragraph.content_reference.default
 targetEntityType: paragraph
 bundle: content_reference
@@ -18,6 +21,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_view_mode:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
     region: content
 hidden:
   created: true

@@ -3,5 +3,5 @@ langcode: en
 status: true
 dependencies: {  }
 id: content_reference
-label: 'Content Reference (Full display)'
+label: 'Include Existing Content'
 behavior_plugins: {  }

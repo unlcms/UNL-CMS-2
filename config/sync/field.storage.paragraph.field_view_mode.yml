@@ -1,23 +1,22 @@
-uuid: 42657dfe-0e19-44d1-a900-ec2224485949
+uuid: b12efede-ddfa-44ae-8475-3dc80cb6f352
 langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
     - field_permissions
     - paragraphs
+    - view_mode_selector
 third_party_settings:
   field_permissions:
     permission_type: public
-id: paragraph.field_column_content
-field_name: field_column_content
+id: paragraph.field_view_mode
+field_name: field_view_mode
 entity_type: paragraph
-type: entity_reference_revisions
-settings:
-  target_type: paragraph
-module: entity_reference_revisions
+type: view_mode_selector
+settings: {  }
+module: view_mode_selector
 locked: false
-cardinality: 7
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

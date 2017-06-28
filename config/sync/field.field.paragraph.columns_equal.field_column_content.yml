@@ -1,11 +1,11 @@
-uuid: f1164917-1eed-4536-af9d-5a84edf94742
+uuid: 6ecc8535-382b-48b4-897f-64b0420128eb
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_column_content
     - paragraphs.paragraphs_type.columns_equal
-    - paragraphs.paragraphs_type.content_reference_teaser
+    - paragraphs.paragraphs_type.content_reference
     - paragraphs.paragraphs_type.wdn_text_band
   module:
     - entity_reference_revisions
@@ -23,28 +23,25 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      content_reference_teaser: content_reference_teaser
+      content_reference: content_reference
       wdn_text_band: wdn_text_band
     target_bundles_drag_drop:
       columns_equal:
-        weight: 8
+        weight: 7
         enabled: false
       content_reference:
+        enabled: true
+        weight: 8
+      wdn_events:
         weight: 9
         enabled: false
-      content_reference_teaser:
-        enabled: true
-        weight: 10
-      wdn_events:
-        weight: 11
-        enabled: false
       wdn_hero:
-        weight: 12
+        weight: 10
         enabled: false
       wdn_quote:
-        weight: 13
+        weight: 11
         enabled: false
       wdn_text_band:
         enabled: true
-        weight: 14
+        weight: 12
 field_type: entity_reference_revisions

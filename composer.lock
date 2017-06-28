@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a23564b066e2a41f35fb7ff7db3e057d",
+    "content-hash": "dfb91d1483c2cfabe5b120223589f4e6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2904,6 +2904,48 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/varnish_purge"
             }
+        },
+        {
+            "name": "drupal/view_mode_selector",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/view_mode_selector",
+                "reference": "8cb9c5cf97f46e3610fff25be7c5040c3104cd46"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1448038139"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "axe312",
+                    "homepage": "https://www.drupal.org/user/682114"
+                },
+                {
+                    "name": "yannickoo",
+                    "homepage": "https://www.drupal.org/user/531118"
+                }
+            ],
+            "description": "Provides a new field type for changing the view mode of an entity.",
+            "homepage": "https://www.drupal.org/project/view_mode_selector",
+            "support": {
+                "source": "http://cgit.drupalcode.org/view_mode_selector"
+            },
+            "time": "2017-04-26 09:20:00"
         },
         {
             "name": "drupal/webform",
@@ -8019,6 +8061,7 @@
         "drupal/menu_entity_index": 15,
         "drupal/libraries": 20,
         "drupal/external_entities": 15,
+        "drupal/view_mode_selector": 20,
         "drupal/drupal_reset": 20,
         "behat/mink": 20
     },
