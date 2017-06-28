@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_existing_content_item
     - node.type.article
-    - node.type.modular_content
     - node.type.page
     - node.type.webform
     - paragraphs.paragraphs_type.content_reference_teaser
@@ -25,7 +24,6 @@ settings:
     target_bundles:
       article: article
       page: page
-      modular_content: modular_content
       webform: webform
     sort:
       field: _none
