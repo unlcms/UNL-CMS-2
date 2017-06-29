@@ -5,15 +5,15 @@ dependencies:
   config:
     - field.storage.paragraph.field_existing_content_item
     - node.type.article
-    - node.type.modular_content
     - node.type.page
+    - node.type.person
     - node.type.webform
     - paragraphs.paragraphs_type.content_reference
 id: paragraph.content_reference.field_existing_content_item
 field_name: field_existing_content_item
 entity_type: paragraph
 bundle: content_reference
-label: 'Existing Content'
+label: 'Existing Content Reference'
 description: ''
 required: false
 translatable: false
@@ -25,7 +25,7 @@ settings:
     target_bundles:
       article: article
       page: page
-      modular_content: modular_content
+      person: person
       webform: webform
     sort:
       field: _none

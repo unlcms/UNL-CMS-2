@@ -755,3 +755,14 @@ $settings['file_scan_ignore_directories'] = [
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+
+$settings['twig_sandbox_whitelisted_methods'] = [
+  'id',
+  'label',
+  'bundle',
+  'get',
+  '__toString',
+  'toString',
+  'referencedEntities',
+  'view',
+];

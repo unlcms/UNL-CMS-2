@@ -16,3 +16,4 @@ permissions:
   - 'use exclude node title'
   - 'view any band entities'
   - 'view files'
+  - 'view unl_directory external entity'

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_bands
     - node.type.page
   module:
+    - paragraphs
     - path
     - text
 _core:
@@ -29,6 +31,18 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_bands:
+    weight: 26
+    settings:
+      title: Band
+      title_plural: Bands
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   path:
     type: path

@@ -6,7 +6,6 @@ dependencies:
     - field.storage.group.field_front_page
     - group.type.site
     - node.type.article
-    - node.type.modular_content
     - node.type.page
     - node.type.webform
 id: group.site.field_front_page
@@ -25,7 +24,6 @@ settings:
     target_bundles:
       article: article
       page: page
-      modular_content: modular_content
       webform: webform
     sort:
       field: _none
