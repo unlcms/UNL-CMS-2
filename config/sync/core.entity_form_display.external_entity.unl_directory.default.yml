@@ -17,6 +17,7 @@ dependencies:
     - field.field.external_entity.unl_directory.field_knowledge_presentations
     - field.field.external_entity.unl_directory.field_mail
     - field.field.external_entity.unl_directory.field_telephonenumber
+    - field.field.external_entity.unl_directory.field_uid
     - field.field.external_entity.unl_directory.field_unldirectoryaddress
     - field.field.external_entity.unl_directory.field_unlhrprimarydepartment
   module:
@@ -129,6 +130,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
+  field_uid:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_unldirectoryaddress:
     weight: 0
