@@ -1,0 +1,21 @@
+uuid: 75ce4250-7672-402a-b9c5-387252fd9251
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+id: external_entity.field_uid
+field_name: field_uid
+entity_type: external_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

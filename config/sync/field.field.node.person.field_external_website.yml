@@ -1,0 +1,23 @@
+uuid: e8150e2c-b535-4e05-a135-bd3b044a34bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_external_website
+    - node.type.person
+  module:
+    - link
+id: node.person.field_external_website
+field_name: field_external_website
+entity_type: node
+bundle: person
+label: 'External website'
+description: 'Lab or research website'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -7,6 +7,7 @@ dependencies:
     - node.type.article
     - node.type.modular_content
     - node.type.page
+    - node.type.person
     - node.type.webform
     - paragraphs.paragraphs_type.content_reference_teaser
 id: paragraph.content_reference_teaser.field_existing_content_item
@@ -26,6 +27,7 @@ settings:
       article: article
       page: page
       modular_content: modular_content
+      person: person
       webform: webform
     sort:
       field: _none

@@ -6,6 +6,6 @@ id: site
 label: Site
 description: 'A main subsite/section.'
 creator_membership: true
+creator_wizard: true
 creator_roles:
   - site-admin
-creator_wizard: true
