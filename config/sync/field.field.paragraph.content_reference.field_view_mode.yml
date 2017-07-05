@@ -1,0 +1,36 @@
+uuid: 11579c59-e1ad-41f6-880e-aba0d32e7ae3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_mode
+    - paragraphs.paragraphs_type.content_reference
+  module:
+    - view_mode_selector
+id: paragraph.content_reference.field_view_mode
+field_name: field_view_mode
+entity_type: paragraph
+bundle: content_reference
+label: 'View mode'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: teaser
+default_value_callback: ''
+settings:
+  view_modes:
+    default:
+      enable: 0
+      hide_title: 0
+      icon: {  }
+    small_teaser:
+      enable: 0
+      hide_title: 0
+      icon: {  }
+    teaser:
+      enable: 0
+      hide_title: 0
+      icon: {  }
+field_type: view_mode_selector

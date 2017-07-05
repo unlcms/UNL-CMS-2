@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_bands
     - node.type.page
   module:
+    - entity_reference_revisions
     - text
     - user
 _core:
@@ -22,9 +24,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  links:
+  field_bands:
     weight: 1
+    label: hidden
+    settings:
+      view_mode: view_mode_selector
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

@@ -79,6 +79,7 @@ module:
   user: 0
   varnish_purge_tags: 0
   varnish_purger: 0
+  view_mode_selector: 0
   views_ui: 0
   webform: 0
   webform_node: 0
