@@ -55,7 +55,9 @@
         "drupal/ckeditor_codemirror": "^1.0",
         "drupal/theme_change": "^1.5",
         "drupal/external_entities": "^1.0@alpha",
-        "unlcms/external_entities_unldirectory": "*"
+        "unlcms/external_entities_unldirectory": "*",
+        "drupal/taxonomy_machine_name": "^1.0@alpha",
+        "unlcms/unl_tags": "dev-8.x-1.x"
     },
     "require-dev": {
         "drupal/devel": "1.0-beta1",
@@ -169,6 +171,10 @@
         "unl_multisite": {
           "url": "https://github.com/unlcms/unl_multisite.git",
           "type": "git"
+        },
+        "unl_tags": {
+            "url": "https://github.com/unlcms/unl_tags.git",
+            "type": "git"
         }
     }
 }
