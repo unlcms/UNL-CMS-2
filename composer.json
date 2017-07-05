@@ -59,7 +59,7 @@
         "drupal/view_mode_selector": "1.x-dev"
     },
     "require-dev": {
-        "drupal/devel": "1.0-beta1",
+        "drupal/devel": "^1.0",
         "drupal/drupal_reset": "1.x-dev"
     },
     "minimum-stability": "dev",
