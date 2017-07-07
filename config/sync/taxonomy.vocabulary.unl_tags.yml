@@ -1,0 +1,9 @@
+uuid: febebecb-48ff-496a-a70d-3ef6420d793f
+langcode: en
+status: true
+dependencies: {  }
+name: 'UNL Tags'
+vid: unl_tags
+description: 'UNL controlled vocabulary'
+hierarchy: 0
+weight: 0
