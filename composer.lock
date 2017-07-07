@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "906f92187907b54065daccdb22812ab0",
+    "content-hash": "d49fe7034deb9e8b3735a0ba915beaab",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1801,8 +1801,8 @@
                 "drupal/core": "*",
                 "drupal/token": "*"
             },
-            "require-dev": {
-                "drupal/pathauto": "*"
+            "suggest": {
+                "drupal/pathauto": "Required by drupal/file_entity"
             },
             "type": "drupal-module",
             "extra": {
@@ -2369,7 +2369,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/menu_entity_index-8.x-1.0-rc1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc1",
                 "shasum": "3009381de827e4e57e22517c88b2be99cafc7382"
             },
             "require": {
@@ -2434,7 +2434,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta11",
-                    "datestamp": "1483477143"
+                    "datestamp": "1478265227"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2699,8 +2699,8 @@
             "require": {
                 "drupal/core": "*"
             },
-            "require-dev": {
-                "drupal/rules": "*"
+            "suggest": {
+                "drupal/rules": "Required by drupal/scheduler_rules_integration"
             },
             "type": "drupal-module",
             "extra": {
@@ -2743,6 +2743,49 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/scheduler",
                 "issues": "https://www.drupal.org/project/issues/scheduler"
+            }
+        },
+        {
+            "name": "drupal/taxonomy_machine_name",
+            "version": "1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/taxonomy_machine_name",
+                "reference": "8.x-1.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_machine_name-8.x-1.0-alpha4.zip",
+                "reference": "8.x-1.0-alpha4",
+                "shasum": "4740368598e5228053509d045283e508622f4029"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha4",
+                    "datestamp": "1495030687"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastien @Actualys",
+                    "homepage": "https://www.drupal.org/user/380104"
+                }
+            ],
+            "description": "Provides a new property to store machine name for taxonomy terms.",
+            "homepage": "https://www.drupal.org/project/taxonomy_machine_name",
+            "support": {
+                "source": "http://cgit.drupalcode.org/taxonomy_machine_name"
             }
         },
         {
@@ -6009,6 +6052,25 @@
             "time": "2016-12-22 19:31:29"
         },
         {
+            "name": "unlcms/unl_tags",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unlcms/unl_tags.git",
+                "reference": "e24b32e11277c49ff661e5a2502dd451bc7cf682"
+            },
+            "type": "drupal-module",
+            "authors": [
+                {
+                    "name": "Michael Fairchild (mfairchild365)",
+                    "homepage": "https://www.drupal.org/u/mfairchild365",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "UNL Tags integration",
+            "time": "2017-07-05 21:09:13"
+        },
+        {
             "name": "unlcms/unl_user",
             "version": "dev-develop",
             "source": {
@@ -6650,7 +6712,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/devel-8.x-1.0-rc2.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc2",
                 "shasum": "011322bf9c263dab29f94640829f4b654e9c5632"
             },
             "require": {
@@ -8050,6 +8112,8 @@
         "drupal/libraries": 20,
         "drupal/external_entities": 15,
         "drupal/view_mode_selector": 20,
+        "drupal/taxonomy_machine_name": 15,
+        "unlcms/unl_tags": 20,
         "drupal/drupal_reset": 20,
         "behat/mink": 20
     },
