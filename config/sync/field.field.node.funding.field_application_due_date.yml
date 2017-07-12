@@ -1,0 +1,21 @@
+uuid: 352b1239-ddbd-4412-b771-80883a28868b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_due_date
+    - node.type.funding
+  module:
+    - datetime
+id: node.funding.field_application_due_date
+field_name: field_application_due_date
+entity_type: node
+bundle: funding
+label: 'Application Due Date'
+description: 'Set date for when application closes'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

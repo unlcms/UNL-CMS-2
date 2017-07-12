@@ -1,0 +1,27 @@
+uuid: 081c89be-6fd4-40fe-8c26-8a307b8c72f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_phone_number
+    - node.type.funding
+  module:
+    - telephone
+    - telephone_validation
+third_party_settings:
+  telephone_validation:
+    format: '2'
+    country:
+      - US
+id: node.funding.field_contact_phone_number
+field_name: field_contact_phone_number
+entity_type: node
+bundle: funding
+label: 'Contact Phone Number'
+description: 'Contact''s phone number'
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,21 @@
+uuid: bb665cfb-c489-405b-a1a3-6c306e022cff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_full_description
+    - node.type.funding
+  module:
+    - text
+id: node.funding.field_full_description
+field_name: field_full_description
+entity_type: node
+bundle: funding
+label: 'Full Description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

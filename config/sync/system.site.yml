@@ -1,11 +1,11 @@
 uuid: 221e50ed-53b1-4909-a242-2264546bf91b
-name: CMS
+name: UNLcms
 mail: noreply@unl.edu
-slogan: 'Information Technology Services'
+slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/11
+  front: /node/4
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

@@ -1,0 +1,21 @@
+uuid: 38c998fd-0ab1-474b-b341-5aad2eff595f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_periods
+    - node.type.funding
+  module:
+    - datetime_range
+id: node.funding.field_funding_periods
+field_name: field_funding_periods
+entity_type: node
+bundle: funding
+label: 'Funding Periods'
+description: 'Use this field to specify the different funding periods'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

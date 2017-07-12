@@ -1,0 +1,9 @@
+uuid: ca3dee4e-0e7c-451c-b005-8cbc6aec4ee6
+langcode: en
+status: true
+dependencies: {  }
+name: 'UNL Tags'
+vid: unl_tags
+description: 'UNL controlled vocabulary'
+hierarchy: 0
+weight: 0

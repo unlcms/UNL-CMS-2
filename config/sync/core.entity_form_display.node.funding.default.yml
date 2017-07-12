@@ -1,0 +1,218 @@
+uuid: 5e780ae6-a69d-435e-b8e6-8ffd5997aca4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.funding.field_application_due_date
+    - field.field.node.funding.field_contact_email
+    - field.field.node.funding.field_contact_name
+    - field.field.node.funding.field_contact_phone_number
+    - field.field.node.funding.field_eligibility
+    - field.field.node.funding.field_full_description
+    - field.field.node.funding.field_funding_amount
+    - field.field.node.funding.field_funding_periods
+    - field.field.node.funding.field_how_to_apply
+    - field.field.node.funding.field_resources_documents
+    - field.field.node.funding.field_resources_external_links
+    - field.field.node.funding.field_teaser_summary
+    - field.field.node.funding.field_templates
+    - node.type.funding
+  module:
+    - datetime
+    - datetime_range
+    - field_group
+    - file
+    - link
+    - path
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_funding_overview:
+      children:
+        - field_funding_amount
+        - field_funding_periods
+        - field_application_due_date
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'A quick overview of this funding opportunity'
+        required_fields: false
+      label: 'Funding Overview'
+    group_person_department_contact_:
+      children:
+        - field_contact_name
+        - field_contact_email
+        - field_contact_phone_number
+      parent_name: ''
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Person/Department Contact Info'
+    group_resources:
+      children:
+        - field_resources_documents
+        - field_resources_external_links
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        label: Resources
+        description: 'Add documents or links that will be of use and related to this funding opportunity'
+        id: ''
+        classes: form-group--resources
+        required_fields: false
+      label: Resources
+id: node.funding.default
+targetEntityType: node
+bundle: funding
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_application_due_date:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_contact_email:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: 'lowercase email address'
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_contact_name:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_phone_number:
+    weight: 16
+    settings:
+      placeholder: '(xxx) xxx-xxxx'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_eligibility:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_full_description:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_funding_amount:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_funding_periods:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_how_to_apply:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_resources_documents:
+    weight: 13
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_resources_external_links:
+    weight: 14
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_teaser_summary:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_templates:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

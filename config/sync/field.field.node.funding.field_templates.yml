@@ -1,0 +1,27 @@
+uuid: c0102e29-f37d-4b46-b89d-9ef5d1ff041f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_templates
+    - node.type.funding
+  module:
+    - file
+id: node.funding.field_templates
+field_name: field_templates
+entity_type: node
+bundle: funding
+label: Templates
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf docx xls xlsx'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

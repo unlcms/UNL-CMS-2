@@ -1,0 +1,21 @@
+uuid: e656f377-c020-4b65-ae59-f6a93d8d9fde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_how_to_apply
+    - node.type.funding
+  module:
+    - text
+id: node.funding.field_how_to_apply
+field_name: field_how_to_apply
+entity_type: node
+bundle: funding
+label: 'How to Apply'
+description: 'Enter guidelines & instructions on how to apply for the funding'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

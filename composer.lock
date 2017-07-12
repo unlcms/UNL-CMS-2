@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d76e7cf82bfee5847a2e8183391d295",
+    "content-hash": "f10c5ad9e640e157e617a283f33c7d79",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2076,17 +2076,17 @@
         },
         {
             "name": "drupal/honeypot",
-            "version": "1.26.0",
+            "version": "1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/honeypot",
-                "reference": "8.x-1.26"
+                "reference": "8.x-1.27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.26.zip",
-                "reference": "8.x-1.26",
-                "shasum": "045579e80f97cec3364fd7baff903ea88eed5268"
+                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.27.zip",
+                "reference": null,
+                "shasum": "b40f86ef45a7f4325343e8aa455ecbdceab51ffe"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2097,8 +2097,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.26",
-                    "datestamp": "1497409443"
+                    "version": "8.x-1.27",
+                    "datestamp": "1499867343"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2852,6 +2852,49 @@
             }
         },
         {
+            "name": "drupal/taxonomy_machine_name",
+            "version": "1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/taxonomy_machine_name",
+                "reference": "8.x-1.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_machine_name-8.x-1.0-alpha4.zip",
+                "reference": null,
+                "shasum": "4740368598e5228053509d045283e508622f4029"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha4",
+                    "datestamp": "1495030687"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastien @Actualys",
+                    "homepage": "https://www.drupal.org/user/380104"
+                }
+            ],
+            "description": "Provides a new property to store machine name for taxonomy terms.",
+            "homepage": "https://www.drupal.org/project/taxonomy_machine_name",
+            "support": {
+                "source": "http://cgit.drupalcode.org/taxonomy_machine_name"
+            }
+        },
+        {
             "name": "drupal/telephone_validation",
             "version": "2.0.0-beta1",
             "source": {
@@ -3106,7 +3149,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "a8df97d6514a2e9db92fbc000393340e8b5aaf9a"
+                "reference": "881d6a9b552c08d85f1444c0f01233dceac9ba8f"
             },
             "require": {
                 "drupal/core": "*"
@@ -3117,8 +3160,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta15+1-dev",
-                    "datestamp": "1499074742"
+                    "version": "8.x-5.0-beta15+19-dev",
+                    "datestamp": "1499511243"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3170,7 +3213,7 @@
                 "source": "http://cgit.drupalcode.org/webform",
                 "issues": "https://drupal.org/project/issues/webform"
             },
-            "time": "2017-07-05 09:26:34"
+            "time": "2017-07-09 00:37:25"
         },
         {
             "name": "drush/drush",
@@ -4273,16 +4316,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.8",
+            "version": "v0.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e"
+                "reference": "58a31cc4404c8f632d8c557bc72056af2d3a83db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
-                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/58a31cc4404c8f632d8c557bc72056af2d3a83db",
+                "reference": "58a31cc4404c8f632d8c557bc72056af2d3a83db",
                 "shasum": ""
             },
             "require": {
@@ -4342,7 +4385,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-06-24T06:16:19+00:00"
+            "time": "2017-07-06T14:53:52+00:00"
         },
         {
             "name": "stack/builder",
@@ -6277,6 +6320,25 @@
             ],
             "description": "Processes the queue when a node is saved.",
             "time": "2016-12-22 19:31:29"
+        },
+        {
+            "name": "unlcms/unl_tags",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unlcms/unl_tags.git",
+                "reference": "ca9a3a13ddc10949b18fa3699ecddb9007b8d57f"
+            },
+            "type": "drupal-module",
+            "authors": [
+                {
+                    "name": "Michael Fairchild (mfairchild365)",
+                    "homepage": "https://www.drupal.org/u/mfairchild365",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "UNL Tags integration",
+            "time": "2017-07-07 18:38:37"
         },
         {
             "name": "unlcms/unl_user",
@@ -8374,6 +8436,8 @@
         "drupal/view_mode_selector": 20,
         "drupal/telephone_validation": 10,
         "drupal/field_group": 5,
+        "drupal/taxonomy_machine_name": 15,
+        "unlcms/unl_tags": 20,
         "drupal/drupal_reset": 20,
         "behat/mink": 20
     },

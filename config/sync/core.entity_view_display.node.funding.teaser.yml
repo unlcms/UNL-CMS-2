@@ -1,0 +1,20 @@
+uuid: 251ae072-869d-43b9-a1df-f0d5028d60f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.funding.field_full_description
+    - node.type.funding
+  module:
+    - user
+id: node.funding.teaser
+targetEntityType: node
+bundle: funding
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_full_description: true

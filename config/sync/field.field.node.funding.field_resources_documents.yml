@@ -1,0 +1,27 @@
+uuid: 7ff2d478-7d98-4317-961e-d1f6f13a8fda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resources_documents
+    - node.type.funding
+  module:
+    - file
+id: node.funding.field_resources_documents
+field_name: field_resources_documents
+entity_type: node
+bundle: funding
+label: 'Resources - Documents'
+description: 'Used to upload additional documents related to the funding opportunity. Do not upload templates here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf docx xls xlsx'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

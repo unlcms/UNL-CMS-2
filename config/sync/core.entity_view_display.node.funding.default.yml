@@ -1,0 +1,144 @@
+uuid: 2978fec7-df0a-494c-9b50-c4b37a6b9ad9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.funding.field_application_due_date
+    - field.field.node.funding.field_contact_email
+    - field.field.node.funding.field_contact_name
+    - field.field.node.funding.field_contact_phone_number
+    - field.field.node.funding.field_eligibility
+    - field.field.node.funding.field_full_description
+    - field.field.node.funding.field_funding_amount
+    - field.field.node.funding.field_funding_periods
+    - field.field.node.funding.field_how_to_apply
+    - field.field.node.funding.field_resources_documents
+    - field.field.node.funding.field_resources_external_links
+    - field.field.node.funding.field_teaser_summary
+    - field.field.node.funding.field_templates
+    - node.type.funding
+  module:
+    - datetime
+    - datetime_range
+    - file
+    - link
+    - phone_link
+    - text
+    - user
+id: node.funding.default
+targetEntityType: node
+bundle: funding
+mode: default
+content:
+  field_application_due_date:
+    type: datetime_default
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      timezone_override: America/Chicago
+      format_type: m_d_y
+    third_party_settings: {  }
+  field_contact_email:
+    type: email_mailto
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_contact_name:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_contact_phone_number:
+    type: phone_link_field_formatter
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      title: 'Call @phone'
+      text: ''
+    third_party_settings: {  }
+  field_eligibility:
+    type: text_default
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_full_description:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_funding_amount:
+    type: string
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_funding_periods:
+    type: daterange_default
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      timezone_override: America/Chicago
+      format_type: m_d_y
+      separator: '-'
+    third_party_settings: {  }
+  field_how_to_apply:
+    type: text_default
+    weight: 9
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_resources_documents:
+    type: file_default
+    weight: 10
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_resources_external_links:
+    type: link
+    weight: 11
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_teaser_summary:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_templates:
+    type: file_default
+    weight: 12
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
