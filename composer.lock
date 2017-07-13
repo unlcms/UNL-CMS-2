@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d49fe7034deb9e8b3735a0ba915beaab",
+    "content-hash": "cf6d7c4d4f686ad9bfc5c8b1b10fe906",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1801,8 +1801,8 @@
                 "drupal/core": "*",
                 "drupal/token": "*"
             },
-            "suggest": {
-                "drupal/pathauto": "Required by drupal/file_entity"
+            "require-dev": {
+                "drupal/pathauto": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1971,7 +1971,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/groupmenu",
-                "reference": "3aa314f23f67751695f1a4d69939f78565bc566e"
+                "reference": "53b31fd3337759779819bf913c240f1015d501a7"
             },
             "require": {
                 "drupal/core": "*",
@@ -1990,7 +1990,6 @@
                     "datestamp": "1498665241"
                 },
                 "patches_applied": {
-                    "2885065 - Parent item is not set correctly on /node/%/edit if user does not have global Administer Menus permission": "patches/2885065-6.patch",
                     "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch"
                 }
             },
@@ -2013,21 +2012,21 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/groupmenu"
             },
-            "time": "2017-06-28 15:53:05"
+            "time": "2017-07-13 15:05:38"
         },
         {
             "name": "drupal/honeypot",
-            "version": "1.26.0",
+            "version": "1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/honeypot",
-                "reference": "8.x-1.26"
+                "reference": "8.x-1.27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.26.zip",
-                "reference": "8.x-1.26",
-                "shasum": "045579e80f97cec3364fd7baff903ea88eed5268"
+                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.27.zip",
+                "reference": null,
+                "shasum": "b40f86ef45a7f4325343e8aa455ecbdceab51ffe"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2038,8 +2037,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.26",
-                    "datestamp": "1497409443"
+                    "version": "8.x-1.27",
+                    "datestamp": "1499867343"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2148,17 +2147,17 @@
         },
         {
             "name": "drupal/imce",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/imce",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imce-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "b6ea0b74e9f1d37bf7acab10fdf0c1d1b3441464"
+                "url": "https://ftp.drupal.org/files/projects/imce-8.x-1.6.zip",
+                "reference": null,
+                "shasum": "973fc92959dc31b16e33114852b8c26ec050ba7c"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2169,8 +2168,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1486506784"
+                    "version": "8.x-1.6",
+                    "datestamp": "1499898842"
                 },
                 "patches_applied": {
                     "Don't auto-populate the Alternative Text with the image filename": "patches/2884755-2.patch"
@@ -2434,7 +2433,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta11",
-                    "datestamp": "1478265227"
+                    "datestamp": "1483477143"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2699,8 +2698,8 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/rules": "Required by drupal/scheduler_rules_integration"
+            "require-dev": {
+                "drupal/rules": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2799,7 +2798,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/theme_change-8.x-1.5.zip",
-                "reference": "8.x-1.5",
+                "reference": null,
                 "shasum": "e2472aa57b0073da759af96396e589e9a220eb30"
             },
             "require": {
@@ -2996,7 +2995,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "a8df97d6514a2e9db92fbc000393340e8b5aaf9a"
+                "reference": "82a3c007aad10b3c72900b93deb9e102d8b14fe7"
             },
             "require": {
                 "drupal/core": "*"
@@ -3007,8 +3006,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta15+1-dev",
-                    "datestamp": "1499074742"
+                    "version": "8.x-5.0-beta15+25-dev",
+                    "datestamp": "1499911443"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3060,7 +3059,7 @@
                 "source": "http://cgit.drupalcode.org/webform",
                 "issues": "https://drupal.org/project/issues/webform"
             },
-            "time": "2017-07-05 09:26:34"
+            "time": "2017-07-13 02:44:12"
         },
         {
             "name": "drush/drush",
@@ -4046,16 +4045,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.8",
+            "version": "v0.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e"
+                "reference": "58a31cc4404c8f632d8c557bc72056af2d3a83db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
-                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/58a31cc4404c8f632d8c557bc72056af2d3a83db",
+                "reference": "58a31cc4404c8f632d8c557bc72056af2d3a83db",
                 "shasum": ""
             },
             "require": {
@@ -4115,7 +4114,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-06-24T06:16:19+00:00"
+            "time": "2017-07-06T14:53:52+00:00"
         },
         {
             "name": "stack/builder",
@@ -6057,7 +6056,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_tags.git",
-                "reference": "e24b32e11277c49ff661e5a2502dd451bc7cf682"
+                "reference": "ca9a3a13ddc10949b18fa3699ecddb9007b8d57f"
             },
             "type": "drupal-module",
             "authors": [
@@ -6068,7 +6067,7 @@
                 }
             ],
             "description": "UNL Tags integration",
-            "time": "2017-07-05 21:09:13"
+            "time": "2017-07-07 18:38:37"
         },
         {
             "name": "unlcms/unl_user",
@@ -6190,16 +6189,16 @@
         },
         {
             "name": "wikimedia/composer-merge-plugin",
-            "version": "v1.4.0",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikimedia/composer-merge-plugin.git",
-                "reference": "ca453f9f13d8b05f86f20ea10be992a782e6f78c"
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/ca453f9f13d8b05f86f20ea10be992a782e6f78c",
-                "reference": "ca453f9f13d8b05f86f20ea10be992a782e6f78c",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
                 "shasum": ""
             },
             "require": {
@@ -6235,7 +6234,7 @@
                 }
             ],
             "description": "Composer plugin to merge multiple composer.json files",
-            "time": "2017-03-13T16:52:55+00:00"
+            "time": "2017-04-25T02:31:25+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
