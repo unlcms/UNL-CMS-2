@@ -696,7 +696,7 @@ index 65c08d8..98cbdaf 100644
 +function field_css_library_info_build() {
 +  $libraries = [];
 +  if ($path = field_css_codemirror()) {
-+    $path = base_path() . $path;
++    $path = '/' . $path;
 +    $libraries['codemirror'] = [
 +      'version' => 'VERSION',
 +      'css' => [
