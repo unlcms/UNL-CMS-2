@@ -26,7 +26,9 @@ settings:
   default_draft_loaded_message: 'A partially-completed form was found. Please complete the remaining portions.'
   default_confirmation_message: 'New submission added to [webform:title].'
   default_confirmation_back_label: 'Back to form'
+  default_submission_label: '[webform_submission:submitted-to]: Submission #[webform_submission:serial]'
   default_submission_log: false
+  preview_classes: "messages messages--error\nmessages messages--warning\nmessages messages--status\n"
   confirmation_classes: "messages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
   confirmation_back_classes: "button\r\n"
   default_limit_total_message: 'No more submissions are permitted.'
@@ -62,15 +64,24 @@ batch:
 purge:
   cron_size: 100
 element:
+  empty_message: '{Empty}'
   allowed_tags: admin
   wrapper_classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
   classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
   default_description_display: ''
+  default_empty_option: true
+  default_empty_option_required: ''
+  default_empty_option_optional: ''
   default_icheck: ''
   default_google_maps_api_key: ''
   excluded_elements: {  }
+html_editor:
+  disabled: false
+  format: ''
+  tidy: true
 file:
   file_public: false
+  file_private_redirect: true
   default_max_filesize: ''
   default_managed_file_extensions: 'gif jpg png bmp eps tif pict psd txt rtf html odf pdf doc docx ppt pptx xls xlsx xml avi mov mp3 ogg wav bz2 dmg gz jar rar sit svg tar zip'
   default_audio_file_extensions: 'mp3 ogg wav'
@@ -79,6 +90,7 @@ file:
   default_video_file_extensions: 'avi mov mp4 ogg wav webm'
 format: {  }
 mail:
+  default_to_mail: '[site:mail]'
   default_from_mail: '[site:mail]'
   default_from_name: '[site:name]'
   default_reply_to: ''

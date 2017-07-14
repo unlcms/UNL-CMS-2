@@ -1,0 +1,1236 @@
+diff --git a/css/field_css.admin.css b/css/field_css.admin.css
+new file mode 100644
+index 0000000..6c13414
+--- /dev/null
++++ b/css/field_css.admin.css
+@@ -0,0 +1,15 @@
++.field--widget-css-structured .form-type-textfield {
++  display:inline;
++}
++.field--widget-css-structured .form-type-textfield:after {
++  content:""
++}
++.field--widget-css-structured .form-textarea-wrapper:after {
++  content:""
++}
++.field--widget-css-structured.nowrapping .form-type-textfield:after {
++  content:""
++}
++.field--widget-css-structured.nowrapping .form-textarea-wrapper:after {
++  content:""
++}
+diff --git a/field_css.admin.css b/field_css.admin.css
+deleted file mode 100644
+index bbee850..0000000
+--- a/field_css.admin.css
++++ /dev/null
+@@ -1,15 +0,0 @@
+-.field-widget-field-css-structured-widget .form-type-textfield {
+-  display:inline;
+-}
+-.field-widget-field-css-structured-widget .form-type-textfield:after {
+-  content:""
+-}
+-.field-widget-field-css-structured-widget .form-textarea-wrapper:after {
+-  content:""
+-}
+-.field-widget-field-css-structured-widget.nowrapping .form-type-textfield:after {
+-  content:""
+-}
+-.field-widget-field-css-structured-widget.nowrapping .form-textarea-wrapper:after {
+-  content:""
+-}
+diff --git a/field_css.info b/field_css.info
+deleted file mode 100644
+index 19a70dc..0000000
+--- a/field_css.info
++++ /dev/null
+@@ -1,4 +0,0 @@
+-name = Field CSS
+-description = Provides a field that allows for the input of CSS
+-package = fields
+-core = 7.x
+diff --git a/field_css.info.yml b/field_css.info.yml
+new file mode 100644
+index 0000000..a3f39f5
+--- /dev/null
++++ b/field_css.info.yml
+@@ -0,0 +1,8 @@
++name: Field CSS
++description: 'Provides a field that allows for the input of CSS.'
++package: Field types
++type: module
++version: VERSION
++core: 8.x
++dependencies:
++  - field
+diff --git a/field_css.install b/field_css.install
+index 8c195a1..630866a 100644
+--- a/field_css.install
++++ b/field_css.install
+@@ -1,45 +1,6 @@
+ <?php
++
+ /**
+  * @file
+  * Install, update, and uninstall functions for the field_css module.
+  */
+-
+-/**
+- * Implements hook_field_schema().
+- *
+- * Defines the database schema of the field, using the format used by the
+- * Schema API.
+- *
+- * The data we will store here is just one 7-character element, even
+- * though the widget presents the three portions separately.
+- *
+- * All implementations of hook_field_schema() must be in the module's
+- * .install file.
+- *
+- * @see http://drupal.org/node/146939
+- * @see schemaapi
+-  @see hook_field_schema()
+- * @ingroup field_css
+- */
+-function field_css_field_schema($field) {
+-  $columns = array(
+-    'selector' => array(
+-      'type' => 'varchar',
+-      'length' => 255,
+-      'not null' => FALSE,
+-    ),
+-    'style' => array(
+-      'type' => 'blob',
+-      'not null' => FALSE,
+-    ),
+-  );
+-
+-  $indexes = array(
+-    'selector' => array('selector'),
+-  );
+-
+-  return array(
+-    'columns' => $columns,
+-    'indexes' => $indexes,
+-  );
+-}
+diff --git a/field_css.js b/field_css.js
+deleted file mode 100644
+index 10f77cf..0000000
+--- a/field_css.js
++++ /dev/null
+@@ -1,93 +0,0 @@
+-/**
+- * @file
+- * Custom JS for enabling/disabling the CodeMirror interface.
+- */
+-
+-(function ($) {
+-  Drupal.behaviors.field_cssCodeMirror = {
+-
+-    attach: function(context, settings) {
+-      $('.field-type-field-css-field .form-type-textarea', context).each(function() {
+-        // Toggle link not already present?
+-        if ($(this).children('.field_css-toggle').length < 1) {
+-          // Create a toggle link.
+-          var $link = '<a href="#" class="field_css-toggle">' + Drupal.t('Enable syntax highlighting') + '</a>.';
+-          // Add toggle link to parent.
+-          $(this).append($link);
+-          // Add click event to toggle.
+-          $(this).children('.field_css-toggle').click(function(e){
+-            e.preventDefault();
+-            // Get grippie.
+-            var $grippie = $(this).siblings('.form-textarea-wrapper').find('textarea').parents('.resizable-textarea').find('.grippie');
+-            // Add nowrapping class to textarea wrapper.
+-            $(this).siblings('.form-textarea-wrapper').addClass("nowrapping");
+-            // Enabled?
+-            if ($(this).hasClass('enabled')) {
+-              // disable.
+-              disableCodeMirrorHighlighting($(this), $grippie);
+-            }
+-            else {
+-              // Enable.
+-              enableCodeMirrorHighlighting($(this), $grippie);
+-            }
+-          });
+-        }
+-        // Already has a toggle link?
+-        else {
+-          $(this).children('.field_css-toggle').each(function() {
+-            // Enabled?
+-            if ($(this).hasClass('enabled')) {
+-              // Get grippie
+-              var $grippie = $(this).siblings('.form-textarea-wrapper').find('textarea').parents('.resizable-textarea').find('.grippie');
+-              // Enable.
+-              enableCodeMirrorHighlighting($(this), $grippie);
+-            }
+-          });
+-        }
+-      });
+-    }
+-  };
+-
+-  /**
+-   * Function to disabling codemirror syntax highlighting.
+-   * @param object $toggle
+-   *  Toggle link object.
+-   * @param object $grippie
+-   *   grippie DOM object.
+-   */
+-  function disableCodeMirrorHighlighting($toggle, $grippie) {
+-    $toggle.data('editor').toTextArea();
+-    $grippie.show();
+-    // Change toggle text.
+-    $toggle.text(Drupal.t('Enable syntax highlighting'));
+-    // Remove enabled class.
+-    $toggle.removeClass('enabled');
+-  }
+-
+-  /**
+-   * function for enabling syntax highlighting.
+-   * @param object $toggle
+-   *  Toggle link object.
+-   * @param object $grippie
+-   *   grippie DOM object.
+-   */
+-  function enableCodeMirrorHighlighting($toggle, $grippie) {
+-    // Get text area.
+-    var $textarea = $toggle.siblings('.form-textarea-wrapper').find('textarea');
+-    // Hide grippie.
+-    $grippie.hide();
+-    // Configure editor.
+-    var editor = CodeMirror.fromTextArea($textarea.get(0), {
+-      mode: 'css',
+-      tabSize: 0,
+-      gutters: ['CodeMirror-linenumbers'],
+-      lineNumbers: true
+-    });
+-    $toggle.data('editor', editor);
+-    // Change toddle text.
+-    $toggle.text(Drupal.t('Disable syntax highlighting'));
+-    // Add enabled class.
+-    $toggle.addClass('enabled');
+-  }
+-
+-})(jQuery);
+diff --git a/field_css.libraries.yml b/field_css.libraries.yml
+new file mode 100644
+index 0000000..ca6a685
+--- /dev/null
++++ b/field_css.libraries.yml
+@@ -0,0 +1,5 @@
++admin:
++  version: VERSION
++  css:
++    theme:
++      css/field_css.admin.css: {}
+diff --git a/field_css.module b/field_css.module
+index 65c08d8..98cbdaf 100644
+--- a/field_css.module
++++ b/field_css.module
+@@ -1,47 +1,36 @@
+ <?php
++
+ /**
+  * @file
+- * This file implements the field_css field
++ * This file implements the field_css field.
+  */
+ 
+-/**
+- * Implements hook_field_info().
+- *
+- */
+-function field_css_field_info() {
+-  return array(
+-    // We name our field as the associative name of the array.
+-    'field_css_field' => array(
+-      'label' => t('CSS'),
+-      'description' => t('Allow limited css markup'),
+-      'default_widget' => 'field_css_structured_widget',
+-      'default_formatter' => 'field_css_style_tag_formatter',
+-    ),
+-  );
+-}
++use Drupal\Core\Entity\EntityInterface;
++use Drupal\Core\Field\FieldItemListInterface;
+ 
+ /**
+  * Helper function to post process data and remove of white spaces, { and }.
+  *
+- * It also post converts feeform widgets fields into the structured data fields.
++ * It also post converts freeform widgets fields into the structured data
++ * fields.
+  */
+-function field_css_post_process($widget_type, $items) {
++function field_css_post_process($widget_type, array $items) {
+   switch ($widget_type) {
+-    case "field_css_freeform_widget":
++    case "css_freeform":
+       $new_items = array();
+       foreach ($items as &$item) {
+-        // do not prcess if we already have processed and have a selector
+-        if(empty($item['selector'])) {
++        // Do not process if we already have processed and have a selector.
++        if (empty($item['selector'])) {
+           $new_items = array_merge($new_items, field_css_parse_freeform($item['style']));
+         }
+       }
+-      //If we have new items lets replace the old ones
+-      if(!empty($new_items)) {
++      // If we have new items lets replace the old ones.
++      if (!empty($new_items)) {
+         $items = $new_items;
+       }
+       break;
+ 
+-    case 'field_css_structured_widget':
++    case 'css_structured':
+       break;
+   }
+   foreach ($items as &$item) {
+@@ -74,84 +63,6 @@ function field_css_parse_freeform($css) {
+ }
+ 
+ /**
+- * Implements hook_field_presave().
+- */
+-function field_css_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
+-  $items = field_css_post_process($instance['widget']['type'], $items);
+-  // Condense rules for storage.
+-  _field_css_condense_items($items);
+-}
+-
+-/**
+- * Implements hook_field_validate().
+- *
+- * @see field_css_field_widget_error()
+- */
+-function field_css_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
+-  // Lets test items as if they were going to be saved.
+-  $w_type = $instance['widget']['type'];
+-  $items = field_css_post_process($w_type, $items);
+-  foreach ($items as $delta => $item) {
+-    if (!empty($item['selector'])) {
+-      $forbid_selector_regexs = "/(:root|\{|\})/";
+-      $forbid_selector_text = t("':root', '{' and '}'");
+-      if (preg_match($forbid_selector_regexs, $item['selector'])) {
+-        // Always error on delta 0 if using field_css_freeform_widget.
+-        if ($w_type == "field_css_freeform_widget") {
+-          $delta = 0;
+-        }
+-        $errors[$field['field_name']][$langcode][$delta][] = array(
+-          'error' => 'Selector not valid',
+-          'message' => t('Selector contains a forbidden entry. Forbidden entries are @entries.', array(
+-            "@entries" => $forbid_selector_text,
+-          )),
+-        );
+-      }
+-    }
+-    if (!empty($item['style'])) {
+-      $forbid_style_regexs = "/(\{|\})/";
+-      $forbid_style_text = t("'{' and '}'");
+-      if (preg_match($forbid_style_regexs, $item['style'])) {
+-        $errors[$field['field_name']][$langcode][$delta][] = array(
+-          'error' => 'Style not valid',
+-          'message' => t('Style contains a forbidden entry. Forbidden entries are @entries.', array(
+-            "@entries" => $forbid_style_text,
+-          )),
+-        );
+-      }
+-    }
+-  }
+-}
+-
+-/**
+- * Implements hook_field_is_empty().
+- *
+- */
+-function field_css_field_is_empty($item, $field) {
+-  $style = trim($item['style'], "{} \t\n\r\0\x0B");
+-  return empty($style);
+-}
+-
+-/**
+- * Implements hook_field_formatter_info().
+- *
+- * @see field_css_field_formatter_view()
+- */
+-function field_css_field_formatter_info() {
+-  return array(
+-    // This formatter just displays the hex value in the color indicated.
+-    'field_css_style_tag_formatter' => array(
+-      'label' => t('Style Tag'),
+-      'field types' => array('field_css_field'),
+-    ),
+-    'field_css_add_css_formatter' => array(
+-      'label' => t('Add CSS function'),
+-      'field types' => array('field_css_field'),
+-    ),
+-  );
+-}
+-
+-/**
+  * Helper function to add prefixes to all of the selectors.
+  *
+  * @param string $selector
+@@ -164,7 +75,7 @@ function field_css_field_formatter_info() {
+  */
+ function field_css_add_prefix($selector, $prefix = "") {
+   $selectors = explode(",", $selector);
+-  $selectors = array_map(function($item) use($prefix) {
++  $selectors = array_map(function ($item) use ($prefix) {
+     return $prefix . " " . trim($item);
+   }, $selectors);
+   return implode(",\n", $selectors);
+@@ -179,11 +90,11 @@ function field_css_add_prefix($selector, $prefix = "") {
+  * @param string $prefix
+  *   A string to add to the front of all selectors.
+  *
+- * @return array
++ * @return string
+  *   CSS ready for inserting.
+  */
+ function field_css_parse_fields(array $items, $prefix = "") {
+-  return array_reduce($items, function($c, $i) use($prefix) {
++  return array_reduce($items, function ($c, $i) use ($prefix) {
+     return $c . field_css_parse_field($i, $prefix);
+   }, "");
+ }
+@@ -192,201 +103,54 @@ function field_css_parse_fields(array $items, $prefix = "") {
+  * Helper function to parse afield_css field to usable css.
+  *
+  * @param array $item
+- *    An array taken from field_css field entry,
+- *    it has two items keyed by "selector" and "style".
++ *   An array taken from field_css field entry,
++ *   it has two items keyed by "selector" and "style".
+  * @param string $prefix
+  *   A string to add to the front of all selectors.
+  *
+- * @return array
++ * @return string
+  *   CSS ready for inserting.
+  */
+ function field_css_parse_field(array $item, $prefix = "") {
+   $selector = field_css_add_prefix($item['selector'], $prefix);
+-  return t("@selector { \n @style \n}\n", array(
+-    "@selector" => $selector,
+-    "@style" => $item['style'],
+-  ));
++  return sprintf("%s { \n %s \n}\n", $selector, $item['style']);
+ }
+ 
+ /**
+- * Implements hook_field_formatter_view().
+- *
+- * @see field_css_field_formatter_info()
++ * Helper function to parse setting and generate the widget.
+  */
+-function field_css_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+-  // Expand stored values.
+-  _field_css_expand_items($items);
+-  $prefix = field_css_get_prefix($field, $entity_type, $entity);
+-  $element = array();
+-  $css = field_css_parse_fields($items, $prefix);
+-
+-  switch ($display['type']) {
+-    case 'field_css_style_tag_formatter':
+-      $element[0] = array(
+-        '#type' => 'html_tag',
+-        '#tag' => 'style',
+-        '#value' => $css,
+-      );
+-      break;
+-
+-    case 'field_css_add_css_formatter':
+-      drupal_add_css($css, array("type" => "inline"));
+-  }
+-  return $element;
+-}
+-
+-/**
+- * Implements hook_field_widget_info().
+- *
+- * @see field_css_field_widget_form()
+- */
+-function field_css_field_widget_info() {
+-  return array(
+-    'field_css_structured_widget' => array(
+-      'label' => t('Structured'),
+-      'field types' => array('field_css_field'),
+-    ),
+-    'field_css_freeform_widget' => array(
+-      'label' => t('Free form'),
+-      'field types' => array('field_css_field'),
+-    ),
+-  );
+-}
+-
+-/**
+- * Implements hook_field_widget_settings_form().
+- */
+-function field_css_field_settings_form($field, $instance, $has_data) {
+-  $settings = $field['settings'];
+-  $form = array(
+-    'prefix' => array(
+-      '#type' => 'select',
+-      '#title' => t('Selector Prefix'),
+-      '#default_value' => isset($settings['prefix']) ? $settings['prefix'] : '',
+-      '#options' => array(
+-        "none" => "None",
+-        "entity-item" => "EntityType-Id (e.g. node-4938)",
+-        "fixed-value" => "Fixed Value",
+-      ),
+-      '#required' => FALSE,
+-      '#description' => t('What selector should prefix all css rules.'),
+-    ),
+-    'prefix_value' => array(
+-      '#type' => 'textfield',
+-      '#title' => t('Prefix Value'),
+-      '#default_value' => isset($settings['prefix_value']) ? $settings['prefix_value'] : '',
+-      '#required' => FALSE,
+-      '#description' => t('Proved the fixed value declaration that shall prefix all custom declarations.(Only used with Fix Value above).'),
+-    ));
+-  return $form;
+-}
+-
+-/**
+- * Helper function to parse setting and generate the wiget.
+- */
+-function field_css_get_prefix($field, $entity_type, $entity) {
++function field_css_get_prefix(array $field_settings, $entity_type, EntityInterface $entity) {
+   $prefix = "";
+-  $prefix_type = $field['settings']['prefix'];
++  $prefix_type = $field_settings['prefix'];
+   switch ($prefix_type) {
+     case 'entity-item':
+-      $entity_info = entity_get_info($entity_type);
+-      $id = isset($entity->{$entity_info['entity keys']['id']}) ? $entity->{$entity_info['entity keys']['id']} : "###";
++      $entity_info = Drupal::entityTypeManager()->getDefinition($entity_type);
++      $id = $entity_info->hasKey('id') && $entity->id() ? $entity->id() : "###";
+       $prefix = "." . $entity_type . "-" . $id;
+       break;
+ 
+     case 'fixed-value';
+-      $prefix = $field['settings']['prefix_value'];
++      $prefix = $field_settings['prefix_value'];
+       break;
+   }
+   return $prefix;
+-
+-}
+-
+-/**
+- * Implements hook_field_widget_form().
+- */
+-function field_css_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+-  // Expand stored values.
+-  _field_css_expand_items($items);
+-
+-  $value = isset($items[$delta]) ? $items[$delta] : array("selector" => "", "style" => "");
+-  switch ($instance['widget']['type']) {
+-
+-    case 'field_css_structured_widget':
+-      $element['selector'] = array(
+-        '#type' => 'textfield',
+-        '#title' => '',
+-        '#prefix' => field_css_get_prefix($field, $element['#entity_type'], $element['#entity']),
+-        '#default_value' => $value['selector'],
+-        '#attributes' => array('class' => array("field-css-selector", "field-css-wrapped")),
+-      );
+-      $element['style'] = array(
+-        '#type' => 'textarea',
+-        '#title' => '',
+-        '#desciption' => "",
+-        '#default_value' => "{\n" . $value['style'] . "\n}",
+-        '#attributes' => array('class' => array("field-css-style", "field-css-wrapped")),
+-      );
+-      $element['#attached']['css'] = array(
+-        drupal_get_path('module', 'field_css') . '/field_css.admin.css',
+-      );
+-      $element['#attributes']['class'][] = "field-css-stff";
+-      break;
+-
+-    case 'field_css_freeform_widget':
+-
+-      //if ($delta === 0) {
+-        $element['style'] = array(
+-          '#type' => 'textarea',
+-          '#title' => '',
+-          '#prefix' => t("All declorations will be prefixed by '@prefix'.", array(
+-            "@prefix" => field_css_get_prefix($field, $element['#entity_type'], $element['#entity']),
+-          )),
+-          '#default_value' => field_css_parse_fields($items),
+-          '#attributes' => array('class' => array("field-css-style", "field-css-wrapped")),
+-        );
+-     /* }
+-      else {
+-        $element = NULL;
+-      }*/
+-      break;
+-  }
+-  if (isset($element['style'])) {
+-    field_css_attach_syntax_highlighting($form);
+-  }
+-
+-  return $element;
+-}
+-
+-/**
+- * Implements hook_field_widget_error().
+- *
+- * Hook_field_widget_error() lets us figure out what to do with errors
+- * we might have generated in hook_field_validate(). Generally, we'll just
+- * call form_error().
+- *
+- * @see field_css_field_validate()
+- * @see form_error()
+- */
+-function field_css_field_widget_error($element, $error, $form, &$form_state) {
+-  form_error($element, $error['message']);
+ }
+ 
+ /**
+  * Returns path to CodeMirror, or FALSE if not found.
+  *
+- * Thank you to http://www.drupal.org/projects/cpn.
++ * Thank you to http://www.drupal.org/project/cpn.
+  */
+ function field_css_codemirror() {
+   static $path;
+ 
+   // Only process this once per page load.
+   if (is_null($path)) {
+-    if (module_exists('libraries')) {
++    if (Drupal::moduleHandler()->moduleExists('libraries')) {
+       $path = libraries_get_path('codemirror');
+     }
+     else {
+-      $path = 'sites/all/libraries/codemirror';
++      $path = 'libraries/codemirror';
+     }
+     $path = file_exists($path) && is_dir($path) ? $path : FALSE;
+   }
+@@ -397,18 +161,12 @@ function field_css_codemirror() {
+ /**
+  * Attaches syntax highlighting to a form element.
+  *
+- * Thank you to http://www.drupal.org/projects/cpn.
++ * Thank you to http://www.drupal.org/project/cpn.
+  */
+-function field_css_attach_syntax_highlighting(&$form) {
++function field_css_attach_syntax_highlighting(array &$form) {
+   $path = field_css_codemirror();
+   if (!empty($path)) {
+-    $form['#attached']['js'][$path . '/lib/codemirror.js'] = array(
+-      'type' => 'file',
+-      'group' => JS_LIBRARY,
+-    );
+-    $form['#attached']['css'][] = $path . '/lib/codemirror.css';
+-    $form['#attached']['js'][] = $path . '/mode/css/css.js';
+-    $form['#attached']['js'][] = drupal_get_path('module', 'field_css') . '/field_css.js';
++    $form['#attached']['library'][] = 'field_css/codemirror';
+   }
+ }
+ 
+@@ -416,11 +174,12 @@ function field_css_attach_syntax_highlighting(&$form) {
+  * Helper function to condense multiple CSS rules for storage.
+  *
+  * @param array &$items
+- *    Array of css items.
++ *   Array of css items.
++ *
+  * @return array
+- *   condensed array of combined and json_encoded css rules.
++ *   Condensed array of combined and json_encoded css rules.
+  */
+-function _field_css_condense_items(&$items) {
++function _field_css_condense_items(array &$items) {
+   // Only encode multiple rules.
+   if (!empty($items) && (count($items) > 1)) {
+     $condensed = array();
+@@ -432,21 +191,24 @@ function _field_css_condense_items(&$items) {
+     $condensed['style'] = json_encode($condensed['style']);
+     $items = array($condensed);
+   }
++  return $items;
+ }
+ 
+ /**
+  * Helper function to expand CSS rules from storage.
+  *
+- * @param &$items
++ * @param \Drupal\Core\Field\FieldItemListInterface $items
+  *   Condensed array of combined json_encoded css rules.
++ *
+  * @return array
+  *   Expanded array of css rules.
+  */
+-function _field_css_expand_items(&$items) {
++function _field_css_expand_items(FieldItemListInterface $items) {
++  $expanded = array();
+ 
+-  if(!empty($items)) {
+-    $expanded = array();
++  if (!$items->isEmpty()) {
+     foreach ($items as $item) {
++      $item = $item->toArray();
+       // Check if item is json encoded.
+       if (json_decode($item['selector'])) {
+         $item['selector'] = json_decode($item['selector']);
+@@ -469,7 +231,35 @@ function _field_css_expand_items(&$items) {
+         );
+       }
+     }
++  }
++
++  return $expanded;
++}
+ 
+-    $items = $expanded;
++/**
++ * Implements hook_library_info_build().
++ */
++function field_css_library_info_build() {
++  $libraries = [];
++  if ($path = field_css_codemirror()) {
++    $path = base_path() . $path;
++    $libraries['codemirror'] = [
++      'version' => 'VERSION',
++      'css' => [
++        'component' => [
++          $path . '/lib/codemirror.css' => [],
++        ],
++      ],
++      'js' => [
++        $path . '/lib/codemirror.js' => [],
++        $path . '/mode/css/css.js' => [],
++        'js/field_css.js' => [],
++      ],
++      'dependencies' => [
++        'core/jquery',
++        'core/drupal',
++      ],
++    ];
+   }
++  return $libraries;
+ }
+diff --git a/js/field_css.js b/js/field_css.js
+new file mode 100644
+index 0000000..49aca21
+--- /dev/null
++++ b/js/field_css.js
+@@ -0,0 +1,96 @@
++/**
++ * @file
++ * Custom JS for enabling/disabling the CodeMirror interface.
++ */
++
++(function ($, Drupal) {
++
++  'use strict';
++
++  Drupal.behaviors.field_cssCodeMirror = {
++
++    attach: function(context, settings) {
++      $('.field--type-css .form-type-textarea', context).each(function() {
++        // Toggle link not already present?
++        if ($(this).children('.field_css-toggle').length < 1) {
++          // Create a toggle link.
++          var $link = '<a href="#" class="field_css-toggle">' + Drupal.t('Enable syntax highlighting') + '</a>.';
++          // Add toggle link to parent.
++          $(this).append($link);
++          // Add click event to toggle.
++          $(this).children('.field_css-toggle').click(function(e){
++            e.preventDefault();
++            // Get grippie.
++            var $grippie = $(this).siblings('.form-textarea-wrapper').find('textarea').parents('.resizable-textarea').find('.grippie');
++            // Add nowrapping class to textarea wrapper.
++            $(this).siblings('.form-textarea-wrapper').addClass("nowrapping");
++            // Enabled?
++            if ($(this).hasClass('enabled')) {
++              // disable.
++              disableCodeMirrorHighlighting($(this), $grippie);
++            }
++            else {
++              // Enable.
++              enableCodeMirrorHighlighting($(this), $grippie);
++            }
++          });
++        }
++        // Already has a toggle link?
++        else {
++          $(this).children('.field_css-toggle').each(function() {
++            // Enabled?
++            if ($(this).hasClass('enabled')) {
++              // Get grippie
++              var $grippie = $(this).siblings('.form-textarea-wrapper').find('textarea').parents('.resizable-textarea').find('.grippie');
++              // Enable.
++              enableCodeMirrorHighlighting($(this), $grippie);
++            }
++          });
++        }
++      });
++    }
++  };
++
++  /**
++   * Function to disabling codemirror syntax highlighting.
++   * @param {object} $toggle
++   *   Toggle link {object}.
++   * @param {object} $grippie
++   *   grippie DOM {object}.
++   */
++  function disableCodeMirrorHighlighting($toggle, $grippie) {
++    $toggle.data('editor').toTextArea();
++    $grippie.show();
++    // Change toggle text.
++    $toggle.text(Drupal.t('Enable syntax highlighting'));
++    // Remove enabled class.
++    $toggle.removeClass('enabled');
++  }
++
++  /**
++   * function for enabling syntax highlighting.
++   * @param {object} $toggle
++   *   Toggle link {object}.
++   * @param {object} $grippie
++   *   grippie DOM {object}.
++   */
++  function enableCodeMirrorHighlighting($toggle, $grippie) {
++    // Get text area.
++    var $textarea = $toggle.siblings('.form-textarea-wrapper').find('textarea');
++    // Hide grippie.
++    $grippie.hide();
++    // Configure editor.
++    var editor = CodeMirror.fromTextArea($textarea.get(0), {
++      mode: 'css',
++      tabSize: 0,
++      gutters: ['CodeMirror-linenumbers'],
++      lineNumbers: true
++    });
++    $toggle.data('editor', editor);
++    // Change toddle text.
++    $toggle.text(Drupal.t('Disable syntax highlighting'));
++    // Add enabled class.
++    $toggle.addClass('enabled');
++  }
++
++})(jQuery, Drupal);
+diff --git a/src/Plugin/Field/FieldFormatter/CssHtmlHeadFormatter.php b/src/Plugin/Field/FieldFormatter/CssHtmlHeadFormatter.php
+new file mode 100644
+index 0000000..754b7b9
+--- /dev/null
++++ b/src/Plugin/Field/FieldFormatter/CssHtmlHeadFormatter.php
+@@ -0,0 +1,45 @@
++<?php
++
++namespace Drupal\field_css\Plugin\Field\FieldFormatter;
++
++use Drupal\Core\Field\FormatterBase;
++use Drupal\Core\Field\FieldItemListInterface;
++
++/**
++ * Plugin implementation of the 'css_html_head' formatter.
++ *
++ * @FieldFormatter(
++ *   id = "css_html_head",
++ *   label = @Translation("Add CSS function"),
++ *   field_types = {
++ *     "css"
++ *   }
++ * )
++ */
++class CssHtmlHeadFormatter extends FormatterBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  public function viewElements(FieldItemListInterface $items, $langcode) {
++    $element = [];
++
++    // Expand stored values.
++    $values = _field_css_expand_items($items->filterEmptyItems());
++    $prefix = field_css_get_prefix($this->getFieldSettings(), $items->getEntity()->getEntityTypeId(), $items->getEntity());
++    $css = field_css_parse_fields($values, $prefix);
++
++    // Render element as attached inline style.
++    $element[0]['#attached']['html_head'][] = [
++      [
++        '#type' => 'html_tag',
++        '#tag' => 'style',
++        '#value' => $css,
++      ],
++      'field_css',
++    ];
++
++    return $element;
++  }
++
++}
+diff --git a/src/Plugin/Field/FieldFormatter/CssStyleTagFormatter.php b/src/Plugin/Field/FieldFormatter/CssStyleTagFormatter.php
+new file mode 100644
+index 0000000..10e3350
+--- /dev/null
++++ b/src/Plugin/Field/FieldFormatter/CssStyleTagFormatter.php
+@@ -0,0 +1,42 @@
++<?php
++
++namespace Drupal\field_css\Plugin\Field\FieldFormatter;
++
++use Drupal\Core\Field\FormatterBase;
++use Drupal\Core\Field\FieldItemListInterface;
++
++/**
++ * Plugin implementation of the 'css_style_tag' formatter.
++ *
++ * @FieldFormatter(
++ *   id = "css_style_tag",
++ *   label = @Translation("Style tag"),
++ *   field_types = {
++ *     "css"
++ *   }
++ * )
++ */
++class CssStyleTagFormatter extends FormatterBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  public function viewElements(FieldItemListInterface $items, $langcode) {
++    $element = [];
++
++    // Expand stored values.
++    $values = _field_css_expand_items($items->filterEmptyItems());
++    $prefix = field_css_get_prefix($this->getFieldSettings(), $items->getEntity()->getEntityTypeId(), $items->getEntity());
++    $css = field_css_parse_fields($values, $prefix);
++
++    // Render element as html_tag.
++    $element[0] = [
++      '#type' => 'html_tag',
++      '#tag' => 'style',
++      '#value' => $css,
++    ];
++
++    return $element;
++  }
++
++}
+diff --git a/src/Plugin/Field/FieldType/CssItem.php b/src/Plugin/Field/FieldType/CssItem.php
+new file mode 100644
+index 0000000..2178764
+--- /dev/null
++++ b/src/Plugin/Field/FieldType/CssItem.php
+@@ -0,0 +1,123 @@
++<?php
++
++namespace Drupal\field_css\Plugin\Field\FieldType;
++
++use Drupal\Core\Field\FieldItemBase;
++use Drupal\Core\Field\FieldStorageDefinitionInterface;
++use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\TypedData\DataDefinition;
++
++/**
++ * Plugin implementation of the 'css' field type.
++ *
++ * @FieldType(
++ *   id = "css",
++ *   label = @Translation("CSS"),
++ *   description = @Translation("Allow limited css markup."),
++ *   default_formatter = "css_style_tag",
++ *   default_widget = "css_structured",
++ * )
++ */
++class CssItem extends FieldItemBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function defaultFieldSettings() {
++    return [
++      'prefix' => 'none',
++      'prefix_value' => '',
++    ] + parent::defaultFieldSettings();
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function mainPropertyName() {
++    return 'style';
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
++    $properties['selector'] = DataDefinition::create('string')
++      ->setLabel(t('Selector'))
++      ->setRequired(TRUE);
++
++    $properties['style'] = DataDefinition::create('string')
++      ->setLabel(t('Style'))
++      ->setRequired(TRUE);
++
++    return $properties;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function schema(FieldStorageDefinitionInterface $field_definition) {
++    return array(
++      'columns' => array(
++        'selector' => array(
++          'type' => 'varchar',
++          'length' => 255,
++          'not null' => FALSE,
++        ),
++        'style' => array(
++          'type' => 'blob',
++          'not null' => FALSE,
++        ),
++      ),
++      'indexes' => array(
++        'selector' => array('selector'),
++      ),
++    );
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function preSave() {
++    parent::preSave();
++
++    $this->selector = (isset($this->selector) ? trim($this->selector) : '');
++    $this->style = (isset($this->style) ? trim($this->style, "{} \t\n\r\0\x0B") : '');
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function isEmpty() {
++    $value = $this->get('style')->getValue();
++    return $value === NULL || !trim($value, "{} \t\n\r\0\x0B");
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function fieldSettingsForm(array $form, FormStateInterface $form_state) {
++    $element = [];
++
++    $element['prefix'] = [
++      '#type' => 'select',
++      '#title' => $this->t('Selector Prefix'),
++      '#default_value' => $this->getSetting('prefix'),
++      '#options' => [
++        'none' => $this->t('None'),
++        'entity-item' => $this->t('EntityType-Id (e.g. node-4938)'),
++        'fixed-value' => $this->t('Fixed Value'),
++      ],
++      '#required' => TRUE,
++      '#description' => $this->t('What selector should prefix all css rules.'),
++    ];
++    $element['prefix_value'] = [
++      '#type' => 'textfield',
++      '#title' => $this->t('Prefix Value'),
++      '#default_value' => $this->getSetting('prefix_value'),
++      '#description' => $this->t('Proved the fixed value declaration that shall prefix all custom declarations.(Only used with Fix Value above).'),
++    ];
++
++    return $element;
++  }
++
++}
+diff --git a/src/Plugin/Field/FieldWidget/CssFreeformWidget.php b/src/Plugin/Field/FieldWidget/CssFreeformWidget.php
+new file mode 100644
+index 0000000..14b7c8b
+--- /dev/null
++++ b/src/Plugin/Field/FieldWidget/CssFreeformWidget.php
+@@ -0,0 +1,41 @@
++<?php
++
++namespace Drupal\field_css\Plugin\Field\FieldWidget;
++
++use Drupal\Core\Field\FieldItemListInterface;
++use Drupal\Core\Form\FormStateInterface;
++
++/**
++ * Plugin implementation of the 'css_freeform' widget.
++ *
++ * @FieldWidget(
++ *   id = "css_freeform",
++ *   label = @Translation("Free form"),
++ *   field_types = {
++ *     "css"
++ *   }
++ * )
++ */
++class CssFreeformWidget extends CssWidgetBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
++    // Expand stored values.
++    $values = _field_css_expand_items($items);
++
++    $element['style'] = array(
++      '#type' => 'textarea',
++      '#title' => '',
++      '#field_prefix' => t("All declarations will be prefixed by '@prefix'.", array(
++        "@prefix" => field_css_get_prefix($this->getFieldSettings(), $items->getEntity()->getEntityTypeId(), $items->getEntity()),
++      )),
++      '#default_value' => field_css_parse_fields($values),
++      '#attributes' => array('class' => array('field-css-style', 'field-css-wrapped')),
++    );
++
++    return parent::formElement($items, $delta, $element, $form, $form_state);
++  }
++
++}
+diff --git a/src/Plugin/Field/FieldWidget/CssStructuredWidget.php b/src/Plugin/Field/FieldWidget/CssStructuredWidget.php
+new file mode 100644
+index 0000000..fc0d447
+--- /dev/null
++++ b/src/Plugin/Field/FieldWidget/CssStructuredWidget.php
+@@ -0,0 +1,49 @@
++<?php
++
++namespace Drupal\field_css\Plugin\Field\FieldWidget;
++
++use Drupal\Core\Field\FieldItemListInterface;
++use Drupal\Core\Form\FormStateInterface;
++
++/**
++ * Plugin implementation of the 'css_structured' widget.
++ *
++ * @FieldWidget(
++ *   id = "css_structured",
++ *   label = @Translation("Structured"),
++ *   field_types = {
++ *     "css"
++ *   }
++ * )
++ */
++class CssStructuredWidget extends CssWidgetBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
++    // Expand stored values.
++    $values = _field_css_expand_items($items);
++
++    $value = isset($values[$delta]) ? $values[$delta] : array('selector' => '', 'style' => '');
++    $element['selector'] = array(
++      '#type' => 'textfield',
++      '#title' => '',
++      '#field_prefix' => field_css_get_prefix($this->getFieldSettings(), $items->getEntity()->getEntityTypeId(), $items->getEntity()),
++      '#default_value' => $value['selector'],
++      '#attributes' => array('class' => array('field-css-selector', 'field-css-wrapped')),
++    );
++    $element['style'] = array(
++      '#type' => 'textarea',
++      '#title' => '',
++      '#desciption' => '',
++      '#default_value' => "{\n" . $value['style'] . "\n}",
++      '#attributes' => array('class' => array('field-css-style', 'field-css-wrapped')),
++    );
++    $element['#attached']['library'][] = 'field_css/admin';
++    $element['#attributes']['class'][] = 'field-css-stff';
++
++    return parent::formElement($items, $delta, $element, $form, $form_state);
++  }
++
++}
+diff --git a/src/Plugin/Field/FieldWidget/CssWidgetBase.php b/src/Plugin/Field/FieldWidget/CssWidgetBase.php
+new file mode 100644
+index 0000000..b64d57c
+--- /dev/null
++++ b/src/Plugin/Field/FieldWidget/CssWidgetBase.php
+@@ -0,0 +1,79 @@
++<?php
++
++namespace Drupal\field_css\Plugin\Field\FieldWidget;
++
++use Drupal\Core\Field\FieldItemListInterface;
++use Drupal\Core\Field\WidgetBase;
++use Drupal\Core\Form\FormStateInterface;
++
++/**
++ * Base class for the 'css_*' widgets.
++ */
++abstract class CssWidgetBase extends WidgetBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
++    if (isset($element['style'])) {
++      field_css_attach_syntax_highlighting($form);
++    }
++    // Add our custom validator.
++    $element['#element_validate'][] = [$this, 'validateElement'];
++
++    return $element;
++  }
++
++  /**
++   * Form validation handler for widget elements.
++   *
++   * @param array $element
++   *   The form element.
++   * @param \Drupal\Core\Form\FormStateInterface $form_state
++   *   The form state.
++   */
++  public function validateElement(array $element, FormStateInterface $form_state) {
++    // Transform $element properties to an array of items.
++    $items = [
++      [
++        'selector' => isset($element['selector']['#value']) ? $element['selector']['#value'] : NULL,
++        'style' => isset($element['style']['#value']) ? $element['style']['#value'] : NULL,
++      ],
++    ];
++
++    // Lets test items as if they were going to be saved.
++    $items = field_css_post_process($this->getPluginId(), $items);
++    foreach ($items as $item) {
++      if (!empty($item['selector'])) {
++        if (preg_match("/(:root|\{|\})/", $item['selector'])) {
++          $form_state->setError($element['selector'],
++            $this->t('Selector contains a forbidden entry. Forbidden entries are @entries.', array(
++              '@entries' => $this->t("':root', '{' and '}'"),
++            ))
++          );
++        }
++      }
++      if (!empty($item['style'])) {
++        if (preg_match("/(\{|\})/", $item['style'])) {
++          $form_state->setError($element['style'],
++            $this->t('Style contains a forbidden entry. Forbidden entries are @entries.', array(
++              '@entries' => $this->t("'{' and '}'"),
++            ))
++          );
++        }
++      }
++    }
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function massageFormValues(array $values, array $form, FormStateInterface $form_state) {
++    $values = field_css_post_process($this->getPluginId(), $values);
++    // Condense rules for storage.
++    _field_css_condense_items($values);
++
++    return $values;
++  }
++
++}

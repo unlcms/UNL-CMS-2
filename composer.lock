@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf6d7c4d4f686ad9bfc5c8b1b10fe906",
+    "content-hash": "4c81c03369fa70e1c81c1fb2f62683db",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -928,6 +928,49 @@
             }
         },
         {
+            "name": "drupal/allowed_formats",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/allowed_formats",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/allowed_formats-8.x-1.1.zip",
+                "reference": null,
+                "shasum": "b7bfc78d7e64f1df37ca6cad118a1ff8f7228b64"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1492709942"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "floretan",
+                    "homepage": "https://www.drupal.org/user/66163"
+                }
+            ],
+            "description": "Limit which text formats are available for each field instance.",
+            "homepage": "https://www.drupal.org/project/allowed_formats",
+            "support": {
+                "source": "http://cgit.drupalcode.org/allowed_formats"
+            }
+        },
+        {
             "name": "drupal/asset_injector",
             "version": "dev-1.x",
             "source": {
@@ -1728,6 +1771,50 @@
             }
         },
         {
+            "name": "drupal/field_css",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/field_css",
+                "reference": "c778e331d25246d6ca6dbc00f0dc155b3ba9e78d"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1492088343"
+                },
+                "patches_applied": {
+                    "2869028 - Drupal 8 port": "patches/drupal_8_port-2869028-2.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "e2thex",
+                    "homepage": "https://www.drupal.org/user/189123"
+                },
+                {
+                    "name": "mikemiles86",
+                    "homepage": "https://www.drupal.org/user/471470"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/field_css",
+            "support": {
+                "source": "http://cgit.drupalcode.org/field_css"
+            },
+            "time": "2016-02-29 15:27:30"
+        },
+        {
             "name": "drupal/field_permissions",
             "version": "1.0.0-beta2",
             "source": {
@@ -2025,7 +2112,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.27.zip",
-                "reference": null,
+                "reference": "8.x-1.27",
                 "shasum": "b40f86ef45a7f4325343e8aa455ecbdceab51ffe"
             },
             "require": {
@@ -2156,7 +2243,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/imce-8.x-1.6.zip",
-                "reference": null,
+                "reference": "8.x-1.6",
                 "shasum": "973fc92959dc31b16e33114852b8c26ec050ba7c"
             },
             "require": {
@@ -2798,7 +2885,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/theme_change-8.x-1.5.zip",
-                "reference": null,
+                "reference": "8.x-1.5",
                 "shasum": "e2472aa57b0073da759af96396e589e9a220eb30"
             },
             "require": {
@@ -2995,7 +3082,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "82a3c007aad10b3c72900b93deb9e102d8b14fe7"
+                "reference": "6ab17bb174b731514ad5dfaf523d7321a6b27c0c"
             },
             "require": {
                 "drupal/core": "*"
@@ -3006,8 +3093,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta15+25-dev",
-                    "datestamp": "1499911443"
+                    "version": "8.x-5.0-beta15+28-dev",
+                    "datestamp": "1500025443"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3059,7 +3146,7 @@
                 "source": "http://cgit.drupalcode.org/webform",
                 "issues": "https://drupal.org/project/issues/webform"
             },
-            "time": "2017-07-13 02:44:12"
+            "time": "2017-07-14 09:45:18"
         },
         {
             "name": "drush/drush",
@@ -5956,7 +6043,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_editor.git",
-                "reference": "c122e561b65699434699604c6fb092a3a7cc053b"
+                "reference": "34ab03bd7498e12872447fb8241671281210b688"
             },
             "type": "drupal-module",
             "authors": [
@@ -5967,7 +6054,7 @@
                 }
             ],
             "description": "Modifications for text formats and editors.",
-            "time": "2017-03-02 23:09:44"
+            "time": "2017-07-14 20:02:28"
         },
         {
             "name": "unlcms/unl_filter",
@@ -5999,7 +6086,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_fourone.git",
-                "reference": "05bc9a53c68baa1d50edad4b6e25d0df608021bd"
+                "reference": "b95806b6ef660a87b5bf69b23f83f93ee6aba876"
             },
             "type": "drupal-theme",
             "authors": [
@@ -6010,7 +6097,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-06-29 21:25:07"
+            "time": "2017-07-14 20:00:38"
         },
         {
             "name": "unlcms/unl_multisite",
@@ -8113,6 +8200,7 @@
         "drupal/view_mode_selector": 20,
         "drupal/taxonomy_machine_name": 15,
         "unlcms/unl_tags": 20,
+        "drupal/field_css": 20,
         "drupal/drupal_reset": 20,
         "behat/mink": 20
     },

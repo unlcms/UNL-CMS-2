@@ -1,0 +1,40 @@
+uuid: 405b2c58-e8d4-4abf-bae4-d534e44e1a80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.html.field_css
+    - field.field.paragraph.html.field_html
+    - paragraphs.paragraphs_type.html
+  module:
+    - field_css
+    - text
+id: paragraph.html.default
+targetEntityType: paragraph
+bundle: html
+mode: default
+content:
+  field_css:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: css_freeform
+    region: content
+  field_html:
+    weight: 1
+    settings:
+      rows: 10
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

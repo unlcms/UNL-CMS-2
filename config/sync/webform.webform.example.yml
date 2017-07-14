@@ -50,6 +50,7 @@ settings:
   preview_message: ''
   preview_attributes: {  }
   preview_excluded_elements: {  }
+  preview_exclude_empty: true
   draft: ''
   draft_multiple: false
   draft_auto_save: false
@@ -81,26 +82,34 @@ access:
       - anonymous
       - authenticated
     users: {  }
+    permissions: {  }
   view_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   update_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   delete_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   purge_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   view_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   update_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   delete_own:
     roles: {  }
     users: {  }
+    permissions: {  }
 handlers: {  }
 uuid: af34bf89-c8c5-4d77-a1fb-96f29dcc03dc

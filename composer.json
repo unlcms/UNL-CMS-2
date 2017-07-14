@@ -58,7 +58,9 @@
         "unlcms/external_entities_unldirectory": "*",
         "drupal/view_mode_selector": "1.x-dev",
         "drupal/taxonomy_machine_name": "^1.0@alpha",
-        "unlcms/unl_tags": "dev-8.x-1.x"
+        "unlcms/unl_tags": "dev-8.x-1.x",
+        "drupal/field_css": "1.x-dev",
+        "drupal/allowed_formats": "^1.1"
     },
     "require-dev": {
         "drupal/devel": "^1.0",
@@ -86,6 +88,9 @@
         "patches": {
             "drupal/core": {
                 "2771837 - drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "patches/drupalimage_ckeditor-2771837-8.patch"
+            },
+            "drupal/field_css": {
+                "2869028 - Drupal 8 port": "patches/drupal_8_port-2869028-2.patch"
             },
             "drupal/group": {
                 "Get a token of a node's parent group to create a pathauto pattern": "patches/group_add-node-group-tokens-2774827-24.patch",

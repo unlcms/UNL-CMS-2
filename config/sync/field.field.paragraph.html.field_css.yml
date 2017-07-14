@@ -1,0 +1,23 @@
+uuid: c9641efe-a491-470a-b175-e70713d3462c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_css
+    - paragraphs.paragraphs_type.html
+  module:
+    - field_css
+id: paragraph.html.field_css
+field_name: field_css
+entity_type: paragraph
+bundle: html
+label: CSS
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  prefix: entity-item
+  prefix_value: ''
+field_type: css
