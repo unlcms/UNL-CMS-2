@@ -1,19 +1,19 @@
-uuid: ddf1969d-2b2c-4b42-a226-0d4ceb88186e
+uuid: c523294e-bc66-41b9-891c-198ea9f61697
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_eligibility
+    - field.storage.node.field_funding_eligibility
     - node.type.funding
   module:
     - text
-id: node.funding.field_eligibility
-field_name: field_eligibility
+id: node.funding.field_funding_eligibility
+field_name: field_funding_eligibility
 entity_type: node
 bundle: funding
 label: Eligibility
 description: 'Please enter only eligibility information in this section.'
-required: false
+required: 0
 translatable: false
 default_value: {  }
 default_value_callback: ''

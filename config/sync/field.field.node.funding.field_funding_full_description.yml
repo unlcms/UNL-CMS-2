@@ -1,19 +1,19 @@
-uuid: bb665cfb-c489-405b-a1a3-6c306e022cff
+uuid: b18d7f10-3a53-4cc2-ae3b-4cd0ca385855
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_full_description
+    - field.storage.node.field_funding_full_description
     - node.type.funding
   module:
     - text
-id: node.funding.field_full_description
-field_name: field_full_description
+id: node.funding.field_funding_full_description
+field_name: field_funding_full_description
 entity_type: node
 bundle: funding
 label: 'Full Description'
 description: ''
-required: true
+required: 1
 translatable: false
 default_value: {  }
 default_value_callback: ''

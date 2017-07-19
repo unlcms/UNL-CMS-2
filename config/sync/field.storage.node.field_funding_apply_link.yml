@@ -1,20 +1,20 @@
-uuid: bf6248b2-8682-4b9e-b852-da95d39446ab
+uuid: c68a66c0-0854-4313-8f85-2793a51d5199
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
+    - link
     - node
-    - text
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_full_description
-field_name: field_full_description
+id: node.field_funding_apply_link
+field_name: field_funding_apply_link
 entity_type: node
-type: text_long
+type: link
 settings: {  }
-module: text
+module: link
 locked: false
 cardinality: 1
 translatable: true

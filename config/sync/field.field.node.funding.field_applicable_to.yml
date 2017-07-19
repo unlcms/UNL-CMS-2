@@ -1,0 +1,28 @@
+uuid: 5fb238fc-00fa-4f4b-9101-18570d624b62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_applicable_to
+    - node.type.funding
+    - taxonomy.vocabulary.unl_tags
+id: node.funding.field_applicable_to
+field_name: field_applicable_to
+entity_type: node
+bundle: funding
+label: 'Applicable To'
+description: ''
+required: 1
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      unl_tags: unl_tags
+    sort:
+      field: _none
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

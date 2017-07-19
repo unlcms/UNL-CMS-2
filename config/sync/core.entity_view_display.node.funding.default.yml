@@ -3,19 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.funding.field_application_due_date
-    - field.field.node.funding.field_contact_email
-    - field.field.node.funding.field_contact_name
-    - field.field.node.funding.field_contact_phone_number
-    - field.field.node.funding.field_eligibility
-    - field.field.node.funding.field_full_description
+    - field.field.node.funding.field_applicable_to
     - field.field.node.funding.field_funding_amount
+    - field.field.node.funding.field_funding_app_due_date
+    - field.field.node.funding.field_funding_application_form
+    - field.field.node.funding.field_funding_apply_cta
+    - field.field.node.funding.field_funding_apply_link
+    - field.field.node.funding.field_funding_contact_email
+    - field.field.node.funding.field_funding_contact_name
+    - field.field.node.funding.field_funding_contact_phone
+    - field.field.node.funding.field_funding_eligibility
+    - field.field.node.funding.field_funding_full_description
+    - field.field.node.funding.field_funding_how_to_apply
     - field.field.node.funding.field_funding_periods
-    - field.field.node.funding.field_how_to_apply
-    - field.field.node.funding.field_resources_documents
-    - field.field.node.funding.field_resources_external_links
+    - field.field.node.funding.field_funding_resources_docs
+    - field.field.node.funding.field_funding_resources_links
+    - field.field.node.funding.field_funding_templates
     - field.field.node.funding.field_teaser_summary
-    - field.field.node.funding.field_templates
     - node.type.funding
   module:
     - datetime
@@ -30,89 +34,48 @@ targetEntityType: node
 bundle: funding
 mode: default
 content:
-  field_application_due_date:
-    type: datetime_default
-    weight: 8
-    region: content
-    label: hidden
+  field_applicable_to:
+    weight: 17
+    label: above
     settings:
-      timezone_override: America/Chicago
-      format_type: m_d_y
+      link: true
     third_party_settings: {  }
-  field_contact_email:
-    type: email_mailto
+    type: entity_reference_label
+    region: content
+  field_funding_amount:
+    type: string
     weight: 3
     region: content
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_contact_name:
-    type: string
-    weight: 2
-    region: content
-    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_contact_phone_number:
-    type: phone_link_field_formatter
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      title: 'Call @phone'
-      text: ''
-    third_party_settings: {  }
-  field_eligibility:
-    type: text_default
-    weight: 5
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_full_description:
-    type: text_default
-    weight: 1
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_funding_amount:
-    type: string
+  field_funding_app_due_date:
     weight: 6
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_funding_periods:
-    type: daterange_default
-    weight: 7
-    region: content
     label: hidden
     settings:
       timezone_override: America/Chicago
       format_type: m_d_y
-      separator: '-'
     third_party_settings: {  }
-  field_how_to_apply:
-    type: text_default
-    weight: 9
+    type: datetime_default
     region: content
+  field_funding_application_form:
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_resources_documents:
     type: file_default
-    weight: 10
     region: content
+  field_funding_apply_cta:
+    weight: 8
     label: hidden
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-  field_resources_external_links:
-    type: link
-    weight: 11
+    type: string
     region: content
+  field_funding_apply_link:
+    weight: 7
     label: hidden
     settings:
       trim_length: 80
@@ -121,23 +84,99 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    type: link
+    region: content
+  field_funding_contact_email:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_funding_contact_name:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_funding_contact_phone:
+    weight: 11
+    label: hidden
+    settings:
+      title: ''
+      text: ''
+    third_party_settings: {  }
+    type: phone_link_field_formatter
+    region: content
+  field_funding_eligibility:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_funding_full_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_funding_how_to_apply:
+    weight: 13
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_funding_periods:
+    type: daterange_default
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      timezone_override: America/Chicago
+      format_type: m_d_y
+      separator: '-'
+    third_party_settings: {  }
+  field_funding_resources_docs:
+    weight: 15
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_funding_resources_links:
+    weight: 16
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_funding_templates:
+    weight: 14
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
   field_teaser_summary:
     type: string
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_templates:
-    type: file_default
-    weight: 12
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   links:
-    weight: 13
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

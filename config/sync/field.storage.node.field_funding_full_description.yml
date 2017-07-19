@@ -1,22 +1,20 @@
-uuid: d1dd0d3a-85a2-41a5-bacc-31db36e1645a
+uuid: ae4cf32c-d62a-446b-8370-343682bb5e4e
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - node
+    - text
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_contact_name
-field_name: field_contact_name
+id: node.field_funding_full_description
+field_name: field_funding_full_description
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

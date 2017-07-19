@@ -1,0 +1,23 @@
+uuid: 9d6880b0-0d46-45b2-bab2-5b29fb4708b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_resources_links
+    - node.type.funding
+  module:
+    - link
+id: node.funding.field_funding_resources_links
+field_name: field_funding_resources_links
+entity_type: node
+bundle: funding
+label: 'Resources - Links'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '1'
+field_type: link

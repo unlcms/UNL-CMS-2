@@ -89,7 +89,8 @@
         },
         "patches": {
             "drupal/core": {
-                "2771837 - drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "patches/drupalimage_ckeditor-2771837-8.patch"
+                "2771837 - drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "patches/drupalimage_ckeditor-2771837-8.patch",
+                "2708101 - Default value for link text is not saved": "patches/drupal-fix_bug_link_module-2708101-27.patch"
             },
             "drupal/group": {
                 "Get a token of a node's parent group to create a pathauto pattern": "patches/group_add-node-group-tokens-2774827-24.patch",

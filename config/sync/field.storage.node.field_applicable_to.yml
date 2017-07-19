@@ -1,24 +1,21 @@
-uuid: 5b727c6e-db56-45b5-a7ac-bc11eb9cbdf7
+uuid: 78393e22-084e-4778-b64a-9931b2fc55d3
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - file
     - node
+    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_resources_documents
-field_name: field_resources_documents
+id: node.field_applicable_to
+field_name: field_applicable_to
 entity_type: node
-type: file
+type: entity_reference
 settings:
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  target_type: file
-module: file
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: -1
 translatable: true

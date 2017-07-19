@@ -3,19 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.funding.field_application_due_date
-    - field.field.node.funding.field_contact_email
-    - field.field.node.funding.field_contact_name
-    - field.field.node.funding.field_contact_phone_number
-    - field.field.node.funding.field_eligibility
-    - field.field.node.funding.field_full_description
+    - field.field.node.funding.field_applicable_to
     - field.field.node.funding.field_funding_amount
+    - field.field.node.funding.field_funding_app_due_date
+    - field.field.node.funding.field_funding_application_form
+    - field.field.node.funding.field_funding_apply_cta
+    - field.field.node.funding.field_funding_apply_link
+    - field.field.node.funding.field_funding_contact_email
+    - field.field.node.funding.field_funding_contact_name
+    - field.field.node.funding.field_funding_contact_phone
+    - field.field.node.funding.field_funding_eligibility
+    - field.field.node.funding.field_funding_full_description
+    - field.field.node.funding.field_funding_how_to_apply
     - field.field.node.funding.field_funding_periods
-    - field.field.node.funding.field_how_to_apply
-    - field.field.node.funding.field_resources_documents
-    - field.field.node.funding.field_resources_external_links
+    - field.field.node.funding.field_funding_resources_docs
+    - field.field.node.funding.field_funding_resources_links
+    - field.field.node.funding.field_funding_templates
     - field.field.node.funding.field_teaser_summary
-    - field.field.node.funding.field_templates
     - node.type.funding
   module:
     - datetime
@@ -32,9 +36,9 @@ third_party_settings:
       children:
         - field_funding_amount
         - field_funding_periods
-        - field_application_due_date
+        - field_funding_app_due_date
       parent_name: ''
-      weight: 10
+      weight: 7
       format_type: fieldset
       format_settings:
         id: ''
@@ -44,11 +48,11 @@ third_party_settings:
       label: 'Funding Overview'
     group_person_department_contact_:
       children:
-        - field_contact_name
-        - field_contact_email
-        - field_contact_phone_number
+        - field_funding_contact_name
+        - field_funding_contact_email
+        - field_funding_contact_phone
       parent_name: ''
-      weight: 11
+      weight: 8
       format_type: fieldset
       format_settings:
         id: ''
@@ -58,10 +62,11 @@ third_party_settings:
       label: 'Person/Department Contact Info'
     group_resources:
       children:
-        - field_resources_documents
-        - field_resources_external_links
+        - field_funding_templates
+        - field_funding_resources_docs
+        - field_funding_resources_links
       parent_name: ''
-      weight: 20
+      weight: 10
       format_type: fieldset
       format_settings:
         label: Resources
@@ -70,6 +75,21 @@ third_party_settings:
         classes: form-group--resources
         required_fields: false
       label: Resources
+    group_application_step:
+      children:
+        - field_funding_apply_link
+        - field_funding_application_form
+        - field_funding_apply_cta
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        label: 'Application Step'
+        description: "Appears as an call to action button underneath Funding Overview section\n<strong>DO NOT USE BOTH FIELDS</strong>. <br>\nIf you do, only the the Apply Link field will show. If you have both, instead please upload the document application under the Resources-Document Field instead.  "
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Application Step'
 id: node.funding.default
 targetEntityType: node
 bundle: funding
@@ -81,50 +101,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_application_due_date:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_contact_email:
-    weight: 15
+  field_applicable_to:
+    weight: 12
     settings:
-      size: 60
-      placeholder: 'lowercase email address'
-    third_party_settings: {  }
-    type: email_default
-    region: content
-  field_contact_name:
-    weight: 14
-    settings:
+      match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_contact_phone_number:
-    weight: 16
-    settings:
-      placeholder: '(xxx) xxx-xxxx'
-    third_party_settings: {  }
-    type: telephone_default
-    region: content
-  field_eligibility:
-    weight: 8
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_full_description:
-    weight: 7
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
+    type: entity_reference_autocomplete
     region: content
   field_funding_amount:
     weight: 8
@@ -134,34 +118,109 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_funding_periods:
-    weight: 9
+  field_funding_app_due_date:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
-    type: daterange_default
+    type: datetime_default
     region: content
-  field_how_to_apply:
-    weight: 9
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_resources_documents:
+  field_funding_application_form:
     weight: 13
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
-  field_resources_external_links:
+  field_funding_apply_cta:
     weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_funding_apply_link:
+    weight: 12
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_funding_contact_email:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_funding_contact_name:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_funding_contact_phone:
+    weight: 33
+    settings:
+      placeholder: '(xxx) xxx-xxxx'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_funding_eligibility:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_funding_full_description:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_funding_how_to_apply:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_funding_periods:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_funding_resources_docs:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_funding_resources_links:
+    weight: 13
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_funding_templates:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_teaser_summary:
     weight: 6
@@ -170,13 +229,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_templates:
-    weight: 12
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
     region: content
   path:
     type: path

@@ -1,9 +1,9 @@
-uuid: 081c89be-6fd4-40fe-8c26-8a307b8c72f2
+uuid: 3f631973-31c2-4ec4-947b-045c7b1320d3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_contact_phone_number
+    - field.storage.node.field_funding_contact_phone
     - node.type.funding
   module:
     - telephone
@@ -13,8 +13,8 @@ third_party_settings:
     format: '2'
     country:
       - US
-id: node.funding.field_contact_phone_number
-field_name: field_contact_phone_number
+id: node.funding.field_funding_contact_phone
+field_name: field_funding_contact_phone
 entity_type: node
 bundle: funding
 label: 'Contact Phone Number'

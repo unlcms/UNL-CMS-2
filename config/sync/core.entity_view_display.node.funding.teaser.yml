@@ -4,7 +4,21 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.funding.field_full_description
+    - field.field.node.funding.field_funding_amount
+    - field.field.node.funding.field_funding_app_due_date
+    - field.field.node.funding.field_funding_application_form
+    - field.field.node.funding.field_funding_apply_link
+    - field.field.node.funding.field_funding_contact_email
+    - field.field.node.funding.field_funding_contact_name
+    - field.field.node.funding.field_funding_contact_phone
+    - field.field.node.funding.field_funding_eligibility
+    - field.field.node.funding.field_funding_full_description
+    - field.field.node.funding.field_funding_how_to_apply
+    - field.field.node.funding.field_funding_periods
+    - field.field.node.funding.field_funding_resources_docs
+    - field.field.node.funding.field_funding_resources_links
+    - field.field.node.funding.field_funding_templates
+    - field.field.node.funding.field_teaser_summary
     - node.type.funding
   module:
     - user
@@ -17,4 +31,18 @@ content:
     weight: 100
     region: content
 hidden:
-  field_full_description: true
+  field_funding_amount: true
+  field_funding_app_due_date: true
+  field_funding_application_form: true
+  field_funding_apply_link: true
+  field_funding_contact_email: true
+  field_funding_contact_name: true
+  field_funding_contact_phone: true
+  field_funding_eligibility: true
+  field_funding_full_description: true
+  field_funding_how_to_apply: true
+  field_funding_periods: true
+  field_funding_resources_docs: true
+  field_funding_resources_links: true
+  field_funding_templates: true
+  field_teaser_summary: true

@@ -1,20 +1,21 @@
-uuid: 3c07b607-0879-4326-bb90-f8d746e05b87
+uuid: 4432cef8-5129-4ef4-bd5d-ef03c12cade6
 langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - field_permissions
     - node
-    - telephone
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_contact_phone_number
-field_name: field_contact_phone_number
+id: node.field_funding_app_due_date
+field_name: field_funding_app_due_date
 entity_type: node
-type: telephone
-settings: {  }
-module: telephone
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

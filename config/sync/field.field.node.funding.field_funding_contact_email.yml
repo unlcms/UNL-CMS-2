@@ -1,17 +1,17 @@
-uuid: 840a030d-42c5-47e9-8530-479cb164ec1c
+uuid: b609e0c1-9012-4bf5-8121-8d5b48650e99
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_contact_email
+    - field.storage.node.field_funding_contact_email
     - node.type.funding
-id: node.funding.field_contact_email
-field_name: field_contact_email
+id: node.funding.field_funding_contact_email
+field_name: field_funding_contact_email
 entity_type: node
 bundle: funding
 label: 'Contact Email'
 description: 'Contact''s email address'
-required: false
+required: 0
 translatable: false
 default_value: {  }
 default_value_callback: ''
