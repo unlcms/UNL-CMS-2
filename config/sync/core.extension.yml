@@ -17,6 +17,7 @@ module:
   crop: 0
   ctools: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   diff: 0
   dynamic_page_cache: 0
@@ -27,6 +28,7 @@ module:
   external_entities: 0
   external_entities_unldirectory: 0
   field: 0
+  field_group: 0
   field_css: 0
   field_permissions: 0
   field_ui: 0
@@ -47,6 +49,7 @@ module:
   imagemagick: 0
   imce: 0
   imce_groups: 0
+  layout_discovery: 0
   libraries: 0
   link: 0
   menu_ui: 0
@@ -54,6 +57,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  phone_link: 0
   purge: 0
   purge_drush: 0
   purge_processor_cron: 0
@@ -67,6 +71,7 @@ module:
   taxonomy: 0
   taxonomy_machine_name: 0
   telephone: 0
+  telephone_validation: 0
   text: 0
   theme_change: 0
   token: 0

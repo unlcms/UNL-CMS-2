@@ -1,0 +1,21 @@
+uuid: 5a211d79-ba53-42f3-9ecb-1c2952863a1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_apply_cta
+    - node.type.funding
+id: node.funding.field_funding_apply_cta
+field_name: field_funding_apply_cta
+entity_type: node
+bundle: funding
+label: 'Apply Call to Action Button Text'
+description: '100 Character Limit. Use it to provide more context where visitor will go to. E.g. "Apply on NUgrant" vs generic "Apply Now"'
+required: 0
+translatable: false
+default_value:
+  -
+    value: 'Apply Now'
+default_value_callback: ''
+settings: {  }
+field_type: string

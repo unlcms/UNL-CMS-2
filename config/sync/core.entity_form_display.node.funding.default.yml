@@ -1,0 +1,270 @@
+uuid: 5e780ae6-a69d-435e-b8e6-8ffd5997aca4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.funding.field_applicable_to
+    - field.field.node.funding.field_funding_amount
+    - field.field.node.funding.field_funding_app_due_date
+    - field.field.node.funding.field_funding_application_form
+    - field.field.node.funding.field_funding_apply_cta
+    - field.field.node.funding.field_funding_apply_link
+    - field.field.node.funding.field_funding_contact_email
+    - field.field.node.funding.field_funding_contact_name
+    - field.field.node.funding.field_funding_contact_phone
+    - field.field.node.funding.field_funding_eligibility
+    - field.field.node.funding.field_funding_full_description
+    - field.field.node.funding.field_funding_how_to_apply
+    - field.field.node.funding.field_funding_periods
+    - field.field.node.funding.field_funding_resources_docs
+    - field.field.node.funding.field_funding_resources_links
+    - field.field.node.funding.field_funding_templates
+    - field.field.node.funding.field_teaser_summary
+    - node.type.funding
+  module:
+    - datetime
+    - datetime_range
+    - field_group
+    - file
+    - link
+    - path
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_funding_overview:
+      children:
+        - field_funding_amount
+        - field_funding_periods
+        - field_funding_app_due_date
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'A quick overview of this funding opportunity'
+        required_fields: false
+      label: 'Funding Overview'
+    group_person_department_contact_:
+      children:
+        - field_funding_contact_name
+        - field_funding_contact_email
+        - field_funding_contact_phone
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Person/Department Contact Info'
+    group_resources:
+      children:
+        - field_funding_templates
+        - field_funding_resources_docs
+        - field_funding_resources_links
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        label: Resources
+        description: 'Add documents or links that will be of use and related to this funding opportunity'
+        id: ''
+        classes: form-group--resources
+        required_fields: false
+      label: Resources
+    group_application_step:
+      children:
+        - field_funding_apply_link
+        - field_funding_application_form
+        - field_funding_apply_cta
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        label: 'Application Step'
+        description: "Appears as an call to action button underneath Funding Overview section\n<strong>DO NOT USE BOTH FIELDS</strong>. <br>\nIf you do, only the the Apply Link field will show. If you have both, instead please upload the document application under the Resources-Document Field instead.  "
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Application Step'
+id: node.funding.default
+targetEntityType: node
+bundle: funding
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_applicable_to:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_funding_amount:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_funding_app_due_date:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_funding_application_form:
+    weight: 13
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_funding_apply_cta:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_funding_apply_link:
+    weight: 12
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_funding_contact_email:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_funding_contact_name:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_funding_contact_phone:
+    weight: 33
+    settings:
+      placeholder: '(xxx) xxx-xxxx'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_funding_eligibility:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_funding_full_description:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_funding_how_to_apply:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_funding_periods:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_funding_resources_docs:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_funding_resources_links:
+    weight: 13
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_funding_templates:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_teaser_summary:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

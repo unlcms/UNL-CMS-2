@@ -1,0 +1,17 @@
+diff --git a/core/modules/link/src/Plugin/Field/FieldWidget/LinkWidget.php b/core/modules/link/src/Plugin/Field/FieldWidget/LinkWidget.php
+index fd670fd..4360625 100644
+--- a/core/modules/link/src/Plugin/Field/FieldWidget/LinkWidget.php
++++ b/core/modules/link/src/Plugin/Field/FieldWidget/LinkWidget.php
+@@ -141,6 +141,12 @@ public static function validateUriElement($element, FormStateInterface $form_sta
+       $form_state->setError($element, t('Manually entered paths should start with /, ? or #.'));
+       return;
+     }
++    elseif(empty($element['#value'])) {
++      $values = $form_state->getValue('default_value_input');
++      if (isset($element['#parents'][2]) && isset($element['#parents'][1]) && !empty($values[$element['#parents'][1]][$element['#parents'][2]]['title'])) {
++        $form_state->setError($element, t('URL is required.'));
++      }
++    }
+   }
+ 
+   /**
