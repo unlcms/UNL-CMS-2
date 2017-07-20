@@ -1,0 +1,23 @@
+uuid: d48e13f8-81b7-48df-a62e-573c0d5cbd51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_apply_link
+    - node.type.funding
+  module:
+    - link
+id: node.funding.field_funding_apply_link
+field_name: field_funding_apply_link
+entity_type: node
+bundle: funding
+label: 'Apply Link'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '0'
+field_type: link

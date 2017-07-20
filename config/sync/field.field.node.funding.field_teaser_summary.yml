@@ -1,0 +1,19 @@
+uuid: 5881d465-5d6e-4473-a67e-18becd5ec78a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_summary
+    - node.type.funding
+id: node.funding.field_teaser_summary
+field_name: field_teaser_summary
+entity_type: node
+bundle: funding
+label: 'Teaser Summary'
+description: 'This summary provides a brief overview for this content when it is displayed in a list along with other similar content type. Maximum 300 character limit.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

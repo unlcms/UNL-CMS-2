@@ -1,0 +1,27 @@
+uuid: e204367c-355b-4d23-90be-9dde96908388
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_application_form
+    - node.type.funding
+  module:
+    - file
+id: node.funding.field_funding_application_form
+field_name: field_funding_application_form
+entity_type: node
+bundle: funding
+label: 'Application Form'
+description: 'If you have more than one application form, please use the Resource Section - Documents field below to upload them instead.'
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf docx xls xlsx'
+  max_filesize: ''
+  description_field: 0
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

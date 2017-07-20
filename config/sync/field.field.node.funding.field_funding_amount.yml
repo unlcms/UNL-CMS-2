@@ -1,0 +1,19 @@
+uuid: 1dce4ad1-db84-4932-a084-4364595919ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_amount
+    - node.type.funding
+id: node.funding.field_funding_amount
+field_name: field_funding_amount
+entity_type: node
+bundle: funding
+label: 'Funding Amount'
+description: 'Enter amount that will be awarded. Please keep it succinct. You can add multiple entries but each entry will have a 140 character limit.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
