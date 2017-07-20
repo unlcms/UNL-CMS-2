@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_body
     - paragraphs.paragraphs_type.wdn_text_band
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    wysiwyg: wysiwyg
+    html: '0'
+    restricted_html: '0'
+    plain_text: '0'
 id: paragraph.wdn_text_band.field_body
 field_name: field_body
 entity_type: paragraph

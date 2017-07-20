@@ -1,0 +1,31 @@
+uuid: 11212daf-1781-4a7c-bf9b-c8933d57d07f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.html.field_css
+    - field.field.paragraph.html.field_html
+    - paragraphs.paragraphs_type.html
+  module:
+    - field_css
+    - text
+id: paragraph.html.default
+targetEntityType: paragraph
+bundle: html
+mode: default
+content:
+  field_css:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: css_html_head
+    region: content
+  field_html:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

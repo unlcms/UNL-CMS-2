@@ -1,0 +1,14 @@
+uuid: db7d5012-38d4-4922-80ff-f3c897841ab3
+langcode: en
+status: true
+dependencies: {  }
+name: HTML
+format: html
+weight: -9
+filters:
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

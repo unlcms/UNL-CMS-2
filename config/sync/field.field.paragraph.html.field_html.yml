@@ -1,0 +1,31 @@
+uuid: 7f039630-ca09-4e7a-b08d-af7dd14d8363
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_html
+    - paragraphs.paragraphs_type.html
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    html: html
+    wysiwyg: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.html.field_html
+field_name: field_html
+entity_type: paragraph
+bundle: html
+label: HTML
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<div class=\"wdn-band\">\r\n  <div class=\"wdn-inner-wrapper\">\r\n\r\n  </div>\r\n</div>"
+    format: html
+default_value_callback: ''
+settings: {  }
+field_type: text_long
