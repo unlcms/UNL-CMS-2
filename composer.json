@@ -29,7 +29,7 @@
         "drupal/imce": "^1.0",
         "drupal/admin_toolbar": "^1.0",
         "drupal/honeypot": "^1.23",
-        "drupal/webform": "5.x-dev",
+        "drupal/webform": "^5.0",
         "drupal/paragraphs": "^1.1",
         "drupal/entity_reference_revisions": "^1.0",
         "drupal/exclude_node_title": "1.0-beta1",
