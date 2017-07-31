@@ -1,0 +1,16 @@
+{% set grid_set_class = [
+  1 == items|length ? 'bp768-wdn-grid-set-full',
+  2 == items|length ? 'bp768-wdn-grid-set-halves',
+  3 == items|length ? 'bp768-wdn-grid-set-thirds',
+  4 == items|length ? 'bp768-wdn-grid-set-fourths',
+  5 == items|length ? 'bp768-wdn-grid-set-fifths',
+  6 == items|length ? 'bp768-wdn-grid-set-sixths',
+  7 == items|length ? 'bp768-wdn-grid-set-sevenths',
+]
+%}
+
+<div{{ attributes.addClass(grid_set_class) }}>
+  {% for item in items %}
+    <div{{ item.attributes.addClass("wdn-col") }}>{{ item.content }}</div>
+  {% endfor %}
+</div>

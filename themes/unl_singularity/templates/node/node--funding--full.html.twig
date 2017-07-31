@@ -1,0 +1,198 @@
+
+{%
+set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+node.isPromoted() ? 'node--promoted',
+node.isSticky() ? 'node--sticky',
+not node.isPublished() ? 'node--unpublished',
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+'clearfix',
+]
+%}
+{{ attach_library('classy/node') }}
+{{ attach_library('unl_singularity/funding') }}
+
+<article{{ attributes.addClass(classes) }}>
+
+    {{ title_prefix }}
+    {% if not page and view_mode != "full" %}
+        <h2{{ title_attributes }}>
+            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if display_submitted %}
+        <footer>
+            {{ author_picture }}
+            <div{{ author_attributes }}>
+                {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+                {{ metadata }}
+            </div>
+        </footer>
+    {% endif %}
+
+    <div class="wdn-grid-set">
+        <div class="bp768-wdn-col-three-eighths wdn-pull-right">
+            {# taxonomy section that is visible in mobile #}
+            <section class="funding-ct--taxonomy-tags-section--mobile">
+                {% if node.field_applicable_to.value %}
+                    <span class="wdn-text-hidden">{{ content.field_applicable_to['#title'] }}</span>
+                    <ul class="funding-ct--taxonomy-tags">
+                        {% for i, value in content.field_applicable_to['#items'] %}
+                            {% set tag_value = content.field_applicable_to[i]['#title']|split(':')%}
+                            {% set tag_value_last_index = (tag_value|length - 1) %}
+                            <li><a class="wdn-sans-serif" href="{{ content.field_applicable_to[i]['#url'] }}">{{ tag_value[tag_value_last_index] }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </section>
+
+            <div class="funding-ct--summary-section--teaser-summary">
+                <p>{{ node.field_teaser_summary.value }} <a href="#full-description"><em>Read full description below</em></a></p>
+            </div>
+
+            <section class="funding-ct--summary-section">
+                <h2 class="funding-ct--summary-section--title wdn-brand clear-top">Funding Overview</h2>
+
+                <span class="funding-ct--summary-section--label wdn-sans-serif">{{ content.field_funding_amount['#title'] }}:</span>
+                <ul class="funding-ct--summary-section--list">
+                    {% for i, value in node.field_funding_amount %}
+                        <li>{{ node.field_funding_amount[i].value }}</li>
+                    {% endfor %}
+                </ul>
+
+                {# if funding period information is present, print it out #}
+                {% if node.field_funding_periods.value  %}
+                    <span class="funding-ct--summary-section--label wdn-sans-serif">{{ content.field_funding_periods['#title']}}:</span>
+                    <ul class="funding-ct--summary-section--list">
+                        {% for i, value in content.field_funding_periods['#items'] %}
+                            <li>{{ content.field_funding_periods[i].start_date }} {{ content.field_funding_periods[i].separator }} {{ content.field_funding_periods[i].end_date }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+                {#to get striptags filter to work on date value#}
+                {% set application_due_date_value %}
+                    {{ content.field_funding_app_due_date }}
+                {% endset %}
+
+                <span class="funding-ct--summary-section--label wdn-sans-serif">{{ content.field_funding_app_due_date['#title']}}:</span>
+                {{ application_due_date_value|striptags('<time>')|raw }}
+
+
+                {# if contact information is present, print it out #}
+                {% if node.field_funding_contact_email.value or node.field_funding_contact_phone.value %}
+                    <h3 class="funding-ct--summary-section--contact-info-title">Contact Information</h3>
+                    {% if node.field_funding_contact_name.value %}
+                        {{ content.field_funding_contact_name }}
+                    {% endif %}
+                    {% if node.field_funding_contact_phone.value %}
+                        {{ content.field_funding_contact_phone }}
+                    {% endif %}
+                    {% if node.field_funding_contact_email.value %}
+                        {{ content.field_funding_contact_email }}
+                    {% endif %}
+                {% endif %}
+            </section>
+
+            {# if apply information present, print it out #}
+            {% if node.field_funding_apply_link.value or node.field_funding_application_form.value %}
+                <section class="funding-ct--apply-section">
+                    {% if node.field_funding_apply_link.value %}
+                        {% if node.field_funding_apply_cta.value is empty %}
+                            <a class="wdn-button wdn-button-brand funding-ct--apply-button" href="{{content.field_funding_apply_link.0['#url']}}">Apply Now</a>
+                        {% elseif  node.field_funding_apply_cta.value != "Apply Now" %}
+                            <a class="wdn-button wdn-button-brand funding-ct--apply-button" href="{{content.field_funding_apply_link.0['#url']}}">{{ node.field_funding_apply_cta.value }}</a>
+                        {% else %}
+                            <a class="wdn-button wdn-button-brand funding-ct--apply-button" href="{{content.field_funding_apply_link.0['#url']}}">Apply Now</a>
+                        {% endif %}
+                    {% elseif node.field_funding_application_form.value %}
+                        {% if node.field_funding_apply_cta.value is empty %}
+                            <a class="wdn-button wdn-button-brand funding-ct--apply-button" href="{{file_url(node.field_funding_application_form.entity.fileuri)}}">Apply Now</a>
+                        {% elseif  node.field_funding_apply_cta.value != "Apply Now" %}
+                            <a class="wdn-button wdn-button-brand funding-ct--apply-button" href="{{file_url(node.field_funding_application_form.entity.fileuri)}}">{{ node.field_funding_apply_cta.value }}</a>
+                        {% else %}
+                            <a class="wdn-button wdn-button-brand funding-ct--apply-button" href="{{file_url(node.field_funding_application_form.entity.fileuri)}}">Apply Now</a>
+                        {% endif %}
+                    {% endif %}
+                </section>
+            {% endif %}
+
+            {# if template information is present, print it out #}
+            {% if node.field_funding_templates.value %}
+                <section class="funding-ct--templates-section">
+                    <h2 class="funding-ct--summary-section--title wdn-brand clear-top">Templates</h2>
+                    <ul class="funding-ct--summary-section--list">
+                        {% for i, value in content.field_funding_templates['#items'] %}
+                            <li>{{ content.field_funding_templates[i] }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+
+            {# if resources information is present, print it out #}
+            {% if node.field_funding_resources_docs.value or node.field_funding_resources_links.value %}
+                <section class="funding-ct--resources-section">
+                    <h2 class="funding-ct--summary-section--title wdn-brand clear-top">Resources</h2>
+                    {% if node.field_funding_resources_docs.value %}
+                        <span class="funding-ct--summary-section--label wdn-sans-serif">Documents:</span>
+                        <ul class="funding-ct--summary-section--list">
+                            {% for i, value in content.field_funding_resources_docs['#items'] %}
+                                <li>{{ content.field_funding_resources_docs[i] }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% if node.field_funding_resources_links %}
+                        <span class="funding-ct--summary-section--label wdn-sans-serif">Links:</span>
+                        <ul class="funding-ct--summary-section--list">
+                            {% for i, value in content.field_funding_resources_links['#items'] %}
+                                <li>{{ content.field_funding_resources_links[i] }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </section>
+            {% endif %}
+        </div>
+
+        <div class="bp768-wdn-col-five-eighths">
+            {# taxonomy section that is visible on desktop #}
+            <section class="funding-ct--taxonomy-tags-section--desktop">
+                {% if node.field_applicable_to.value %}
+                    <span class="wdn-text-hidden">{{ content.field_applicable_to['#title'] }}</span>
+                    <ul class="funding-ct--taxonomy-tags">
+                        {% for i, value in content.field_applicable_to['#items'] %}
+                            {% set tag_value = content.field_applicable_to[i]['#title']|split(':')%}
+                            {% set tag_value_last_index = (tag_value|length - 1) %}
+                            <li><a class="wdn-sans-serif" href="{{ content.field_applicable_to[i]['#url'] }}">{{ tag_value[tag_value_last_index] }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </section>
+            <section class="funding-ct--full-description">
+                <a id="full-description" class="anchor"></a>
+                {{ content.field_funding_full_description }}
+            </section>
+            <div id="tabs">
+                <ul>
+                    {% if node.field_funding_eligibility.value %}
+                        <li><a href="#eligibility-tab">Eligibility</a></li>
+                    {% endif %}
+                    <li><a href="#how-to-apply-tab">How to Apply</a></li>
+                </ul>
+                {% if node.field_funding_eligibility.value %}
+                    <div id="eligibility-tab">
+                        <h2>Eligibility</h2>
+                        {{ content.field_funding_eligibility }}
+                    </div>
+                {% endif %}
+                <div id="how-to-apply-tab">
+                    <h2>How to Apply</h2>
+                    {{ content.field_funding_how_to_apply }}
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+

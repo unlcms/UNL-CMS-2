@@ -1,0 +1,19 @@
+global-styling:
+  version: VERSION
+  css:
+    component:
+      css/components/local-tasks.css: {}
+
+funding:
+  version: VERSION
+  css:
+    theme:
+      css/theme/funding.css: {}
+  js:
+    js/funding.js: {}
+
+person:
+  version: VERSION
+  css:
+    theme:
+      css/theme/person.css: {}

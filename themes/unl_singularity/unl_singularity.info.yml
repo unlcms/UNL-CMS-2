@@ -1,0 +1,35 @@
+name: UNL Singularity
+type: theme
+description: 'Subtheme for unl_fourone.'
+core: 8.x
+
+base theme: unl_fourone
+
+libraries:
+  - unl_singularity/global-styling
+
+libraries-override:
+  core/classList: false
+  core/html5shiv: false
+  core/normalize: false
+
+regions:
+  page_top: Page top
+  page_bottom: Page bottom
+
+  header: Header
+  breadcrumb: Breadcrumbs
+  pagetitle: Page Title
+  navlinks: Navigation links
+  content_top: Content top
+  sidebar_first: Sidebar first
+  content: Content
+  sidebar_second: Sidebar second
+  content_bottom: Content bottom
+
+  optionalfooter: Optional footer
+  contactinfo: Contact info (Main)
+  contactinfo_additional: Contact info (Additional)
+  socialmedia: Social media
+  leftcollinks: Related links
+

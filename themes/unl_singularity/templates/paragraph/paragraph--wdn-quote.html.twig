@@ -1,0 +1,14 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+<div class="wdn-band wdn-band-neutral-seperator wdn-light-neutral-band">
+  <div class="wdn-inner-wrapper">
+    <blockquote class="wdn-quote">
+      {{ content.field_quote }}
+      <cite class="wdn-quoter">
+        {{ content.field_quoter }} <span class="quoter-context">{{ content.field_quoter_context }}</span>
+      </cite>
+    </blockquote>
+  </div>
+</div>
+{% endblock %}

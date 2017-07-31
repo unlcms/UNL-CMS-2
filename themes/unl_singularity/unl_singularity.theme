@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements template_preprocess_field().
+ */
+function unl_singularity_preprocess_field(&$variables) {
+  $element = $variables['element'];
+  if ($element['#field_name'] == 'field_hero_link') {
+    foreach ($variables['items'] as $key => $item) {
+      $variables['items'][$key]['content']['#options']['attributes']['class'] = array(
+        'wdn-button',
+        'wdn-button-outline'
+      );
+    }
+  }
+}

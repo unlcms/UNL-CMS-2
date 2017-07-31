@@ -1,0 +1,8 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  <div class="wdn-inner-wrapper">
+    <div id="events-band" class="bp1-wdn-grid-set-halves bp2-wdn-grid-set-thirds"></div>
+    <script>WDN.initializePlugin('events-band', {url: '{{ content.field_events_link }}', limit: 6});</script>
+  </div>
+{% endblock %}

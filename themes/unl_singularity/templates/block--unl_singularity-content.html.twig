@@ -1,0 +1,6 @@
+{#
+  Purpose of this template: The "guts" of the page needs to be an immediate child
+  of #maincontent so that the typical page is constrained (not full-width) while
+  pages/nodes/views/etc that wish to go full-width call use .wdn-band
+#}
+{% if content %}{{ content }}{% endif %}
