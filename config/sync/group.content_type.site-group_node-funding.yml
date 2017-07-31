@@ -1,0 +1,20 @@
+uuid: 886ffd4f-c7ca-4381-9079-e2f08770eb7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site
+    - node.type.funding
+  module:
+    - gnode
+    - node
+id: site-group_node-funding
+label: 'Site: Group node (Funding Opportunity)'
+description: 'Adds <em class="placeholder">Funding Opportunity</em> content to groups both publicly and privately.'
+group_type: site
+content_plugin: 'group_node:funding'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false
+  node_form_group_menu: 1

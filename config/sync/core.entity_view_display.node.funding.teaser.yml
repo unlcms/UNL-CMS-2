@@ -31,9 +31,11 @@ content:
     weight: 100
     region: content
 hidden:
+  field_applicable_to: true
   field_funding_amount: true
   field_funding_app_due_date: true
   field_funding_application_form: true
+  field_funding_apply_cta: true
   field_funding_apply_link: true
   field_funding_contact_email: true
   field_funding_contact_name: true
