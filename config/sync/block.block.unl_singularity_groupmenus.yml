@@ -1,0 +1,23 @@
+uuid: 20ba0d68-39e3-4372-bcb5-f2d0041aaaa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - groupmenu_block
+  theme:
+    - unl_singularity
+id: unl_singularity_groupmenus
+theme: unl_singularity
+region: navlinks
+weight: 0
+provider: null
+plugin: groupmenus
+settings:
+  id: groupmenus
+  label: 'Group menus'
+  provider: groupmenu_block
+  label_display: '0'
+  context_mapping:
+    group: '@group.group_route_context:group'
+    node: '@node.node_route_context:node'
+visibility: {  }

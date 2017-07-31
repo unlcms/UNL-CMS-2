@@ -1,0 +1,22 @@
+uuid: dfdc62ea-2bc3-49ac-96ac-f9217315d602
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unl_singularity
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: unl_singularity_content
+theme: unl_singularity
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

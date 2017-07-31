@@ -1,0 +1,24 @@
+uuid: 0d5fff22-f812-472f-8a15-458f8c814532
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - unl_singularity
+id: unl_singularity_main_menu
+theme: unl_singularity
+region: navlinks
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 42289c40-58a2-406e-8e1a-87992f7c5519
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unl_singularity
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: unl_singularity_page_title
+theme: unl_singularity
+region: pagetitle
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

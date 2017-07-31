@@ -102,6 +102,7 @@ theme:
   classy: 0
   seven: 0
   unl_fourone: 0
+  unl_singularity: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 profile: config_installer

@@ -1,4 +1,6 @@
-nid_list: {  }
+nid_list:
+  - 1
+  - 26
 translation_sync: true
 search: false
 _core:
@@ -8,9 +10,6 @@ content_types:
   modular_content: user
   page: user
   site: none
-  funding: all
-  person: none
-  webform: none
 content_type_modes:
   article: {  }
   modular_content:
@@ -18,6 +17,3 @@ content_type_modes:
   page:
     - full
   site: {  }
-  funding: {  }
-  person: {  }
-  webform: {  }

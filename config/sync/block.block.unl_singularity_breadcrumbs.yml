@@ -1,0 +1,22 @@
+uuid: 3b2edc5a-6679-4115-a4b9-0ebac427bd6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unl_singularity
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: unl_singularity_breadcrumbs
+theme: unl_singularity
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

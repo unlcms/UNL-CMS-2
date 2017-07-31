@@ -1,0 +1,22 @@
+uuid: ac345470-0be8-4374-836c-46a4932c501c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unl_singularity
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: unl_singularity_local_tasks
+theme: unl_singularity
+region: header
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
