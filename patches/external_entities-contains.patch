@@ -1,0 +1,12 @@
+diff --git a/src/Entity/Query/External/Query.php b/src/Entity/Query/External/Query.php
+index 52c97d3..e08a802 100644
+--- a/src/Entity/Query/External/Query.php
++++ b/src/Entity/Query/External/Query.php
+@@ -163,6 +163,7 @@ class Query extends QueryBase implements QueryInterface {
+     return array(
+       '=',
+       'IN',
++      'CONTAINS',
+     );
+   }
+ 
