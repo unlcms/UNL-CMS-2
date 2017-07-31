@@ -36,7 +36,7 @@
       <div class="wdn-inner-wrapper wdn-inner-padding-sm">
         <div class="wdn-grid-set knowledge-grid">
           <div class="bp2-wdn-col-two-sevenths directory-knowledge-summary">
-            <div class="vcard faculty" data-uid="{{ node.field_my_unl_id.entity.uid.value  }}" data-preferred-name="{{ label }}" itemscope itemtype="http://schema.org/Person">
+            <div class="vcard faculty" data-uid="{{ node.field_my_unl_id.entity.field_uid.value }}" data-preferred-name="{{ label }}" itemscope itemtype="http://schema.org/Person">
               <a class="card-profile planetred_profile" href="{% if node.field_my_unl_id.entity.field_uid.value %}https://planetred.unl.edu/pg/profile/{{ node.field_my_unl_id.entity.field_uid.value }}{% else %}#{% endif %}" title="Planet Red profile for {{ label }}" itemprop="url">
                 {% if node.field_person_portrait.value %}
                   {{ content.field_person_portrait }}
