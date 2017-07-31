@@ -37,12 +37,12 @@
         <div class="wdn-grid-set knowledge-grid">
           <div class="bp2-wdn-col-two-sevenths directory-knowledge-summary">
             <div class="vcard faculty" data-uid="{{ node.field_my_unl_id.entity.uid.value  }}" data-preferred-name="{{ label }}" itemscope itemtype="http://schema.org/Person">
-              <a class="card-profile planetred_profile" href="https://planetred.unl.edu/pg/profile/{{ node.field_my_unl_id.entity.uid.value }}" title="Planet Red profile for {{ label }}" itemprop="url">
-                  {% if node.field_person_portrait.value %}
-                    {{ content.field_person_portrait }}
-                  {% else  %}
-                    <img class="photo profile_pic" itemprop="image" src="{{ node.field_my_unl_id.entity.field_imageurl.value }}" alt="Avatar for {{ label }}" />
-                  {% endif %}
+              <a class="card-profile planetred_profile" href="{% if node.field_my_unl_id.entity.field_uid.value %}https://planetred.unl.edu/pg/profile/{{ node.field_my_unl_id.entity.field_uid.value }}{% else %}#{% endif %}" title="Planet Red profile for {{ label }}" itemprop="url">
+                {% if node.field_person_portrait.value %}
+                  {{ content.field_person_portrait }}
+                {% else  %}
+                  <img class="photo profile_pic" itemprop="image" src="{{ node.field_my_unl_id.entity.field_imageurl.value }}" alt="Avatar for {{ label }}" />
+                {% endif %}
               </a>
               <div class="vcardInfo">
                 <h1 class="headline">
@@ -66,6 +66,8 @@
                     </span>
                   </li>
                 </ul>
+
+                {% if node.field_person_address[0].value or node.field_my_unl_id.entity.field_unldirectoryaddress[0].value %}
                 <div class="adr work attribute icon-map-pin" itemprop="workLocation" itemscope itemtype="http://schema.org/Place">
                   <span class="type">Work</span>
                     {% if node.field_person_address.value %}
@@ -105,6 +107,9 @@
                         {% endfor %}
                      {% endif %}
                 </div>
+                {% endif %}
+
+                {% if node.field_person_phone.value or node.field_my_unl_id.entity.field_telephonenumber.value %}
                 <div class="tel work icon-phone attribute">
                   <span class="type">Work</span>
                   {% if node.field_person_phone.value %}
@@ -127,20 +132,27 @@
                     {% endif %}
                   {% endif %}
                 </div>
-                <div class="icon-email attribute">
+                {% endif %}
+
+                {% if node.field_person_email.value or node.field_my_unl_id.entity.field_mail.value %}
+                  <div class="icon-email attribute">
                     {% if node.field_person_email.value %}
-                      <a class="email" href="mailto:{{ content.field_person_email }}" itemprop="email">{{ content.field_person_email }}</a>
+                      <a class="email" href="mailto:{{ node.field_person_email.value|lower }}" itemprop="email">{{ node.field_person_email.value|lower }}</a>
                     {%  else %}
-                     <a class="email" href="mailto:{{ node.field_my_unl_id.entity.field_mail.value }}" itemprop="email">{{ node.field_my_unl_id.entity.field_mail.value }}</a>
+                      <a class="email" href="mailto:{{ node.field_my_unl_id.entity.field_mail.value|lower }}" itemprop="email">{{ node.field_my_unl_id.entity.field_mail.value|lower }}</a>
                     {% endif %}
-                </div>
+                  </div>
+                {% endif %}
+
               </div>
+
             </div>
           </div>
+
+          {% if node.body.value or node.field_my_unl_id.entity.field_knowledge_bio.value %}
           <div class="bp2-wdn-col-five-sevenths wdn-pull-right">
             <div class="card">
               <div class="card-content">
-                  {% if content.body or node.field_my_unl_id.entity.field_knowledge_bio.value %}
                 <div class="directory-knowledge-section directory-knowledge-section-bio">
                     {% if node.body.value is not empty %}
                       {{ content.body }}
@@ -199,10 +211,11 @@
                       {% endfor %}
                   </ul>
                 </div>
-                  {% endif %}
               </div>
             </div>
           </div>
+          {% endif %}
+
         </div>
       </div>
     </div>
