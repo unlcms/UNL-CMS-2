@@ -14,3 +14,21 @@ function unl_singularity_preprocess_field(&$variables) {
     }
   }
 }
+
+/**
+ * Implements template_preprocess_paragraph__PARAGRAPH_TYPE().
+ */
+function unl_singularity_preprocess_paragraph__bg_image_container(&$variables) {
+  if (!$variables['paragraph']->field_bg_image->isEmpty()) {
+    $image = file_create_url($variables['paragraph']->field_bg_image->entity->getFileUri());
+    $variables['attributes']['style'][] = 'background-image: url("' . $image . '");';
+
+    if ((int)$variables['paragraph']->field_bg_image_tile->getString()) {
+      $variables['attributes']['style'][] = 'background-repeat: repeat;';
+    }
+    else {
+      $variables['attributes']['style'][] = 'background-size: cover;';
+      $variables['attributes']['style'][] = 'background-position: center center;';
+    }
+  }
+}

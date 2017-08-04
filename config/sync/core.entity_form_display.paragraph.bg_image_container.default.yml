@@ -1,0 +1,52 @@
+uuid: be88d475-fad7-4ead-9687-9454cb50e0d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bg_image_container.field_bg_image
+    - field.field.paragraph.bg_image_container.field_bg_image_tile
+    - field.field.paragraph.bg_image_container.field_nested_content
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.bg_image_container
+  module:
+    - image
+    - imce
+    - paragraphs
+id: paragraph.bg_image_container.default
+targetEntityType: paragraph
+bundle: bg_image_container
+mode: default
+content:
+  field_bg_image:
+    weight: 0
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+    type: image_image
+    region: content
+  field_bg_image_tile:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_nested_content:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,38 @@
+uuid: fd5ecc69-6aee-44ba-97fa-fce29ecc4ffa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bg_image
+    - paragraphs.paragraphs_type.bg_image_container
+  module:
+    - image
+id: paragraph.bg_image_container.field_bg_image
+field_name: field_bg_image
+entity_type: paragraph
+bundle: bg_image_container
+label: 'Background image'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: images/bg
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: 0
+  alt_field_required: 1
+  title_field: 0
+  title_field_required: 0
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

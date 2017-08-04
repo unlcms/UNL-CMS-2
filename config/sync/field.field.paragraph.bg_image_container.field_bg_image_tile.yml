@@ -1,0 +1,23 @@
+uuid: 3e45d993-226c-4804-a044-df958abe02db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bg_image_tile
+    - paragraphs.paragraphs_type.bg_image_container
+id: paragraph.bg_image_container.field_bg_image_tile
+field_name: field_bg_image_tile
+entity_type: paragraph
+bundle: bg_image_container
+label: Tile
+description: 'Select if the image should be used as a repeating background pattern.'
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

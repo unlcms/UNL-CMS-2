@@ -1,0 +1,7 @@
+uuid: f481a28b-7168-4841-8a00-2134643ac439
+langcode: en
+status: true
+dependencies: {  }
+id: bg_image_container
+label: 'Background image container'
+behavior_plugins: {  }

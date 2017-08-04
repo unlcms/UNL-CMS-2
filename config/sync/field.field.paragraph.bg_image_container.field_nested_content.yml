@@ -1,0 +1,49 @@
+uuid: 62f9f2ce-9ee9-499b-816e-06d764ec2302
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nested_content
+    - paragraphs.paragraphs_type.bg_image_container
+  module:
+    - entity_reference_revisions
+id: paragraph.bg_image_container.field_nested_content
+field_name: field_nested_content
+entity_type: paragraph
+bundle: bg_image_container
+label: 'Nested content'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      bg_image_container:
+        weight: '9'
+        enabled: 0
+      columns_equal:
+        weight: '10'
+        enabled: 0
+      content_reference:
+        weight: '11'
+        enabled: 0
+      html:
+        weight: '12'
+        enabled: 0
+      wdn_events:
+        weight: '13'
+        enabled: 0
+      wdn_hero:
+        weight: '14'
+        enabled: 0
+      wdn_quote:
+        weight: '15'
+        enabled: 0
+      wdn_text_band:
+        weight: '16'
+        enabled: 0
+field_type: entity_reference_revisions
