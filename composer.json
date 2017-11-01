@@ -106,14 +106,8 @@
                 "Configurable entities as group content": "patches/2797793-13.patch",
                 "group/{group}/node/create use's the permissions of group/{group}/node/add": "patches/2881769-3.patch"
             },
-            "drupal/groupmenu": {
-                "2885037 - Make /group/%/menus more like /group/%/nodes": "patches/2885037-3.patch"
-            },
             "drupal/imce": {
                 "Don't auto-populate the Alternative Text with the image filename": "patches/2884755-2.patch"
-            },
-            "drupal/theme_change": {
-                "2887872 - Initialize vars and fix 'wilcard' typos": "patches/theme_change-init-and-typos.patch"
             },
             "drush/drush": {
                 "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch",
