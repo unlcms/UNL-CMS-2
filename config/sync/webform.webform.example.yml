@@ -14,6 +14,7 @@ css: ''
 javascript: ''
 settings:
   ajax: false
+  ajax_scroll_top: form
   page: true
   page_submit_path: ''
   page_confirm_path: ''
@@ -43,8 +44,9 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_start_label: ''
-  wizard_complete: true
-  wizard_complete_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -77,6 +79,8 @@ settings:
   results_disabled_ignore: false
   token_update: false
   form_closed_message: ''
+  wizard_comfirmation: true
+  wizard_comfirmation_label: ''
 access:
   create:
     roles:

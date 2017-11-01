@@ -13,7 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.wdn_hero
   module:
     - file
-    - image
+    - focal_point
     - imce
     - link
 id: paragraph.wdn_hero.default
@@ -50,10 +50,12 @@ content:
     settings:
       preview_image_style: medium
       progress_indicator: throbber
+      preview_link: true
+      offsets: '50,50'
     third_party_settings:
       imce:
         enabled: false
-    type: image_image
+    type: image_focal_point
     region: content
   field_hero_video:
     weight: 5

@@ -9,7 +9,7 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.bg_image_container
   module:
-    - image
+    - focal_point
     - imce
     - paragraphs
 id: paragraph.bg_image_container.default
@@ -22,10 +22,12 @@ content:
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
+      preview_link: true
+      offsets: '50,50'
     third_party_settings:
       imce:
         enabled: true
-    type: image_image
+    type: image_focal_point
     region: content
   field_bg_image_tile:
     type: boolean_checkbox

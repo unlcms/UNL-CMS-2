@@ -6,7 +6,7 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - image
+    - focal_point
     - path
     - user
 _core:
@@ -35,10 +35,12 @@ content:
     weight: 6
     region: content
   user_picture:
-    type: image_image
+    type: image_focal_point
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
     weight: -1
     region: content

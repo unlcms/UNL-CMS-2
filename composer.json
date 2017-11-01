@@ -14,7 +14,6 @@
         "drupal/memcache": "2.0-alpha2",
         "drupal/menu_block": "1.4",
         "drupal/metatag": "^1.0",
-        "drupal/file_entity": "^2.0",
         "drupal/scheduler": "^1.0",
         "unlcms/unl_fourone": "*",
         "unlcms/unl_cas": "*",

@@ -1,21 +1,17 @@
-uuid: 4e8d4bbd-3bf6-4db5-83c3-87f1bcce3696
+uuid: 9c83b8b0-a395-42c9-b411-c255e1e1ce61
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.group_content.group_roles
   module:
-    - group
+    - dblog
     - user
-_core:
-  default_config_hash: VbvlMutXPE0EiR18Bv3ko8ils0ieg3fnz072bTkskAY
-id: group_members
-label: 'Group members'
-module: group
-description: ''
+id: watchdog
+label: Watchdog
+module: views
+description: 'Recent log messages'
 tag: ''
-base_table: group_content_field_data
-base_field: id
+base_table: watchdog
+base_field: wid
 core: 8.x
 display:
   default:
@@ -25,11 +21,11 @@ display:
     position: 0
     display_options:
       access:
-        type: group_permission
+        type: perm
         options:
-          group_permission: 'administer members'
+          perm: 'access site reports'
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -42,25 +38,20 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
-          reset_button: false
+          submit_button: Filter
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: mini
         options:
           items_per_page: 50
           offset: 0
           id: 0
           total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -69,97 +60,393 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: table
         options:
           grouping: {  }
-          row_class: ''
+          row_class: '{{ type }} {{ severity }}'
           default_row_class: true
           override: true
-          sticky: true
+          sticky: false
           caption: ''
           summary: ''
           description: ''
           columns:
+            nothing: nothing
+            wid: wid
+            severity: severity
+            type: type
+            timestamp: timestamp
+            message: message
             name: name
-            group_roles: group_roles
-            changed: changed
-            created: created
-            view_group_content: view_group_content
-            edit_group_content: edit_group_content
-            delete_group_content: delete_group_content
-            dropbutton: dropbutton
+            link: link
           info:
+            nothing:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-medium
+            wid:
+              sortable: false
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-low
+            severity:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-low
+            type:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-medium
+            timestamp:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-low
+            message:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             name:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
-              responsive: ''
-            group_roles:
+              responsive: priority-medium
+            link:
               align: ''
               separator: ''
               empty_column: false
-              responsive: ''
-            changed:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            created:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            view_group_content:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            edit_group_content:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            delete_group_content:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            dropbutton:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: true
+              responsive: priority-low
+          default: wid
+          empty_table: false
       row:
         type: fields
-        options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
       fields:
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: Icon
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: icon
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
+        wid:
+          id: wid
+          table: watchdog
+          field: wid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: WID
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: standard
+        severity:
+          id: severity
+          table: watchdog
+          field: severity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Severity
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          machine_name: false
+          plugin_id: machine_name
+        type:
+          id: type
+          table: watchdog
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Type
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: standard
+        timestamp:
+          id: timestamp
+          table: watchdog
+          field: timestamp
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Date
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          date_format: short
+          custom_date_format: ''
+          timezone: ''
+          plugin_id: date
+        message:
+          id: message
+          table: watchdog
+          field: message
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Message
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: 'admin/reports/dblog/event/{{ wid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: '{{ message }}'
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 56
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: true
+            trim: true
+            preserve_tags: ''
+            html: true
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          replace_variables: true
+          plugin_id: dblog_message
         name:
           id: name
           table: users_field_data
           field: name
-          relationship: gc__user
+          relationship: uid
           group_type: group
           admin_label: ''
           label: User
@@ -220,360 +507,10 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-        group_roles:
-          id: group_roles
-          table: group_content__group_roles
-          field: group_roles
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Roles
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: '<div class="item-list"><ul><li>&lt;none&gt;</li></ul></div>'
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: ul
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        changed:
-          id: changed
-          table: group_content_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Updated
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: short
-            custom_date_format: ''
-            timezone: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: group_content
-          entity_field: changed
-          plugin_id: field
-        created:
-          id: created
-          table: group_content_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Joined
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: short
-            custom_date_format: ''
-            timezone: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: group_content
-          entity_field: created
-          plugin_id: field
-        view_group_content:
-          id: view_group_content
-          table: group_content
-          field: view_group_content
-          relationship: none
-          group_type: group
-          admin_label: 'View member link'
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: 'View member'
-          entity_type: group_content
-          plugin_id: entity_link
-        edit_group_content:
-          id: edit_group_content
-          table: group_content
-          field: edit_group_content
-          relationship: none
-          group_type: group
-          admin_label: 'Edit member link'
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: 'Edit member'
-          entity_type: group_content
-          plugin_id: entity_link_edit
-        delete_group_content:
-          id: delete_group_content
-          table: group_content
-          field: delete_group_content
-          relationship: none
-          group_type: group
-          admin_label: 'Remove member link'
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: 'Remove member'
-          entity_type: group_content
-          plugin_id: entity_link_delete
-        dropbutton:
-          id: dropbutton
-          table: views
-          field: dropbutton
+        link:
+          id: link
+          table: watchdog
+          field: link
           relationship: none
           group_type: group
           admin_label: ''
@@ -618,120 +555,156 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          fields:
-            view_group_content: view_group_content
-            edit_group_content: edit_group_content
-            delete_group_content: delete_group_content
-            name: '0'
-            group_roles: '0'
-            changed: '0'
-            created: '0'
-          destination: true
-          plugin_id: dropbutton
-      filters: {  }
-      sorts: {  }
+          plugin_id: dblog_operations
+      filters:
+        type:
+          id: type
+          table: watchdog
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: Type
+            description: ''
+            use_operator: false
+            operator: type_op
+            identifier: type
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: dblog_types
+        severity:
+          id: severity
+          table: watchdog
+          field: severity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: severity_op
+            label: Severity
+            description: ''
+            use_operator: false
+            operator: severity_op
+            identifier: severity
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: in_operator
+      sorts:
+        wid:
+          id: wid
+          table: watchdog
+          field: wid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      title: 'Recent log messages'
       header: {  }
       footer: {  }
       empty:
-        area_text_custom:
-          id: area_text_custom
+        area:
+          id: area
           table: views
-          field: area_text_custom
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No members available.'
-          plugin_id: text_custom
+          content:
+            value: 'No log messages available.'
+            format: basic_html
+          plugin_id: text
       relationships:
-        gc__user:
-          id: gc__user
-          table: group_content_field_data
-          field: gc__user
+        uid:
+          id: uid
+          table: watchdog
+          field: uid
           relationship: none
           group_type: group
-          admin_label: 'Member account'
-          required: true
-          group_content_plugins:
-            group_membership: group_membership
-          entity_type: group_content
-          plugin_id: group_content_to_entity
-      arguments:
-        gid:
-          id: gid
-          table: group_content_field_data
-          field: gid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: 'access denied'
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: true
-          title: '{{ arguments.gid|placeholder }} members'
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          entity_type: group_content
-          entity_field: gid
-          plugin_id: numeric
+          admin_label: User
+          required: false
+          plugin_id: standard
+      arguments: {  }
       display_extenders: {  }
-      title: Members
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      css_class: admin-dblog
     cache_metadata:
       max-age: 0
       contexts:
-        - group_membership.roles.permissions
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
-      tags:
-        - 'config:field.storage.group_content.group_roles'
-  page_1:
+        - user.permissions
+      tags: {  }
+  page:
     display_plugin: page
-    id: page_1
+    id: page
     display_title: Page
     position: 1
     display_options:
       display_extenders: {  }
-      path: group/%group/members
-      menu:
-        type: tab
-        title: Members
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 20
-        context: '0'
-        menu_name: main
-        enabled: true
+      path: admin/reports/dblog
     cache_metadata:
       max-age: 0
       contexts:
-        - group_membership.roles.permissions
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
-      tags:
-        - 'config:field.storage.group_content.group_roles'
+        - user.permissions
+      tags: {  }

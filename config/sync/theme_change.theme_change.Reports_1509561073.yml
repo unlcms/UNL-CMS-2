@@ -1,0 +1,10 @@
+uuid: 8538422d-3586-4e55-afc3-f883e34f76ca
+langcode: en
+status: true
+dependencies: {  }
+id: Reports_1509561073
+label: Akau
+type: path
+path: '/group/*/nodes'
+route: ''
+theme: seven

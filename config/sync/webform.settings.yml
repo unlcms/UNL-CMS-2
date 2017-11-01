@@ -4,6 +4,7 @@ settings:
   default_form_close_message: 'Sorry...This form is closed to new submissions.'
   default_form_exception_message: 'Unable to display this webform. Please contact the site administrator.'
   default_submit_button_label: Submit
+  default_reset_button_label: Reset
   default_form_submit_once: false
   default_form_confidential_message: 'This form is confidential. You must <a href="[site:login-url]/logout?destination=[current-page:url:relative]">Log out</a> to submit it.'
   default_form_disable_back: false
@@ -15,7 +16,7 @@ settings:
   default_wizard_prev_button_label: '< Previous Page'
   default_wizard_next_button_label: 'Next Page >'
   default_wizard_start_label: Start
-  default_wizard_complete_label: Complete
+  default_wizard_confirmation_label: Complete
   default_preview_next_button_label: Preview
   default_preview_prev_button_label: '< Previous'
   default_preview_label: Preview
@@ -33,6 +34,7 @@ settings:
   confirmation_back_classes: "button\r\n"
   default_limit_total_message: 'No more submissions are permitted.'
   default_limit_user_message: 'No more submissions are permitted.'
+  default_wizard_complete_label: Complete
   default_form_closed_message: 'Sorry...This form is closed to new submissions.'
   default_form_submit_label: Submit
 assets:
@@ -51,9 +53,13 @@ export:
   header_prefix_label_delimiter: ': '
   header_prefix_key_delimiter: __
   composite_element_item_format: label
-  options_format: compact
+  options_single_format: compact
+  options_multiple_format: compact
   options_item_format: label
-  entity_reference_format: link
+  entity_reference_items:
+    - id
+    - title
+    - url
   likert_answers_format: label
   signature_format: status
   excluded_exporters: {  }
@@ -61,6 +67,7 @@ batch:
   default_batch_export_size: 500
   default_batch_update_size: 500
   default_batch_delete_size: 500
+  default_batch_email_size: 500
 purge:
   cron_size: 100
 element:
@@ -69,6 +76,8 @@ element:
   wrapper_classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
   classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
   default_description_display: ''
+  default_more_title: More
+  default_section_title_tag: h2
   default_empty_option: true
   default_empty_option_required: ''
   default_empty_option_optional: ''
@@ -95,6 +104,8 @@ mail:
   default_from_name: '[site:name]'
   default_reply_to: ''
   default_return_path: ''
+  default_sender_mail: ''
+  default_sender_name: ''
   default_subject: 'Webform submission from: [webform-submission:source-entity]'
   default_body_text: "Submitted on [webform-submission:created]\r\nSubmitted by: [webform-submission:user]\r\n\r\nSubmitted values are:\r\n[webform-submission:values]\r\n"
   default_body_html: "<p>Submitted on [webform-submission:created]</p>\r\n<p>Submitted by: [webform-submission:user]</p>\r\n<p>Submitted values are:</p>\r\n[webform-submission:values]\r\n"
@@ -107,12 +118,17 @@ ui:
   details_save: true
   dialog_disabled: false
   offcanvas_disabled: false
-  help_menu_disabled: false
+  about_disabled: false
+  promotions_disabled: false
+  description_help: true
   html_editor_disabled: false
 libraries:
   excluded_libraries:
     - jquery.chosen
-  cdn: false
+requirements:
+  cdn: true
+  bootstrap: true
+  spam: true
 langcode: en
 third_party_settings: {  }
 library:
