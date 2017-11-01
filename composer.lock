@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a3323ee8da6d0e687d64b660610dbdb",
+    "content-hash": "0ee18985067ce1f62465ffa08fd386ed",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2111,7 +2111,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/group",
-                "reference": "22a99c0e1372e94b238860b543519812579fed78"
+                "reference": "d265f2934a8751f180f32ef193f1fd1b7a20ff52"
             },
             "require": {
                 "drupal/core": "*"
@@ -2130,7 +2130,6 @@
                     }
                 },
                 "patches_applied": {
-                    "Get a token of a node's parent group to create a pathauto pattern": "patches/group_add-node-group-tokens-2774827-24.patch",
                     "More contexts needed": "patches/expand_context_to_nodes-2815971-13.patch",
                     "Configurable entities as group content": "patches/2797793-13.patch",
                     "group/{group}/node/create use's the permissions of group/{group}/node/add": "patches/2881769-3.patch"
@@ -2150,8 +2149,7 @@
             "homepage": "https://www.drupal.org/project/group",
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
-            },
-            "time": "2017-06-06 12:09:13"
+            }
         },
         {
             "name": "drupal/groupmenu",

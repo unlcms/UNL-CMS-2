@@ -38,7 +38,7 @@
         "drupal/purge": "^3.0@beta",
         "drupal/varnish_purge": "^1.4",
         "symfony/ldap": "~3.2.1",
-        "drupal/group": "1.x-dev#22a99c0e1372e94b238860b543519812579fed78",
+        "drupal/group": "1.x-dev#d265f2934a8751f180f32ef193f1fd1b7a20ff52",
         "drupal/groupmenu": "1.x-dev",
         "unlcms/group_simplecss": "*",
         "unlcms/group_subdomain": "*",
