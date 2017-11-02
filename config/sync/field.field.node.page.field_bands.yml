@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_bands
     - node.type.page
     - paragraphs.paragraphs_type.basic_text
+    - paragraphs.paragraphs_type.column
   module:
     - entity_reference_revisions
 id: node.page.field_bands
@@ -24,32 +25,39 @@ settings:
     negate: 1
     target_bundles:
       basic_text: basic_text
+      column: column
     target_bundles_drag_drop:
+      wdn_text_band:
+        weight: -23
+        enabled: false
       columns_equal:
-        weight: 8
+        weight: -22
+        enabled: false
+      grid_columns_mixed:
+        weight: -21
+        enabled: false
+      bg_image_container:
+        weight: -20
+        enabled: false
+      html:
+        weight: -19
         enabled: false
       content_reference:
-        weight: 9
+        weight: -18
         enabled: false
       basic_text:
         enabled: true
-        weight: 10
-      bg_image_container:
-        weight: 11
-        enabled: false
+        weight: -17
       wdn_events:
-        weight: 11
+        weight: -16
         enabled: false
       wdn_hero:
-        weight: 12
+        weight: -15
         enabled: false
       wdn_quote:
-        weight: 13
+        weight: -14
         enabled: false
-      html:
-        weight: 14
-        enabled: false
-      wdn_text_band:
-        weight: 14
-        enabled: false
+      column:
+        enabled: true
+        weight: -13
 field_type: entity_reference_revisions

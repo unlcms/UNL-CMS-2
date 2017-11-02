@@ -1,0 +1,65 @@
+uuid: f8ddc334-75bd-4738-9744-fe5a2201a483
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_content_plain
+    - paragraphs.paragraphs_type.basic_text
+    - paragraphs.paragraphs_type.column
+    - paragraphs.paragraphs_type.content_reference
+    - paragraphs.paragraphs_type.html
+  module:
+    - entity_reference_revisions
+id: paragraph.column.field_column_content_plain
+field_name: field_column_content_plain
+entity_type: paragraph
+bundle: column
+label: 'Column Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      basic_text: basic_text
+      content_reference: content_reference
+      html: html
+    target_bundles_drag_drop:
+      basic_text:
+        enabled: true
+        weight: 12
+      bg_image_container:
+        weight: 13
+        enabled: false
+      column:
+        weight: 14
+        enabled: false
+      columns_equal:
+        weight: 15
+        enabled: false
+      content_reference:
+        enabled: true
+        weight: 16
+      grid_columns_mixed:
+        weight: 17
+        enabled: false
+      html:
+        enabled: true
+        weight: 18
+      wdn_events:
+        weight: 19
+        enabled: false
+      wdn_hero:
+        weight: 20
+        enabled: false
+      wdn_quote:
+        weight: 21
+        enabled: false
+      wdn_text_band:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

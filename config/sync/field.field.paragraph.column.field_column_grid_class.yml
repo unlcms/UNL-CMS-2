@@ -1,0 +1,23 @@
+uuid: d18dcc97-4598-4c3c-9e6d-932d496569d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_grid_class
+    - paragraphs.paragraphs_type.column
+  module:
+    - options
+id: paragraph.column.field_column_grid_class
+field_name: field_column_grid_class
+entity_type: paragraph
+bundle: column
+label: 'Column Grid Class'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: wdn-col-one-half
+default_value_callback: ''
+settings: {  }
+field_type: list_string

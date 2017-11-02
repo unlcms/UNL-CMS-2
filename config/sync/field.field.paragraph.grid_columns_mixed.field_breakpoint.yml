@@ -1,0 +1,23 @@
+uuid: cb3c83cd-dbb2-408b-99b9-c9332504a144
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_breakpoint
+    - paragraphs.paragraphs_type.grid_columns_mixed
+  module:
+    - options
+id: paragraph.grid_columns_mixed.field_breakpoint
+field_name: field_breakpoint
+entity_type: paragraph
+bundle: grid_columns_mixed
+label: Breakpoint
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '768'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

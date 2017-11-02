@@ -1,0 +1,33 @@
+uuid: a23fb2a7-8854-4beb-a872-8b1c06cef59e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid_columns_mixed.field_breakpoint
+    - field.field.paragraph.grid_columns_mixed.field_columns
+    - paragraphs.paragraphs_type.grid_columns_mixed
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.grid_columns_mixed.default
+targetEntityType: paragraph
+bundle: grid_columns_mixed
+mode: default
+content:
+  field_breakpoint:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_columns:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

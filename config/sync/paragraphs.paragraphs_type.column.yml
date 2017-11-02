@@ -1,0 +1,9 @@
+uuid: cdc417f1-a770-4079-bd62-46de658efdc2
+langcode: en
+status: true
+dependencies: {  }
+id: column
+label: Column
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

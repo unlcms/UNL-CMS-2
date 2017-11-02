@@ -1,0 +1,9 @@
+uuid: db54ae12-91ec-4cbd-ab06-59f10362471e
+langcode: en
+status: true
+dependencies: {  }
+id: grid_columns_mixed
+label: 'Grid (Mixed-width Columns)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

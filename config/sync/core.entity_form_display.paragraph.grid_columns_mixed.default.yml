@@ -1,0 +1,37 @@
+uuid: 603ef585-16b8-4049-b401-3005bf66ef86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid_columns_mixed.field_breakpoint
+    - field.field.paragraph.grid_columns_mixed.field_columns
+    - paragraphs.paragraphs_type.grid_columns_mixed
+  module:
+    - paragraphs
+id: paragraph.grid_columns_mixed.default
+targetEntityType: paragraph
+bundle: grid_columns_mixed
+mode: default
+content:
+  field_breakpoint:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_columns:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

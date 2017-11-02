@@ -1,0 +1,11 @@
+{% extends "paragraph.html.twig" %}
+
+{% set breakpoint = content.field_breakpoint['#items'].getString() is defined ? 'bp' ~ content.field_breakpoint['#items'].getString() ~ '-' : '' %}
+
+{% block content %}
+  <div class="wdn-inner-wrapper">
+    <div class="wdn-grid-set">
+      {{ content.field_columns }}
+    </div>
+  </div>
+{% endblock %}

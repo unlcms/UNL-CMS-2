@@ -14,7 +14,7 @@
 
 {% block content %}
   <div class="wdn-inner-wrapper">
-    <div{{ attributes.addClass(grid_set_class) }}>
+    <div{{ attributes|without('class').addClass(grid_set_class) }}>
       {{ content.field_column_content }}
     </div>
   </div>

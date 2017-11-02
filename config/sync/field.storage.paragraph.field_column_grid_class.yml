@@ -1,0 +1,109 @@
+uuid: e07e608c-ce8b-4993-aac3-55f8ed5b8a0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_column_grid_class
+field_name: field_column_grid_class
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: wdn-col-full
+      label: wdn-col-full
+    -
+      value: wdn-col-one-half
+      label: wdn-col-one-half
+    -
+      value: wdn-col-one-third
+      label: wdn-col-one-third
+    -
+      value: wdn-col-two-thirds
+      label: wdn-col-two-thirds
+    -
+      value: wdn-col-one-fourth
+      label: wdn-col-one-fourth
+    -
+      value: wdn-col-three-fourths
+      label: wdn-col-three-fourths
+    -
+      value: wdn-col-one-fifth
+      label: wdn-col-one-fifth
+    -
+      value: wdn-col-two-fifths
+      label: wdn-col-two-fifths
+    -
+      value: wdn-col-three-fifths
+      label: wdn-col-three-fifths
+    -
+      value: wdn-col-four-fifths
+      label: wdn-col-four-fifths
+    -
+      value: wdn-col-one-sixth
+      label: wdn-col-one-sixth
+    -
+      value: wdn-col-five-sixths
+      label: wdn-col-five-sixths
+    -
+      value: wdn-col-one-seventh
+      label: wdn-col-one-seventh
+    -
+      value: wdn-col-two-sevenths
+      label: wdn-col-two-sevenths
+    -
+      value: wdn-col-three-sevenths
+      label: wdn-col-three-sevenths
+    -
+      value: wdn-col-four-sevenths
+      label: wdn-col-four-sevenths
+    -
+      value: wdn-col-five-sevenths
+      label: wdn-col-five-sevenths
+    -
+      value: wdn-col-six-sevenths
+      label: wdn-col-six-sevenths
+    -
+      value: wdn-col-one-eighth
+      label: wdn-col-one-eighth
+    -
+      value: wdn-col-three-eighths
+      label: wdn-col-three-eighths
+    -
+      value: wdn-col-five-eighths
+      label: wdn-col-five-eighths
+    -
+      value: wdn-col-seven-eighths
+      label: wdn-col-seven-eighths
+    -
+      value: wdn-col-one-ninth
+      label: wdn-col-one-ninth
+    -
+      value: wdn-col-two-ninths
+      label: wdn-col-two-ninths
+    -
+      value: wdn-col-four-ninths
+      label: wdn-col-four-ninths
+    -
+      value: wdn-col-five-ninths
+      label: wdn-col-five-ninths
+    -
+      value: wdn-col-seven-ninths
+      label: wdn-col-seven-ninths
+    -
+      value: wdn-col-eight-ninths
+      label: wdn-col-eight-ninths
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
