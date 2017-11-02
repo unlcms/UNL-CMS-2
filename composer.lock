@@ -3230,17 +3230,17 @@
         },
         {
             "name": "drupal/varnish_purge",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/varnish_purge",
-                "reference": "8.x-1.8"
+                "reference": "8.x-1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.8.zip",
-                "reference": "8.x-1.8",
-                "shasum": "9592cce920731a40197305e087af5291387750d3"
+                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "ecc6857c81c493609b360e659bab1fce65ceec3d"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -3256,8 +3256,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.8",
-                    "datestamp": "1509359585",
+                    "version": "8.x-1.9",
+                    "datestamp": "1509622084",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3331,17 +3331,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.0.0-beta21",
+            "version": "5.0.0-beta22",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "8.x-5.0-beta21"
+                "reference": "8.x-5.0-beta22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-beta21.zip",
-                "reference": "8.x-5.0-beta21",
-                "shasum": "0d03eddb81e73f436cb2b6b0a5d1bb1e333b0e84"
+                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-beta22.zip",
+                "reference": "8.x-5.0-beta22",
+                "shasum": "5254e03501c00fc6a25c051f04b28bbe1358e44f"
             },
             "require": {
                 "drupal/core": "*"
@@ -3352,8 +3352,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta21",
-                    "datestamp": "1509363484",
+                    "version": "8.x-5.0-beta22",
+                    "datestamp": "1509576185",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -3755,16 +3755,16 @@
         },
         {
             "name": "giggsey/locale",
-            "version": "1.3",
+            "version": "1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/Locale.git",
-                "reference": "e6eb1883c1452df7734a03fb183a2ec5175c16f2"
+                "reference": "e351a72ad6af6b41b690efdeffe1138fe5cc8b9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/Locale/zipball/e6eb1883c1452df7734a03fb183a2ec5175c16f2",
-                "reference": "e6eb1883c1452df7734a03fb183a2ec5175c16f2",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/e351a72ad6af6b41b690efdeffe1138fe5cc8b9c",
+                "reference": "e351a72ad6af6b41b690efdeffe1138fe5cc8b9c",
                 "shasum": ""
             },
             "require": {
@@ -3773,7 +3773,7 @@
             "require-dev": {
                 "pear/pear-core-minimal": "^1.9",
                 "pear/pear_exception": "^1.0",
-                "pear/versioncontrol_git": "dev-master",
+                "pear/versioncontrol_git": "^0.5",
                 "phing/phing": "~2.7",
                 "phpunit/phpunit": "^4.8|^5.0",
                 "satooshi/php-coveralls": "^1.0",
@@ -3800,7 +3800,7 @@
                 }
             ],
             "description": "Locale functions required by libphonenumber-for-php",
-            "time": "2017-04-07T18:45:42+00:00"
+            "time": "2017-11-01T21:34:27+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -6202,7 +6202,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_breadcrumbs.git",
-                "reference": "6c31e19dfd198d7747d39c9ae0888a2d8d93ba0a"
+                "reference": "ab89546cac1199d315a7451c74ea62c725a81e24"
             },
             "type": "drupal-module",
             "authors": [
@@ -6213,7 +6213,7 @@
                 }
             ],
             "description": "UNL breadcrumb implementation",
-            "time": "2017-01-24 20:40:36"
+            "time": "2017-11-02 15:12:19"
         },
         {
             "name": "unlcms/unl_cas",
