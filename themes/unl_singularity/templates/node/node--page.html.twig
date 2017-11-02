@@ -13,7 +13,7 @@
 <article{% if page %}{{ attributes.addClass('wdn-band').addClass(classes) }}{% else %}{{ attributes.addClass(classes) }}{% endif %}>
 
   {{ title_prefix }}
-  {% if not page and view_mode != "full" %}
+  {% if not page and view_mode != 'full' %}
     <h2{{ title_attributes }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h2>
@@ -31,13 +31,13 @@
   {% endif %}
 
   {% if node.body.value %}
-    {% if page %}<div class="wdn-inner-wrapper wdn-inner-padding-no-top">{% endif %}
+    {% if view_mode == 'full' %}<div class="wdn-inner-wrapper wdn-inner-padding-no-top">{% endif %}
       <div class="wdn-grid-set"{{ content_attributes }}>
         <div class="wdn-col-full bp960-wdn-col-four-fifths bp1280-wdn-col-three-fourths bp1600-wdn-col-two-thirds">
           {{ content.body }}
         </div>
       </div>
-    {% if page %}</div>{% endif %}
+    {% if view_mode == 'full' %}</div>{% endif %}
   {% endif %}
 
   {{ content.field_bands }}
