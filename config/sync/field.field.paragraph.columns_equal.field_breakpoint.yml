@@ -1,0 +1,23 @@
+uuid: 8c0a63b9-a4dd-475d-977c-c3ed35f104fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_breakpoint
+    - paragraphs.paragraphs_type.columns_equal
+  module:
+    - options
+id: paragraph.columns_equal.field_breakpoint
+field_name: field_breakpoint
+entity_type: paragraph
+bundle: columns_equal
+label: Breakpoint
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '768'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

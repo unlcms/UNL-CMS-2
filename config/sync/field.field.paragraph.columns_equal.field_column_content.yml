@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_column_content
+    - paragraphs.paragraphs_type.basic_text
     - paragraphs.paragraphs_type.columns_equal
     - paragraphs.paragraphs_type.content_reference
-    - paragraphs.paragraphs_type.wdn_text_band
+    - paragraphs.paragraphs_type.html
   module:
     - entity_reference_revisions
 id: paragraph.columns_equal.field_column_content
@@ -22,26 +23,37 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
+      basic_text: basic_text
       content_reference: content_reference
-      wdn_text_band: wdn_text_band
+      html: html
     target_bundles_drag_drop:
       columns_equal:
-        weight: 7
+        weight: -19
         enabled: false
+      basic_text:
+        enabled: true
+        weight: -18
       content_reference:
         enabled: true
-        weight: 8
+        weight: -17
       wdn_events:
-        weight: 9
+        weight: -16
         enabled: false
       wdn_hero:
-        weight: 10
+        weight: -15
+        enabled: false
+      bg_image_container:
+        weight: -14
         enabled: false
       wdn_quote:
-        weight: 11
+        weight: -13
         enabled: false
       wdn_text_band:
+        weight: -12
+        enabled: false
+      html:
         enabled: true
-        weight: 12
+        weight: -11
 field_type: entity_reference_revisions

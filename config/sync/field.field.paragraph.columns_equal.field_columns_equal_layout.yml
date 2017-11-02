@@ -1,0 +1,23 @@
+uuid: 8a50d593-3fcf-4c50-b4c5-4a922850e295
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns_equal_layout
+    - paragraphs.paragraphs_type.columns_equal
+  module:
+    - options
+id: paragraph.columns_equal.field_columns_equal_layout
+field_name: field_columns_equal_layout
+entity_type: paragraph
+bundle: columns_equal
+label: 'Number of Columns'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '2'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

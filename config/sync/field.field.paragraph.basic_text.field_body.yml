@@ -1,0 +1,29 @@
+uuid: 4972a4cb-8c2c-429d-8e62-317b4bf2ccb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.basic_text
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    wysiwyg: wysiwyg
+    html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.basic_text.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: basic_text
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

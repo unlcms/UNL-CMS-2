@@ -1,0 +1,119 @@
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 14
+template: false
+id: global_nebraska_request_a_visit
+title: 'Global Nebraska Request a Visit'
+description: ''
+category: ''
+elements: "institution_name:\n  '#type': textfield\n  '#title': 'Name of International Institution or Organization (include website address):'\n  '#required': true\ncontact_name:\n  '#type': textfield\n  '#title': 'Contact Name'\n  '#required': true\ncontact_email_address:\n  '#type': email\n  '#title': 'Contact Email Address'\n  '#required': true\nlist_all_members_of_your_delegation_include_names_academic_affil:\n  '#type': textfield\n  '#title': 'List all members of your delegation. Include names, academic affiliation, title and email address:'\n  '#required': true\ndescribe_your_institution_or_organization_s_mission_and_identify:\n  '#type': textfield\n  '#title': 'Describe your institution or organization''s mission and identify academic strengths, programs, and/or disciplines:'\n  '#required': true\nproposed_arrival_date:\n  '#type': date\n  '#title': 'Proposed Arrival Date'\n  '#min': today\n  '#max': '+2 years'\nproposed_departure_date:\n  '#type': date\n  '#title': 'Proposed Departure Date'\n  '#min': today\n  '#max': '+5 years'\nwhat_is_the_purpose_of_your_visit_indicate_expected_outcomes_as_:\n  '#type': textfield\n  '#title': 'What is the purpose of your visit? Indicate expected outcomes, as necessary:'\nif_known_include_contact_information_of_unl_faculty_or_administr:\n  '#type': textfield\n  '#title': 'If known: include contact information of UNL faculty or administrators with whom the delegation hopes to meet. Please be aware t'\nwhat_types_of_collaboration_if_any_already_exist_with_unl_facult:\n  '#type': textarea\n  '#title': 'What types of collaboration, if any, already exist with UNL faculty or administrators (e.g., collaborative research)?'\nindicate_if_your_primary_interest_focuses_on_agriculture_and_nat:\n  '#type': textarea\n  '#title': 'Indicate if your primary interest focuses on Agriculture and Natural Resources. If so, please note specific areas or disciplines'\nplease_provide_additional_information_about_your_visit_as_necess:\n  '#type': textarea\n  '#title': 'Please provide additional information about your visit, as necessary:'\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+  wizard_comfirmation: true
+  wizard_comfirmation_label: ''
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+uuid: 83ae7204-abd5-4832-ba52-20b2c4389104

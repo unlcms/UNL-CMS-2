@@ -1,0 +1,43 @@
+uuid: af8c583d-066a-4ca4-81ad-be32db697044
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_breakpoint
+field_name: field_breakpoint
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '480'
+      label: '480'
+    -
+      value: '640'
+      label: '640'
+    -
+      value: '768'
+      label: '768'
+    -
+      value: '960'
+      label: '960'
+    -
+      value: '1280'
+      label: '1280'
+    -
+      value: '1600'
+      label: '1600'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

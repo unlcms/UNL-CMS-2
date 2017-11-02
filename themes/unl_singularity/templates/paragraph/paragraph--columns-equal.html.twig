@@ -1,7 +1,21 @@
 {% extends "paragraph.html.twig" %}
 
+{% set breakpoint = content.field_breakpoint['#items'].getString() is defined ? 'bp' ~ content.field_breakpoint['#items'].getString() ~ '-' : '' %}
+{% set grid_set_class = [
+    1 == content.field_columns_equal_layout['#items'].getString() ? breakpoint ~ 'wdn-grid-set-full',
+    2 == content.field_columns_equal_layout['#items'].getString() ? breakpoint ~ 'wdn-grid-set-halves',
+    3 == content.field_columns_equal_layout['#items'].getString() ? breakpoint ~ 'wdn-grid-set-thirds',
+    4 == content.field_columns_equal_layout['#items'].getString() ? breakpoint ~ 'wdn-grid-set-fourths',
+    5 == content.field_columns_equal_layout['#items'].getString() ? breakpoint ~ 'wdn-grid-set-fifths',
+    6 == content.field_columns_equal_layout['#items'].getString() ? breakpoint ~ 'wdn-grid-set-sixths',
+    7 == content.field_columns_equal_layout['#items'].getString() ? breakpoint ~ 'wdn-grid-set-sevenths',
+  ]
+%}
+
 {% block content %}
   <div class="wdn-inner-wrapper">
-    {{ content }}
+    <div{{ attributes.addClass(grid_set_class) }}>
+      {{ content.field_column_content }}
+    </div>
   </div>
 {% endblock %}

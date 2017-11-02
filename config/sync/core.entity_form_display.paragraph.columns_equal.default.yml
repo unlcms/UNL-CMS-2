@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.columns_equal.field_breakpoint
     - field.field.paragraph.columns_equal.field_column_content
+    - field.field.paragraph.columns_equal.field_columns_equal_layout
     - paragraphs.paragraphs_type.columns_equal
   module:
     - paragraphs
@@ -12,9 +14,15 @@ targetEntityType: paragraph
 bundle: columns_equal
 mode: default
 content:
+  field_breakpoint:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_column_content:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -23,6 +31,12 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
+  field_columns_equal_layout:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true

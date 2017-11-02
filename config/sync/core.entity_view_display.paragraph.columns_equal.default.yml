@@ -3,15 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.columns_equal.field_breakpoint
     - field.field.paragraph.columns_equal.field_column_content
+    - field.field.paragraph.columns_equal.field_columns_equal_layout
     - paragraphs.paragraphs_type.columns_equal
   module:
     - entity_reference_revisions
+    - options
 id: paragraph.columns_equal.default
 targetEntityType: paragraph
 bundle: columns_equal
 mode: default
 content:
+  field_breakpoint:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_column_content:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -21,4 +31,11 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_columns_equal_layout:
+    type: list_key
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

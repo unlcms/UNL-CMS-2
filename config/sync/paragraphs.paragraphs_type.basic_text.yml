@@ -1,9 +1,9 @@
-uuid: ee7788f7-aee7-4c0b-adb1-22faf76f8b50
+uuid: de3f2509-e984-46d5-8d43-fdb9f266477b
 langcode: en
 status: true
 dependencies: {  }
-id: columns_equal
-label: 'Grid (Proportionate Columns)'
+id: basic_text
+label: 'Basic text'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }

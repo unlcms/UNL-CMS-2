@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_bands
     - node.type.page
+    - paragraphs.paragraphs_type.basic_text
   module:
     - entity_reference_revisions
 id: node.page.field_bands
@@ -20,7 +21,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    negate: 1
+    target_bundles:
+      basic_text: basic_text
     target_bundles_drag_drop:
       columns_equal:
         weight: 8
@@ -28,8 +31,11 @@ settings:
       content_reference:
         weight: 9
         enabled: false
-      content_reference_teaser:
+      basic_text:
+        enabled: true
         weight: 10
+      bg_image_container:
+        weight: 11
         enabled: false
       wdn_events:
         weight: 11
@@ -39,6 +45,9 @@ settings:
         enabled: false
       wdn_quote:
         weight: 13
+        enabled: false
+      html:
+        weight: 14
         enabled: false
       wdn_text_band:
         weight: 14

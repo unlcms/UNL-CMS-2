@@ -3,5 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: content_reference
-label: 'Include Existing Content'
+label: 'Existing content reference'
+icon_uuid: null
+description: ''
 behavior_plugins: {  }
