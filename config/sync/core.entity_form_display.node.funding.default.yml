@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.funding.field_teaser_summary
     - node.type.funding
   module:
+    - allowed_formats
     - datetime
     - datetime_range
     - field_group
@@ -175,7 +176,10 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textarea
     region: content
   field_funding_full_description:
@@ -183,7 +187,10 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textarea
     region: content
   field_funding_how_to_apply:
@@ -191,7 +198,10 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textarea
     region: content
   field_funding_periods:
