@@ -1179,16 +1179,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.4.1",
+            "version": "8.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "dbdd31c4e1a21d2188622107c0b856f5c1b0e56e"
+                "reference": "68d25c07b7306340900abc4020c38683a817f0eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/dbdd31c4e1a21d2188622107c0b856f5c1b0e56e",
-                "reference": "dbdd31c4e1a21d2188622107c0b856f5c1b0e56e",
+                "url": "https://api.github.com/repos/drupal/core/zipball/68d25c07b7306340900abc4020c38683a817f0eb",
+                "reference": "68d25c07b7306340900abc4020c38683a817f0eb",
                 "shasum": ""
             },
             "require": {
@@ -1369,7 +1369,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2017-11-01T18:38:24+00:00"
+            "time": "2017-11-03T13:20:16+00:00"
         },
         {
             "name": "drupal/crop",
@@ -3331,17 +3331,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.0.0-beta22",
+            "version": "5.0.0-beta23",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "8.x-5.0-beta22"
+                "reference": "8.x-5.0-beta23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-beta22.zip",
-                "reference": "8.x-5.0-beta22",
-                "shasum": "5254e03501c00fc6a25c051f04b28bbe1358e44f"
+                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-beta23.zip",
+                "reference": "8.x-5.0-beta23",
+                "shasum": "b62f90be0adf25afba7932401f8b06eea69c4b83"
             },
             "require": {
                 "drupal/core": "*"
@@ -3352,8 +3352,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta22",
-                    "datestamp": "1509576185",
+                    "version": "8.x-5.0-beta23",
+                    "datestamp": "1509673984",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -6135,7 +6135,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/group_simplecss.git",
-                "reference": "6766df58495834e68ae19df37970380b302e123b"
+                "reference": "a2efe2b0bdfd12e446b7784a93d2c2192bb62c37"
             },
             "type": "drupal-module",
             "authors": [
@@ -6146,7 +6146,7 @@
                 }
             ],
             "description": "Add CSS to a Group.",
-            "time": "2017-06-29 19:57:54"
+            "time": "2017-11-02 16:02:48"
         },
         {
             "name": "unlcms/group_subdomain",
