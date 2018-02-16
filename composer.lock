@@ -1032,7 +1032,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/asset_injector"
             },
-            "time": "2017-05-25 16:24:20"
+            "time": "2017-05-25T16:24:20+00:00"
         },
         {
             "name": "drupal/ckeditor_codemirror",
@@ -1134,7 +1134,7 @@
                 "issues": "http://drupal.org/project/config_ignore",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             },
-            "time": "2017-04-26 18:09:46"
+            "time": "2017-04-26T18:09:46+00:00"
         },
         {
             "name": "drupal/config_installer",
@@ -1175,20 +1175,20 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/config_installer"
             },
-            "time": "2017-09-22 11:04:43"
+            "time": "2017-09-22T11:04:43+00:00"
         },
         {
             "name": "drupal/core",
-            "version": "8.4.2",
+            "version": "8.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "68d25c07b7306340900abc4020c38683a817f0eb"
+                "reference": "c6585ffaea5df4ed529e2bdf4371850f8fc3b88c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/68d25c07b7306340900abc4020c38683a817f0eb",
-                "reference": "68d25c07b7306340900abc4020c38683a817f0eb",
+                "url": "https://api.github.com/repos/drupal/core/zipball/c6585ffaea5df4ed529e2bdf4371850f8fc3b88c",
+                "reference": "c6585ffaea5df4ed529e2bdf4371850f8fc3b88c",
                 "shasum": ""
             },
             "require": {
@@ -1369,7 +1369,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2017-11-03T13:20:16+00:00"
+            "time": "2018-01-03T19:27:53+00:00"
         },
         {
             "name": "drupal/crop",
@@ -1893,7 +1893,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_css"
             },
-            "time": "2016-02-29 15:27:30"
+            "time": "2016-02-29T15:27:30+00:00"
         },
         {
             "name": "drupal/field_group",
@@ -2115,7 +2115,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/group"
             },
-            "time": "2017-10-20 11:50:51"
+            "time": "2017-10-20T11:50:51+00:00"
         },
         {
             "name": "drupal/groupmenu",
@@ -2165,7 +2165,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/groupmenu"
             },
-            "time": "2017-10-09 08:14:16"
+            "time": "2017-10-09T08:14:16+00:00"
         },
         {
             "name": "drupal/honeypot",
@@ -2410,7 +2410,7 @@
                 "issues": "http://drupal.org/project/issues/libraries",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             },
-            "time": "2017-03-15 17:04:08"
+            "time": "2017-03-15T17:04:08+00:00"
         },
         {
             "name": "drupal/memcache",
@@ -3327,7 +3327,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/view_mode_selector"
             },
-            "time": "2017-04-26 09:20:00"
+            "time": "2017-04-26T09:20:00+00:00"
         },
         {
             "name": "drupal/webform",
@@ -6127,7 +6127,7 @@
                 }
             ],
             "description": "Reference UNL Directory data as external entities.",
-            "time": "2017-07-31 19:51:13"
+            "time": "2017-07-31T19:51:13+00:00"
         },
         {
             "name": "unlcms/group_simplecss",
@@ -6146,7 +6146,7 @@
                 }
             ],
             "description": "Add CSS to a Group.",
-            "time": "2017-11-02 16:02:48"
+            "time": "2017-11-02T16:02:48+00:00"
         },
         {
             "name": "unlcms/group_subdomain",
@@ -6170,7 +6170,7 @@
                 }
             ],
             "description": "Assign subdomains to groups.",
-            "time": "2017-03-03 19:53:38"
+            "time": "2017-03-03T19:53:38+00:00"
         },
         {
             "name": "unlcms/imce_groups",
@@ -6194,7 +6194,7 @@
                 }
             ],
             "description": "Create and use IMCE folders for groups",
-            "time": "2017-02-21 20:17:23"
+            "time": "2017-02-21T20:17:23+00:00"
         },
         {
             "name": "unlcms/unl_breadcrumbs",
@@ -6213,7 +6213,7 @@
                 }
             ],
             "description": "UNL breadcrumb implementation",
-            "time": "2017-11-02 15:12:19"
+            "time": "2017-11-02T15:12:19+00:00"
         },
         {
             "name": "unlcms/unl_cas",
@@ -6232,7 +6232,7 @@
                 }
             ],
             "description": "login.unl.edu integration",
-            "time": "2017-06-28 20:31:31"
+            "time": "2017-06-28T20:31:31+00:00"
         },
         {
             "name": "unlcms/unl_editor",
@@ -6251,7 +6251,7 @@
                 }
             ],
             "description": "Modifications for text formats and editors.",
-            "time": "2017-07-21 20:23:44"
+            "time": "2017-07-21T20:23:44+00:00"
         },
         {
             "name": "unlcms/unl_filter",
@@ -6275,7 +6275,7 @@
                 }
             ],
             "description": "Custom text filters.",
-            "time": "2016-12-23 19:13:46"
+            "time": "2016-12-23T19:13:46+00:00"
         },
         {
             "name": "unlcms/unl_fourone",
@@ -6294,7 +6294,7 @@
                 }
             ],
             "description": "UNLedu Framework 4.1 theme.",
-            "time": "2017-08-04 19:01:43"
+            "time": "2017-08-04T19:01:43+00:00"
         },
         {
             "name": "unlcms/unl_multisite",
@@ -6313,7 +6313,7 @@
                 }
             ],
             "description": "Admin interface to create and manage multiple site installations.",
-            "time": "2017-04-28 15:58:58"
+            "time": "2017-04-28T15:58:58+00:00"
         },
         {
             "name": "unlcms/unl_purge_processor",
@@ -6332,7 +6332,7 @@
                 }
             ],
             "description": "Processes the queue when a node is saved.",
-            "time": "2016-12-22 19:31:29"
+            "time": "2016-12-22T19:31:29+00:00"
         },
         {
             "name": "unlcms/unl_tags",
@@ -6351,7 +6351,7 @@
                 }
             ],
             "description": "UNL Tags integration",
-            "time": "2017-07-07 18:38:37"
+            "time": "2017-07-07T18:38:37+00:00"
         },
         {
             "name": "unlcms/unl_user",
@@ -6373,7 +6373,7 @@
                 }
             ],
             "description": "UNL User data integration",
-            "time": "2017-01-05 16:52:08"
+            "time": "2017-01-05T16:52:08+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -7112,7 +7112,7 @@
                 "source": "http://cgit.drupalcode.org/drupal_reset",
                 "issues": "https://www.drupal.org/project/issues/drupal_reset"
             },
-            "time": "2017-08-23 16:18:19"
+            "time": "2017-08-23T16:18:19+00:00"
         },
         {
             "name": "drupal/twig_vardumper",
