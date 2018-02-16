@@ -105,6 +105,9 @@
                 "Configurable entities as group content": "patches/2797793-13.patch",
                 "group/{group}/node/create use's the permissions of group/{group}/node/add": "patches/2881769-3.patch"
             },
+            "drupal/groupmenu": {
+                "Urls without route in admin menu cause fatal error": "patches/non-routed-urls-in-admin-menu-2927842.patch"
+            },
             "drupal/imce": {
                 "Don't auto-populate the Alternative Text with the image filename": "patches/2884755-2.patch"
             },

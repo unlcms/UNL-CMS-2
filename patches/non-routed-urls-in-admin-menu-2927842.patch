@@ -1,0 +1,14 @@
+diff --git a/groupmenu.module b/groupmenu.module
+index 2a1ca3b..a0ec6d3 100644
+--- a/groupmenu.module
++++ b/groupmenu.module
+@@ -224,6 +224,9 @@ function _groupmenu_filter_admin_links(array &$items, array $group_content_types
+     if (!empty($item['url'])) {
+       /** @var \Drupal\Core\Url $url */
+       $url = $item['url'];
++      if (!$url->isRouted()) {
++        continue;
++      }
+       $route_name = $url->getRouteName();
+       $route_params = $url->getRouteParameters();
+       if ($route_name === 'entity.menu.edit_form') {
