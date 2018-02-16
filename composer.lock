@@ -1178,6 +1178,63 @@
             "time": "2017-09-22T11:04:43+00:00"
         },
         {
+            "name": "drupal/contribute",
+            "version": "1.0.0-beta7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/contribute",
+                "reference": "8.x-1.0-beta7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/contribute-8.x-1.0-beta7.zip",
+                "reference": "8.x-1.0-beta7",
+                "shasum": "f31aaf1294b9504b0057f59ef131d5936f413ede"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta7",
+                    "datestamp": "1518634080",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Adrian Cid Almaguer (adriancid)",
+                    "homepage": "https://www.drupal.org/u/adriancid",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jacob Rockowitz (jrockowitz)",
+                    "homepage": "https://www.drupal.org/u/jrockowitz",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides status report message which encourage users or organizations to join the Drupal community, become a member of Drupal Association, and contribute back to Drupal.",
+            "homepage": "https://www.drupal.org/project/contribute",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/contribute",
+                "issues": "https://www.drupal.org/project/issues/contribute"
+            }
+        },
+        {
             "name": "drupal/core",
             "version": "8.4.4",
             "source": {
@@ -3331,20 +3388,27 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.0.0-beta23",
+            "version": "5.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "8.x-5.0-beta23"
+                "reference": "8.x-5.0-rc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-beta23.zip",
-                "reference": "8.x-5.0-beta23",
-                "shasum": "b62f90be0adf25afba7932401f8b06eea69c4b83"
+                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-rc3.zip",
+                "reference": "8.x-5.0-rc3",
+                "shasum": "1d232ccc9004d14369f59fbc1acd80a2f94428c7"
             },
             "require": {
+                "drupal/contribute": "^1.0",
                 "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/devel": "*",
+                "drupal/token": "*",
+                "drupal/webform_node": "*",
+                "drupal/webform_scheduled_email": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -3352,11 +3416,16 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-beta23",
-                    "datestamp": "1509673984",
+                    "version": "8.x-5.0-rc3",
+                    "datestamp": "1517746080",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
                     }
                 }
             },
@@ -3373,6 +3442,10 @@
                 {
                     "name": "Liam Morland",
                     "homepage": "https://www.drupal.org/user/493050"
+                },
+                {
+                    "name": "bucefal91",
+                    "homepage": "https://www.drupal.org/user/504128"
                 },
                 {
                     "name": "fenstrat",
@@ -3407,7 +3480,9 @@
             "homepage": "https://drupal.org/project/webform",
             "support": {
                 "source": "http://cgit.drupalcode.org/webform",
-                "issues": "https://drupal.org/project/issues/webform"
+                "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
+                "docs": "https://www.drupal.org/docs/8/modules/webform",
+                "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
             }
         },
         {
