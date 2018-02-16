@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e2ffc346105fca8130d32c22d9f9b48",
+    "content-hash": "34f30a5740ff4802ec889ddbb61d8480",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1373,23 +1373,20 @@
         },
         {
             "name": "drupal/crop",
-            "version": "1.3.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/crop",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/crop-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "8075371124c0fd3c70e17c071ac09e9c8d5cf1ed"
+                "url": "https://ftp.drupal.org/files/projects/crop-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "bb275293508cb3988ca6ab766dc1f6ecc22cc03d"
             },
             "require": {
                 "drupal/core": "*"
-            },
-            "require-dev": {
-                "drupal/media_entity": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1397,8 +1394,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1509015245",
+                    "version": "8.x-1.5",
+                    "datestamp": "1516357085",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1897,17 +1894,17 @@
         },
         {
             "name": "drupal/field_group",
-            "version": "1.0.0-rc6",
+            "version": "3.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/field_group",
-                "reference": "8.x-1.0-rc6"
+                "reference": "8.x-3.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-1.0-rc6.zip",
-                "reference": "8.x-1.0-rc6",
-                "shasum": "1ce3c6387e745a04a1099956a5bf39bb50096d44"
+                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.0-beta1.zip",
+                "reference": "8.x-3.0-beta1",
+                "shasum": "a5dfb66385be7a1b3db232e49779d5bc530a048e"
             },
             "require": {
                 "drupal/core": "*"
@@ -1915,14 +1912,14 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                    "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc6",
-                    "datestamp": "1480365484",
+                    "version": "8.x-3.0-beta1",
+                    "datestamp": "1510352338",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -3233,17 +3230,17 @@
         },
         {
             "name": "drupal/varnish_purge",
-            "version": "1.9.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/varnish_purge",
-                "reference": "8.x-1.9"
+                "reference": "8.x-1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "ecc6857c81c493609b360e659bab1fce65ceec3d"
+                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "ab7ea1bd933856fc759dc0e1d53018cc5dee2718"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -3259,8 +3256,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1509622084",
+                    "version": "8.x-1.10",
+                    "datestamp": "1516954984",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3269,7 +3266,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -8518,7 +8515,6 @@
         "drupal/external_entities": 15,
         "drupal/view_mode_selector": 20,
         "drupal/telephone_validation": 10,
-        "drupal/field_group": 5,
         "drupal/taxonomy_machine_name": 15,
         "unlcms/unl_tags": 20,
         "drupal/field_css": 20,
