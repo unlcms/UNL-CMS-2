@@ -12,18 +12,20 @@ index dea1e37..57b77c2 100644
  
      return ['group' => $context];
 diff --git a/src/Context/GroupRouteContextTrait.php b/src/Context/GroupRouteContextTrait.php
-index 53a6ac9..19d166c 100644
+index 53a6ac9..b209559 100644
 --- a/src/Context/GroupRouteContextTrait.php
 +++ b/src/Context/GroupRouteContextTrait.php
-@@ -3,6 +3,7 @@
+@@ -3,7 +3,9 @@
  namespace Drupal\group\Context;
  
  use Drupal\group\Entity\Group;
 +use Drupal\group\Entity\GroupContent;
  use Drupal\group\Entity\GroupInterface;
++use Drupal\node\Entity\Node;
  
  /**
-@@ -62,4 +63,28 @@ trait GroupRouteContextTrait {
+  * Trait to get the group entity from the current route.
+@@ -62,4 +64,31 @@ trait GroupRouteContextTrait {
      return NULL;
    }
  
@@ -41,6 +43,9 @@ index 53a6ac9..19d166c 100644
 +      return $group;
 +    }
 +    elseif ($node = \Drupal::request()->attributes->get('node')) {
++      if (is_numeric($node)) {
++        $node = Node::load($node);
++      }
 +      $group_content_array = GroupContent::loadByEntity($node);
 +      foreach ($group_content_array as $group_content) {
 +        $group = $group_content->getGroup();
