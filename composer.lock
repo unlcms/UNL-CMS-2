@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f903589765de1bc9e22b7015abb2d039",
+    "content-hash": "594dcefacf62a75fe969ee929441da46",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1009,11 +1009,17 @@
         },
         {
             "name": "drupal/asset_injector",
-            "version": "dev-1.x",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/asset_injector",
-                "reference": "728a2eafa66457f7bdc2c338b1ac277ac83dd8de"
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "c0a1caf17b44d40b3e1a0bba4f3b88020ec65ed7"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1021,37 +1027,37 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                    "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2+67-dev",
-                    "datestamp": "1495729684",
+                    "version": "8.x-2.2",
+                    "datestamp": "1523307484",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "axel.rutz",
-                    "homepage": "https://www.drupal.org/user/229048"
+                    "name": "Mike Decker",
+                    "homepage": "https://www.drupal.org/u/pookmish"
                 },
                 {
-                    "name": "pookmish",
-                    "homepage": "https://www.drupal.org/user/3059577"
+                    "name": "Axel Rutz",
+                    "homepage": "https://www.drupal.org/u/axelrutz"
                 }
             ],
             "description": "Adds CSS or JS to the page output based on configurable rules.",
-            "homepage": "https://www.drupal.org/project/asset_injector",
+            "homepage": "http://drupal.org/project/asset_injector",
             "support": {
-                "source": "http://cgit.drupalcode.org/asset_injector"
-            },
-            "time": "2017-05-25T16:24:20+00:00"
+                "source": "http://cgit.drupalcode.org/asset_injector",
+                "issues": "https://www.drupal.org/project/issues/asset_injector"
+            }
         },
         {
             "name": "drupal/ckeditor_codemirror",
@@ -1106,15 +1112,24 @@
             }
         },
         {
-            "name": "drupal/config_ignore",
-            "version": "dev-1.x",
+            "name": "drupal/config_filter",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/config_ignore",
-                "reference": "8914431d622175418fda0dcbef9f8007f4f5c211"
+                "url": "https://git.drupal.org/project/config_filter",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_filter-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "ba3d76dc6bb1eb8644ce8997ca2890496a50ae0e"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "~8.0"
+            },
+            "suggest": {
+                "drupal/config_split": "Split site configuration for different environments."
             },
             "type": "drupal-module",
             "extra": {
@@ -1122,11 +1137,78 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4+1-dev",
-                    "datestamp": "1493230443",
+                    "version": "8.x-1.2",
+                    "datestamp": "1522943885",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "email": "opensource@fabianbircher.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nuvole Web",
+                    "homepage": "http://nuvole.org",
+                    "email": "info@nuvole.org",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Config Filter allows other modules to interact with a ConfigStorage through filter plugins.",
+            "homepage": "https://www.drupal.org/project/config_filter",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/config_filter",
+                "issues": "https://www.drupal.org/project/issues/config_filter",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/config_ignore",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/config_ignore",
+                "reference": "8.x-2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "07e00684930706632b3f2fc2a7433ffdae57cde7"
+            },
+            "require": {
+                "drupal/config_filter": "1.*",
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.1",
+                    "datestamp": "1507706044",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -1137,13 +1219,14 @@
             "authors": [
                 {
                     "name": "Tommy Lynge Jørgensen",
-                    "homepage": "https://github.com/tlyngej",
+                    "homepage": "https://www.drupal.org/u/tlyngej",
                     "email": "tlyngej@gmail.com",
                     "role": "Maintainer"
                 },
                 {
-                    "name": "tlyngej",
-                    "homepage": "https://www.drupal.org/user/413139"
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "role": "Maintainer"
                 }
             ],
             "description": "Ignore certain configuration during import.",
@@ -1152,16 +1235,21 @@
                 "source": "http://cgit.drupalcode.org/config_ignore",
                 "issues": "http://drupal.org/project/config_ignore",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2017-04-26T18:09:46+00:00"
+            }
         },
         {
             "name": "drupal/config_installer",
-            "version": "dev-1.x",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_installer",
-                "reference": "128c8bd9ed7230ee66d750b38c0ce9e216ef56bd"
+                "reference": "8.x-1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_installer-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "43d7af76a3f00d074161e242ddf94d942d256250"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1172,11 +1260,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.7+1-dev",
-                    "datestamp": "1520649184",
+                    "version": "8.x-1.8",
+                    "datestamp": "1524572284",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -1193,8 +1281,7 @@
             "homepage": "https://www.drupal.org/project/config_installer",
             "support": {
                 "source": "http://cgit.drupalcode.org/config_installer"
-            },
-            "time": "2018-03-10T02:28:14+00:00"
+            }
         },
         {
             "name": "drupal/core",
@@ -2498,17 +2585,17 @@
         },
         {
             "name": "drupal/memcache",
-            "version": "2.0.0-alpha2",
+            "version": "2.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/memcache",
-                "reference": "8.x-2.0-alpha2"
+                "reference": "8.x-2.0-alpha5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.0-alpha2.zip",
-                "reference": "8.x-2.0-alpha2",
-                "shasum": "dedad417e274e06a064e282135ce2f05b2c2c6ba"
+                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.0-alpha5.zip",
+                "reference": "8.x-2.0-alpha5",
+                "shasum": "4210217dd4040a5687831da82884f7bcad155c66"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2519,8 +2606,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha2",
-                    "datestamp": "1492523944",
+                    "version": "8.x-2.0-alpha5",
+                    "datestamp": "1508351413",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -2529,7 +2616,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2554,24 +2641,25 @@
                 }
             ],
             "description": "High performance integration with memcache.",
-            "homepage": "https://www.drupal.org/project/memcache",
+            "homepage": "http://drupal.org/project/memcache",
             "support": {
-                "source": "http://cgit.drupalcode.org/memcache"
+                "source": "http://cgit.drupalcode.org/memcache",
+                "issues": "https://www.drupal.org/project/issues/memcache"
             }
         },
         {
             "name": "drupal/menu_block",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/menu_block",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "fd8d559452a9e1e07de6fefd9955df6feadc943a"
+                "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "b3ac3e23e426f702974d88cc8bf93bf2a0b6236b"
             },
             "require": {
                 "drupal/core": "*"
@@ -2582,7 +2670,7 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4",
+                    "version": "8.x-1.5",
                     "datestamp": "1525200184",
                     "security-coverage": {
                         "status": "covered",
@@ -9461,13 +9549,10 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "unlcms/unl_breadcrumbs": 20,
-        "drupal/config_installer": 20,
         "drupal/purge": 10,
         "drupal/group": 20,
         "drupal/groupmenu": 20,
         "drupal/imagemagick": 15,
-        "drupal/asset_injector": 20,
-        "drupal/config_ignore": 20,
         "drupal/field_permissions": 10,
         "drupal/menu_entity_index": 15,
         "drupal/libraries": 20,
