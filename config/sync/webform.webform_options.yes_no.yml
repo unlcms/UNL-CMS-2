@@ -8,4 +8,5 @@ dependencies:
 id: yes_no
 label: Yes/No
 category: null
+likert: false
 options: "Yes: Yes\nNo: No\n"

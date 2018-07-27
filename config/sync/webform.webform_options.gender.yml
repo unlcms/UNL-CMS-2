@@ -8,4 +8,5 @@ dependencies:
 id: gender
 label: Gender
 category: null
+likert: false
 options: "Male: Male\nFemale: Female\nTransgender: Transgender\n"

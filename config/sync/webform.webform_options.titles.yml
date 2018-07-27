@@ -8,4 +8,5 @@ dependencies:
 id: titles
 label: Titles
 category: null
+likert: false
 options: "Miss: Miss\nMs: Ms\nMr: Mr\nMrs: Mrs\nDr: Dr\n"

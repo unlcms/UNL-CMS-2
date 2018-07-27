@@ -8,4 +8,5 @@ dependencies:
 id: months
 label: Months
 category: null
+likert: false
 options: "January: January\nFebruary: February\nMarch: March\nApril: April\nMay: May\nJune: June\nJuly: July\nAugust: August\nSeptember: September\nOctober: October\nNovember: November\nDecember: December\n"

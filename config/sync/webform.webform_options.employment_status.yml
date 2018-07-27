@@ -8,4 +8,5 @@ dependencies:
 id: employment_status
 label: 'Employment status'
 category: null
+likert: false
 options: "'Full Time': 'Full Time'\n'Part Time': 'Part Time'\n'Military': 'Military'\nUnemployed: Unemployed\nRetired: Retired\n"

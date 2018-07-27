@@ -8,4 +8,5 @@ dependencies:
 id: days
 label: Days
 category: null
+likert: false
 options: "Sunday: Sunday\nMonday: Monday\nTuesday: Tuesday\nWednesday: Wednesday\nThursday: Thursday\nFriday: Friday\nSaturday: Saturday\n"

@@ -8,4 +8,5 @@ dependencies:
 id: languages
 label: Languages
 category: null
+likert: false
 options: ''

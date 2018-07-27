@@ -8,4 +8,5 @@ dependencies:
 id: relationship
 label: Relationship
 category: null
+likert: false
 options: "Parent: Parent\n'Significant Other': 'Significant Other'\nSibling: Sibling\nChild: Child\nFriend: Friend\n"

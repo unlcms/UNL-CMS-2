@@ -8,4 +8,5 @@ dependencies:
 id: size
 label: Size
 category: null
+likert: false
 options: "Extra Small: Extra Small\nSmall: Small\nMedium: Medium\nLarge: Large\nExtra Large: Extra Large\n"

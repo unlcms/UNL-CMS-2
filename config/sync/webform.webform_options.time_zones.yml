@@ -8,4 +8,5 @@ dependencies:
 id: time_zones
 label: 'Time zones'
 category: null
+likert: false
 options: ''

@@ -311,7 +311,7 @@ display:
           plugin_id: user_uid
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -329,7 +329,7 @@ display:
       block_description: 'Your Groups'
       block_hide_empty: false
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

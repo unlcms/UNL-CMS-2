@@ -8,4 +8,5 @@ dependencies:
 id: creditcard_codes
 label: 'Credit card codes'
 category: null
+likert: false
 options: "VI: 'Visa'\nMC: 'Mastercard'\nAE: 'American Express'\nDC: 'Discover'\n"
