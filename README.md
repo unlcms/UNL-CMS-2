@@ -94,8 +94,8 @@ Drupal 8 installation at the University of Nebraska–Lincoln
 # Production deployment
 
   * `composer install --no-dev`
-  * `drush config-import --partial`  IMPORTANT: Must use the '--partial' flag so that existing group menus and webforms are not deleted.
   * `drush updb`
+  * `drush config-import --partial`  IMPORTANT: Must use the '--partial' flag so that existing group menus and webforms are not deleted.
   * `drush cr`
 
 # Local devlopment
