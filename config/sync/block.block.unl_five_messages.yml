@@ -1,0 +1,22 @@
+uuid: 9c052d53-049e-45f7-ba57-91fcc0604525
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - unl_five
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: unl_five_messages
+theme: unl_five
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

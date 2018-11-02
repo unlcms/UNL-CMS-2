@@ -1,0 +1,20 @@
+uuid: 800e1df9-05dd-4d6b-b854-23358d1c4768
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unl_five
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: unl_five_local_actions
+theme: unl_five
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

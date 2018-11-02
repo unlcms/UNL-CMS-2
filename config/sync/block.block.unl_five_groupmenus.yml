@@ -1,0 +1,23 @@
+uuid: 380071fa-8178-412f-8a43-95c50fafc065
+langcode: en
+status: true
+dependencies:
+  module:
+    - groupmenu_block
+  theme:
+    - unl_five
+id: unl_five_groupmenus
+theme: unl_five
+region: navlinks
+weight: 0
+provider: null
+plugin: groupmenus
+settings:
+  id: groupmenus
+  label: 'Group menus'
+  provider: groupmenu_block
+  label_display: '0'
+  context_mapping:
+    group: '@group.group_route_context:group'
+    node: '@node.node_route_context:node'
+visibility: {  }

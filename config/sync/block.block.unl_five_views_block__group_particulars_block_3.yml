@@ -1,0 +1,25 @@
+uuid: d70e55ba-8e0a-4658-9256-678f784e572a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_particulars
+  module:
+    - views
+  theme:
+    - unl_five
+id: unl_five_views_block__group_particulars_block_3
+theme: unl_five
+region: socialmedia
+weight: 0
+provider: null
+plugin: 'views_block:group_particulars-block_3'
+settings:
+  id: 'views_block:group_particulars-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

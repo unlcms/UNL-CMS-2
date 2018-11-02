@@ -1,0 +1,24 @@
+uuid: c5c477cb-19d8-4037-b2bf-2502f1b8eb2a
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - unl_five
+id: unl_five_main_menu
+theme: unl_five
+region: navlinks
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+visibility: {  }

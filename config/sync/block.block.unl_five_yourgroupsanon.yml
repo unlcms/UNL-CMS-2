@@ -1,0 +1,39 @@
+uuid: fe7b2159-9e5e-4a2b-8bda-6da14d238e4d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2a9dea85-3087-48d8-99d5-07c7002fc6dd'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - unl_five
+id: unl_five_yourgroupsanon
+theme: unl_five
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:2a9dea85-3087-48d8-99d5-07c7002fc6dd'
+settings:
+  id: 'block_content:2a9dea85-3087-48d8-99d5-07c7002fc6dd'
+  label: 'Your Sites'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
