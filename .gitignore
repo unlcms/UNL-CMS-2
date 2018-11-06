@@ -55,6 +55,7 @@ wdn
 modules
 profiles
 themes/unl_fourone
+themes/unl_five
 
 # Ignore Group menus by ignoring all menus then adding back in the core ones with !
 config/sync/system.menu.*
