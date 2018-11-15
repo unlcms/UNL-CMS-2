@@ -6901,7 +6901,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/unl_cas.git",
-                "reference": "b04e5429240d07db65a0c5cd516ef123952d3951"
+                "reference": "5b67f2818b11e9c846b97ff3e269308d8dbd8863"
             },
             "type": "drupal-module",
             "authors": [
@@ -6912,7 +6912,7 @@
                 }
             ],
             "description": "login.unl.edu integration",
-            "time": "2017-06-28T20:31:31+00:00"
+            "time": "2018-11-15T15:43:39+00:00"
         },
         {
             "name": "unlcms/unl_editor",
