@@ -1,0 +1,24 @@
+uuid: 47c11e78-24f5-4f4c-96a8-ffe4aef27e83
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_timeline_item_start_date
+field_name: field_timeline_item_start_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

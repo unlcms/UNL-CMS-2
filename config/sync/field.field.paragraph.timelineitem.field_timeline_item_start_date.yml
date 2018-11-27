@@ -1,0 +1,21 @@
+uuid: fda005f8-6bbb-4a82-b0e2-2d309787021b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_item_start_date
+    - paragraphs.paragraphs_type.timelineitem
+  module:
+    - datetime
+id: paragraph.timelineitem.field_timeline_item_start_date
+field_name: field_timeline_item_start_date
+entity_type: paragraph
+bundle: timelineitem
+label: 'Timeline Item Start Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -63,7 +63,8 @@
         "drupal/taxonomy_machine_name": "^1.0@alpha",
         "unlcms/unl_tags": "dev-8.x-1.x",
         "drupal/field_css": "1.x-dev",
-        "drupal/allowed_formats": "^1.1"
+        "drupal/allowed_formats": "^1.1",
+        "drupal/views_timelinejs": "^3.1"
     },
     "require-dev": {
         "drupal/devel": "^1.0",

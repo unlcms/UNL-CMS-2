@@ -1,0 +1,30 @@
+uuid: 18626872-8fda-4b24-85f8-966a2292c50e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline.field_nested_content
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - paragraphs
+id: paragraph.timeline.default
+targetEntityType: paragraph
+bundle: timeline
+mode: default
+content:
+  field_nested_content:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

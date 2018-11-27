@@ -1,0 +1,21 @@
+uuid: 13396cb4-94c4-40a7-8da1-3a14086add99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_item_end_date
+    - paragraphs.paragraphs_type.timelineitem
+  module:
+    - datetime
+id: paragraph.timelineitem.field_timeline_item_end_date
+field_name: field_timeline_item_end_date
+entity_type: paragraph
+bundle: timelineitem
+label: 'Timeline Item End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

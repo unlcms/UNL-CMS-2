@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\views\Views;
+
 /**
  * Implements template_preprocess_field().
  */
@@ -31,4 +33,16 @@ function unl_singularity_preprocess_paragraph__bg_image_container(&$variables) {
       $variables['attributes']['style'][] = 'background-position: center center;';
     }
   }
+}
+
+/**
+ * Implements template_preprocess_paragraph__PARAGRAPH_TYPE().
+ */
+function unl_singularity_preprocess_paragraph__timeline(&$variables) {
+  // Prepare a custom view_timeline_js variable to output the timeline in the template.
+  $view = Views::getView('timeline_js');
+  $view->setDisplay('embed_1');
+  $view->preview('false');
+  $view->setArguments([$variables['paragraph']->id()]);
+  $variables['view_timeline_js'] = $view->render();
 }

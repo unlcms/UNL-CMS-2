@@ -1,0 +1,67 @@
+uuid: 424d40df-ac87-4c23-a30f-51b219bd9cc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nested_content
+    - paragraphs.paragraphs_type.timeline
+    - paragraphs.paragraphs_type.timelineitem
+  module:
+    - entity_reference_revisions
+id: paragraph.timeline.field_nested_content
+field_name: field_nested_content
+entity_type: paragraph
+bundle: timeline
+label: 'Timeline Items'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      timelineitem: timelineitem
+    target_bundles_drag_drop:
+      basic_text:
+        weight: 14
+        enabled: false
+      bg_image_container:
+        weight: 15
+        enabled: false
+      column:
+        weight: 16
+        enabled: false
+      columns_equal:
+        weight: 17
+        enabled: false
+      content_reference:
+        weight: 18
+        enabled: false
+      grid_columns_mixed:
+        weight: 19
+        enabled: false
+      html:
+        weight: 20
+        enabled: false
+      timeline:
+        weight: 21
+        enabled: false
+      timelineitem:
+        enabled: true
+        weight: 22
+      wdn_events:
+        weight: 23
+        enabled: false
+      wdn_hero:
+        weight: 24
+        enabled: false
+      wdn_quote:
+        weight: 25
+        enabled: false
+      wdn_text_band:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: d0899d07-ac24-4b5b-8f34-c016b415e9e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_item_background_c
+    - paragraphs.paragraphs_type.timelineitem
+id: paragraph.timelineitem.field_timeline_item_background_c
+field_name: field_timeline_item_background_c
+entity_type: paragraph
+bundle: timelineitem
+label: 'Timeline Item Background Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

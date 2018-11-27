@@ -1,0 +1,79 @@
+uuid: 895422e5-3501-4c8f-a71a-52ef719aa7cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timelineitem.field_timeline_item_background_c
+    - field.field.paragraph.timelineitem.field_timeline_item_background_i
+    - field.field.paragraph.timelineitem.field_timeline_item_body
+    - field.field.paragraph.timelineitem.field_timeline_item_end_date
+    - field.field.paragraph.timelineitem.field_timeline_item_group
+    - field.field.paragraph.timelineitem.field_timeline_item_start_date
+    - field.field.paragraph.timelineitem.field_timeline_item_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.timelineitem
+  module:
+    - datetime
+    - image
+    - text
+id: paragraph.timelineitem.default
+targetEntityType: paragraph
+bundle: timelineitem
+mode: default
+content:
+  field_timeline_item_background_c:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_timeline_item_background_i:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_timeline_item_body:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_timeline_item_end_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_timeline_item_group:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_timeline_item_start_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_timeline_item_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

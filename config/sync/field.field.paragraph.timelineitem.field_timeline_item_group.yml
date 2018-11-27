@@ -1,0 +1,19 @@
+uuid: 62aa1ca3-142e-4a63-a0af-291029b12f40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_item_group
+    - paragraphs.paragraphs_type.timelineitem
+id: paragraph.timelineitem.field_timeline_item_group
+field_name: field_timeline_item_group
+entity_type: paragraph
+bundle: timelineitem
+label: 'Timeline Item Group'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

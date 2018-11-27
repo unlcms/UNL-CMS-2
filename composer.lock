@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9473a1422857712a2b97849f2e09e7d5",
+    "content-hash": "18980fab1338bd56fdf7e71fc5a87a20",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3817,6 +3817,72 @@
                 "source": "http://cgit.drupalcode.org/view_mode_selector"
             },
             "time": "2018-02-12T12:03:58+00:00"
+        },
+        {
+            "name": "drupal/views_timelinejs",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_timelinejs",
+                "reference": "8.x-3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_timelinejs-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "67a36cb21f5c249160cd34d10c58f78bee39cc1a"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.1",
+                    "datestamp": "1507674581",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "David Cameron (dcam)",
+                    "homepage": "https://www.drupal.org/u/dcam",
+                    "role": "3.x branch maintainer"
+                },
+                {
+                    "name": "WorldFallz",
+                    "homepage": "https://www.drupal.org/user/155304"
+                },
+                {
+                    "name": "dcam",
+                    "homepage": "https://www.drupal.org/user/1791830"
+                },
+                {
+                    "name": "juhaniemi",
+                    "homepage": "https://www.drupal.org/user/157732"
+                },
+                {
+                    "name": "operinko",
+                    "homepage": "https://www.drupal.org/user/1806534"
+                }
+            ],
+            "description": "Provides a View style that displays rows in a Timeline.",
+            "homepage": "https://www.drupal.org/project/views_timelinejs",
+            "support": {
+                "source": "https://cgit.drupalcode.org/views_timelinejs",
+                "issues": "https://drupal.org/project/issues/views_timelinejs",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
         },
         {
             "name": "drupal/webform",

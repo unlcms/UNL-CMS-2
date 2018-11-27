@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.basic_text
     - paragraphs.paragraphs_type.column
+    - paragraphs.paragraphs_type.timelineitem
   module:
     - entity_reference_revisions
 id: node.page.field_bands
@@ -26,6 +27,7 @@ settings:
     target_bundles:
       basic_text: basic_text
       column: column
+      timelineitem: timelineitem
     target_bundles_drag_drop:
       wdn_text_band:
         weight: -23
@@ -60,4 +62,10 @@ settings:
       column:
         enabled: true
         weight: -13
+      timeline:
+        weight: 21
+        enabled: false
+      timelineitem:
+        enabled: true
+        weight: 22
 field_type: entity_reference_revisions
