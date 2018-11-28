@@ -42,7 +42,6 @@ function unl_singularity_preprocess_paragraph__timeline(&$variables) {
   // Prepare a custom view_timeline_js variable to output the timeline in the template.
   $view = Views::getView('timeline_js');
   $view->setDisplay('embed_1');
-  $view->preview('false');
   $view->setArguments([$variables['paragraph']->id()]);
   $variables['view_timeline_js'] = $view->render();
 }
