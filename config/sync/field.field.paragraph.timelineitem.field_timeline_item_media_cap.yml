@@ -1,0 +1,19 @@
+uuid: 4bcd8f65-b039-43a8-9857-5318eb9ae346
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_item_media_cap
+    - paragraphs.paragraphs_type.timelineitem
+id: paragraph.timelineitem.field_timeline_item_media_cap
+field_name: field_timeline_item_media_cap
+entity_type: paragraph
+bundle: timelineitem
+label: 'Timeline Item Media Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

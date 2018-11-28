@@ -8,6 +8,10 @@ dependencies:
     - field.storage.paragraph.field_timeline_item_body
     - field.storage.paragraph.field_timeline_item_end_date
     - field.storage.paragraph.field_timeline_item_group
+    - field.storage.paragraph.field_timeline_item_media_cap
+    - field.storage.paragraph.field_timeline_item_media_credit
+    - field.storage.paragraph.field_timeline_item_media_image
+    - field.storage.paragraph.field_timeline_item_media_other
     - field.storage.paragraph.field_timeline_item_start_date
     - field.storage.paragraph.field_timeline_item_title
     - paragraphs.paragraphs_type.timelineitem
@@ -86,10 +90,10 @@ display:
             display_date: ''
             background: field_timeline_item_background_i
             background_color: field_timeline_item_background_c
-            media: ''
-            credit: ''
-            caption: ''
-            thumbnail: ''
+            media: field_timeline_item_media_other
+            credit: field_timeline_item_media_credit
+            caption: field_timeline_item_media_cap
+            thumbnail: field_timeline_item_media_image
             group: field_timeline_item_group
             type: ''
             unique_id: id
@@ -212,7 +216,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: html_date
+            format_type: m_d_y
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -276,7 +280,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: html_date
+            format_type: m_d_y
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -602,6 +606,257 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_timeline_item_media_image:
+          id: field_timeline_item_media_image
+          table: paragraph__field_timeline_item_media_image
+          field: field_timeline_item_media_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image_url
+          settings:
+            image_style: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_timeline_item_media_other:
+          id: field_timeline_item_media_other
+          table: paragraph__field_timeline_item_media_other
+          field: field_timeline_item_media_other
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: '{{ field_timeline_item_media_image }}'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_timeline_item_media_cap:
+          id: field_timeline_item_media_cap
+          table: paragraph__field_timeline_item_media_cap
+          field: field_timeline_item_media_cap
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_timeline_item_media_credit:
+          id: field_timeline_item_media_credit
+          table: paragraph__field_timeline_item_media_credit
+          field: field_timeline_item_media_credit
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -683,6 +938,10 @@ display:
         - 'config:field.storage.paragraph.field_timeline_item_body'
         - 'config:field.storage.paragraph.field_timeline_item_end_date'
         - 'config:field.storage.paragraph.field_timeline_item_group'
+        - 'config:field.storage.paragraph.field_timeline_item_media_cap'
+        - 'config:field.storage.paragraph.field_timeline_item_media_credit'
+        - 'config:field.storage.paragraph.field_timeline_item_media_image'
+        - 'config:field.storage.paragraph.field_timeline_item_media_other'
         - 'config:field.storage.paragraph.field_timeline_item_start_date'
         - 'config:field.storage.paragraph.field_timeline_item_title'
   embed_1:
@@ -704,5 +963,9 @@ display:
         - 'config:field.storage.paragraph.field_timeline_item_body'
         - 'config:field.storage.paragraph.field_timeline_item_end_date'
         - 'config:field.storage.paragraph.field_timeline_item_group'
+        - 'config:field.storage.paragraph.field_timeline_item_media_cap'
+        - 'config:field.storage.paragraph.field_timeline_item_media_credit'
+        - 'config:field.storage.paragraph.field_timeline_item_media_image'
+        - 'config:field.storage.paragraph.field_timeline_item_media_other'
         - 'config:field.storage.paragraph.field_timeline_item_start_date'
         - 'config:field.storage.paragraph.field_timeline_item_title'

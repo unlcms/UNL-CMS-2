@@ -8,6 +8,10 @@ dependencies:
     - field.field.paragraph.timelineitem.field_timeline_item_body
     - field.field.paragraph.timelineitem.field_timeline_item_end_date
     - field.field.paragraph.timelineitem.field_timeline_item_group
+    - field.field.paragraph.timelineitem.field_timeline_item_media_cap
+    - field.field.paragraph.timelineitem.field_timeline_item_media_credit
+    - field.field.paragraph.timelineitem.field_timeline_item_media_image
+    - field.field.paragraph.timelineitem.field_timeline_item_media_other
     - field.field.paragraph.timelineitem.field_timeline_item_start_date
     - field.field.paragraph.timelineitem.field_timeline_item_title
     - image.style.thumbnail
@@ -15,6 +19,7 @@ dependencies:
   module:
     - datetime
     - image
+    - imce
     - text
 id: paragraph.timelineitem.default
 targetEntityType: paragraph
@@ -22,7 +27,7 @@ bundle: timelineitem
 mode: default
 content:
   field_timeline_item_background_c:
-    weight: 5
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -30,11 +35,13 @@ content:
     type: string_textfield
     region: content
   field_timeline_item_background_i:
-    weight: 4
+    weight: 8
     settings:
-      progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
     type: image_image
     region: content
   field_timeline_item_body:
@@ -52,12 +59,46 @@ content:
     type: datetime_default
     region: content
   field_timeline_item_group:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_timeline_item_media_cap:
     weight: 6
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_timeline_item_media_credit:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_timeline_item_media_image:
+    weight: 4
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+    type: image_image
+    region: content
+  field_timeline_item_media_other:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_timeline_item_start_date:
     weight: 1

@@ -1,0 +1,19 @@
+uuid: 196580e9-a5be-4a51-8b43-252f8c72a6a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_item_media_other
+    - paragraphs.paragraphs_type.timelineitem
+id: paragraph.timelineitem.field_timeline_item_media_other
+field_name: field_timeline_item_media_other
+entity_type: paragraph
+bundle: timelineitem
+label: 'Timeline Item Media (Other)'
+description: 'Use this for any Media other than Image (which should be included with the field above). See the <a href="https://timeline.knightlab.com/docs/media-types.html" target="_blank">media types documentation</a> for a list of supported types.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

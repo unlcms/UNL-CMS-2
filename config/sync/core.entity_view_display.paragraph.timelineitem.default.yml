@@ -8,6 +8,10 @@ dependencies:
     - field.field.paragraph.timelineitem.field_timeline_item_body
     - field.field.paragraph.timelineitem.field_timeline_item_end_date
     - field.field.paragraph.timelineitem.field_timeline_item_group
+    - field.field.paragraph.timelineitem.field_timeline_item_media_cap
+    - field.field.paragraph.timelineitem.field_timeline_item_media_credit
+    - field.field.paragraph.timelineitem.field_timeline_item_media_image
+    - field.field.paragraph.timelineitem.field_timeline_item_media_other
     - field.field.paragraph.timelineitem.field_timeline_item_start_date
     - field.field.paragraph.timelineitem.field_timeline_item_title
     - paragraphs.paragraphs_type.timelineitem
@@ -60,6 +64,38 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_timeline_item_media_cap:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_timeline_item_media_credit:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_timeline_item_media_image:
+    weight: 7
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_timeline_item_media_other:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_timeline_item_start_date:
     weight: 1
