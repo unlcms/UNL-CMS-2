@@ -10,8 +10,8 @@ _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: unl_five_singularity_help
 theme: unl_five_singularity
-region: content
-weight: -7
+region: content_top
+weight: -6
 provider: null
 plugin: help_block
 settings:

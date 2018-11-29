@@ -10,7 +10,7 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: unl_five_messages
 theme: unl_five
-region: content
+region: content_top
 weight: -7
 provider: null
 plugin: system_messages_block

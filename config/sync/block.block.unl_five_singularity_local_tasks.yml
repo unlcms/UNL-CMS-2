@@ -9,7 +9,7 @@ _core:
 id: unl_five_singularity_local_tasks
 theme: unl_five_singularity
 region: header
-weight: -5
+weight: -7
 provider: null
 plugin: local_tasks_block
 settings:

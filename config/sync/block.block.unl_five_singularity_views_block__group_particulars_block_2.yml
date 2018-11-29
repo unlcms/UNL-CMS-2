@@ -11,7 +11,7 @@ dependencies:
 id: unl_five_singularity_views_block__group_particulars_block_2
 theme: unl_five_singularity
 region: header
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_block:group_particulars-block_2'
 settings:
