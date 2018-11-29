@@ -69,8 +69,8 @@ display:
         options:
           timeline_config:
             width: 100%
-            height: 40em
-            hash_bookmark: false
+            height: 60em
+            hash_bookmark: true
             scale_factor: !!float 2
             timenav_position: bottom
             timenav_height: ''
@@ -93,7 +93,7 @@ display:
             media: field_timeline_item_media_other
             credit: field_timeline_item_media_credit
             caption: field_timeline_item_media_cap
-            thumbnail: field_timeline_item_media_image
+            thumbnail: ''
             group: field_timeline_item_group
             type: ''
             unique_id: id
