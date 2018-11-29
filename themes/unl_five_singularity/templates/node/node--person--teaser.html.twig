@@ -1,0 +1,87 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{{ attach_library('classy/node') }}
+{{ attach_library('unl_five_singularity/person') }}
+<article{{ attributes.addClass('wdn-band').addClass(classes) }}>
+  <div{{ content_attributes }}>
+    <div class="wdn-band record-container">
+      <div class="wdn-inner-wrapper wdn-inner-padding-sm">
+        <div class="wdn-grid-set">
+          <div class="bp480-wdn-col-one-sixth wdn-pull-right">
+            <figure class="wdn-frame">
+            {% if node.field_person_portrait.value %}
+              {{ content.field_person_portrait }}
+            {% else  %}
+              <img class="photo profile_pic" itemprop="image" src="{{ node.field_my_unl_id.entity.field_imageurl.value }}" alt="Avatar for {{ label }}" />
+            {% endif %}
+            </figure>
+          </div>
+          <div class="bp480-wdn-col-five-sixths">
+            <h3 class="clear-top wdn-brand">
+              {{ title_prefix }}{{ label }}{{ title_suffix }}
+              <span class="wdn-subhead" itemprop="jobTitle">
+                {% if node.field_person_job_title.value %}
+                  {{ content.field_person_job_title }}
+                {% else %}
+                  {{ node.field_my_unl_id.entity.field_jobtitle.value }}
+                {% endif %}
+              </span>
+            </h3>
+
+            {% if node.field_person_phone.value or node.field_my_unl_id.entity.field_telephonenumber.value %}
+            <div class="tel work icon-phone attribute">
+              <span class="type">Work</span>
+              {% if node.field_person_phone.value %}
+                <span class="value">
+                  <a href="tel:{{ node.field_person_phone.value|replace({'-':''}) }}">
+                    <span itemprop="telephone">{{ node.field_person_phone.value }}</span>
+                  </a>
+                </span>
+                {% if node.field_person_phone.value|slice(0,7) == '402-472' %}
+                  <abbr class="on-campus-dialing" title="For on-campus dialing only. Off-campus, dial {{ node.field_person_phone.value }}">On-campus {{ node.field_person_phone.value|replace({'402-472-':'2-'}) }}</abbr>
+                {% endif %}
+              {% else %}
+                <span class="value">
+                  <a href="tel:{{ node.field_my_unl_id.entity.field_telephonenumber.value|replace({' ':''})  }}">
+                    <span itemprop="telephone">{{ node.field_my_unl_id.entity.field_telephonenumber.value|replace({'402472':'402-472-'})  }}</span>
+                  </a>
+                </span>
+                {% if node.field_my_unl_id.entity.field_telephonenumber.value|slice(0,6) == '402472' %}
+                  <abbr class="on-campus-dialing" title="For on-campus dialing only. Off-campus, dial {{ node.field_my_unl_id.entity.field_telephonenumber.value|replace({'402472':'402-472-'}) }}">On-campus {{ node.field_my_unl_id.entity.field_telephonenumber.value|replace({'402472':'2-'}) }}</abbr>
+                {% endif %}
+              {% endif %}
+            </div>
+            {% endif %}
+
+            {% if node.field_person_email.value or node.field_my_unl_id.entity.field_mail.value %}
+            <div class="icon-email attribute">
+                {% if node.field_person_email.value %}
+                  <a class="email" href="mailto:{{ node.field_person_email.value|lower }}" itemprop="email">{{ node.field_person_email.value|lower }}</a>
+                {%  else %}
+                 <a class="email" href="mailto:{{ node.field_my_unl_id.entity.field_mail.value|lower }}" itemprop="email">{{ node.field_my_unl_id.entity.field_mail.value|lower }}</a>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% if content.body or node.field_my_unl_id.entity.field_knowledge_bio.value %}
+              {% if node.body.value is not empty %}
+                {{ content.body }}
+              {% else %}
+                {{ node.field_my_unl_id.entity.field_knowledge_bio.value }}
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

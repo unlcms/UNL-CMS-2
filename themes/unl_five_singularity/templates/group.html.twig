@@ -1,0 +1,29 @@
+{%
+  set classes = [
+    'group',
+    'group--type-' ~ group.bundle|clean_class,
+    view_mode ? 'group--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{% if page %}{{ attributes.addClass('wdn-band').addClass(classes) }}{% else %}{{ attributes.addClass(classes) }}{% endif %}>
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
+</article>
+<style>
+  body.path-group #pagetitle {
+    display: none;
+  }
+</style>

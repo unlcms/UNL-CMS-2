@@ -1,0 +1,7 @@
+{% set bp = element['#object'].field_breakpoint.value is defined ? 'bp' ~ element['#object'].field_breakpoint.value ~ '-' : '' %}
+
+{% for item in items %}
+  <div{{ item.attributes.addClass(bp ~ item.content['#paragraph'].field_column_grid_class.value) }}>
+    {{ item.content }}
+  </div>
+{% endfor %}

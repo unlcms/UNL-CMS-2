@@ -1,0 +1,61 @@
+<?php
+
+use Drupal\views\Views;
+
+/**
+ * Implements template_preprocess_field().
+ */
+function unl_five_singularity_preprocess_field(&$variables) {
+  $element = $variables['element'];
+  if ($element['#field_name'] == 'field_hero_link') {
+    foreach ($variables['items'] as $key => $item) {
+      $variables['items'][$key]['content']['#options']['attributes']['class'] = array(
+        'wdn-button',
+        'wdn-button-outline'
+      );
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_paragraph__PARAGRAPH_TYPE().
+ */
+function unl_five_singularity_preprocess_paragraph__bg_image_container(&$variables) {
+  if (!$variables['paragraph']->field_bg_image->isEmpty()) {
+    $image = file_create_url($variables['paragraph']->field_bg_image->entity->getFileUri());
+    $variables['attributes']['style'][] = 'background-image: url("' . $image . '");';
+
+    if ((int)$variables['paragraph']->field_bg_image_tile->getString()) {
+      $variables['attributes']['style'][] = 'background-repeat: repeat;';
+    }
+    else {
+      $variables['attributes']['style'][] = 'background-size: cover;';
+      $variables['attributes']['style'][] = 'background-position: center center;';
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_paragraph__PARAGRAPH_TYPE().
+ */
+function unl_five_singularity_preprocess_paragraph__timeline(&$variables) {
+  // Prepare a custom view_timeline_js variable to output the timeline in the paragraph--timeline.html.twig template.
+  $view = Views::getView('timeline_js');
+  $view->setDisplay('embed_1');
+  $view->setArguments([$variables['paragraph']->id()]);
+  $variables['view_timeline_js'] = $view->render();
+}
+
+/**
+ * Implements template_preprocess_views_view_field().
+ */
+function unl_five_singularity_preprocess_views_view_field(&$variables) {
+  // Output the Timeline Item Media (Other) field as raw HTML so that an iframe or blockquote can be displayed.
+  $view = $variables['view'];
+  $field = $variables['field'];
+  if ($view->id() == 'timeline_js' && $view->current_display == 'embed_1') {
+    if ($field->field == 'field_timeline_item_media_other') {
+      $variables['output'] = Drupal\Core\Render\Markup::create(html_entity_decode($variables['output']));
+    }
+  }
+}
