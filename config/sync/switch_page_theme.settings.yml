@@ -1,7 +1,7 @@
 spt_table:
   -
     status: '1'
-    pages: "/history-nebraska-football\r\n/timeline"
+    pages: "/history-nebraska-football\r\n/timeline\r\n/n150/timeline"
     theme: unl_five_singularity
     roles:
       anonymous: anonymous
