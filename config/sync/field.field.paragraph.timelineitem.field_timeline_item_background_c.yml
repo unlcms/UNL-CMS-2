@@ -10,7 +10,7 @@ field_name: field_timeline_item_background_c
 entity_type: paragraph
 bundle: timelineitem
 label: 'Timeline Item Background Color'
-description: 'Set this based on the prominent color of the Background Image. Suggested values: <b>#FFFFFF</b> (white), <b>#000000</b> (black), <b>#DD0000</b> (red)'
+description: '(Optional) Set this based on the prominent color of the Background Image. Suggested values: <b>#FFFFFF</b> (white), <b>#000000</b> (black), <b>#D00000</b> (scarlet), or another HEX color.'
 required: false
 translatable: false
 default_value: {  }
