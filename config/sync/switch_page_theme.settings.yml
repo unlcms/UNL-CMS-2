@@ -1,0 +1,14 @@
+spt_table:
+  -
+    status: '1'
+    pages: "/history-nebraska-football\r\n/timeline"
+    theme: unl_five_singularity
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      editor: 0
+      coder: 0
+      site_admin: 0
+      administrator: 0
+    weight: '-10'
+    remove: Remove

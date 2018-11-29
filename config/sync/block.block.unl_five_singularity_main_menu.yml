@@ -1,0 +1,24 @@
+uuid: eb86e1f8-cf4b-4d93-b688-efd2b1cedc35
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - unl_five_singularity
+id: unl_five_singularity_main_menu
+theme: unl_five_singularity
+region: navlinks
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+visibility: {  }

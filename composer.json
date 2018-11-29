@@ -64,7 +64,8 @@
         "unlcms/unl_tags": "dev-8.x-1.x",
         "drupal/field_css": "1.x-dev",
         "drupal/allowed_formats": "^1.1",
-        "drupal/views_timelinejs": "^3.1"
+        "drupal/views_timelinejs": "^3.1",
+        "drupal/switch_page_theme": "^1.0"
     },
     "require-dev": {
         "drupal/devel": "^1.0",

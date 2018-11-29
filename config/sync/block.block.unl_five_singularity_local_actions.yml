@@ -1,0 +1,20 @@
+uuid: ce7761b6-b706-4258-bcfc-eeb21e766afd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unl_five_singularity
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: unl_five_singularity_local_actions
+theme: unl_five_singularity
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

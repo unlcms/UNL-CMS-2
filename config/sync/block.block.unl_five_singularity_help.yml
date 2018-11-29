@@ -1,0 +1,22 @@
+uuid: c0957ee5-16e8-45b3-980d-85692c6e9624
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - unl_five_singularity
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: unl_five_singularity_help
+theme: unl_five_singularity
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

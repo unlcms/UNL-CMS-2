@@ -1,0 +1,25 @@
+uuid: 9eb4813f-64e6-4215-b560-8c7bb95780be
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_particulars
+  module:
+    - views
+  theme:
+    - unl_five_singularity
+id: unl_five_singularity_views_block__group_particulars_block_3
+theme: unl_five_singularity
+region: socialmedia
+weight: 0
+provider: null
+plugin: 'views_block:group_particulars-block_3'
+settings:
+  id: 'views_block:group_particulars-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

@@ -67,6 +67,7 @@ module:
   recreate_block_content: 0
   responsive_image: 0
   shortcut: 0
+  switch_page_theme: 0
   system: 0
   taxonomy: 0
   taxonomy_machine_name: 0
@@ -105,6 +106,7 @@ theme:
   unl_fourone: 0
   unl_singularity: 0
   unl_five: 0
+  unl_five_singularity: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 profile: config_installer
