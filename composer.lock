@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f38b3a6daa08c04a1ca2b33f73259be8",
+    "content-hash": "9d209f02a467aa5088baef23b980159a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2430,6 +2430,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Missing primary key in table honeypot_user": "patches/honeypot-fix_missing_primary_key-8.x-2943526-6.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

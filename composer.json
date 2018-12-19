@@ -123,6 +123,9 @@
             "drupal/groupmenu": {
                 "Urls without route in admin menu cause fatal error": "patches/non-routed-urls-in-admin-menu-2927842.patch"
             },
+            "drupal/honeypot": {
+                "Missing primary key in table honeypot_user": "patches/honeypot-fix_missing_primary_key-8.x-2943526-6.patch"
+            },
             "drush/drush": {
                 "Add db-drop-existing-tables to site-install": "patches/drush-droptablesoption.patch",
                 "Add prefix to database array": "patches/drush-add-prefix.patch"
