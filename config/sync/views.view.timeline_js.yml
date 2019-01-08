@@ -14,6 +14,8 @@ dependencies:
     - field.storage.paragraph.field_timeline_item_media_other
     - field.storage.paragraph.field_timeline_item_start_date
     - field.storage.paragraph.field_timeline_item_title
+    - image.style.16x9_1600x900
+    - image.style.max_1300x1300
     - paragraphs.paragraphs_type.timelineitem
   module:
     - datetime
@@ -70,7 +72,7 @@ display:
           timeline_config:
             width: 100%
             height: 60em
-            hash_bookmark: false
+            hash_bookmark: true
             scale_factor: !!float 2
             timenav_position: bottom
             timenav_height: ''
@@ -469,7 +471,7 @@ display:
           click_sort_column: target_id
           type: image_url
           settings:
-            image_style: ''
+            image_style: 16x9_1600x900
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -657,7 +659,7 @@ display:
           click_sort_column: target_id
           type: image_url
           settings:
-            image_style: ''
+            image_style: max_1300x1300
           group_column: ''
           group_columns: {  }
           group_rows: true
