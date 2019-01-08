@@ -6808,7 +6808,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unlcms/group_subdomain.git",
-                "reference": "1e5bb011b665be3ae244a7638b06873a116ed320"
+                "reference": "19633454668bef2a30dc7696b1dbf77a4dae5d59"
             },
             "type": "drupal-module",
             "authors": [
@@ -6824,7 +6824,7 @@
                 }
             ],
             "description": "Assign subdomains to groups.",
-            "time": "2018-03-15T19:27:40+00:00"
+            "time": "2019-01-08T15:45:40+00:00"
         },
         {
             "name": "unlcms/imce_groups",
